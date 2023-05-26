@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bmt2o3dfnoopb"]
+
+[ext_resource type="Texture2D" path="res://Textures/Ground/Pavement_Curbstones_BaseColor.dds" id="1_b3lol"]
+[ext_resource type="Texture2D" uid="uid://r0x3c8mymops" path="res://Textures/Ground/Pavement_Curbstones_Normal.png" id="2_7n6ro"]
+
+[resource]
+albedo_texture = ExtResource("1_b3lol")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_7n6ro")

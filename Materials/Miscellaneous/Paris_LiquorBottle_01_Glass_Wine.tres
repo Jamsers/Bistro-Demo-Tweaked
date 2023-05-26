@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://db74sosdrefu6"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/Paris_LiquorBottle_01_Glass_Wine_BaseColor.dds" id="1_h65p0"]
+
+[resource]
+albedo_texture = ExtResource("1_h65p0")
+roughness = 0.73

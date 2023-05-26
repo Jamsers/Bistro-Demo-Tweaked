@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dun5yepikwpxp"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/MASTER_Building_Details_BaseColor.dds" id="1_vctsq"]
+[ext_resource type="Texture2D" uid="uid://byscmffffxe2c" path="res://Textures/Miscellaneous/MASTER_Building_Details_Normal.png" id="2_yc8e8"]
+
+[resource]
+albedo_texture = ExtResource("1_vctsq")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_yc8e8")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ymw22ec4s672"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/MASTER_Boulangerie_BaseColor.dds" id="1_cy1pi"]
+[ext_resource type="Texture2D" uid="uid://wynqxua00sn7" path="res://Textures/Miscellaneous/MASTER_Plastic_Normal.png" id="2_xdpag"]
+
+[resource]
+albedo_texture = ExtResource("1_cy1pi")
+roughness = 0.73
+normal_texture = ExtResource("2_xdpag")

@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://ncj04jk76gn0"]
+
+[ext_resource type="PackedScene" uid="uid://clfo7vsxbdmuy" path="res://Meshes/Section02/Bistro_StringLights.glb" id="1_rjuhd"]
+[ext_resource type="Material" uid="uid://d3lja8yy8w8om" path="res://Materials/Lights/StringLights.tres" id="2_tul44"]
+[ext_resource type="Material" uid="uid://cnrxe37qqbo5e" path="res://Materials/Lights/StringLight_Orange.tres" id="3_brebl"]
+[ext_resource type="Material" uid="uid://pub4k2cqjy50" path="res://Materials/Lights/StringLight_Green.tres" id="4_g1ybc"]
+[ext_resource type="Material" uid="uid://ivcxxvgm585r" path="res://Materials/Lights/StringLight_White.tres" id="5_dyq18"]
+[ext_resource type="Material" uid="uid://bh3xso5831lxm" path="res://Materials/Lights/StringLight_Pink.tres" id="6_78hus"]
+[ext_resource type="Material" uid="uid://b6dx1tpevicfc" path="res://Materials/Lights/StringLight_Blue.tres" id="7_0lsvn"]
+[ext_resource type="Material" uid="uid://bi8tfpoad535y" path="res://Materials/Lights/StringLight_Red.tres" id="8_10hs5"]
+
+[node name="Bistro_StringLights" instance=ExtResource("1_rjuhd")]
+
+[node name="StringLight_Wind_14" parent="." index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("8_10hs5")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+surface_material_override/5 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_15" parent="." index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("4_g1ybc")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+surface_material_override/5 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_18" parent="." index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("7_0lsvn")
+surface_material_override/2 = ExtResource("8_10hs5")
+surface_material_override/3 = ExtResource("4_g1ybc")
+surface_material_override/4 = ExtResource("5_dyq18")
+surface_material_override/5 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_19" parent="." index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("7_0lsvn")
+surface_material_override/3 = ExtResource("6_78hus")
+surface_material_override/4 = ExtResource("8_10hs5")
+
+[node name="StringLight_Wind_20" parent="." index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("7_0lsvn")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_21" parent="." index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("4_g1ybc")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+surface_material_override/5 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_22" parent="." index="6"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("4_g1ybc")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+surface_material_override/5 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_23" parent="." index="7"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+surface_material_override/1 = ExtResource("3_brebl")
+surface_material_override/2 = ExtResource("4_g1ybc")
+surface_material_override/3 = ExtResource("5_dyq18")
+surface_material_override/4 = ExtResource("6_78hus")
+surface_material_override/5 = ExtResource("7_0lsvn")

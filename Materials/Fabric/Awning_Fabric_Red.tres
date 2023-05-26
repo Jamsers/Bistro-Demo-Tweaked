@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cji6cg06guols"]
+
+[ext_resource type="Texture2D" path="res://Textures/Fabric/MASTER_Awning_Fabric_Red_BaseColor.dds" id="1_cc8pd"]
+[ext_resource type="Texture2D" uid="uid://dhb1o5laerg5a" path="res://Textures/Fabric/MASTER_Awning_Fabric_Red_Normal.png" id="2_o0d0k"]
+
+[resource]
+albedo_texture = ExtResource("1_cc8pd")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_o0d0k")
+backlight_enabled = true
+backlight = Color(0.360784, 0.360784, 0.360784, 1)

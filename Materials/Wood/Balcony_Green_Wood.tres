@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://btpgd0wv0cpfv"]
+
+[ext_resource type="Texture2D" path="res://Textures/Wood/Balcony_Green_Wood_BaseColor.dds" id="1_7or2t"]
+[ext_resource type="Texture2D" uid="uid://cj7f5eq74c6vc" path="res://Textures/Wood/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png" id="2_a7dv7"]
+
+[resource]
+albedo_texture = ExtResource("1_7or2t")
+metallic_texture_channel = 2
+roughness = 0.37
+normal_enabled = true
+normal_texture = ExtResource("2_a7dv7")

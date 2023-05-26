@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7x2605gbo88t"]
+
+[ext_resource type="PackedScene" uid="uid://df3xanpbd43qu" path="res://Meshes/Section02/Bistro_Lanterns.glb" id="1_iu717"]
+[ext_resource type="Material" uid="uid://dsm0qamubvq5h" path="res://Materials/Lights/HangingLight.tres" id="2_gt8w3"]
+[ext_resource type="Material" uid="uid://uyoltu5ukmtw" path="res://Materials/Lights/HangingLight_Emissive.tres" id="3_yhwc0"]
+
+[node name="Bistro_Lanterns" instance=ExtResource("1_iu717")]
+
+[node name="Lantern_Wind_21" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+surface_material_override/1 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_22" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+surface_material_override/1 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_23" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+surface_material_override/1 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_24" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+surface_material_override/1 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_25" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+surface_material_override/1 = ExtResource("3_yhwc0")

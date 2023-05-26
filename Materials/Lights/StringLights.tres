@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d3lja8yy8w8om"]
+
+[ext_resource type="Texture2D" path="res://Textures/Lights/Stringlights_BaseColor.dds" id="1_8apbo"]
+[ext_resource type="Texture2D" uid="uid://xvqofc5uv335" path="res://Textures/Lights/Stringlights_Normal.png" id="2_1hrwx"]
+
+[resource]
+albedo_texture = ExtResource("1_8apbo")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_1hrwx")

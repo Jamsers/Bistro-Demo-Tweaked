@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://s4fjd3sv062x"]
+
+[ext_resource type="Texture2D" path="res://Textures/Nature/Foliage_Bux_Hedges46_BaseColor.dds" id="1_rwtkt"]
+[ext_resource type="Texture2D" uid="uid://hmo28ahsoefx" path="res://Textures/Nature/Foliage_Bux_Hedges46_Normal.png" id="2_nfyxq"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_rwtkt")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_nfyxq")
+backlight_enabled = true
+backlight = Color(0.560784, 0.560784, 0.560784, 1)

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c2fedvcu7bar5"]
+
+[ext_resource type="Texture2D" path="res://Textures/Nature/Foliage_Ivy_branches_BaseColor.dds" id="1_x5ttl"]
+[ext_resource type="Texture2D" uid="uid://cbwkmeoskm7mb" path="res://Textures/Nature/Foliage_Ivy_branches_Normal.png" id="2_wq04r"]
+
+[resource]
+albedo_texture = ExtResource("1_x5ttl")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_wq04r")

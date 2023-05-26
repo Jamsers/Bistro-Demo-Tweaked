@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dh86ldgjwcoyi"]
+
+[ext_resource type="Texture2D" path="res://Textures/Lights/MASTER_Focus_BaseColor.dds" id="1_lh8wj"]
+[ext_resource type="Texture2D" uid="uid://cmxsphc1sqrvl" path="res://Textures/Lights/MASTER_Focus_Normal.png" id="2_tsidw"]
+
+[resource]
+albedo_texture = ExtResource("1_lh8wj")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_tsidw")

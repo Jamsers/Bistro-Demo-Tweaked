@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dm7rsve3a5n0y"]
+
+[ext_resource type="Texture2D" path="res://Textures/Roofing/MASTER_Roofing_Shingle_Grey_BaseColor.dds" id="1_gvi7m"]
+[ext_resource type="Texture2D" uid="uid://buk7bw88ktmhw" path="res://Textures/Roofing/MASTER_Roofing_Shingle_Grey_Normal.png" id="2_q1cdn"]
+
+[resource]
+albedo_texture = ExtResource("1_gvi7m")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_q1cdn")

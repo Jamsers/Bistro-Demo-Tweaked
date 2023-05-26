@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://i06guesrovca"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/Concrete2_BaseColor.dds" id="1_elbc1"]
+[ext_resource type="Texture2D" uid="uid://doocsk0yph31m" path="res://Textures/Stone/Concrete2_Normal.png" id="2_jh4xt"]
+
+[resource]
+albedo_texture = ExtResource("1_elbc1")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_jh4xt")

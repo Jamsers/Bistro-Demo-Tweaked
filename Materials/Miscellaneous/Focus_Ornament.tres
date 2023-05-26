@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dt4cmdpx48ga1"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/MASTER_Focus_Ornament_BaseColor.dds" id="1_8gmal"]
+[ext_resource type="Texture2D" uid="uid://cc6p6b0b1lab1" path="res://Textures/Miscellaneous/MASTER_Focus_Ornament_Normal.png" id="2_01n42"]
+
+[resource]
+albedo_texture = ExtResource("1_8gmal")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_01n42")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dvrgkeqy7vbdg"]
+
+[ext_resource type="Texture2D" path="res://Textures/Nature/Pavement_Ground_Wet_BaseColor.dds" id="1_yvnk0"]
+[ext_resource type="Texture2D" uid="uid://rkqlyif6i78u" path="res://Textures/Nature/Pavement_Ground_Wet_Normal.png" id="2_ctfoi"]
+
+[resource]
+albedo_texture = ExtResource("1_yvnk0")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_ctfoi")

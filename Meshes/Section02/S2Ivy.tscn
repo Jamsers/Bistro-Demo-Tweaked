@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4b75rgbhmhow"]
+
+[ext_resource type="PackedScene" uid="uid://3xoanv37yq3q" path="res://Meshes/Section02/S2Ivy.glb" id="1_gbpwf"]
+[ext_resource type="Material" uid="uid://dbmaeuxn1j2px" path="res://Materials/Nature/Foliage_Ivy_Leaf.tres" id="2_5l5nd"]
+[ext_resource type="Material" uid="uid://c2fedvcu7bar5" path="res://Materials/Nature/Foliage_Ivy_Branches.tres" id="3_m5u7l"]
+
+[node name="S2Ivy" instance=ExtResource("1_gbpwf")]
+
+[node name="Bistro_Research_Exterior_Ivy_Ivy_4013" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_5l5nd")
+
+[node name="Bistro_Research_Exterior_Ivy_Ivy_4015" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_m5u7l")
+
+[node name="Bistro_Research_Exterior_Ivy_Ivy_4033" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_m5u7l")
+
+[node name="Bistro_Research_Exterior_Ivy_Ivy_4035" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_5l5nd")

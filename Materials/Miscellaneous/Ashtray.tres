@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bt3xppx6800la"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/Ashtray_BaseColor.dds" id="1_nrrl7"]
+[ext_resource type="Texture2D" uid="uid://bmmkgi4qtb0e3" path="res://Textures/Miscellaneous/Ashtray_Normal.png" id="2_eaxt7"]
+
+[resource]
+albedo_texture = ExtResource("1_nrrl7")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_eaxt7")

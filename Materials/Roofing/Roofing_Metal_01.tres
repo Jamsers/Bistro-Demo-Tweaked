@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dqkueuayoekny"]
+
+[ext_resource type="Texture2D" path="res://Textures/Roofing/MASTER_Roofing_Metal_01_BaseColor.dds" id="1_ynqkq"]
+[ext_resource type="Texture2D" uid="uid://c6oph7gm4ukc5" path="res://Textures/Roofing/MASTER_Roofing_Metal_01_Normal.png" id="2_ymklw"]
+
+[resource]
+albedo_texture = ExtResource("1_ynqkq")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_ymklw")

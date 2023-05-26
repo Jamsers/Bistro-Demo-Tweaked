@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dek2mtkuw23qu"]
+
+[ext_resource type="Texture2D" path="res://Textures/Fabric/Awnings_Hotel_Fabric_BaseColor.dds" id="1_xs8g3"]
+[ext_resource type="Texture2D" uid="uid://bdmi1e30goue5" path="res://Textures/Fabric/Awnings_Hotel_Fabric_Normal.png" id="2_6wwto"]
+
+[resource]
+albedo_texture = ExtResource("1_xs8g3")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_6wwto")
+backlight_enabled = true
+backlight = Color(0.360784, 0.360784, 0.360784, 1)

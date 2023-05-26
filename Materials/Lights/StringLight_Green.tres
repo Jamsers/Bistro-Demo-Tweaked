@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://pub4k2cqjy50"]
+
+[ext_resource type="Texture2D" path="res://Textures/Lights/Paris_StringLights_01_Green_Color_Emissive_BaseColor.dds" id="1_cpei0"]
+
+[resource]
+albedo_texture = ExtResource("1_cpei0")
+roughness = 0.73
+emission_enabled = true
+emission_intensity = 800.0
+emission_texture = ExtResource("1_cpei0")

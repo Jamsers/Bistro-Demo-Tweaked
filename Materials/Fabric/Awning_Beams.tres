@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ddafiav24hit3"]
+
+[ext_resource type="Texture2D" path="res://Textures/Fabric/MASTER_Awning_Beams_BaseColor.dds" id="1_gd760"]
+[ext_resource type="Texture2D" uid="uid://5yo3ajghb3k0" path="res://Textures/Fabric/MASTER_Awning_Beams_Normal.png" id="2_2vec5"]
+
+[resource]
+albedo_texture = ExtResource("1_gd760")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_2vec5")

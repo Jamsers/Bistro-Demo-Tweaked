@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dhhosflxqill6"]
+
+[ext_resource type="Texture2D" path="res://Textures/Metal/Bollards_BaseColor.dds" id="1_hegum"]
+[ext_resource type="Texture2D" uid="uid://cmj8143w1omca" path="res://Textures/Metal/Bollards_Normal.png" id="2_60sb7"]
+
+[resource]
+albedo_texture = ExtResource("1_hegum")
+metallic = 1.0
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_60sb7")

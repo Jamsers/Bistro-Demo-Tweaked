@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bp3tljs26s33m"]
+
+[ext_resource type="Texture2D" path="res://Textures/Glass/MASTER_Glass_Exterior_BaseColor.dds" id="1_qfhd6"]
+
+[resource]
+blend_mode = 1
+albedo_texture = ExtResource("1_qfhd6")
+roughness = 0.07

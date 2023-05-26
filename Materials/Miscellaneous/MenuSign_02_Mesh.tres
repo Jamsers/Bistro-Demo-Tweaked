@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cvrqno58y1mqm"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/MenuSign_02_Mesh_BaseColor.dds" id="1_jyio2"]
+[ext_resource type="Texture2D" uid="uid://bx81urvmexc8m" path="res://Textures/Miscellaneous/MenuSign_02_Mesh_Normal.png" id="2_bsno4"]
+
+[resource]
+albedo_texture = ExtResource("1_jyio2")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_bsno4")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bp6iv34uya44q"]
+
+[ext_resource type="Texture2D" path="res://Textures/Wood/Paris_Chair_01_BaseColor.dds" id="1_pniqi"]
+[ext_resource type="Texture2D" uid="uid://bq0kcxum0g7nh" path="res://Textures/Wood/Paris_Chair_01_Normal.png" id="2_358ko"]
+
+[resource]
+albedo_texture = ExtResource("1_pniqi")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_358ko")

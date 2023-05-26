@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://x65cq1udsqsf"]
+
+[ext_resource type="PackedScene" uid="uid://ftmej0jfgqkv" path="res://Meshes/Section01/S1B1.glb" id="1_owbjw"]
+[ext_resource type="Material" uid="uid://bkfpmtw5ajbr7" path="res://Materials/Fabric/Curtains.tres" id="2_02hjk"]
+[ext_resource type="Material" uid="uid://bvai3l055rxts" path="res://Materials/Stone/Concrete_Plaster.tres" id="2_25upj"]
+[ext_resource type="Material" uid="uid://bw1jumvewrd6k" path="res://Materials/Stone/Concrete_Smooth.tres" id="2_o64gk"]
+[ext_resource type="Material" uid="uid://hy1wu02oyqvf" path="res://Materials/Stone/Brick_Large_Beige.tres" id="2_odyvn"]
+[ext_resource type="Material" uid="uid://dhaisjcg257al" path="res://Materials/Stone/Concrete_Grooved.tres" id="4_2hd2h"]
+[ext_resource type="Material" uid="uid://cevqin48dcqbi" path="res://Materials/Wood/Wood_Painted_Green.tres" id="4_t7bvr"]
+[ext_resource type="Material" uid="uid://bs54qrhaga2nh" path="res://Materials/Metal/Black_Metal.tres" id="6_dx1p8"]
+[ext_resource type="Material" uid="uid://cl2l1r3amdbqh" path="res://Materials/Metal/Bronze.tres" id="6_oog21"]
+[ext_resource type="Material" uid="uid://bal8eo7owcg2n" path="res://Materials/Stone/Concrete.tres" id="10_bx4ja"]
+
+[node name="S1B1" instance=ExtResource("1_owbjw")]
+
+[node name="Bistro_Research_Exterior_paris_building_07_10__5343" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_02hjk")
+
+[node name="Bistro_Research_Exterior_paris_building_07_11__5345" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_odyvn")
+
+[node name="Bistro_Research_Exterior_paris_building_07_12__5347" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_o64gk")
+
+[node name="Bistro_Research_Exterior_paris_building_07_1__5349" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_o64gk")
+
+[node name="Bistro_Research_Exterior_paris_building_07_2__5351" parent="." index="4"]
+surface_material_override/0 = ExtResource("4_t7bvr")
+
+[node name="Bistro_Research_Exterior_paris_building_07_3__5353" parent="." index="5"]
+surface_material_override/0 = ExtResource("6_oog21")
+
+[node name="Bistro_Research_Exterior_paris_building_07_4__5355" parent="." index="6"]
+surface_material_override/0 = ExtResource("4_2hd2h")
+
+[node name="Bistro_Research_Exterior_paris_building_07_5__5357" parent="." index="7"]
+surface_material_override/0 = ExtResource("6_dx1p8")
+
+[node name="Bistro_Research_Exterior_paris_building_07_7__5361" parent="." index="8"]
+surface_material_override/0 = ExtResource("2_25upj")
+
+[node name="Bistro_Research_Exterior_paris_building_07_8__5363" parent="." index="9"]
+surface_material_override/0 = ExtResource("10_bx4ja")

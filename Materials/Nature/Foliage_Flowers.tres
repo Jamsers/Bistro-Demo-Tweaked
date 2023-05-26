@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://47a1fxw6b4x1"]
+
+[ext_resource type="Texture2D" path="res://Textures/Nature/Foliage_Flowers_BaseColor.dds" id="1_5valn"]
+[ext_resource type="Texture2D" uid="uid://t0j0m804woay" path="res://Textures/Nature/Foliage_Flowers_Normal.png" id="2_8c7jx"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_5valn")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_8c7jx")

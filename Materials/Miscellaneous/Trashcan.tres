@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://6dpxfs7fuhqq"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/Trashcan_BaseColor.dds" id="1_nf8t0"]
+[ext_resource type="Texture2D" uid="uid://q2u18i0reaua" path="res://Textures/Miscellaneous/Trashcan_Normal.png" id="2_uxnw0"]
+
+[resource]
+albedo_texture = ExtResource("1_nf8t0")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_uxnw0")

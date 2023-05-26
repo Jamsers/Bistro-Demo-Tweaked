@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://uypaq6gdtd36"]
+
+[ext_resource type="Texture2D" path="res://Textures/Miscellaneous/Vespa_Odometer_BaseColor.dds" id="1_4hhi6"]
+[ext_resource type="Texture2D" uid="uid://dyxnsmp0772xd" path="res://Textures/Miscellaneous/Vespa_Odometer_Normal.png" id="2_j1hgg"]
+
+[resource]
+albedo_texture = ExtResource("1_4hhi6")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_j1hgg")
+ao_texture_channel = 3

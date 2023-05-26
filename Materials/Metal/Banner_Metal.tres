@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cjdturllbv1g1"]
+
+[ext_resource type="Texture2D" path="res://Textures/Metal/Banner_Metal_BaseColor.dds" id="1_43bgh"]
+[ext_resource type="Texture2D" uid="uid://dt7cuhs88tsqt" path="res://Textures/Metal/Banner_Metal_Normal.png" id="2_407yf"]
+
+[resource]
+albedo_texture = ExtResource("1_43bgh")
+metallic = 1.0
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_407yf")

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dbhonoml2uada"]
+
+[ext_resource type="Texture2D" path="res://Textures/Lights/Streetlight_Chains_BaseColor.dds" id="1_mfn0j"]
+[ext_resource type="Texture2D" uid="uid://ds0f8ibm0vfph" path="res://Textures/Lights/Streetlight_Chains_Normal.png" id="2_mgyba"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_mfn0j")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_mgyba")

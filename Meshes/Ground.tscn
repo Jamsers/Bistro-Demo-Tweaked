@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bumtkl0ox2bxf"]
+
+[ext_resource type="PackedScene" uid="uid://bktru7bm6maat" path="res://Meshes/Ground.glb" id="1_y6r4x"]
+[ext_resource type="Material" uid="uid://bmt2o3dfnoopb" path="res://Materials/Ground/Pavement_Curbstones.tres" id="2_6badn"]
+[ext_resource type="Material" uid="uid://b1crws0o8dm3c" path="res://Materials/Ground/Pavement_Cobblestone_Small.tres" id="3_ddkh6"]
+[ext_resource type="Material" uid="uid://cyxqjuvathim8" path="res://Materials/Ground/Pavement_Cobblestone_Big.tres" id="3_sqqad"]
+[ext_resource type="Material" uid="uid://cqvv0g76deyid" path="res://Materials/Ground/Pavement_Cobblestone_Wet.tres" id="4_3n1pe"]
+[ext_resource type="Material" uid="uid://cvyv4xmbk2x5b" path="res://Materials/Ground/Pavement_Cobblestone_02.tres" id="4_vjvrw"]
+[ext_resource type="Material" uid="uid://yyjlkr1o1s61" path="res://Materials/Ground/Pavement_Brick.tres" id="5_i3wwk"]
+[ext_resource type="Material" uid="uid://dhtdy1tq3oauo" path="res://Materials/Ground/Pavement_Manhole_Cover.tres" id="8_on8pq"]
+
+[node name="Ground" instance=ExtResource("1_y6r4x")]
+
+[node name="Bistro_Research_Exterior_Paris_Street_13_NormalFix_14" parent="." index="0"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("2_6badn")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6181" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_6badn")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6183" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_ddkh6")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6185" parent="." index="3"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("3_ddkh6")
+surface_material_override/1 = ExtResource("3_sqqad")
+surface_material_override/2 = ExtResource("5_i3wwk")
+surface_material_override/3 = ExtResource("4_vjvrw")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6225" parent="." index="4"]
+lod_bias = 4.671
+surface_material_override/0 = ExtResource("4_3n1pe")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6231" parent="." index="5"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("4_3n1pe")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6251" parent="." index="6"]
+surface_material_override/0 = ExtResource("2_6badn")
+
+[node name="Manhole2" parent="." index="7"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Manhole3" parent="." index="8"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Manhole4" parent="." index="9"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Manhole5" parent="." index="10"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Manhole6" parent="." index="11"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")
+
+[node name="Manhole_2" parent="." index="12"]
+surface_material_override/0 = ExtResource("8_on8pq")
+surface_material_override/1 = ExtResource("4_3n1pe")

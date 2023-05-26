@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bij2ka0wuj53c"]
+
+[ext_resource type="PackedScene" uid="uid://d1vrx6ak04tyj" path="res://Meshes/Section02/S2Details.glb" id="1_fuvsa"]
+[ext_resource type="Material" uid="uid://s4fjd3sv062x" path="res://Materials/Nature/Foliage_Hedges.tres" id="2_sg5oo"]
+[ext_resource type="Material" uid="uid://dhhosflxqill6" path="res://Materials/Metal/Bollards.tres" id="3_g4rkb"]
+[ext_resource type="Material" uid="uid://bmjri6pfjnpig" path="res://Materials/Metal/Paris_ElectricBox.tres" id="3_h1uaf"]
+[ext_resource type="Material" uid="uid://dvrgkeqy7vbdg" path="res://Materials/Nature/Pavement_Ground_Wet.tres" id="4_e5hxk"]
+[ext_resource type="Material" uid="uid://bmt2o3dfnoopb" path="res://Materials/Ground/Pavement_Curbstones.tres" id="5_a7m0c"]
+
+[node name="S2Details" instance=ExtResource("1_fuvsa")]
+
+[node name="Bistro_Research_Exterior_bux_hedge_box_long_high5_3959" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_sg5oo")
+
+[node name="Bistro_Research_Exterior_Paris_Bollard_01A1_4135" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_g4rkb")
+
+[node name="Bistro_Research_Exterior_Paris_ElectricBox_5989" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_h1uaf")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6189" parent="." index="3"]
+surface_material_override/0 = ExtResource("4_e5hxk")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6227" parent="." index="4"]
+surface_material_override/0 = ExtResource("5_a7m0c")

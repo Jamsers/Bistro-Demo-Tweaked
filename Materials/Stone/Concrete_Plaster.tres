@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bvai3l055rxts"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/MASTER_Concrete_Plaster_BaseColor.dds" id="1_m30jn"]
+[ext_resource type="Texture2D" uid="uid://df0u4c2etl3jm" path="res://Textures/Stone/MASTER_Concrete_Plaster_Normal.png" id="2_kautt"]
+
+[resource]
+albedo_texture = ExtResource("1_m30jn")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_kautt")

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bkfpmtw5ajbr7"]
+
+[ext_resource type="Texture2D" path="res://Textures/Fabric/MASTER_Curtains_BaseColor.dds" id="1_7gkey"]
+[ext_resource type="Texture2D" uid="uid://dsrbhxl7i5jfy" path="res://Textures/Fabric/MASTER_Curtains_Normal.png" id="2_fm6qd"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_7gkey")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_fm6qd")

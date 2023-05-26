@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://blwqqrxjynm4l"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/MASTER_Brick_Large_White_BaseColor.dds" id="1_blnse"]
+[ext_resource type="Texture2D" uid="uid://chrd5xvtfn6xi" path="res://Textures/Stone/MASTER_Brick_Large_White_Normal.png" id="2_psybt"]
+
+[resource]
+albedo_texture = ExtResource("1_blnse")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_psybt")

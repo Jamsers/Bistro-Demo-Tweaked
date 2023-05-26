@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cjjq6f1e35pt3"]
+
+[ext_resource type="Texture2D" path="res://Textures/Wood/MASTER_Doors_BaseColor.dds" id="1_onp2r"]
+[ext_resource type="Texture2D" uid="uid://kd1eybs6d6eh" path="res://Textures/Wood/MASTER_Doors_Normal.png" id="2_b8254"]
+
+[resource]
+albedo_texture = ExtResource("1_onp2r")
+roughness = 0.37
+normal_enabled = true
+normal_texture = ExtResource("2_b8254")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dhaisjcg257al"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/MASTER_Concrete_Grooved_BaseColor.dds" id="1_ntyv0"]
+[ext_resource type="Texture2D" uid="uid://dw6kfh64tyq3g" path="res://Textures/Stone/MASTER_Concrete_Grooved_Normal.png" id="2_qxela"]
+
+[resource]
+albedo_texture = ExtResource("1_ntyv0")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_qxela")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccmnlkssgfvk7"]
+
+[ext_resource type="PackedScene" uid="uid://3algwkgncmeu" path="res://Meshes/Section01/S1Walls.glb" id="1_ahpjx"]
+[ext_resource type="Material" uid="uid://bal8eo7owcg2n" path="res://Materials/Stone/Concrete.tres" id="2_1qo4d"]
+[ext_resource type="Material" uid="uid://bbgxykd37frx0" path="res://Materials/Stone/Brick_Small_Red_Blend.tres" id="2_wnsar"]
+
+[node name="S1Walls" instance=ExtResource("1_ahpjx")]
+
+[node name="Bistro_Research_Exterior_paris_building_06_1__5315" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_wnsar")
+
+[node name="Bistro_Research_Exterior_paris_building_06_2__5317" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_1qo4d")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6253" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_wnsar")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6255" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_1qo4d")

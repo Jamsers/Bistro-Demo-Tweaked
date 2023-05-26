@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://jh0jhev3vfjy"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/Balcony_Ornaments_BaseColor.dds" id="1_at8ca"]
+[ext_resource type="Texture2D" uid="uid://cbd7l5wul4kcy" path="res://Textures/Stone/Balcony_Ornaments_Normal.png" id="2_eknat"]
+
+[resource]
+albedo_texture = ExtResource("1_at8ca")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_eknat")

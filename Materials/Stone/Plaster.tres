@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ckm5ncfsws8gb"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/Plaster_BaseColor.dds" id="1_17jcc"]
+[ext_resource type="Texture2D" uid="uid://cbb3oddbfy8fc" path="res://Textures/Stone/Plaster_Normal.png" id="2_qstb6"]
+
+[resource]
+albedo_texture = ExtResource("1_17jcc")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_qstb6")
