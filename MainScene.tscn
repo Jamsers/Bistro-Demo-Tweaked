@@ -142,17 +142,18 @@ material = SubResource("FogMaterial_jguo7")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
-visible = false
 light_temperature = 4250.0
 shadow_enabled = true
 
 [node name="Moon" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.877983, -0.326467, 0.350093, 0, 0.731354, 0.681998, -0.478692, 0.598783, -0.642116, -4.77862, 19.0998, 2.18251)
+visible = false
 light_intensity_lux = 400.0
 light_temperature = 9000.0
 shadow_enabled = true
 
 [node name="Night Lights" type="Node3D" parent="."]
+visible = false
 
 [node name="Bistro Spotlights" type="Node3D" parent="Night Lights"]
 
@@ -602,7 +603,6 @@ omni_range = 6.5
 omni_attenuation = 0.965936
 
 [node name="Day Lights" type="Node3D" parent="."]
-visible = false
 
 [node name="HangingLight01" type="OmniLight3D" parent="Day Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17348, 2.60211, -5.0847)
