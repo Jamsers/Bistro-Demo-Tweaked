@@ -1,8 +1,9 @@
 # Bistro-Demo-Tweaked
 Lumberyard Bistro demo for Godot, tweaked. Original can be found [here](https://github.com/godotengine/godot/issues/74965).
 
-![Screenshot](screenshots/screenshotday.jpg)
-![Screenshot](screenshots/screenshotnight.jpg)
+![Screenshot](screenshots/screenshotday.png)
+
+![Screenshot](screenshots/screenshotnight.png)
 
 ## Tweaks:
 1. Added anisotropic filtering.
