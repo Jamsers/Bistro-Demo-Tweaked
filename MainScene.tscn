@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=35 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -43,19 +43,25 @@ background_mode = 2
 sky = SubResource("Sky_ibtkt")
 tonemap_mode = 3
 tonemap_white = 8.0
-ssao_enabled = true
 ssao_detail = 2.0
+ssil_enabled = true
 sdfgi_enabled = true
-sdfgi_bounce_feedback = 0.9
+sdfgi_bounce_feedback = 1.0
+sdfgi_y_scale = 0
 glow_enabled = true
-glow_normalized = true
-glow_bloom = 0.2
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
+glow_blend_mode = 1
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
-volumetric_fog_gi_inject = 1.14
-volumetric_fog_anisotropy = 0.7
-volumetric_fog_sky_affect = 0.295
+volumetric_fog_density = 0.0
 adjustment_saturation = 1.17
+
+[sub_resource type="FogMaterial" id="FogMaterial_jguo7"]
+density = 0.0225
+height_falloff = 0.15
 
 [node name="Node3D" type="Node3D"]
 
@@ -130,6 +136,10 @@ adjustment_saturation = 1.17
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w4sm2")
 camera_attributes = ExtResource("30_pvdv2")
+
+[node name="FogVolume" type="FogVolume" parent="."]
+shape = 4
+material = SubResource("FogMaterial_jguo7")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.605197, 0.796076, 0, -0.796076, 0.605197, -4.86868, 8.33126, 2.18251)
