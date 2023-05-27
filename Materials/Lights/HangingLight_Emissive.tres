@@ -7,3 +7,4 @@ albedo_color = Color(0, 0, 0, 1)
 roughness = 0.73
 emission_enabled = true
 emission_texture = ExtResource("1_ngst5")
+texture_filter = 5

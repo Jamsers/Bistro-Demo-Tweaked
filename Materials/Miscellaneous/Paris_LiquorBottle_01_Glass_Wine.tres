@@ -5,3 +5,4 @@
 [resource]
 albedo_texture = ExtResource("1_h65p0")
 roughness = 0.73
+texture_filter = 5

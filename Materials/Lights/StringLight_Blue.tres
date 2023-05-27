@@ -8,3 +8,4 @@ roughness = 0.73
 emission_enabled = true
 emission_intensity = 800.0
 emission_texture = ExtResource("1_iet5a")
+texture_filter = 5

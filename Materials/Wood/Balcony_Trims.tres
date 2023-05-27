@@ -8,3 +8,4 @@ albedo_texture = ExtResource("1_xdia7")
 roughness = 0.37
 normal_enabled = true
 normal_texture = ExtResource("2_7xdqg")
+texture_filter = 5

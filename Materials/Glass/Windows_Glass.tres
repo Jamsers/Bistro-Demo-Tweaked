@@ -4,3 +4,4 @@
 blend_mode = 1
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.18
+texture_filter = 5

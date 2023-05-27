@@ -9,3 +9,4 @@ roughness = 0.73
 emission = Color(1, 0.686275, 0.278431, 1)
 normal_enabled = true
 normal_texture = ExtResource("2_fqg3s")
+texture_filter = 5

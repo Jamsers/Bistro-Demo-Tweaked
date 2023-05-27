@@ -9,3 +9,4 @@ metallic = 0.77
 roughness = 0.08
 emission_energy_multiplier = 3.71
 emission_texture = ExtResource("2_pbdcv")
+texture_filter = 5

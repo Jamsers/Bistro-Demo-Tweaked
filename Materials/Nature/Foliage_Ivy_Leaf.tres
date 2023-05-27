@@ -14,3 +14,4 @@ normal_enabled = true
 normal_texture = ExtResource("2_kdv48")
 backlight_enabled = true
 backlight = Color(0.54902, 0.533333, 0.235294, 1)
+texture_filter = 5

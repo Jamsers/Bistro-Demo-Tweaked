@@ -11,3 +11,4 @@ emission_enabled = true
 emission_texture = ExtResource("2_spfdb")
 normal_enabled = true
 normal_texture = ExtResource("3_sy55k")
+texture_filter = 5

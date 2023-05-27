@@ -9,3 +9,4 @@ metallic = 1.0
 roughness = 0.73
 normal_enabled = true
 normal_texture = ExtResource("2_web66")
+texture_filter = 5

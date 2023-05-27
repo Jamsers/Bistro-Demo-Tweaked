@@ -6,3 +6,4 @@
 roughness = 0.73
 normal_enabled = true
 normal_texture = ExtResource("1_5krpj")
+texture_filter = 5

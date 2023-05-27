@@ -11,3 +11,4 @@ albedo_texture = ExtResource("1_5muds")
 roughness = 0.73
 backlight_enabled = true
 backlight = Color(0.329412, 0.329412, 0.329412, 1)
+texture_filter = 5

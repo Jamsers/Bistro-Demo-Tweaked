@@ -6,3 +6,4 @@
 blend_mode = 1
 albedo_texture = ExtResource("1_qfhd6")
 roughness = 0.07
+texture_filter = 5

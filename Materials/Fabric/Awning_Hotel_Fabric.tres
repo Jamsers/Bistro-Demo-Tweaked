@@ -10,3 +10,4 @@ normal_enabled = true
 normal_texture = ExtResource("2_6wwto")
 backlight_enabled = true
 backlight = Color(0.360784, 0.360784, 0.360784, 1)
+texture_filter = 5
