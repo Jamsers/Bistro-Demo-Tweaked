@@ -141,8 +141,9 @@ shape = 4
 material = SubResource("FogMaterial_jguo7")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
+transform = Transform3D(-0.607376, -0.632775, 0.480302, 0, 0.604599, 0.79653, -0.794415, 0.483793, -0.367219, -4.86868, 8.33126, 2.18251)
 light_temperature = 4250.0
+light_angular_distance = 0.5
 shadow_enabled = true
 
 [node name="Moon" type="DirectionalLight3D" parent="."]
@@ -638,3 +639,7 @@ light_intensity_lumens = 10000.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 omni_range = 2.665
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.177441, 0.495104, -0.850522, 0, 0.864236, 0.503087, 0.984131, -0.0892682, 0.153351, -11.4528, 3.95207, -1.45137)
+fov = 50.0
