@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=48 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://cw80w12aln7jp" path="res://Meshes/Section05/S5B1_trash.tscn" id="27_74fbg"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
+[ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 2, 85.35)
@@ -84,6 +85,18 @@ adjustment_saturation = 1.17
 [sub_resource type="FogMaterial" id="FogMaterial_jguo7"]
 density = 0.0225
 height_falloff = 0.15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0oho"]
+metallic = 1.0
+roughness = 0.0
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gxu67"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72mn7"]
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -700,3 +713,29 @@ omni_range = 2.665
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82449, 0.782661, 1.10135)
+
+[node name="MaterialCubeSpecular" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6882, 0.757995, -0.406049)
+collision_layer = 2
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MaterialCubeSpecular"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MaterialCubeSpecular"]
+shape = SubResource("BoxShape3D_gxu67")
+
+[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="."]
+transform = Transform3D(0.87462, -0.25691, 0.411142, 0, 0.848048, 0.529919, -0.48481, -0.463478, 0.74172, -16.4682, 0.936772, -1.52551)
+collision_layer = 2
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MaterialCubeAlbedo"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MaterialCubeAlbedo"]
+shape = SubResource("BoxShape3D_ra78n")
