@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=36 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://del44lwpj48x1" path="res://Meshes/Section05/S5B2.tscn" id="25_tcv6v"]
 [ext_resource type="PackedScene" uid="uid://ckb5gvf1swqgf" path="res://Meshes/Section05/S5Lamps.tscn" id="26_xvk4t"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://BistroCameraAttributesPractical.tres" id="30_pvdv2"]
+[ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_6vvcb"]
 
@@ -638,3 +639,6 @@ light_intensity_lumens = 10000.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 omni_range = 2.665
+
+[node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.18, 0.78266, 3.22039)

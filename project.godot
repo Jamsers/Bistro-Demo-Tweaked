@@ -11,11 +11,14 @@ config_version=5
 [application]
 
 config/name="LumberyardBistro_Godot4"
-config/features=PackedStringArray("4.0", "Forward Plus")
+run/main_scene="res://MainScene.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+run/max_fps=139
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=2
 window/vsync/vsync_mode=0
 
 [rendering]
@@ -23,5 +26,11 @@ window/vsync/vsync_mode=0
 textures/canvas_textures/default_texture_filter=2
 lights_and_shadows/use_physical_light_units=true
 textures/default_filters/anisotropic_filtering_level=3
+environment/ssao/half_size=false
+environment/ssil/half_size=false
+anti_aliasing/screen_space_roughness_limiter/enabled=false
 textures/decals/filter=5
 textures/light_projectors/filter=5
+global_illumination/sdfgi/probe_ray_count=2
+anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_3d=2
