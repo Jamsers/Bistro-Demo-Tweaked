@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=37 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://c12tht4kio8pw" path="res://Meshes/Section05/S5B1.tscn" id="24_0u2lm"]
 [ext_resource type="PackedScene" uid="uid://del44lwpj48x1" path="res://Meshes/Section05/S5B2.tscn" id="25_tcv6v"]
 [ext_resource type="PackedScene" uid="uid://ckb5gvf1swqgf" path="res://Meshes/Section05/S5Lamps.tscn" id="26_xvk4t"]
+[ext_resource type="PackedScene" uid="uid://cw80w12aln7jp" path="res://Meshes/Section05/S5B1_trash.tscn" id="27_74fbg"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 
@@ -129,6 +130,8 @@ height_falloff = 0.15
 [node name="Section05" type="Node3D" parent="."]
 
 [node name="S5B1" parent="Section05" instance=ExtResource("24_0u2lm")]
+
+[node name="S5B1_trash" parent="Section05" instance=ExtResource("27_74fbg")]
 
 [node name="S5B2" parent="Section05" instance=ExtResource("25_tcv6v")]
 
