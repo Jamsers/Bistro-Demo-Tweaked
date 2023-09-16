@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=43 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -32,6 +32,24 @@
 [ext_resource type="PackedScene" uid="uid://cw80w12aln7jp" path="res://Meshes/Section05/S5B1_trash.tscn" id="27_74fbg"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
+size = Vector3(42.825, 2, 85.35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sixh"]
+albedo_color = Color(0.0470588, 0.0196078, 0.00392157, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_85nr3"]
+data = PackedVector3Array(-21.4125, 1, 42.675, 21.4125, 1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, -42.675, 21.4125, -1, -42.675, -21.4125, 1, -42.675, -21.4125, -1, -42.675, 21.4125, -1, -42.675, 21.4125, 1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, -42.675, 21.4125, -1, 42.675, -21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, 1, 42.675, -21.4125, 1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, 1, -42.675, 21.4125, 1, -42.675, -21.4125, -1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, -1, 42.675, 21.4125, -1, -42.675, -21.4125, -1, -42.675)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e2lxq"]
+data = PackedVector3Array(-21.4125, 1, 42.675, 21.4125, 1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, -42.675, 21.4125, -1, -42.675, -21.4125, 1, -42.675, -21.4125, -1, -42.675, 21.4125, -1, -42.675, 21.4125, 1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, -42.675, 21.4125, -1, 42.675, -21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, 1, 42.675, -21.4125, 1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, 1, -42.675, 21.4125, 1, -42.675, -21.4125, -1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, -1, 42.675, 21.4125, -1, -42.675, -21.4125, -1, -42.675)
+
+[sub_resource type="BoxMesh" id="BoxMesh_78hf1"]
+size = Vector3(53.73, 2, 69.155)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_raaq2"]
+data = PackedVector3Array(-26.865, 1, 34.5775, 26.865, 1, 34.5775, -26.865, -1, 34.5775, 26.865, 1, 34.5775, 26.865, -1, 34.5775, -26.865, -1, 34.5775, 26.865, 1, -34.5775, -26.865, 1, -34.5775, 26.865, -1, -34.5775, -26.865, 1, -34.5775, -26.865, -1, -34.5775, 26.865, -1, -34.5775, 26.865, 1, 34.5775, 26.865, 1, -34.5775, 26.865, -1, 34.5775, 26.865, 1, -34.5775, 26.865, -1, -34.5775, 26.865, -1, 34.5775, -26.865, 1, -34.5775, -26.865, 1, 34.5775, -26.865, -1, -34.5775, -26.865, 1, 34.5775, -26.865, -1, 34.5775, -26.865, -1, -34.5775, 26.865, 1, 34.5775, -26.865, 1, 34.5775, 26.865, 1, -34.5775, -26.865, 1, 34.5775, -26.865, 1, -34.5775, 26.865, 1, -34.5775, -26.865, -1, 34.5775, 26.865, -1, 34.5775, -26.865, -1, -34.5775, 26.865, -1, 34.5775, 26.865, -1, -34.5775, -26.865, -1, -34.5775)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_6vvcb"]
 
@@ -137,7 +155,39 @@ height_falloff = 0.15
 
 [node name="S5Lamps" parent="Section05" instance=ExtResource("26_xvk4t")]
 
-[node name="Ground" parent="." instance=ExtResource("3_e3k7r")]
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="Ground" parent="Ground" instance=ExtResource("3_e3k7r")]
+
+[node name="LightBlocker" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.779218, 0, -0.626753, 0, 1, 0, 0.626753, 0, 0.779218, 0.764911, -0.864954, -22.6467)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_85nr3")
+
+[node name="LightBlocker2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.613017, 0, 0.79007, 0, 1, 0, -0.79007, 0, 0.613017, -13.318, -0.864954, -9.67719)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e2lxq")
+
+[node name="LightBlocker3" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.390056, 0, 0.920791, 0, 1, 0, -0.920791, 0, 0.390056, 43.1477, -0.864954, 24.8414)
+mesh = SubResource("BoxMesh_78hf1")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_raaq2")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w4sm2")
