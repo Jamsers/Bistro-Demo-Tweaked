@@ -716,8 +716,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82449, 0.782661, 1.10135)
 
 [node name="MaterialCubeSpecular" type="RigidBody3D" parent="."]
 transform = Transform3D(0.672451, -0.342631, -0.656059, 0.453991, 0.891006, 0, 0.584553, -0.297845, 0.75471, -14.7111, 0.91317, -23.3905)
-collision_layer = 2
-collision_mask = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MaterialCubeSpecular"]
 gi_mode = 2
@@ -729,8 +727,6 @@ shape = SubResource("BoxShape3D_gxu67")
 
 [node name="MaterialCubeAlbedo" type="RigidBody3D" parent="."]
 transform = Transform3D(0.737277, 0.296159, -0.607216, 0, 0.898794, 0.438371, 0.67559, -0.323201, 0.66266, 10.0383, 0.891349, -39.0332)
-collision_layer = 2
-collision_mask = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MaterialCubeAlbedo"]
 gi_mode = 2

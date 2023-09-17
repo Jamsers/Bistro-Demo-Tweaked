@@ -76,8 +76,6 @@ points = PackedVector3Array(-0.0973405, 0.374776, 0.582752, -0.262763, 0.374776,
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6528" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61042, 0.977278, -23.7939)
-collision_layer = 2
-collision_mask = 7
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A_6528"]
 gi_mode = 2
@@ -90,8 +88,6 @@ shape = SubResource("ConvexPolygonShape3D_yfi2b")
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527_002" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36071, 1.09002, -24.4298)
-collision_layer = 2
-collision_mask = 7
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527_001" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A_6527_002"]
 gi_mode = 2
