@@ -226,6 +226,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 shape = SubResource("BoxShape3D_ra78n")
 
 [node name="UI" parent="." instance=ExtResource("32_q35xk")]
+enable_profiler = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w4sm2")

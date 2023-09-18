@@ -7,7 +7,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_ig5si"]
 font_size = 13
 
-[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box", "custom_res")]
+[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box", "fps_text", "custom_res", "profiler")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +17,9 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_24736")
 custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/HBoxContainer/LineEdit")
+fps_text = NodePath("HBoxContainer/VBoxContainer2/Profiler")
 custom_res = [NodePath("HBoxContainer/VBoxContainer/HBoxContainer"), NodePath("HBoxContainer/VBoxContainer/Label5")]
+profiler = [NodePath("HBoxContainer/VBoxContainer2/Profiler"), NodePath("HBoxContainer/VBoxContainer2/HSeparator")]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -79,7 +81,6 @@ popup/item_5/text = "Custom"
 popup/item_5/id = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 
 [node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
@@ -92,7 +93,6 @@ layout_mode = 2
 text = "p"
 
 [node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 text = "(Press ENTER to apply)"
 label_settings = SubResource("LabelSettings_ig5si")
@@ -125,7 +125,7 @@ theme_override_styles/separator = ExtResource("3_8dy65")
 layout_mode = 2
 alignment = 2
 
-[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="Profiler" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "FPS: 120
 "

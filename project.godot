@@ -13,7 +13,6 @@ config_version=5
 config/name="LumberyardBistro_Godot4"
 run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-run/max_fps=139
 config/icon="res://icon.svg"
 
 [display]
