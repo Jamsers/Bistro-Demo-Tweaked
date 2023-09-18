@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckt8i0dx43ex0"]
+[gd_scene load_steps=5 format=3 uid="uid://ckt8i0dx43ex0"]
 
 [ext_resource type="Script" path="res://Scripts/UIController.gd" id="1_24736"]
+[ext_resource type="StyleBox" uid="uid://dwtrhw44g5vck" path="res://Materials/separator_horizontal.tres" id="2_j6um5"]
+[ext_resource type="StyleBox" uid="uid://pi0oobce83ay" path="res://Materials/separator_vertical.tres" id="3_8dy65"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig5si"]
 font_size = 13
 
-[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box")]
+[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box", "custom_res")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,25 +16,29 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_24736")
-custom_res_text_box = NodePath("VBoxContainer/HBoxContainer/LineEdit")
+custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/HBoxContainer/LineEdit")
+custom_res = [NodePath("HBoxContainer/VBoxContainer/HBoxContainer"), NodePath("HBoxContainer/VBoxContainer/Label5")]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -298.0
-offset_right = 178.0
+offset_top = -215.0
+offset_right = 468.0
 offset_bottom = -8.0
 grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Time Of Day"
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 4
@@ -46,14 +52,15 @@ popup/item_2/id = 2
 popup/item_3/text = "Night"
 popup/item_3/id = 3
 
-[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Render Resolution"
 
-[node name="OptionButton2" type="OptionButton" parent="VBoxContainer"]
+[node name="OptionButton2" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 6
@@ -71,31 +78,34 @@ popup/item_4/id = 4
 popup/item_5/text = "Custom"
 popup/item_5/id = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 focus_mode = 1
 alignment = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "p"
 
-[node name="Label5" type="Label" parent="VBoxContainer"]
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "(Press ENTER to apply)"
 label_settings = SubResource("LabelSettings_ig5si")
 
-[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
 
-[node name="Label3" type="Label" parent="VBoxContainer"]
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quality Scaling"
 
-[node name="OptionButton3" type="OptionButton" parent="VBoxContainer"]
+[node name="OptionButton3" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 3
@@ -107,19 +117,26 @@ popup/item_1/id = 1
 popup/item_2/text = "High"
 popup/item_2/id = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 193.025
-offset_top = -52.0
-offset_right = 363.025
-grow_vertical = 0
-
-[node name="Label4" type="Label" parent="VBoxContainer2"]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
-text = "To capture/uncapture
-cursor, press ESC"
+theme_override_styles/separator = ExtResource("3_8dy65")
 
-[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_custom_res_input"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "FPS: 120
+"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "To capture/uncapture cursor, press ESC"
+
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/OptionButton2" to="." method="_on_res_selected"]
+[connection signal="text_submitted" from="HBoxContainer/VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_custom_res_input"]
