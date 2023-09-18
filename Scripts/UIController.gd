@@ -1,10 +1,13 @@
 extends Control
 
+@export var settings: ScalabilitySettings
 @export var enable_profiler : bool
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
 @export var custom_res: Array[Control]
 @export var profiler: Array[Control]
+@export var sun_light: DirectionalLight3D
+@export var environment: WorldEnvironment
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -22,11 +25,15 @@ func _ready():
 	refresh_performance()
 	
 	_on_res_selected(2)
+	_on_quality_selected(1)
+	
 	get_viewport().connect("size_changed", _on_viewport_resize)
 	
 	if !enable_profiler:
 		for control in profiler:
 			control.visible = false
+	
+	print(settings.health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -83,3 +90,16 @@ func _on_custom_res_input(input_string):
 	renderTargetVertical = clamp(float(input_string), LOWER_RES_LIMIT, UPPER_RES_LIMIT)
 	custom_res_text_box.text = str(int(renderTargetVertical))
 	_on_viewport_resize()
+
+func _on_quality_selected(index):
+	match index:
+		0:
+			apply_settings(settings.low)
+		1:
+			apply_settings(settings.normal)
+		2:
+			apply_settings(settings.high)
+
+func apply_settings(settings):
+	sun_light.light_angular_distance = settings.sun_angle
+	environment.environment.ssr_enabled = settings.ssr_enabled
