@@ -193,10 +193,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
 shape = SubResource("BoxShape3D_ra78n")
 
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment") instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
+night_lights = NodePath("../Night Lights")
+day_lights = NodePath("../Day Lights")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("33_vhloy")
@@ -208,16 +210,10 @@ material = ExtResource("35_hsy4k")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
+light_intensity_lux = 75000.0
 light_temperature = 4250.0
 shadow_enabled = true
-directional_shadow_pancake_size = 30.0
-
-[node name="Moon" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.877983, -0.326467, 0.350093, 0, 0.731354, 0.681998, -0.478692, 0.598783, -0.642116, -4.77862, 19.0998, 2.18251)
-visible = false
-light_intensity_lux = 400.0
-light_temperature = 9000.0
-shadow_enabled = true
+directional_shadow_pancake_size = 40.0
 
 [node name="Night Lights" type="Node3D" parent="."]
 visible = false

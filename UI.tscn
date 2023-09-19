@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckt8i0dx43ex0"]
+[gd_scene load_steps=7 format=3 uid="uid://ckt8i0dx43ex0"]
 
 [ext_resource type="Script" path="res://Scripts/UIController.gd" id="1_24736"]
 [ext_resource type="Resource" uid="uid://cn0mwoakbtfhb" path="res://ScalabilitySettings.tres" id="2_5o1hx"]
 [ext_resource type="StyleBox" uid="uid://dwtrhw44g5vck" path="res://Materials/separator_horizontal.tres" id="2_j6um5"]
 [ext_resource type="StyleBox" uid="uid://pi0oobce83ay" path="res://Materials/separator_vertical.tres" id="3_8dy65"]
+[ext_resource type="Resource" uid="uid://bhft8dubbqr2h" path="res://LightingScenarios.tres" id="3_jfefo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig5si"]
 font_size = 13
@@ -18,6 +19,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_24736")
 settings = ExtResource("2_5o1hx")
+lighting_scenarios = ExtResource("3_jfefo")
 custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input")
 fps_text = NodePath("HBoxContainer/VBoxContainer2/profiler")
 custom_res = [NodePath("HBoxContainer/VBoxContainer/custom_resolution"), NodePath("HBoxContainer/VBoxContainer/custom_resolution_apply_label")]
@@ -142,6 +144,7 @@ theme_override_styles/separator = ExtResource("2_j6um5")
 layout_mode = 2
 text = "To capture/uncapture cursor, press ESC"
 
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/time_of_day_select" to="." method="_on_time_selected"]
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/resolution_select" to="." method="_on_res_selected"]
 [connection signal="text_submitted" from="HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input" to="." method="_on_custom_res_input"]
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/quality_select" to="." method="_on_quality_selected"]

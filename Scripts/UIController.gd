@@ -1,6 +1,7 @@
 extends Control
 
 @export var settings: ScalabilitySettings
+@export var lighting_scenarios: LightingScenarios
 @export var enable_profiler : bool
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
@@ -8,6 +9,8 @@ extends Control
 @export var profiler: Array[Control]
 @export var sun_light: DirectionalLight3D
 @export var environment: WorldEnvironment
+@export var night_lights: Node3D
+@export var day_lights: Node3D
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -25,6 +28,7 @@ func _ready():
 	
 	_on_res_selected(3)
 	_on_quality_selected(1)
+	_on_time_selected(2)
 	
 	get_viewport().connect("size_changed", _on_viewport_resize)
 	
@@ -108,6 +112,24 @@ func _on_quality_selected(index):
 		2:
 			apply_settings(settings.high)
 
+func _on_time_selected(index):
+	night_lights.visible = false
+	day_lights.visible = false
+	
+	match index:
+		0:
+			apply_time(lighting_scenarios.dusk)
+			day_lights.visible = true
+		1:
+			apply_time(lighting_scenarios.noon)
+			day_lights.visible = true
+		2:
+			apply_time(lighting_scenarios.afternoon)
+			day_lights.visible = true
+		3:
+			apply_time(lighting_scenarios.night)
+			night_lights.visible = false
+
 func apply_settings(settings):
 	sun_light.light_angular_distance = settings.sun_angle
 	environment.environment.ssr_enabled = settings.ssr
@@ -116,3 +138,9 @@ func apply_settings(settings):
 	environment.environment.sdfgi_enabled = settings.sdfgi
 	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
+
+func apply_time(lighting):
+	sun_light.light_intensity_lux = lighting.lux
+	sun_light.light_temperature = lighting.temp
+	sun_light.quaternion = lighting.rotation
+	environment.environment.background_intensity = lighting.sky_nits

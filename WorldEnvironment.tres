@@ -7,6 +7,7 @@ sky_material = ExtResource("1_nfxgk")
 
 [resource]
 background_mode = 2
+background_intensity = 25000.0
 sky = SubResource("Sky_u3ie7")
 tonemap_mode = 3
 tonemap_white = 6.0
