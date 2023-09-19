@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=47 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -29,38 +29,43 @@
 [ext_resource type="PackedScene" uid="uid://c12tht4kio8pw" path="res://Meshes/Section05/S5B1.tscn" id="24_0u2lm"]
 [ext_resource type="PackedScene" uid="uid://del44lwpj48x1" path="res://Meshes/Section05/S5B2.tscn" id="25_tcv6v"]
 [ext_resource type="PackedScene" uid="uid://ckb5gvf1swqgf" path="res://Meshes/Section05/S5Lamps.tscn" id="26_xvk4t"]
+[ext_resource type="PackedScene" uid="uid://cw80w12aln7jp" path="res://Meshes/Section05/S5B1_trash.tscn" id="27_74fbg"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://BistroCameraAttributesPractical.tres" id="30_pvdv2"]
+[ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
+[ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://UI.tscn" id="32_q35xk"]
+[ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
+[ext_resource type="Environment" uid="uid://bevtu3gehmb2j" path="res://WorldEnvironment.tres" id="33_vhloy"]
+[ext_resource type="Material" uid="uid://elgkttuqw3r" path="res://Materials/FogMaterial.tres" id="35_hsy4k"]
 
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_6vvcb"]
+[sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
+size = Vector3(42.825, 2, 85.35)
 
-[sub_resource type="Sky" id="Sky_ibtkt"]
-sky_material = SubResource("PhysicalSkyMaterial_6vvcb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sixh"]
+albedo_color = Color(0.0470588, 0.0196078, 0.00392157, 1)
 
-[sub_resource type="Environment" id="Environment_w4sm2"]
-background_mode = 2
-sky = SubResource("Sky_ibtkt")
-tonemap_mode = 3
-tonemap_white = 8.0
-ssao_detail = 2.0
-ssil_enabled = true
-sdfgi_enabled = true
-sdfgi_bounce_feedback = 1.0
-sdfgi_y_scale = 0
-glow_enabled = true
-glow_levels/1 = 1.0
-glow_levels/2 = 1.0
-glow_levels/4 = 1.0
-glow_levels/6 = 1.0
-glow_levels/7 = 1.0
-glow_strength = 0.83
-glow_blend_mode = 1
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-adjustment_saturation = 1.17
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_85nr3"]
+data = PackedVector3Array(-21.4125, 1, 42.675, 21.4125, 1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, -42.675, 21.4125, -1, -42.675, -21.4125, 1, -42.675, -21.4125, -1, -42.675, 21.4125, -1, -42.675, 21.4125, 1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, -42.675, 21.4125, -1, 42.675, -21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, 1, 42.675, -21.4125, 1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, 1, -42.675, 21.4125, 1, -42.675, -21.4125, -1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, -1, 42.675, 21.4125, -1, -42.675, -21.4125, -1, -42.675)
 
-[sub_resource type="FogMaterial" id="FogMaterial_jguo7"]
-density = 0.0225
-height_falloff = 0.15
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e2lxq"]
+data = PackedVector3Array(-21.4125, 1, 42.675, 21.4125, 1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, -42.675, 21.4125, -1, -42.675, -21.4125, 1, -42.675, -21.4125, -1, -42.675, 21.4125, -1, -42.675, 21.4125, 1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, 42.675, 21.4125, 1, -42.675, 21.4125, -1, -42.675, 21.4125, -1, 42.675, -21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, -42.675, -21.4125, 1, 42.675, -21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, 1, 42.675, -21.4125, 1, 42.675, 21.4125, 1, -42.675, -21.4125, 1, 42.675, -21.4125, 1, -42.675, 21.4125, 1, -42.675, -21.4125, -1, 42.675, 21.4125, -1, 42.675, -21.4125, -1, -42.675, 21.4125, -1, 42.675, 21.4125, -1, -42.675, -21.4125, -1, -42.675)
+
+[sub_resource type="BoxMesh" id="BoxMesh_78hf1"]
+size = Vector3(53.73, 2, 69.155)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_raaq2"]
+data = PackedVector3Array(-26.865, 1, 34.5775, 26.865, 1, 34.5775, -26.865, -1, 34.5775, 26.865, 1, 34.5775, 26.865, -1, 34.5775, -26.865, -1, 34.5775, 26.865, 1, -34.5775, -26.865, 1, -34.5775, 26.865, -1, -34.5775, -26.865, 1, -34.5775, -26.865, -1, -34.5775, 26.865, -1, -34.5775, 26.865, 1, 34.5775, 26.865, 1, -34.5775, 26.865, -1, 34.5775, 26.865, 1, -34.5775, 26.865, -1, -34.5775, 26.865, -1, 34.5775, -26.865, 1, -34.5775, -26.865, 1, 34.5775, -26.865, -1, -34.5775, -26.865, 1, 34.5775, -26.865, -1, 34.5775, -26.865, -1, -34.5775, 26.865, 1, 34.5775, -26.865, 1, 34.5775, 26.865, 1, -34.5775, -26.865, 1, 34.5775, -26.865, 1, -34.5775, 26.865, 1, -34.5775, -26.865, -1, 34.5775, 26.865, -1, 34.5775, -26.865, -1, -34.5775, 26.865, -1, 34.5775, 26.865, -1, -34.5775, -26.865, -1, -34.5775)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0oho"]
+metallic = 1.0
+roughness = 0.0
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gxu67"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72mn7"]
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -126,31 +131,88 @@ height_falloff = 0.15
 
 [node name="S5B1" parent="Section05" instance=ExtResource("24_0u2lm")]
 
+[node name="S5B1_trash" parent="Section05" instance=ExtResource("27_74fbg")]
+
 [node name="S5B2" parent="Section05" instance=ExtResource("25_tcv6v")]
 
 [node name="S5Lamps" parent="Section05" instance=ExtResource("26_xvk4t")]
 
-[node name="Ground" parent="." instance=ExtResource("3_e3k7r")]
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="Ground" parent="Ground" instance=ExtResource("3_e3k7r")]
+
+[node name="LightBlocker" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.779218, 0, -0.626753, 0, 1, 0, 0.626753, 0, 0.779218, 0.764911, -0.864954, -22.6467)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_85nr3")
+
+[node name="LightBlocker2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.613017, 0, 0.79007, 0, 1, 0, -0.79007, 0, 0.613017, -13.318, -0.864954, -9.67719)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e2lxq")
+
+[node name="LightBlocker3" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.390056, 0, 0.920791, 0, 1, 0, -0.920791, 0, 0.390056, 43.1477, -0.864954, 24.8414)
+mesh = SubResource("BoxMesh_78hf1")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_raaq2")
+
+[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Ground"]
+transform = Transform3D(0.672451, -0.342631, -0.656059, 0.453991, 0.891006, 0, 0.584553, -0.297845, 0.75471, -14.7111, 0.91317, -23.3905)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeSpecular"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeSpecular"]
+shape = SubResource("BoxShape3D_gxu67")
+
+[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Ground"]
+transform = Transform3D(0.737277, 0.296159, -0.607216, 0, 0.898794, 0.438371, 0.67559, -0.323201, 0.66266, 10.0383, 0.891349, -39.0332)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeAlbedo"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
+shape = SubResource("BoxShape3D_ra78n")
+
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights") instance=ExtResource("32_q35xk")]
+sun_light = NodePath("../Sun")
+environment = NodePath("../WorldEnvironment")
+night_lights = NodePath("../Night Lights")
+day_lights = NodePath("../Day Lights")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_w4sm2")
+environment = ExtResource("33_vhloy")
 camera_attributes = ExtResource("30_pvdv2")
 
 [node name="FogVolume" type="FogVolume" parent="."]
 shape = 4
-material = SubResource("FogMaterial_jguo7")
+material = ExtResource("35_hsy4k")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
+light_intensity_lux = 75000.0
 light_temperature = 4250.0
 shadow_enabled = true
-
-[node name="Moon" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.877983, -0.326467, 0.350093, 0, 0.731354, 0.681998, -0.478692, 0.598783, -0.642116, -4.77862, 19.0998, 2.18251)
-visible = false
-light_intensity_lux = 400.0
-light_temperature = 9000.0
-shadow_enabled = true
+directional_shadow_pancake_size = 40.0
 
 [node name="Night Lights" type="Node3D" parent="."]
 visible = false
@@ -638,3 +700,6 @@ light_intensity_lumens = 10000.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 omni_range = 2.665
+
+[node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82449, 0.782661, 1.10135)

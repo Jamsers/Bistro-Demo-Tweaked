@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bl717yflwnnv6"
+path.s3tc="res://.godot/imported/mannequiny-0.3.0_Piel_BaseColor.png-6c0bee974bbcaec1b3dc6cf50ee23e6f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Textures/mannequiny-0.3.0_Piel_BaseColor.png"
+dest_files=["res://.godot/imported/mannequiny-0.3.0_Piel_BaseColor.png-6c0bee974bbcaec1b3dc6cf50ee23e6f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
