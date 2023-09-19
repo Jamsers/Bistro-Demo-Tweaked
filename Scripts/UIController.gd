@@ -20,7 +20,6 @@ var draw_calls
 var memory
 var vram
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	refresh_performance()
 	
@@ -33,7 +32,6 @@ func _ready():
 		for control in profiler:
 			control.visible = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 

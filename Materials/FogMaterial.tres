@@ -1,0 +1,5 @@
+[gd_resource type="FogMaterial" format=3 uid="uid://elgkttuqw3r"]
+
+[resource]
+density = 0.0225
+height_falloff = 0.15

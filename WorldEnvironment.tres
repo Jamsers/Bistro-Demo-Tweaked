@@ -1,0 +1,39 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bevtu3gehmb2j"]
+
+[ext_resource type="Material" uid="uid://kgrcufewquxd" path="res://Materials/SkyMaterial.tres" id="1_nfxgk"]
+
+[sub_resource type="Sky" id="Sky_u3ie7"]
+sky_material = ExtResource("1_nfxgk")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_u3ie7")
+tonemap_mode = 3
+tonemap_white = 6.0
+ssr_enabled = true
+ssr_max_steps = 128
+ssr_fade_in = 0.05
+ssr_fade_out = 1.5
+ssao_radius = 1.2
+ssao_intensity = 2.3
+ssao_horizon = 0.0
+ssao_sharpness = 1.0
+ssil_enabled = true
+ssil_radius = 2.3
+ssil_intensity = 1.1
+ssil_sharpness = 1.0
+sdfgi_enabled = true
+sdfgi_bounce_feedback = 1.0
+sdfgi_y_scale = 0
+glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
+glow_intensity = 1.0
+glow_strength = 0.6
+glow_blend_mode = 1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+adjustment_saturation = 1.17
