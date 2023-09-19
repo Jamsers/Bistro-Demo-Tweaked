@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="LightingScenarios" load_steps=7 format=3 uid="uid://bhft8dubbqr2h"]
+
+[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_j2wa8"]
+[ext_resource type="Script" path="res://Scripts/LightingScenarios.gd" id="1_whetd"]
+
+[sub_resource type="Resource" id="Resource_wmn5y"]
+script = ExtResource("1_j2wa8")
+rotation = Quaternion(-0.4391, -0.140892, -0.0699394, 0.884561)
+temp = 4250.0
+lux = 75000.0
+sky_nits = 30000.0
+
+[sub_resource type="Resource" id="Resource_kk6fo"]
+script = ExtResource("1_j2wa8")
+rotation = Quaternion(-0.251901, 0, 0, 0.967753)
+temp = 2000.0
+lux = 50000.0
+sky_nits = 30000.0
+
+[sub_resource type="Resource" id="Resource_jdngv"]
+script = ExtResource("1_j2wa8")
+rotation = Quaternion(-0.762904, -0.000553288, 0.0359532, 0.645511)
+temp = 15000.0
+lux = 900.0
+sky_nits = 3000.0
+
+[sub_resource type="Resource" id="Resource_1garo"]
+script = ExtResource("1_j2wa8")
+rotation = Quaternion(-0.674148, 0, 0, 0.738597)
+temp = 6500.0
+lux = 100000.0
+sky_nits = 30000.0
+
+[resource]
+script = ExtResource("1_whetd")
+dusk = SubResource("Resource_kk6fo")
+noon = SubResource("Resource_1garo")
+afternoon = SubResource("Resource_wmn5y")
+night = SubResource("Resource_jdngv")
