@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=47 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
+[ext_resource type="Environment" uid="uid://bevtu3gehmb2j" path="res://WorldEnvironment.tres" id="33_vhloy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 2, 85.35)
@@ -64,35 +65,6 @@ texture_filter = 5
 texture_filter = 5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
-
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_6vvcb"]
-
-[sub_resource type="Sky" id="Sky_ibtkt"]
-sky_material = SubResource("PhysicalSkyMaterial_6vvcb")
-
-[sub_resource type="Environment" id="Environment_w4sm2"]
-background_mode = 2
-sky = SubResource("Sky_ibtkt")
-tonemap_mode = 3
-tonemap_white = 6.0
-ssr_enabled = true
-ssr_max_steps = 512
-ssil_enabled = true
-sdfgi_enabled = true
-sdfgi_bounce_feedback = 1.0
-sdfgi_y_scale = 0
-glow_enabled = true
-glow_levels/1 = 1.0
-glow_levels/2 = 1.0
-glow_levels/4 = 1.0
-glow_levels/6 = 1.0
-glow_levels/7 = 1.0
-glow_intensity = 1.0
-glow_strength = 0.6
-glow_blend_mode = 1
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-adjustment_saturation = 1.17
 
 [sub_resource type="FogMaterial" id="FogMaterial_jguo7"]
 density = 0.0225
@@ -230,7 +202,7 @@ sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_w4sm2")
+environment = ExtResource("33_vhloy")
 camera_attributes = ExtResource("30_pvdv2")
 
 [node name="FogVolume" type="FogVolume" parent="."]
