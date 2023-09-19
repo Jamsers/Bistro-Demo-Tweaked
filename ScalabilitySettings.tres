@@ -10,7 +10,7 @@ ssr = true
 ssao = false
 ssil = true
 sdfgi = true
-msaa = 1
+msaa = 0
 fxaa = 1
 
 [sub_resource type="Resource" id="Resource_qtm60"]

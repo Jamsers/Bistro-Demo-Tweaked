@@ -18,10 +18,10 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_24736")
 settings = ExtResource("2_5o1hx")
-custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/HBoxContainer/LineEdit")
-fps_text = NodePath("HBoxContainer/VBoxContainer2/Profiler")
-custom_res = [NodePath("HBoxContainer/VBoxContainer/HBoxContainer"), NodePath("HBoxContainer/VBoxContainer/Label5")]
-profiler = [NodePath("HBoxContainer/VBoxContainer2/Profiler"), NodePath("HBoxContainer/VBoxContainer2/HSeparator")]
+custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input")
+fps_text = NodePath("HBoxContainer/VBoxContainer2/profiler")
+custom_res = [NodePath("HBoxContainer/VBoxContainer/custom_resolution"), NodePath("HBoxContainer/VBoxContainer/custom_resolution_apply_label")]
+profiler = [NodePath("HBoxContainer/VBoxContainer2/profiler"), NodePath("HBoxContainer/VBoxContainer2/HSeparator")]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -38,11 +38,11 @@ grow_vertical = 0
 layout_mode = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="time_of_day_label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Time Of Day"
 
-[node name="OptionButton" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
+[node name="time_of_day_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 4
@@ -60,11 +60,11 @@ popup/item_3/id = 3
 layout_mode = 2
 theme_override_styles/separator = ExtResource("2_j6um5")
 
-[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="resolution_label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Render Resolution"
 
-[node name="OptionButton2" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
+[node name="resolution_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 7
@@ -84,19 +84,19 @@ popup/item_5/id = 5
 popup/item_6/text = "Custom"
 popup/item_6/id = 6
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="custom_resolution" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="custom_resolution_input" type="LineEdit" parent="HBoxContainer/VBoxContainer/custom_resolution"]
 layout_mode = 2
 focus_mode = 1
 alignment = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="p_label" type="Label" parent="HBoxContainer/VBoxContainer/custom_resolution"]
 layout_mode = 2
 text = "p"
 
-[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="custom_resolution_apply_label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "(Press ENTER to apply)"
 label_settings = SubResource("LabelSettings_ig5si")
@@ -105,11 +105,11 @@ label_settings = SubResource("LabelSettings_ig5si")
 layout_mode = 2
 theme_override_styles/separator = ExtResource("2_j6um5")
 
-[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="quality_label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quality Scaling"
 
-[node name="OptionButton3" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
+[node name="quality_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
 item_count = 3
@@ -129,7 +129,7 @@ theme_override_styles/separator = ExtResource("3_8dy65")
 layout_mode = 2
 alignment = 2
 
-[node name="Profiler" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="profiler" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "FPS: 120
 "
@@ -138,10 +138,10 @@ text = "FPS: 120
 layout_mode = 2
 theme_override_styles/separator = ExtResource("2_j6um5")
 
-[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="hint_label" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "To capture/uncapture cursor, press ESC"
 
-[connection signal="item_selected" from="HBoxContainer/VBoxContainer/OptionButton2" to="." method="_on_res_selected"]
-[connection signal="text_submitted" from="HBoxContainer/VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_custom_res_input"]
-[connection signal="item_selected" from="HBoxContainer/VBoxContainer/OptionButton3" to="." method="_on_quality_selected"]
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/resolution_select" to="." method="_on_res_selected"]
+[connection signal="text_submitted" from="HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input" to="." method="_on_custom_res_input"]
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/quality_select" to="." method="_on_quality_selected"]
