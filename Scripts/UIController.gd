@@ -14,8 +14,10 @@ extends Control
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
+const TIME_CHANGE_DURATION = 4.0
 
 var renderTargetVertical = 1080.0
+var is_time_changing = false
 
 var fps
 var frametime
@@ -128,7 +130,7 @@ func _on_time_selected(index):
 			day_lights.visible = true
 		3:
 			apply_time(lighting_scenarios.night)
-			night_lights.visible = false
+			night_lights.visible = true
 
 func apply_settings(settings):
 	sun_light.light_angular_distance = settings.sun_angle
@@ -140,7 +142,33 @@ func apply_settings(settings):
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
 
 func apply_time(lighting):
-	sun_light.light_intensity_lux = lighting.lux
-	sun_light.light_temperature = lighting.temp
-	sun_light.quaternion = lighting.rotation
-	environment.environment.background_intensity = lighting.sky_nits
+	is_time_changing = false
+	
+	await get_tree().process_frame
+	
+	var time = Time.get_ticks_msec() / 1000.0
+	var orig_lux = sun_light.light_intensity_lux
+	var orig_light = sun_light.light_temperature
+	var orig_rot = sun_light.quaternion
+	var orig_sky = environment.environment.background_intensity
+	
+	is_time_changing = true
+	
+	while is_time_changing:
+		var current_time = Time.get_ticks_msec() / 1000.0
+		var lerp = (current_time - time)/TIME_CHANGE_DURATION
+		if lerp > 1:
+			sun_light.light_intensity_lux = lighting.lux
+			sun_light.light_temperature = lighting.temp
+			sun_light.quaternion = lighting.rotation
+			environment.environment.background_intensity = lighting.sky_nits
+			is_time_changing = false
+			break
+		sun_light.light_intensity_lux = lerp(orig_lux, lighting.lux, easeInOutSine(lerp))
+		sun_light.light_temperature = lerp(orig_light, lighting.temp, easeInOutSine(lerp))
+		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
+		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
+		await get_tree().process_frame
+
+func easeInOutSine(lerp):
+	return -(cos(PI * lerp) - 1) / 2;
