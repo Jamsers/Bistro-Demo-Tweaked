@@ -77,7 +77,6 @@ tonemap_mode = 3
 tonemap_white = 6.0
 ssr_enabled = true
 ssr_max_steps = 512
-ssao_detail = 2.0
 ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_bounce_feedback = 1.0
@@ -89,7 +88,7 @@ glow_levels/4 = 1.0
 glow_levels/6 = 1.0
 glow_levels/7 = 1.0
 glow_intensity = 1.0
-glow_strength = 0.65
+glow_strength = 0.6
 glow_blend_mode = 1
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
@@ -225,8 +224,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
 shape = SubResource("BoxShape3D_ra78n")
 
-[node name="UI" parent="." instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment") instance=ExtResource("32_q35xk")]
 enable_profiler = true
+sun_light = NodePath("../Sun")
+environment = NodePath("../WorldEnvironment")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w4sm2")
@@ -239,7 +240,6 @@ material = SubResource("FogMaterial_jguo7")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
 light_temperature = 4250.0
-light_angular_distance = 0.5
 shadow_enabled = true
 directional_shadow_pancake_size = 30.0
 

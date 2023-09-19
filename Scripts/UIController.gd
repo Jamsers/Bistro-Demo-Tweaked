@@ -24,7 +24,7 @@ var vram
 func _ready():
 	refresh_performance()
 	
-	_on_res_selected(2)
+	_on_res_selected(3)
 	_on_quality_selected(1)
 	
 	get_viewport().connect("size_changed", _on_viewport_resize)
@@ -32,14 +32,19 @@ func _ready():
 	if !enable_profiler:
 		for control in profiler:
 			control.visible = false
-	
-	print(settings.health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_viewport_resize():
+	if renderTargetVertical == 0.0:
+		RenderingServer.viewport_set_scaling_3d_scale(get_viewport().get_viewport_rid(), 1)
+		return
+	
+	RenderingServer.viewport_set_scaling_3d_scale(get_viewport().get_viewport_rid(), renderTargetVertical/float(get_resolution_actual()))
+
+func get_resolution_actual():
 	var yToUse
 	var project_width = float(ProjectSettings.get_setting("display/window/size/viewport_width"))
 	var project_height = float(ProjectSettings.get_setting("display/window/size/viewport_height"))
@@ -49,7 +54,7 @@ func _on_viewport_resize():
 		yToUse = (viewport_width/project_width) * project_height
 	else:
 		yToUse = viewport_height
-	RenderingServer.viewport_set_scaling_3d_scale(get_viewport().get_viewport_rid(), renderTargetVertical/yToUse)
+	return int(yToUse)
 
 func refresh_performance():
 	fps = "FPS: " + str(Performance.get_monitor(Performance.TIME_FPS))
@@ -65,21 +70,26 @@ func refresh_performance():
 	refresh_performance()
 
 func _on_res_selected(index):
-	if index == 5:
-		custom_res_text_box.text = str(int(renderTargetVertical))
+	if index == 6:
+		if renderTargetVertical == 0.0:
+			custom_res_text_box.text = str(get_resolution_actual())
+		else:
+			custom_res_text_box.text = str(int(renderTargetVertical))
 		for control in custom_res:
 			control.visible = true
 	else:
 		match index:
 			0:
-				renderTargetVertical = 480.0
+				renderTargetVertical = 0.0
 			1:
-				renderTargetVertical = 720.0
+				renderTargetVertical = 480.0
 			2:
-				renderTargetVertical = 1080.0
+				renderTargetVertical = 720.0
 			3:
-				renderTargetVertical = 1440.0
+				renderTargetVertical = 1080.0
 			4:
+				renderTargetVertical = 1440.0
+			5:
 				renderTargetVertical = 2160.0
 		_on_viewport_resize()
 		for control in custom_res:
@@ -102,4 +112,9 @@ func _on_quality_selected(index):
 
 func apply_settings(settings):
 	sun_light.light_angular_distance = settings.sun_angle
-	environment.environment.ssr_enabled = settings.ssr_enabled
+	environment.environment.ssr_enabled = settings.ssr
+	environment.environment.ssao_enabled = settings.ssao
+	environment.environment.ssil_enabled = settings.ssil
+	environment.environment.sdfgi_enabled = settings.sdfgi
+	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
+	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
