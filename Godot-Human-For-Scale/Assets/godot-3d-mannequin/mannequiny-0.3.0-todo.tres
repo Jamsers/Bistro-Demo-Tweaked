@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://drg8i6up007s3"]
+
+[ext_resource type="Texture2D" uid="uid://5uvv7r3nbwba" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Textures/mannequiny-0.3.0_Todo_BaseColor.png" id="1_4ihig"]
+[ext_resource type="Texture2D" uid="uid://djpepasluiivs" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Textures/mannequiny-0.3.0_Todo_Metallic.png" id="3_ocb8b"]
+[ext_resource type="Texture2D" uid="uid://cyrofl0huwrem" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Textures/mannequiny-0.3.0_Todo_Normal.png" id="4_d5k5g"]
+[ext_resource type="Texture2D" uid="uid://kb6tukwmrxoq" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Textures/mannequiny-0.3.0_Todo_Roughness.png" id="5_ntbjw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wwljf"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_4ihig")
+metallic = 1.0
+metallic_texture = ExtResource("3_ocb8b")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("5_ntbjw")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("4_d5k5g")
+ao_texture = SubResource("CompressedTexture2D_wwljf")
+ao_texture_channel = 4
+texture_filter = 5

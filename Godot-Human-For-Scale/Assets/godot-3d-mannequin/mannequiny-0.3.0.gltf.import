@@ -1,0 +1,43 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cuhiiv3vccg28"
+path="res://.godot/imported/mannequiny-0.3.0.gltf-c0b9ac221d4bcd7944d45b97af87591e.scn"
+
+[deps]
+
+source_file="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf"
+dest_files=["res://.godot/imported/mannequiny-0.3.0.gltf-c0b9ac221d4bcd7944d45b97af87591e.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=3
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Piel": {
+"use_external/enabled": true,
+"use_external/path": "res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0-piel.tres"
+},
+"Todo": {
+"use_external/enabled": true,
+"use_external/path": "res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0-todo.tres"
+}
+}
+}
+gltf/embedded_image_handling=1
