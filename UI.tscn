@@ -123,6 +123,15 @@ popup/item_1/id = 1
 popup/item_2/text = "High"
 popup/item_2/id = 2
 
+[node name="HSeparator4" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Quit Demo"
+
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = ExtResource("3_8dy65")
@@ -148,3 +157,4 @@ text = "To capture/uncapture cursor, press ESC"
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/resolution_select" to="." method="_on_res_selected"]
 [connection signal="text_submitted" from="HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input" to="." method="_on_custom_res_input"]
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/quality_select" to="." method="_on_quality_selected"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_quit_selected"]

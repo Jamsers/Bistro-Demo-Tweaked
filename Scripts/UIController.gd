@@ -132,6 +132,9 @@ func _on_time_selected(index):
 			apply_time(lighting_scenarios.night)
 			night_lights.visible = true
 
+func _on_quit_selected():
+	get_tree().quit()
+
 func apply_settings(settings):
 	sun_light.light_angular_distance = settings.sun_angle
 	environment.environment.ssr_enabled = settings.ssr
