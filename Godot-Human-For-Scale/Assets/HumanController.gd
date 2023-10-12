@@ -40,7 +40,7 @@ var mousecapture_isdown = false
 func _ready():
 	basis = Basis.IDENTITY
 	anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
-	anim_player.playback_default_blend_time = 0.75
+	anim_player.playback_default_blend_time = 0.2
 
 func _process(delta):
 	process_mousecapture(delta)
@@ -129,14 +129,14 @@ func process_movement():
 
 func process_animation(delta):
 	if !is_on_floor():
-		anim_player.play("Fall")
+		switch_anim("Fall")
 	elif move_direction != Vector3.ZERO:
 		if sprint_isdown:
-			anim_player.play("Run", -1, RUN_MULT)
+			switch_anim("Run", RUN_MULT)
 		else:
-			anim_player.play("Jog", -1, MOVE_MULT)
+			switch_anim("Jog", MOVE_MULT)
 	else:
-		anim_player.play("Idle")
+		switch_anim("Idle")
 	
 	if move_direction != Vector3.ZERO:
 		$ModelRoot.basis = basis_rotate_toward($ModelRoot.basis, Basis.looking_at(move_direction_no_y), ROTATE_SPEED * delta)
@@ -173,8 +173,12 @@ func _unhandled_input(event):
 			KEY_ESCAPE:
 				mousecapture_isdown = event.pressed
 
-static func rotate_toward(from: Quaternion, to: Quaternion, delta: float) -> Quaternion:
+func switch_anim(anim, speed = 1):
+	if anim_player.current_animation != anim:
+		anim_player.play(anim, -1, speed)
+
+static func quat_rotate_toward(from: Quaternion, to: Quaternion, delta: float) -> Quaternion:
 	return from.slerp(to, clamp(delta / from.angle_to(to), 0.0, 1.0)).normalized()
 
 static func basis_rotate_toward(from: Basis, to: Basis, delta: float) -> Basis:
-	return Basis(rotate_toward(from.get_rotation_quaternion(), to.get_rotation_quaternion(), delta)).orthonormalized()
+	return Basis(quat_rotate_toward(from.get_rotation_quaternion(), to.get_rotation_quaternion(), delta)).orthonormalized()
