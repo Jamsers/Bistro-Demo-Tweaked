@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="LumberyardBistro_Godot4"
+config/name="Bistro-Demo-Tweaked"
+config/description="Lumberyard Bistro demo for Godot"
+config/version="1.0"
 run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://bistro_godot.png"
 
 [display]
 
