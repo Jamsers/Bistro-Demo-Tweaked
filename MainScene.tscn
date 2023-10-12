@@ -194,6 +194,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 shape = SubResource("BoxShape3D_ra78n")
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights") instance=ExtResource("32_q35xk")]
+enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")

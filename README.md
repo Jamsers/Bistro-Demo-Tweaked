@@ -18,9 +18,7 @@ V to noclip
 
 ESCAPE to capture/uncapture mouse.
 
-**Mouse is uncaptured on start!**
-
 ## Profiler
-Also includes a profiler to see performance details.
+Also includes a profiler to see performance details. Profiler is enabled by default. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
 
 ![image](https://github.com/Jamsers/Bistro-Demo-Tweaked/assets/39361911/a1ce03cb-2c95-40ce-b62f-b1a7628ff2a7)
