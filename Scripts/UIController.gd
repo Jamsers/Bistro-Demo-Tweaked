@@ -140,6 +140,7 @@ func apply_settings(settings):
 	environment.environment.sdfgi_enabled = settings.sdfgi
 	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
+	RenderingServer.viewport_set_scaling_3d_mode(get_viewport().get_viewport_rid(), settings.scaling)
 
 func apply_time(lighting):
 	is_time_changing = false

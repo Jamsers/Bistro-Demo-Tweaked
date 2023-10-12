@@ -12,6 +12,7 @@ ssil = true
 sdfgi = true
 msaa = 0
 fxaa = 0
+scaling = 2
 
 [sub_resource type="Resource" id="Resource_qtm60"]
 script = ExtResource("1_6ypcq")
@@ -22,6 +23,7 @@ ssil = false
 sdfgi = false
 msaa = 0
 fxaa = 0
+scaling = 2
 
 [sub_resource type="Resource" id="Resource_sovee"]
 script = ExtResource("1_6ypcq")
@@ -32,6 +34,7 @@ ssil = false
 sdfgi = true
 msaa = 0
 fxaa = 0
+scaling = 2
 
 [resource]
 script = ExtResource("1_fleix")
