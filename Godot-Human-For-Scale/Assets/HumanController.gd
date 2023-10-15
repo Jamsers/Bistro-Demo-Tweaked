@@ -11,7 +11,7 @@ const TP_FOV = 60.0
 
 const FP_CAMERA_HEIGHT = 1.655
 const TP_CAMERA_HEIGHT = 1.544
-const TP_CAMERA_OFFSET = -0.5
+const TP_CAMERA_OFFSET = 0.5
 const TP_CAMERA_DISTANCE = 2.1
 const TRANSITION_SPEED = 0.25
 const LOOK_LIMIT_UPPER = 1.25
@@ -36,6 +36,8 @@ var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
 var cam_is_zoomed = false
 var cam_zoom_cooldown = 0.0
+var shoulder_is_swapped = false
+var shoulder_cooldown = 0.0
 var mousecapture_on = true
 var mousecapture_toggle_cooldown = 0.0
 var rigidbody_collisions = []
@@ -53,6 +55,7 @@ var sprint_isdown = false
 var jump_isdown = false
 var mousecapture_isdown = false
 var zoom_isdown = false
+var shoulder_isdown = false
 
 @onready var camera_pivot = $"CameraPivot"
 @onready var spring_arm = $"CameraPivot/SpringArm"
@@ -72,6 +75,7 @@ func _process(delta):
 	process_noclip(delta)
 	process_cam_toggle(delta)
 	process_cam_zoom(delta)
+	process_shoulder_swap(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
 	if sprint_isdown:
@@ -192,11 +196,21 @@ func process_cam_zoom(delta):
 	cam_zoom_cooldown -= delta
 	cam_zoom_cooldown = clamp(cam_zoom_cooldown, 0, TOGGLE_COOLDOWN)
 
+func process_shoulder_swap(delta):
+	if shoulder_isdown and shoulder_cooldown == 0 and !is_cam_transitioning and !cam_is_fp:
+		shoulder_is_swapped = !shoulder_is_swapped
+		shoulder_cooldown = TOGGLE_COOLDOWN
+		cam_transition()
+	
+	shoulder_cooldown -= delta
+	shoulder_cooldown = clamp(shoulder_cooldown, 0, TOGGLE_COOLDOWN)
+
 func cam_transition():
 	if is_cam_transitioning:
 		return
 	
 	var fov
+	var offset
 	
 	if cam_is_zoomed:
 		if cam_is_fp:
@@ -209,10 +223,15 @@ func cam_transition():
 		else:
 			fov = TP_FOV
 	
+	if shoulder_is_swapped:
+		offset = -TP_CAMERA_OFFSET
+	else:
+		offset = TP_CAMERA_OFFSET
+	
 	if cam_is_fp:
 		cam_transitioning(FP_CAMERA_HEIGHT, 0.0, 0.0, fov, false)
 	else:
-		cam_transitioning(TP_CAMERA_HEIGHT, TP_CAMERA_OFFSET, TP_CAMERA_DISTANCE, fov, true)
+		cam_transitioning(TP_CAMERA_HEIGHT, offset, TP_CAMERA_DISTANCE, fov, true)
 
 func cam_transitioning(height, offset, length, fov, mesh_visible):
 	is_cam_transitioning = true
@@ -240,8 +259,8 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 			is_cam_transitioning = false
 			break
 		
-		camera_pivot.position.y = lerp(orig_height, height, lerp)
-		spring_arm.position.x = lerp(orig_offset, offset, lerp)
+		camera_pivot.position.y = lerp(orig_height, height, ease_in_out_sine(lerp))
+		spring_arm.position.x = lerp(orig_offset, offset, ease_in_out_sine(lerp))
 		# Adjusting spring_length is jittery. Likely only updates on physics process.
 		spring_arm.spring_length = lerp(orig_length, length, lerp)
 		# So if you're noticing jitter when switching cams, ^ this lerp is responsible.
@@ -278,6 +297,8 @@ func _unhandled_input(event):
 				jump_isdown = event.pressed
 			KEY_ESCAPE:
 				mousecapture_isdown = event.pressed
+			KEY_TAB:
+				shoulder_isdown = event.pressed
 
 func switch_anim(anim, speed = 1):
 	if anim_player.current_animation != anim:
