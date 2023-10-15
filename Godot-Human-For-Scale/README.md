@@ -1,5 +1,5 @@
 # Godot-Human-For-Scale
-Simple third person controllable character that you can use to run around in your level to get a sense of scale. No input bindings or camera set up necessary, just drag and drop into your scene. The character is 5'10. (177.8 cm)
+Simple controllable character that you can use to run around in your level to get a sense of scale. No input bindings or camera set up necessary, just drag and drop into your scene. The character is 5'10. (177.8 cm)
 
 https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-43da-a2c2-1e5539d293f6
 
@@ -15,7 +15,9 @@ https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-4
 WASD to move  
 SHIFT to sprint  
 SPACE to jump  
-V to noclip
+
+V to switch to third person/first person
+F to noclip  
 
 ESCAPE to capture/uncapture mouse.
 

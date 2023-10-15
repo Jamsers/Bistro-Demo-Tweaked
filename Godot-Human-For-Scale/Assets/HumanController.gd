@@ -1,5 +1,11 @@
 extends CharacterBody3D
 
+const FP_CAMERA_HEIGHT = 1.655
+const FP_FOV = 75.0
+const TP_CAMERA_HEIGHT = 1.544
+const TP_FOV = 60.0
+const TP_CAMERA_OFFSET = 0.5
+const TP_CAMERA_DISTANCE = 2.1
 const LOOK_SENSITIVITY = 0.0025
 const LOOK_LIMIT_UPPER = 1.15
 const LOOK_LIMIT_LOWER = -1.15
@@ -21,25 +27,32 @@ var camera_rotation = Quaternion.IDENTITY
 var camera_rotation_no_y = Quaternion.IDENTITY
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
+var cam_is_fp = false
+var cam_toggle_cooldown = 0.0
 var mousecapture_on = true
 var mousecapture_toggle_cooldown = 0.0
 var rigidbody_collisions = []
 var input_velocity = Vector3.ZERO
-var anim_player
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
 var backward_isdown = false
 var left_isdown = false
 var right_isdown = false
+var cam_toggle_isdown = false
 var noclip_isdown = false
 var sprint_isdown = false
 var jump_isdown = false
 var mousecapture_isdown = false
 
+@onready var camera_pivot = $"CameraPivot"
+@onready var spring_arm = $"CameraPivot/SpringArm"
+@onready var camera = $"CameraPivot/SpringArm/Camera"
+@onready var player_mesh = $"ModelRoot/mannequiny-0_3_0/root/Skeleton3D/mannequiny"
+@onready var anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
+
 func _ready():
 	basis = Basis.IDENTITY
-	anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
 	anim_player.playback_default_blend_time = 0.2
 
 func _process(delta):
@@ -48,6 +61,7 @@ func _process(delta):
 	process_movement()
 	process_animation(delta)
 	process_noclip(delta)
+	process_cam_toggle(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
 	if sprint_isdown:
@@ -150,6 +164,27 @@ func process_noclip(delta):
 	noclip_toggle_cooldown -= delta
 	noclip_toggle_cooldown = clamp(noclip_toggle_cooldown, 0, TOGGLE_COOLDOWN)
 
+func process_cam_toggle(delta):
+	if cam_toggle_isdown and cam_toggle_cooldown == 0:
+		cam_is_fp = !cam_is_fp
+		cam_toggle_cooldown = TOGGLE_COOLDOWN
+		
+		if cam_is_fp:
+			camera_pivot.position.y = FP_CAMERA_HEIGHT
+			spring_arm.position.x = 0.0
+			spring_arm.spring_length = 0.0
+			camera.fov = FP_FOV
+			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
+		else:
+			camera_pivot.position.y = TP_CAMERA_HEIGHT
+			spring_arm.position.x = TP_CAMERA_OFFSET
+			spring_arm.spring_length = TP_CAMERA_DISTANCE
+			camera.fov = TP_FOV
+			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+	
+	cam_toggle_cooldown -= delta
+	cam_toggle_cooldown = clamp(cam_toggle_cooldown, 0, TOGGLE_COOLDOWN)
+
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		mouse_movement -= event.relative
@@ -165,6 +200,8 @@ func _unhandled_input(event):
 			KEY_D:
 				right_isdown = event.pressed
 			KEY_V:
+				cam_toggle_isdown = event.pressed
+			KEY_F:
 				noclip_isdown = event.pressed
 			KEY_SHIFT:
 				sprint_isdown = event.pressed
