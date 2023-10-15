@@ -1,19 +1,23 @@
 extends CharacterBody3D
 
-const FP_CAMERA_HEIGHT = 1.655
-const FP_FOV = 75.0
-const TP_CAMERA_HEIGHT = 1.544
-const TP_FOV = 60.0
-const TP_CAMERA_OFFSET = 0.5
-const TP_CAMERA_DISTANCE = 2.1
-const ZOOM_MULT = 0.3
+# --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
+const MOVE_MULT = 1.4
+const RUN_MULT = 1.25
+const ZOOM_MULT = 0.35
+const FP_FOV = 75.0
+const TP_FOV = 60.0
+# --- Stuff you might be interested in tweaking ---
+
+const FP_CAMERA_HEIGHT = 1.655
+const TP_CAMERA_HEIGHT = 1.544
+const TP_CAMERA_OFFSET = -0.5
+const TP_CAMERA_DISTANCE = 2.1
+const TRANSITION_SPEED = 0.25
 const LOOK_LIMIT_UPPER = 1.25
 const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3
 const ANIM_RUN_SPEED = 5.5
-const MOVE_MULT = 1.4
-const RUN_MULT = 1.25
 const NOCLIP_MULT = 4
 const ROTATE_SPEED = 12.0
 const JUMP_FORCE = 15.0
@@ -36,6 +40,7 @@ var mousecapture_on = true
 var mousecapture_toggle_cooldown = 0.0
 var rigidbody_collisions = []
 var input_velocity = Vector3.ZERO
+var is_cam_transitioning = false
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
@@ -170,45 +175,79 @@ func process_noclip(delta):
 	noclip_toggle_cooldown = clamp(noclip_toggle_cooldown, 0, TOGGLE_COOLDOWN)
 
 func process_cam_toggle(delta):
-	if cam_toggle_isdown and cam_toggle_cooldown == 0:
+	if cam_toggle_isdown and cam_toggle_cooldown == 0 and !is_cam_transitioning:
 		cam_is_fp = !cam_is_fp
 		cam_toggle_cooldown = TOGGLE_COOLDOWN
-		apply_cam_zoom()
-		
-		if cam_is_fp:
-			camera_pivot.position.y = FP_CAMERA_HEIGHT
-			spring_arm.position.x = 0.0
-			spring_arm.spring_length = 0.0
-			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
-		else:
-			camera_pivot.position.y = TP_CAMERA_HEIGHT
-			spring_arm.position.x = TP_CAMERA_OFFSET
-			spring_arm.spring_length = TP_CAMERA_DISTANCE
-			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+		cam_transition()
 	
 	cam_toggle_cooldown -= delta
 	cam_toggle_cooldown = clamp(cam_toggle_cooldown, 0, TOGGLE_COOLDOWN)
 
 func process_cam_zoom(delta):
-	if zoom_isdown and cam_zoom_cooldown == 0:
+	if zoom_isdown and cam_zoom_cooldown == 0 and !is_cam_transitioning:
 		cam_is_zoomed = !cam_is_zoomed
 		cam_zoom_cooldown = TOGGLE_COOLDOWN
-		apply_cam_zoom()
+		cam_transition()
 	
 	cam_zoom_cooldown -= delta
 	cam_zoom_cooldown = clamp(cam_zoom_cooldown, 0, TOGGLE_COOLDOWN)
 
-func apply_cam_zoom():
+func cam_transition():
+	if is_cam_transitioning:
+		return
+	
+	var fov
+	
 	if cam_is_zoomed:
 		if cam_is_fp:
-			camera.fov = FP_FOV * ZOOM_MULT
+			fov = FP_FOV * ZOOM_MULT
 		else:
-			camera.fov = TP_FOV * ZOOM_MULT
+			fov = TP_FOV * ZOOM_MULT
 	else:
 		if cam_is_fp:
-			camera.fov = FP_FOV
+			fov = FP_FOV
 		else:
-			camera.fov = TP_FOV
+			fov = TP_FOV
+	
+	if cam_is_fp:
+		cam_transitioning(FP_CAMERA_HEIGHT, 0.0, 0.0, fov, false)
+	else:
+		cam_transitioning(TP_CAMERA_HEIGHT, TP_CAMERA_OFFSET, TP_CAMERA_DISTANCE, fov, true)
+
+func cam_transitioning(height, offset, length, fov, mesh_visible):
+	is_cam_transitioning = true
+	
+	var time = Time.get_ticks_msec()
+	var orig_height = camera_pivot.position.y
+	var orig_offset = spring_arm.position.x
+	var orig_length = spring_arm.spring_length
+	var orig_fov = camera.fov
+	
+	if mesh_visible:
+		player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+	
+	while is_cam_transitioning:
+		var current_time = Time.get_ticks_msec()
+		var lerp = (current_time - time)/(TRANSITION_SPEED * 1000.0)
+		
+		if lerp > 1:
+			camera_pivot.position.y = height
+			spring_arm.position.x = offset
+			spring_arm.spring_length = length
+			camera.fov = fov
+			if !mesh_visible:
+				player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
+			is_cam_transitioning = false
+			break
+		
+		camera_pivot.position.y = lerp(orig_height, height, lerp)
+		spring_arm.position.x = lerp(orig_offset, offset, lerp)
+		# Adjusting spring_length is jittery. Likely only updates on physics process.
+		spring_arm.spring_length = lerp(orig_length, length, lerp)
+		# So if you're noticing jitter when switching cams, ^ this lerp is responsible.
+		camera.fov = lerp(orig_fov, fov, ease_in_out_sine(lerp))
+		
+		await get_tree().process_frame
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -249,3 +288,6 @@ static func quat_rotate_toward(from: Quaternion, to: Quaternion, delta: float) -
 
 static func basis_rotate_toward(from: Basis, to: Basis, delta: float) -> Basis:
 	return Basis(quat_rotate_toward(from.get_rotation_quaternion(), to.get_rotation_quaternion(), delta)).orthonormalized()
+
+func ease_in_out_sine(lerp):
+	return -(cos(PI * lerp) - 1) / 2;
