@@ -81,20 +81,34 @@ func hijack_camera_attributes():
 	var cams_or_envs = []
 	cams_or_envs += get_tree().current_scene.find_children("*", "WorldEnvironment", true)
 	cams_or_envs += get_tree().current_scene.find_children("*", "Camera3D", true)
+	var hijacked_attributes = null
 	
 	for node in cams_or_envs:
 		if node is WorldEnvironment:
 			if node.camera_attributes != null:
-				camera.attributes = node.camera_attributes.duplicate()
+				hijacked_attributes = node.camera_attributes
 				break
 		if node is Camera3D:
 			if node.attributes != null:
-				camera.attributes = node.attributes.duplicate()
+				hijacked_attributes = node.attributes
 				break
 	
-	if camera.attributes == null:
-		camera.attributes = CameraAttributesPractical.new()
-		camera.attributes.auto_exposure_enabled = true
+	camera.attributes = create_practical_attributes(hijacked_attributes)
+
+func create_practical_attributes(attributes):
+	var practical_attributes = CameraAttributesPractical.new()
+	
+	if attributes != null:
+		if attributes is CameraAttributesPractical:
+			practical_attributes = attributes.duplicate()
+		else:
+			practical_attributes.auto_exposure_enabled = attributes.auto_exposure_enabled
+			practical_attributes.auto_exposure_scale = attributes.auto_exposure_scale
+			practical_attributes.auto_exposure_speed = attributes.auto_exposure_speed
+			practical_attributes.exposure_multiplier = attributes.exposure_multiplier
+			practical_attributes.exposure_sensitivity = attributes.exposure_sensitivity
+	
+	return practical_attributes
 
 func _process(delta):
 	process_mousecapture(delta)

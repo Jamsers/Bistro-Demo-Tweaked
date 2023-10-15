@@ -12,16 +12,19 @@ https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-4
 **Make sure your scene has colliders for the floor at least, or the player will just fall through the map!**
 
 ## Controls
+ESCAPE to capture/uncapture mouse  
+
+**Mouse is uncaptured on start!**  
+
 WASD to move  
 SHIFT to sprint  
 SPACE to jump  
-
-V to switch to third person/first person
 F to noclip  
 
-ESCAPE to capture/uncapture mouse.
+V to switch third person/first person  
+RIGHT CLICK to zoom/focus  
+TAB to switch third person camera shoulders  
 
-**Mouse is uncaptured on start!**
 
 ## Credits
 
