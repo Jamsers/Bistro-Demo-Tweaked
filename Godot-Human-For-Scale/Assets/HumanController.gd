@@ -6,9 +6,10 @@ const TP_CAMERA_HEIGHT = 1.544
 const TP_FOV = 60.0
 const TP_CAMERA_OFFSET = 0.5
 const TP_CAMERA_DISTANCE = 2.1
+const ZOOM_MULT = 0.3
 const LOOK_SENSITIVITY = 0.0025
-const LOOK_LIMIT_UPPER = 1.15
-const LOOK_LIMIT_LOWER = -1.15
+const LOOK_LIMIT_UPPER = 1.25
+const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3
 const ANIM_RUN_SPEED = 5.5
 const MOVE_MULT = 1.4
@@ -29,6 +30,8 @@ var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
+var cam_is_zoomed = false
+var cam_zoom_cooldown = 0.0
 var mousecapture_on = true
 var mousecapture_toggle_cooldown = 0.0
 var rigidbody_collisions = []
@@ -44,6 +47,7 @@ var noclip_isdown = false
 var sprint_isdown = false
 var jump_isdown = false
 var mousecapture_isdown = false
+var zoom_isdown = false
 
 @onready var camera_pivot = $"CameraPivot"
 @onready var spring_arm = $"CameraPivot/SpringArm"
@@ -62,6 +66,7 @@ func _process(delta):
 	process_animation(delta)
 	process_noclip(delta)
 	process_cam_toggle(delta)
+	process_cam_zoom(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
 	if sprint_isdown:
@@ -168,26 +173,51 @@ func process_cam_toggle(delta):
 	if cam_toggle_isdown and cam_toggle_cooldown == 0:
 		cam_is_fp = !cam_is_fp
 		cam_toggle_cooldown = TOGGLE_COOLDOWN
+		apply_cam_zoom()
 		
 		if cam_is_fp:
 			camera_pivot.position.y = FP_CAMERA_HEIGHT
 			spring_arm.position.x = 0.0
 			spring_arm.spring_length = 0.0
-			camera.fov = FP_FOV
 			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
 		else:
 			camera_pivot.position.y = TP_CAMERA_HEIGHT
 			spring_arm.position.x = TP_CAMERA_OFFSET
 			spring_arm.spring_length = TP_CAMERA_DISTANCE
-			camera.fov = TP_FOV
 			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 	
 	cam_toggle_cooldown -= delta
 	cam_toggle_cooldown = clamp(cam_toggle_cooldown, 0, TOGGLE_COOLDOWN)
 
+func process_cam_zoom(delta):
+	if zoom_isdown and cam_zoom_cooldown == 0:
+		cam_is_zoomed = !cam_is_zoomed
+		cam_zoom_cooldown = TOGGLE_COOLDOWN
+		apply_cam_zoom()
+	
+	cam_zoom_cooldown -= delta
+	cam_zoom_cooldown = clamp(cam_zoom_cooldown, 0, TOGGLE_COOLDOWN)
+
+func apply_cam_zoom():
+	if cam_is_zoomed:
+		if cam_is_fp:
+			camera.fov = FP_FOV * ZOOM_MULT
+		else:
+			camera.fov = TP_FOV * ZOOM_MULT
+	else:
+		if cam_is_fp:
+			camera.fov = FP_FOV
+		else:
+			camera.fov = TP_FOV
+
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		mouse_movement -= event.relative
+	
+	if event is InputEventMouseButton:
+		match event.button_index:
+			MOUSE_BUTTON_RIGHT:
+				zoom_isdown = event.pressed
 	
 	if event is InputEventKey:
 		match event.keycode:
