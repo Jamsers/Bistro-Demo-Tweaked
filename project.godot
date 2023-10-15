@@ -16,9 +16,9 @@ config/version="1.0"
 run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://bistro_godot_loading.png"
+boot_splash/image="res://Textures/bistro_godot_loading.png"
 boot_splash/fullsize=false
-config/icon="res://bistro_godot.png"
+config/icon="res://Textures/bistro_godot.png"
 
 [display]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyjkro1m4u3ht"
-path="res://.godot/imported/bistro_godot.png-da6478995af18bce330256497558b087.ctex"
+uid="uid://br5x6f1xqn2hx"
+path="res://.godot/imported/bistro_godot_loading.png-d1b59b28bb48210ac3649bf0cb807789.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bistro_godot.png"
-dest_files=["res://.godot/imported/bistro_godot.png-da6478995af18bce330256497558b087.ctex"]
+source_file="res://Textures/bistro_godot_loading.png"
+dest_files=["res://.godot/imported/bistro_godot_loading.png-d1b59b28bb48210ac3649bf0cb807789.ctex"]
 
 [params]
 
