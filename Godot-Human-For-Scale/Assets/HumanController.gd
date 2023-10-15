@@ -1,12 +1,17 @@
 extends CharacterBody3D
 
+@export var enable_depth_of_field: bool = false
+@export var disable_shadow_in_first_person: bool = false
+
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
 const MOVE_MULT = 1.4
 const RUN_MULT = 1.25
-const ZOOM_MULT = 0.35
 const FP_FOV = 75.0
 const TP_FOV = 60.0
+const ZOOM_MULT = 0.35
+const DOF_AREA_SOFTNESS = 1.15
+const DOF_AREA_SIZE_MULTIPLIER = 0.0
 # --- Stuff you might be interested in tweaking ---
 
 const FP_CAMERA_HEIGHT = 1.655
@@ -25,6 +30,8 @@ const GRAVITY_FORCE = 50.0
 const COLLIDE_FORCE = 0.05
 const DIRECTIONAL_FORCE_DIV = 30.0
 const TOGGLE_COOLDOWN = 0.5
+const DOF_MOVE_SPEED = 40
+const DOF_INTENSITY = 0.25
 
 var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
@@ -60,12 +67,34 @@ var shoulder_isdown = false
 @onready var camera_pivot = $"CameraPivot"
 @onready var spring_arm = $"CameraPivot/SpringArm"
 @onready var camera = $"CameraPivot/SpringArm/Camera"
+@onready var focus_ray = $"CameraPivot/SpringArm/Camera/RayCast3D"
 @onready var player_mesh = $"ModelRoot/mannequiny-0_3_0/root/Skeleton3D/mannequiny"
 @onready var anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
 
 func _ready():
 	basis = Basis.IDENTITY
 	anim_player.playback_default_blend_time = 0.2
+	if enable_depth_of_field:
+		hijack_camera_attributes()
+
+func hijack_camera_attributes():
+	var cams_or_envs = []
+	cams_or_envs += get_tree().current_scene.find_children("*", "WorldEnvironment", true)
+	cams_or_envs += get_tree().current_scene.find_children("*", "Camera3D", true)
+	
+	for node in cams_or_envs:
+		if node is WorldEnvironment:
+			if node.camera_attributes != null:
+				camera.attributes = node.camera_attributes.duplicate()
+				break
+		if node is Camera3D:
+			if node.attributes != null:
+				camera.attributes = node.attributes.duplicate()
+				break
+	
+	if camera.attributes == null:
+		camera.attributes = CameraAttributesPractical.new()
+		camera.attributes.auto_exposure_enabled = true
 
 func _process(delta):
 	process_mousecapture(delta)
@@ -76,6 +105,7 @@ func _process(delta):
 	process_cam_toggle(delta)
 	process_cam_zoom(delta)
 	process_shoulder_swap(delta)
+	process_dof(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
 	if sprint_isdown:
@@ -243,7 +273,10 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 	var orig_fov = camera.fov
 	
 	if mesh_visible:
-		player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+		if disable_shadow_in_first_person:
+			player_mesh.visible = true
+		else:
+			player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
 	
 	while is_cam_transitioning:
 		var current_time = Time.get_ticks_msec()
@@ -255,7 +288,10 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 			spring_arm.spring_length = length
 			camera.fov = fov
 			if !mesh_visible:
-				player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
+				if disable_shadow_in_first_person:
+					player_mesh.visible = false
+				else:
+					player_mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
 			is_cam_transitioning = false
 			break
 		
@@ -267,6 +303,40 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 		camera.fov = lerp(orig_fov, fov, ease_in_out_sine(lerp))
 		
 		await get_tree().process_frame
+
+func process_dof(delta):
+	if camera.attributes == null:
+		return
+	
+	var near_distance = 0.5
+	var near_transition = 0.25
+	var far_distance = 50
+	var far_transition = 50
+	var blur_amount = 0.1
+	
+	if !cam_is_zoomed:
+		camera.attributes.dof_blur_near_enabled = true
+		near_distance = 0.5
+		near_transition = 0.25
+		camera.attributes.dof_blur_far_enabled = false
+		far_distance = 50
+		far_transition = 50
+		blur_amount = 0.1
+	else:
+		var hit_distance = camera.global_position.distance_to(focus_ray.get_collision_point())
+		camera.attributes.dof_blur_near_enabled = true
+		near_distance = hit_distance - (hit_distance * DOF_AREA_SIZE_MULTIPLIER)
+		near_transition = hit_distance * DOF_AREA_SOFTNESS
+		camera.attributes.dof_blur_far_enabled = true
+		far_distance =  hit_distance + (hit_distance * DOF_AREA_SIZE_MULTIPLIER)
+		far_transition = hit_distance * DOF_AREA_SOFTNESS
+		blur_amount = DOF_INTENSITY
+	
+	camera.attributes.dof_blur_near_distance = move_toward(camera.attributes.dof_blur_near_distance, near_distance, delta * DOF_MOVE_SPEED) 
+	camera.attributes.dof_blur_near_transition = move_toward(camera.attributes.dof_blur_near_transition, near_transition, delta * DOF_MOVE_SPEED) 
+	camera.attributes.dof_blur_far_distance =  move_toward(camera.attributes.dof_blur_far_distance, far_distance, delta * DOF_MOVE_SPEED)
+	camera.attributes.dof_blur_far_transition = move_toward(camera.attributes.dof_blur_far_transition, far_transition, delta * DOF_MOVE_SPEED)
+	camera.attributes.dof_blur_amount = move_toward(camera.attributes.dof_blur_amount, blur_amount, delta * (DOF_MOVE_SPEED/10))
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

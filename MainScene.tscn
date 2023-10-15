@@ -704,3 +704,4 @@ omni_range = 2.665
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82449, 0.782661, 1.10135)
+enable_depth_of_field = true
