@@ -11,12 +11,17 @@ Includes [Godot-Human-For-Scale](https://github.com/Jamsers/Godot-Human-For-Scal
 3. Run the project. (Play button on the upper right corner of Godot's interface)
 
 ## Controls
+ESCAPE to capture/uncapture mouse  
+H to hide/unhide control panel UI
+
 WASD to move  
 SHIFT to sprint  
 SPACE to jump  
-V to noclip
+F to noclip  
 
-ESCAPE to capture/uncapture mouse.
+V to switch third person/first person  
+RIGHT CLICK to zoom/focus  
+TAB to switch third person camera shoulders  
 
 ## Profiler
 Also includes a profiler to see performance details. Profiler is enabled by default. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
