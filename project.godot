@@ -51,3 +51,4 @@ environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
 global_illumination/sdfgi/probe_ray_count=2
 anti_aliasing/quality/use_taa=true
+lights_and_shadows/positional_shadow/atlas_size=2048

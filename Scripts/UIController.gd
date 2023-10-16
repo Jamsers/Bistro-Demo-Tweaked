@@ -11,6 +11,8 @@ extends Control
 @export var environment: WorldEnvironment
 @export var night_lights: Node3D
 @export var day_lights: Node3D
+@export var lamp_mesh_containers: Array[Node3D]
+@export var lamp_meshes: Array[MeshInstance3D]
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -117,22 +119,15 @@ func _on_quality_selected(index):
 			apply_settings(settings.high)
 
 func _on_time_selected(index):
-	night_lights.visible = false
-	day_lights.visible = false
-	
 	match index:
 		0:
 			apply_time(lighting_scenarios.dusk)
-			day_lights.visible = true
 		1:
 			apply_time(lighting_scenarios.noon)
-			day_lights.visible = true
 		2:
 			apply_time(lighting_scenarios.afternoon)
-			day_lights.visible = true
 		3:
 			apply_time(lighting_scenarios.night)
-			night_lights.visible = true
 
 func _on_quit_selected():
 	get_tree().quit()
@@ -158,6 +153,10 @@ func apply_time(lighting):
 	var orig_rot = sun_light.quaternion
 	var orig_sky = environment.environment.background_intensity
 	
+	if !lighting.night_lights:
+		night_lights.visible = false
+		change_shadow_casters(true)
+	
 	is_time_changing = true
 	
 	while is_time_changing:
@@ -168,6 +167,9 @@ func apply_time(lighting):
 			sun_light.light_temperature = lighting.temp
 			sun_light.quaternion = lighting.rotation
 			environment.environment.background_intensity = lighting.sky_nits
+			if lighting.night_lights:
+				night_lights.visible = true
+				change_shadow_casters(false)
 			is_time_changing = false
 			break
 		sun_light.light_intensity_lux = lerp(orig_lux, lighting.lux, easeInOutSine(lerp))
@@ -175,6 +177,21 @@ func apply_time(lighting):
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
 		await get_tree().process_frame
+
+func change_shadow_casters(is_cast_on):
+	var shadow_mode
+	
+	if is_cast_on:
+		shadow_mode = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+	else:
+		shadow_mode = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	
+	for node in lamp_mesh_containers:
+		for mesh in node.get_children():
+			if mesh is MeshInstance3D:
+				mesh.cast_shadow = shadow_mode
+	for mesh in lamp_meshes:
+		mesh.cast_shadow = shadow_mode
 
 func switch_visibility():
 	ui_cooldown = true
