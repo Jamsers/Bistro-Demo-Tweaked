@@ -13,6 +13,7 @@ extends Control
 @export var day_lights: Node3D
 @export var lamp_mesh_containers: Array[Node3D]
 @export var lamp_meshes: Array[MeshInstance3D]
+@export var emissives: Array[StandardMaterial3D]
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -156,6 +157,8 @@ func apply_time(lighting):
 	if !lighting.night_lights:
 		night_lights.visible = false
 		change_shadow_casters(true)
+		for mat in emissives:
+			mat.emission_enabled = false
 	
 	is_time_changing = true
 	
@@ -170,6 +173,8 @@ func apply_time(lighting):
 			if lighting.night_lights:
 				night_lights.visible = true
 				change_shadow_casters(false)
+				for mat in emissives:
+					mat.emission_enabled = true
 			is_time_changing = false
 			break
 		sun_light.light_intensity_lux = lerp(orig_lux, lighting.lux, easeInOutSine(lerp))

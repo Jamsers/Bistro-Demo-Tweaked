@@ -1,18 +1,28 @@
-[gd_scene load_steps=47 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=58 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Meshes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Meshes/Section01/S1B2.tscn" id="2_8mtnr"]
+[ext_resource type="Material" uid="uid://cbufshjju7lvd" path="res://Materials/Miscellaneous/Shopsign_Pharmacy_Emissive.tres" id="2_je3vt"]
+[ext_resource type="Material" uid="uid://de2c14t65vd2i" path="res://Materials/Miscellaneous/Shopsign_Book_Store_Emissive.tres" id="3_414o6"]
 [ext_resource type="PackedScene" uid="uid://bgt0h0f43llsf" path="res://Meshes/Section01/S1B3.tscn" id="3_bis43"]
 [ext_resource type="PackedScene" uid="uid://bumtkl0ox2bxf" path="res://Meshes/Ground.tscn" id="3_e3k7r"]
 [ext_resource type="PackedScene" uid="uid://du8nt2wqwtlkg" path="res://Meshes/Section01/S1B4.tscn" id="4_ll7ne"]
+[ext_resource type="Material" uid="uid://t1kioepb34kc" path="res://Materials/Lights/StreetLight_Bulb.tres" id="4_m6wwl"]
 [ext_resource type="PackedScene" uid="uid://1h46fckn3rr5" path="res://Meshes/Section01/S1Details.tscn" id="5_l1708"]
+[ext_resource type="Material" uid="uid://blcwr4ltx5kto" path="res://Materials/Lights/Spotlight_Glass_Emissive.tres" id="5_piy6g"]
 [ext_resource type="PackedScene" uid="uid://cbs4svf33bg3p" path="res://Meshes/Section01/S1Lamps.tscn" id="6_kx4kb"]
 [ext_resource type="PackedScene" uid="uid://ccmnlkssgfvk7" path="res://Meshes/Section01/S1Walls.tscn" id="7_2kc2q"]
+[ext_resource type="Material" uid="uid://b6dx1tpevicfc" path="res://Materials/Lights/StringLight_Blue.tres" id="7_8yd0a"]
 [ext_resource type="PackedScene" uid="uid://dthil5porgf21" path="res://Meshes/Section02/S2B1.tscn" id="8_anouh"]
+[ext_resource type="Material" uid="uid://pub4k2cqjy50" path="res://Materials/Lights/StringLight_Green.tres" id="8_vfdcb"]
+[ext_resource type="Material" uid="uid://cnrxe37qqbo5e" path="res://Materials/Lights/StringLight_Orange.tres" id="9_ksbxv"]
 [ext_resource type="PackedScene" uid="uid://cjnm1rusd0kcd" path="res://Meshes/Section02/S2B2.tscn" id="9_u4tpu"]
+[ext_resource type="Material" uid="uid://bh3xso5831lxm" path="res://Materials/Lights/StringLight_Pink.tres" id="10_5yr8b"]
 [ext_resource type="PackedScene" uid="uid://srx8s5o73xw0" path="res://Meshes/Section02/S2B3.tscn" id="10_ypp8l"]
+[ext_resource type="Material" uid="uid://bi8tfpoad535y" path="res://Materials/Lights/StringLight_Red.tres" id="11_awwij"]
 [ext_resource type="PackedScene" uid="uid://dpgfbsr7n2bm8" path="res://Meshes/Section02/BistroProps.tscn" id="11_e4jub"]
 [ext_resource type="PackedScene" uid="uid://d4b75rgbhmhow" path="res://Meshes/Section02/S2Ivy.tscn" id="12_lc6cf"]
+[ext_resource type="Material" uid="uid://ivcxxvgm585r" path="res://Materials/Lights/StringLight_White.tres" id="12_xvt36"]
 [ext_resource type="PackedScene" uid="uid://biak8e4cv0isu" path="res://Meshes/Section02/S2Lamps.tscn" id="13_v0ve4"]
 [ext_resource type="PackedScene" uid="uid://u5uvyrtg8ns" path="res://Meshes/Section02/S2Walls.tscn" id="14_v6tgn"]
 [ext_resource type="PackedScene" uid="uid://bij2ka0wuj53c" path="res://Meshes/Section02/S2Details.tscn" id="15_uu4ux"]
@@ -67,6 +77,10 @@ texture_filter = 5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_16kqw"]
+radius = 0.04
+height = 0.15
+
 [node name="Node3D" type="Node3D"]
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights", "lamp_mesh_containers", "lamp_meshes") instance=ExtResource("32_q35xk")]
@@ -77,6 +91,7 @@ night_lights = NodePath("../Night Lights")
 day_lights = NodePath("../Day Lights")
 lamp_mesh_containers = [NodePath("../Section01/S1Lamps"), NodePath("../Section02/S2Lamps"), NodePath("../Section03/S3Lamps"), NodePath("../Section05/S5Lamps")]
 lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a___2__6025"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003")]
+emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("33_vhloy")
@@ -756,6 +771,56 @@ light_intensity_lumens = 50000.0
 light_temperature = 2700.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+
+[node name="Emissive_Mesh_Fixes" type="Node3D" parent="Night Lights"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.303, 4.74928, -44.5133)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9039, 4.76208, -36.8393)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2374, 4.29482, 13.6618)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2905, 4.68076, -19.5311)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9854, 4.28018, -15.9953)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7813, 4.2768, -10.2983)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02907, 4.30512, -12.2207)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27053, 4.48249, -19.5776)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_16kqw")
+surface_material_override/0 = ExtResource("4_m6wwl")
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(-0.132256, 0, -0.991215, 0, 1, 0, 0.991215, 0, -0.132256, -10.669, 0.25, -2.297)
