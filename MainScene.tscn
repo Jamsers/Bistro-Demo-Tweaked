@@ -69,6 +69,84 @@ texture_filter = 5
 
 [node name="Node3D" type="Node3D"]
 
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights") instance=ExtResource("32_q35xk")]
+enable_profiler = true
+sun_light = NodePath("../Sun")
+environment = NodePath("../WorldEnvironment")
+night_lights = NodePath("../Night Lights")
+day_lights = NodePath("../Day Lights")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("33_vhloy")
+camera_attributes = ExtResource("30_pvdv2")
+
+[node name="FogVolume" type="FogVolume" parent="."]
+shape = 4
+material = ExtResource("35_hsy4k")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.950516, 0.247463, -0.187834, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
+light_intensity_lux = 75000.0
+light_temperature = 4250.0
+shadow_enabled = true
+directional_shadow_pancake_size = 40.0
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="Ground" parent="Ground" instance=ExtResource("3_e3k7r")]
+
+[node name="LightBlocker" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.779218, 0, -0.626753, 0, 1, 0, 0.626753, 0, 0.779218, 0.764911, -0.864954, -22.6467)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_85nr3")
+
+[node name="LightBlocker2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.613017, 0, 0.79007, 0, 1, 0, -0.79007, 0, 0.613017, -13.318, -0.864954, -9.67719)
+mesh = SubResource("BoxMesh_u4h6w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_e2lxq")
+
+[node name="LightBlocker3" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(0.390056, 0, 0.920791, 0, 1, 0, -0.920791, 0, 0.390056, 43.1477, -0.864954, 24.8414)
+mesh = SubResource("BoxMesh_78hf1")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_raaq2")
+
+[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Ground"]
+transform = Transform3D(0.672451, -0.342631, -0.656059, 0.453991, 0.891006, 0, 0.584553, -0.297845, 0.75471, -14.7111, 0.91317, -23.3905)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeSpecular"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeSpecular"]
+shape = SubResource("BoxShape3D_gxu67")
+
+[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Ground"]
+transform = Transform3D(0.737277, 0.296159, -0.607216, 0, 0.898794, 0.438371, 0.67559, -0.323201, 0.66266, 10.0383, 0.891349, -39.0332)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeAlbedo"]
+gi_mode = 2
+mesh = ExtResource("33_6648h")
+surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
+shape = SubResource("BoxShape3D_ra78n")
+
 [node name="Section01" type="Node3D" parent="."]
 
 [node name="S1B1" parent="Section01" instance=ExtResource("1_17a2u")]
@@ -137,83 +215,42 @@ texture_filter = 5
 
 [node name="S5Lamps" parent="Section05" instance=ExtResource("26_xvk4t")]
 
-[node name="Ground" type="Node3D" parent="."]
+[node name="Day Lights" type="Node3D" parent="."]
 
-[node name="Ground" parent="Ground" instance=ExtResource("3_e3k7r")]
+[node name="HangingLight01" type="OmniLight3D" parent="Day Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17348, 2.60211, -5.0847)
+light_intensity_lumens = 10000.0
+light_color = Color(1, 0.545098, 0.258824, 1)
+light_cull_mask = 4294967293
+omni_range = 2.665
 
-[node name="LightBlocker" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(0.779218, 0, -0.626753, 0, 1, 0, 0.626753, 0, 0.779218, 0.764911, -0.864954, -22.6467)
-mesh = SubResource("BoxMesh_u4h6w")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+[node name="HangingLight02" type="OmniLight3D" parent="Day Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0144725, 2.60211, -7.78534)
+light_intensity_lumens = 10000.0
+light_color = Color(1, 0.545098, 0.258824, 1)
+light_cull_mask = 4294967293
+omni_range = 2.665
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker"]
+[node name="HangingLight03" type="OmniLight3D" parent="Day Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.82587, 2.60211, 2.34868)
+light_intensity_lumens = 10000.0
+light_color = Color(1, 0.545098, 0.258824, 1)
+light_cull_mask = 4294967293
+omni_range = 2.665
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_85nr3")
+[node name="HangingLight04" type="OmniLight3D" parent="Day Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82214, 2.60211, 3.50114)
+light_intensity_lumens = 10000.0
+light_color = Color(1, 0.545098, 0.258824, 1)
+light_cull_mask = 4294967293
+omni_range = 2.665
 
-[node name="LightBlocker2" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(0.613017, 0, 0.79007, 0, 1, 0, -0.79007, 0, 0.613017, -13.318, -0.864954, -9.67719)
-mesh = SubResource("BoxMesh_u4h6w")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_e2lxq")
-
-[node name="LightBlocker3" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(0.390056, 0, 0.920791, 0, 1, 0, -0.920791, 0, 0.390056, 43.1477, -0.864954, 24.8414)
-mesh = SubResource("BoxMesh_78hf1")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ground/LightBlocker3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/LightBlocker3/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_raaq2")
-
-[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Ground"]
-transform = Transform3D(0.672451, -0.342631, -0.656059, 0.453991, 0.891006, 0, 0.584553, -0.297845, 0.75471, -14.7111, 0.91317, -23.3905)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeSpecular"]
-gi_mode = 2
-mesh = ExtResource("33_6648h")
-surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeSpecular"]
-shape = SubResource("BoxShape3D_gxu67")
-
-[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Ground"]
-transform = Transform3D(0.737277, 0.296159, -0.607216, 0, 0.898794, 0.438371, 0.67559, -0.323201, 0.66266, 10.0383, 0.891349, -39.0332)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeAlbedo"]
-gi_mode = 2
-mesh = ExtResource("33_6648h")
-surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
-shape = SubResource("BoxShape3D_ra78n")
-
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights") instance=ExtResource("32_q35xk")]
-enable_profiler = true
-sun_light = NodePath("../Sun")
-environment = NodePath("../WorldEnvironment")
-night_lights = NodePath("../Night Lights")
-day_lights = NodePath("../Day Lights")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("33_vhloy")
-camera_attributes = ExtResource("30_pvdv2")
-
-[node name="FogVolume" type="FogVolume" parent="."]
-shape = 4
-material = ExtResource("35_hsy4k")
-
-[node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.950516, 0.247463, -0.187835, 0, 0.604599, 0.79653, 0.310676, -0.757114, 0.574681, -4.86868, 8.33126, 2.18251)
-light_intensity_lux = 75000.0
-light_temperature = 4250.0
-shadow_enabled = true
-directional_shadow_pancake_size = 40.0
+[node name="HangingLight05" type="OmniLight3D" parent="Day Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77118, 2.60211, 4.46136)
+light_intensity_lumens = 10000.0
+light_color = Color(1, 0.545098, 0.258824, 1)
+light_cull_mask = 4294967293
+omni_range = 2.665
 
 [node name="Night Lights" type="Node3D" parent="."]
 visible = false
@@ -665,43 +702,6 @@ light_temperature = 2700.0
 omni_range = 6.5
 omni_attenuation = 0.965936
 
-[node name="Day Lights" type="Node3D" parent="."]
-
-[node name="HangingLight01" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17348, 2.60211, -5.0847)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-omni_range = 2.665
-
-[node name="HangingLight02" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0144725, 2.60211, -7.78534)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-omni_range = 2.665
-
-[node name="HangingLight03" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.82587, 2.60211, 2.34868)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-omni_range = 2.665
-
-[node name="HangingLight04" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82214, 2.60211, 3.50114)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-omni_range = 2.665
-
-[node name="HangingLight05" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77118, 2.60211, 4.46136)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-omni_range = 2.665
-
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82449, 0.782661, 1.10135)
+transform = Transform3D(-0.132256, 0, -0.991215, 0, 1, 0, 0.991215, 0, -0.132256, -10.669, 0.25, -2.297)
 enable_depth_of_field = true
