@@ -25,6 +25,12 @@ V to switch third person/first person
 RIGHT CLICK to zoom/focus  
 TAB to switch third person camera shoulders  
 
+## Extra Options
+
+You can enable depth of field for the zoom functionality. No camera attributes setup necessary.  
+You can disable the character's shadow in first person view.
+
+![human-for-scale-options](https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/80a466c6-9890-41cf-8303-5225a2106b78)
 
 ## Credits
 
