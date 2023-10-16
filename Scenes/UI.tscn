@@ -149,6 +149,14 @@ text = "FPS: 120
 layout_mode = 2
 theme_override_styles/separator = ExtResource("2_j6um5")
 
+[node name="hide_label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "To hide/unhide UI, press H"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
+
 [node name="hint_label" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "To capture/uncapture cursor, press ESC"

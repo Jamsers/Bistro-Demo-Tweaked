@@ -18,6 +18,8 @@ const TIME_CHANGE_DURATION = 4.0
 
 var renderTargetVertical = 1080.0
 var is_time_changing = false
+var is_ui_hidden = false
+var ui_cooldown = false
 
 var fps
 var frametime
@@ -173,6 +175,20 @@ func apply_time(lighting):
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
 		await get_tree().process_frame
+
+func switch_visibility():
+	ui_cooldown = true
+	visible = !is_ui_hidden
+	await get_tree().create_timer(0.5).timeout
+	ui_cooldown = false
+
+func _unhandled_input(event):
+	if event is InputEventKey:
+		match event.keycode:
+			KEY_H:
+				if !ui_cooldown:
+					is_ui_hidden = !is_ui_hidden
+					switch_visibility()
 
 func easeInOutSine(lerp):
 	return -(cos(PI * lerp) - 1) / 2;
