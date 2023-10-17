@@ -9,6 +9,7 @@ rotation = Quaternion(-0.4391, -0.140892, -0.0699394, 0.884561)
 temp = 4250.0
 lux = 75000.0
 sky_nits = 25000.0
+night_lights = false
 
 [sub_resource type="Resource" id="Resource_kk6fo"]
 script = ExtResource("1_j2wa8")
@@ -16,6 +17,7 @@ rotation = Quaternion(-0.251901, 0, 0, 0.967753)
 temp = 2000.0
 lux = 50000.0
 sky_nits = 20000.0
+night_lights = false
 
 [sub_resource type="Resource" id="Resource_jdngv"]
 script = ExtResource("1_j2wa8")
@@ -23,6 +25,7 @@ rotation = Quaternion(-0.762904, -0.000553288, 0.0359532, 0.645511)
 temp = 15000.0
 lux = 900.0
 sky_nits = 3000.0
+night_lights = true
 
 [sub_resource type="Resource" id="Resource_1garo"]
 script = ExtResource("1_j2wa8")
@@ -30,6 +33,7 @@ rotation = Quaternion(-0.674148, 0, 0, 0.738597)
 temp = 6500.0
 lux = 100000.0
 sky_nits = 30000.0
+night_lights = false
 
 [resource]
 script = ExtResource("1_whetd")

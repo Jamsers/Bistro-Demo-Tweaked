@@ -5,7 +5,6 @@
 [resource]
 albedo_texture = ExtResource("1_8qlhi")
 roughness = 0.73
-emission_enabled = true
-emission_intensity = 800.0
+emission_intensity = 10000.0
 emission_texture = ExtResource("1_8qlhi")
 texture_filter = 5

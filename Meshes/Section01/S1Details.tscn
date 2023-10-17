@@ -141,13 +141,13 @@ surface_material_override/0 = ExtResource("2_dni3b")
 [node name="Bistro_Research_Exterior_bux_hedge_box_long_low1_3965" parent="." index="3"]
 surface_material_override/0 = ExtResource("2_dni3b")
 
-[node name="Bistro_Research_Exterior_bux_hedge_box_long_low1_3965001" parent="." index="4"]
+[node name="Bistro_Research_Exterior_bux_hedge_box_long_low1_3965_001" parent="." index="4"]
 surface_material_override/0 = ExtResource("2_dni3b")
 
 [node name="Bistro_Research_Exterior_bux_hedge_box_long_low_3963" parent="." index="5"]
 surface_material_override/0 = ExtResource("2_dni3b")
 
-[node name="Bistro_Research_Exterior_bux_hedge_box_long_low_3963001" parent="." index="6"]
+[node name="Bistro_Research_Exterior_bux_hedge_box_long_low_3963_001" parent="." index="6"]
 surface_material_override/0 = ExtResource("2_dni3b")
 
 [node name="Bistro_Research_Exterior_bux_hedge_box_long_low_bend2_3991" parent="." index="7"]
@@ -167,127 +167,96 @@ surface_material_override/2 = ExtResource("7_br7th")
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051" index="0"]
 
 [node name="@CollisionShape3D@106172" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_v0r1p")
 
 [node name="@CollisionShape3D@106171" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_hcxkp")
 
 [node name="@CollisionShape3D@106170" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_4nxmt")
 
 [node name="@CollisionShape3D@106169" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_8qp2a")
 
 [node name="@CollisionShape3D@106168" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_mj5sd")
 
 [node name="@CollisionShape3D@106167" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7b1qg")
 
 [node name="@CollisionShape3D@106166" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_djcqi")
 
 [node name="@CollisionShape3D@106165" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_els0f")
 
 [node name="@CollisionShape3D@106164" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7elti")
 
 [node name="@CollisionShape3D@106163" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1l7ba")
 
 [node name="@CollisionShape3D@106162" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7sbwd")
 
 [node name="@CollisionShape3D@106161" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_rqg0f")
 
 [node name="@CollisionShape3D@106160" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_g50dl")
 
 [node name="@CollisionShape3D@106159" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_w2tm8")
 
 [node name="@CollisionShape3D@106158" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_c5lm4")
 
 [node name="@CollisionShape3D@106157" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_8tdrp")
 
 [node name="@CollisionShape3D@106156" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="16"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_rf6fg")
 
 [node name="@CollisionShape3D@106155" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1qni6")
 
 [node name="@CollisionShape3D@106154" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="18"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5ocmk")
 
 [node name="@CollisionShape3D@106153" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_66tew")
 
 [node name="@CollisionShape3D@106152" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="20"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_nl6uw")
 
 [node name="@CollisionShape3D@106151" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="21"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_46swk")
 
 [node name="@CollisionShape3D@106150" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="22"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_qdmmx")
 
 [node name="@CollisionShape3D@106149" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="23"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_qvugf")
 
 [node name="@CollisionShape3D@106148" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="24"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_r7sop")
 
 [node name="@CollisionShape3D@106147" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="25"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_gfp6d")
 
 [node name="@CollisionShape3D@106146" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="26"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_et2kb")
 
 [node name="@CollisionShape3D@106145" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="27"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_3chlk")
 
 [node name="@CollisionShape3D@106144" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="28"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_vdgly")
 
 [node name="@CollisionShape3D@106143" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="29"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_hpyjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Linde_Tree_Large_linde_tree_large_4051/StaticBody3D" index="30"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_yi5q3")
 
 [node name="Bistro_Research_Exterior_Paris_Street_6187" parent="." index="11"]
@@ -346,15 +315,12 @@ surface_material_override/0 = ExtResource("10_quhxj")
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_01_6369" index="0"]
 
 [node name="@CollisionShape3D@111122" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_01_6369/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_alt8m")
 
 [node name="@CollisionShape3D@111121" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_01_6369/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_xr3we")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_01_6369/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_mbddx")
 
 [node name="Bistro_Research_Exterior_Paris_StreetPivot_04_6435" parent="." index="27"]
@@ -363,13 +329,10 @@ surface_material_override/0 = ExtResource("10_quhxj")
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_04_6435" index="0"]
 
 [node name="@CollisionShape3D@112299" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_04_6435/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_qssx7")
 
 [node name="@CollisionShape3D@112298" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_04_6435/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_b5t8e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetPivot_04_6435/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_deetw")
