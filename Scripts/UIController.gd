@@ -14,6 +14,7 @@ extends Control
 @export var lamp_mesh_containers: Array[Node3D]
 @export var lamp_meshes: Array[MeshInstance3D]
 @export var emissives: Array[StandardMaterial3D]
+@export var scalable_night_lights: Node3D
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -142,6 +143,9 @@ func apply_settings(settings):
 	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
 	RenderingServer.viewport_set_scaling_3d_mode(get_viewport().get_viewport_rid(), settings.scaling)
+	for light in scalable_night_lights.get_children():
+		if light is Light3D:
+			light.shadow_enabled = settings.night_shadows
 
 func apply_time(lighting):
 	is_time_changing = false
