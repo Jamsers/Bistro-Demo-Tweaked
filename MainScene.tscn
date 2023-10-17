@@ -682,6 +682,7 @@ light_energy = 0.639
 light_volumetric_fog_energy = 3.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
+omni_shadow_mode = 0
 
 [node name="GalleryLamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4046, 4.26243, -4.03495)
@@ -692,6 +693,7 @@ light_energy = 0.639
 light_volumetric_fog_energy = 3.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
+omni_shadow_mode = 0
 
 [node name="GalleryLamp03" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5866, 4.26243, -7.7218)
@@ -702,6 +704,7 @@ light_energy = 0.639
 light_volumetric_fog_energy = 3.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
+omni_shadow_mode = 0
 
 [node name="GalleryLamp04" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2974, 4.26748, -12.6357)
@@ -712,6 +715,7 @@ light_energy = 0.639
 light_volumetric_fog_energy = 3.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
+omni_shadow_mode = 0
 
 [node name="S1B4Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.1384, 4.26704, 14.4793)
@@ -721,6 +725,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S2B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2473, 4.26704, 13.6706)
@@ -730,6 +735,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S5B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0137, 4.26748, -15.982)
@@ -739,6 +745,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S5B1Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7943, 4.26748, -10.2883)
@@ -748,6 +755,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S5B1Lamp03" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02473, 4.26748, -12.2153)
@@ -757,6 +765,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S5B1Lamp04" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27245, 4.44774, -19.5667)
@@ -766,6 +775,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S3B3Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5338, 3.4633, -18.4168)
@@ -775,6 +785,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S3B3Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.796, 3.4633, -22.5437)
@@ -784,6 +795,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S4B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.60854, 4.81285, -21.5167)
@@ -793,6 +805,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S4B3Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9002, 4.73853, -36.8314)
@@ -802,6 +815,7 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="S4B3Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2939, 4.73853, -44.5023)
@@ -811,6 +825,17 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 6.5
 omni_attenuation = 0.965936
+omni_shadow_mode = 0
+
+[node name="S1B4Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
+transform = Transform3D(-0.768325, -0.210541, 0.604441, 0, 0.944351, 0.32894, -0.64006, 0.252733, -0.725568, 26.1921, 4.89486, 24.8043)
+light_intensity_lumens = 50000.0
+light_temperature = 2700.0
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+omni_range = 6.5
+omni_attenuation = 0.965936
+omni_shadow_mode = 0
 
 [node name="Sign_Lights" type="Node3D" parent="Night Lights"]
 

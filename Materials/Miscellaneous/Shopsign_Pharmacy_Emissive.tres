@@ -7,6 +7,6 @@
 cull_mode = 2
 albedo_texture = ExtResource("1_5feue")
 roughness = 0.73
-emission_intensity = 75000.0
+emission_intensity = 40000.0
 emission_texture = ExtResource("2_c2ri1")
 texture_filter = 5
