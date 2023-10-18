@@ -26,7 +26,7 @@ TAB to switch third person camera shoulders
 ## Profiler
 Also includes a profiler to see performance details. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
 
-![image](https://github.com/Jamsers/Bistro-Demo-Tweaked/assets/39361911/a1ce03cb-2c95-40ce-b62f-b1a7628ff2a7)
+![profiler_cropped](https://github.com/Jamsers/Bistro-Demo-Tweaked/assets/39361911/354eb551-770b-48e9-b808-2c42ed41a85f)
 
 ## Credits
 Ported from [Amazon Lumberyard Bistro](https://developer.nvidia.com/orca/amazon-lumberyard-bistro).  
