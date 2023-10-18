@@ -1,5 +1,5 @@
 # Bistro-Demo-Tweaked
-Lumberyard Bistro demo for [Godot](https://github.com/godotengine/godot). Original can be found [here](https://github.com/godotengine/godot/issues/74965).
+Bistro demo for [Godot](https://github.com/godotengine/godot) showcasing lighting and high quality assets.
 
 https://github.com/Jamsers/Bistro-Demo-Tweaked/assets/39361911/67493ad0-d19c-40ab-ad07-4014dbd654a5
 
@@ -24,6 +24,10 @@ RIGHT CLICK to zoom/focus
 TAB to switch third person camera shoulders  
 
 ## Profiler
-Also includes a profiler to see performance details. Profiler is enabled by default. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
+Also includes a profiler to see performance details. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
 
 ![image](https://github.com/Jamsers/Bistro-Demo-Tweaked/assets/39361911/a1ce03cb-2c95-40ce-b62f-b1a7628ff2a7)
+
+## Credits
+Ported from [Amazon Lumberyard Bistro](https://developer.nvidia.com/orca/amazon-lumberyard-bistro).  
+Original porting work done by [Logan Preshaw](https://github.com/WickedInsignia), original port can be found [here](https://github.com/godotengine/godot/issues/74965).
