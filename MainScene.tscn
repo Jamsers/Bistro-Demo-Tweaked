@@ -93,7 +93,7 @@ environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
 day_lights = NodePath("../Day Lights")
 lamp_mesh_containers = [NodePath("../Section01/S1Lamps"), NodePath("../Section02/S2Lamps"), NodePath("../Section03/S3Lamps"), NodePath("../Section05/S5Lamps")]
-lamp_meshes = [null, NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a___2__6025"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003")]
+lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a___2__6025"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 
