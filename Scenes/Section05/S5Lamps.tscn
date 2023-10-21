@@ -1,10 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://ckb5gvf1swqgf"]
+[gd_scene load_steps=29 format=3 uid="uid://ckb5gvf1swqgf"]
 
 [ext_resource type="PackedScene" uid="uid://6s1ov1j83pe7" path="res://Meshes/Section05/S5Lamps.glb" id="1_0sdqp"]
 [ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="2_8oqeu"]
-[ext_resource type="Material" uid="uid://dartc2dlysfa5" path="res://Materials/Lights/Streetlight_Metal.tres" id="3_u7n2q"]
-[ext_resource type="Material" uid="uid://dbhonoml2uada" path="res://Materials/Lights/Streetlight_Chains.tres" id="4_dsg8k"]
-[ext_resource type="Material" uid="uid://t1kioepb34kc" path="res://Materials/Lights/StreetLight_Bulb.tres" id="5_e3uqc"]
 [ext_resource type="Material" uid="uid://dfcnpxsv3ak8d" path="res://Materials/Lights/Emissive_StreeLight.tres" id="6_cbu1c"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yefcm"]
@@ -87,112 +84,81 @@ points = PackedVector3Array(362.597, 132.606, -2142.46, 376.484, 139.554, -2107.
 [node name="Bistro_Research_Exterior_Paris_Flowers_01a__6019" parent="." index="0"]
 surface_material_override/0 = ExtResource("2_8oqeu")
 
-[node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" parent="." index="1"]
-surface_material_override/0 = ExtResource("3_u7n2q")
-surface_material_override/1 = ExtResource("4_dsg8k")
-surface_material_override/2 = ExtResource("5_e3uqc")
-surface_material_override/3 = ExtResource("3_u7n2q")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" index="0"]
 
 [node name="@CollisionShape3D@53856" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_yefcm")
 
 [node name="@CollisionShape3D@53855" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_t10g2")
 
 [node name="@CollisionShape3D@53854" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_3h2ol")
 
 [node name="@CollisionShape3D@53853" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_cmf6e")
 
 [node name="@CollisionShape3D@53852" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_xx3ae")
 
 [node name="@CollisionShape3D@53851" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_b8egy")
 
 [node name="@CollisionShape3D@53850" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5tqam")
 
 [node name="@CollisionShape3D@53849" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_qugui")
 
 [node name="@CollisionShape3D@53848" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_rcqnk")
 
 [node name="@CollisionShape3D@53847" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_m6o2a")
 
 [node name="@CollisionShape3D@53846" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_lsh3h")
 
 [node name="@CollisionShape3D@53845" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_pnpl6")
 
 [node name="@CollisionShape3D@53844" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_6ajx3")
 
 [node name="@CollisionShape3D@53843" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_o2x3k")
 
 [node name="@CollisionShape3D@53842" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_amw7i")
 
 [node name="@CollisionShape3D@53841" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7x170")
 
 [node name="@CollisionShape3D@53840" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="16"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_g0ut3")
 
 [node name="@CollisionShape3D@53839" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_equ0d")
 
 [node name="@CollisionShape3D@53838" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="18"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_86yn2")
 
 [node name="@CollisionShape3D@53837" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_4h8qd")
 
 [node name="@CollisionShape3D@53836" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="20"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_12wcw")
 
 [node name="@CollisionShape3D@53835" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="21"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5hqgw")
 
 [node name="@CollisionShape3D@53834" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="22"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_mdkj6")
 
 [node name="@CollisionShape3D@53833" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="23"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_tsbvu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/StaticBody3D" index="24"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ndwpw")
 
 [node name="Bistro_Research_Exterior_Paris_Streetlight_Glass_01a__6315" parent="." index="2"]

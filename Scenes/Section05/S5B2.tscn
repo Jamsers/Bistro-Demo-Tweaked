@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://del44lwpj48x1"]
+[gd_scene load_steps=38 format=3 uid="uid://del44lwpj48x1"]
 
 [ext_resource type="PackedScene" uid="uid://dh3e0lbmuvd5o" path="res://Meshes/Section05/S5B2.glb" id="1_mwgp6"]
 [ext_resource type="Material" uid="uid://bw1jumvewrd6k" path="res://Materials/Stone/Concrete_Smooth.tres" id="2_5un8b"]
@@ -17,12 +17,7 @@
 [ext_resource type="Material" uid="uid://bkfpmtw5ajbr7" path="res://Materials/Fabric/Curtains.tres" id="11_vt820"]
 [ext_resource type="Material" uid="uid://dqkueuayoekny" path="res://Materials/Roofing/Roofing_Metal_01.tres" id="12_vf7bo"]
 [ext_resource type="Material" uid="uid://bs54qrhaga2nh" path="res://Materials/Metal/Black_Metal.tres" id="13_2agen"]
-[ext_resource type="Material" uid="uid://duqg3dvrfn2vx" path="res://Materials/Miscellaneous/Plastic.tres" id="14_u4cnn"]
-[ext_resource type="Material" uid="uid://ckg7ld30v27im" path="res://Materials/Metal/Metal.tres" id="15_u6lye"]
-[ext_resource type="Material" uid="uid://c6hask8liobs1" path="res://Materials/Miscellaneous/Shopsign_Ties_Shop.tres" id="16_2a78p"]
 [ext_resource type="Material" uid="uid://cj6sl1aue82s6" path="res://Materials/Glass/Frosted_Glass.tres" id="17_5ti0s"]
-[ext_resource type="Material" uid="uid://cjdturllbv1g1" path="res://Materials/Metal/Banner_Metal.tres" id="17_kgbga"]
-[ext_resource type="Material" uid="uid://cbufshjju7lvd" path="res://Materials/Miscellaneous/Shopsign_Pharmacy_Emissive.tres" id="18_0it8h"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vw6fo"]
 points = PackedVector3Array(399.714, 236.418, -2714.68, 383.321, 211.804, -2804.93, 375.12, 211.804, -2796.72, 375.12, 236.418, -2796.72, 334.095, 211.804, -2739.31, 432.548, 220.01, -2747.5, 334.095, 236.418, -2747.5, 432.548, 236.418, -2763.9, 399.714, 220.01, -2714.68, 399.398, 212.041, -2804.06, 399.714, 236.418, -2804.93)
@@ -113,47 +108,36 @@ surface_material_override/0 = ExtResource("2_t0rv2")
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_paris_building_10_5469" index="0"]
 
 [node name="@CollisionShape3D@45101" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_vw6fo")
 
 [node name="@CollisionShape3D@45100" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_548ck")
 
 [node name="@CollisionShape3D@45099" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_n4dhv")
 
 [node name="@CollisionShape3D@45098" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_veca7")
 
 [node name="@CollisionShape3D@45097" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_gkvte")
 
 [node name="@CollisionShape3D@45096" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_t2mdo")
 
 [node name="@CollisionShape3D@45095" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_y1fw0")
 
 [node name="@CollisionShape3D@45094" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7snl2")
 
 [node name="@CollisionShape3D@45093" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wvht4")
 
 [node name="@CollisionShape3D@45092" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_1558i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5469/StaticBody3D" index="10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_6vv6g")
 
 [node name="Bistro_Research_Exterior_paris_building_10_5471" parent="." index="9"]
@@ -240,15 +224,3 @@ surface_material_override/0 = ExtResource("17_5ti0s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_paris_building_10_5503/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_stxaa")
-
-[node name="Bistro_Research_Exterior_paris_building_10_5507" parent="." index="26"]
-surface_material_override/0 = ExtResource("13_2agen")
-surface_material_override/1 = ExtResource("14_u4cnn")
-
-[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159" parent="." index="27"]
-surface_material_override/0 = ExtResource("15_u6lye")
-surface_material_override/1 = ExtResource("16_2a78p")
-
-[node name="Bistro_Research_Exterior_Paris_ShopSign_01E_6167" parent="." index="28"]
-surface_material_override/0 = ExtResource("17_kgbga")
-surface_material_override/1 = ExtResource("18_0it8h")

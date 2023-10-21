@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://doh36w0se2tbx"]
+
+[ext_resource type="PackedScene" uid="uid://b376hnrxr22tp" path="res://Meshes/Section05/S5B2_Props.glb" id="1_aje4j"]
+
+[node name="S5B2_Props" instance=ExtResource("1_aje4j")]
