@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cos8ymay0y3os"]
+[gd_scene load_steps=3 format=3 uid="uid://cos8ymay0y3os"]
 
 [ext_resource type="PackedScene" uid="uid://bfqcv20oxcv3f" path="res://Meshes/Section04/S4B3_Props.glb" id="1_o1vgg"]
+[ext_resource type="Material" uid="uid://6dpxfs7fuhqq" path="res://Materials/Miscellaneous/Trashcan.tres" id="2_se1uu"]
 
 [node name="S4B3_Props" instance=ExtResource("1_o1vgg")]
+
+[node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6529" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_se1uu")
