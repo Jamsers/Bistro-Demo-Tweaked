@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=60 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -80,10 +80,6 @@ texture_filter = 5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_16kqw"]
-radius = 0.04
-height = 0.15
-
 [node name="Node3D" type="Node3D"]
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights", "lamp_mesh_containers", "lamp_meshes", "scalable_night_lights") instance=ExtResource("32_q35xk")]
@@ -92,7 +88,7 @@ sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
 day_lights = NodePath("../Day Lights")
-lamp_mesh_containers = [NodePath("../Section03/S3Lamps"), NodePath("../Section05/S5Lamps")]
+lamp_mesh_containers = [NodePath("../Section03/S3Lamps")]
 lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a___2__6025"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
@@ -866,56 +862,6 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 2.5
 omni_shadow_mode = 0
-
-[node name="Emissive_Mesh_Fixes" type="Node3D" parent="Night Lights"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -54.025, 4.49928, -2.39048)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -47.0062, 4.51208, -5.5188)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -3.52282, 4.04482, -31.416)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.8827, 4.43076, 23.3279)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -11.2327, 4.03018, 18.7778)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -8.97326, 4.0268, 10.6636)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.3896, 4.05512, 8.19304)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Night Lights/Emissive_Mesh_Fixes"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -22.013, 4.23249, 5.5111)
-cast_shadow = 0
-mesh = SubResource("CapsuleMesh_16kqw")
-surface_material_override/0 = ExtResource("4_m6wwl")
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
