@@ -1,5 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://doh36w0se2tbx"]
+[gd_scene load_steps=4 format=3 uid="uid://doh36w0se2tbx"]
 
 [ext_resource type="PackedScene" uid="uid://b376hnrxr22tp" path="res://Meshes/Section05/S5B2_Props.glb" id="1_aje4j"]
+[ext_resource type="Material" uid="uid://ckg7ld30v27im" path="res://Materials/Metal/Metal.tres" id="2_pdmkb"]
+[ext_resource type="Material" uid="uid://c6hask8liobs1" path="res://Materials/Miscellaneous/Shopsign_Ties_Shop.tres" id="3_k7dxa"]
 
 [node name="S5B2_Props" instance=ExtResource("1_aje4j")]
+
+[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_0" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_pdmkb")
+
+[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_1" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_k7dxa")
+
+[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_002" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_k7dxa")
+
+[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_pdmkb")
+
+[node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_004" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_pdmkb")
