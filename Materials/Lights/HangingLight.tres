@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bch6y6p4wtimi" path="res://Textures/Lights/LanternEmissive_Normal.png" id="3_sy55k"]
 
 [resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_wl7x4")
 roughness = 0.73
 emission_enabled = true

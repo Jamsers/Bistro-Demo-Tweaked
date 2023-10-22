@@ -1,5 +1,299 @@
-[gd_scene load_steps=2 format=3 uid="uid://7pvp17b3ediw"]
+[gd_scene load_steps=14 format=3 uid="uid://7pvp17b3ediw"]
 
 [ext_resource type="PackedScene" uid="uid://2pppdlb4mndm" path="res://Meshes/Section02/BistroProps_Props.glb" id="1_wkdhl"]
+[ext_resource type="Material" uid="uid://xicenicxivp1" path="res://Materials/Miscellaneous/Vespa_Headlight.tres" id="2_mj2hd"]
+[ext_resource type="Material" uid="uid://cubayex8gukre" path="res://Materials/Glass/Windows_Glass.tres" id="3_7rr8y"]
+[ext_resource type="Material" uid="uid://c4atgisto3tmq" path="res://Materials/Miscellaneous/Vespa.tres" id="4_pmwha"]
+[ext_resource type="Material" uid="uid://uypaq6gdtd36" path="res://Materials/Miscellaneous/Vespa_Odometer.tres" id="5_1bnla"]
+[ext_resource type="Material" uid="uid://bt3xppx6800la" path="res://Materials/Miscellaneous/Ashtray.tres" id="6_y51bc"]
+[ext_resource type="Material" uid="uid://bp6iv34uya44q" path="res://Materials/Wood/Paris_Chair_01.tres" id="7_kb1ug"]
+[ext_resource type="Material" uid="uid://db74sosdrefu6" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Glass_Wine.tres" id="8_rvkp1"]
+[ext_resource type="Material" uid="uid://ubcyckfuisi6" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Caps.tres" id="9_wxw4h"]
+[ext_resource type="Material" uid="uid://dn141k7dgev6e" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Labels.tres" id="10_53v7k"]
+[ext_resource type="Material" uid="uid://d2w288okcmuqi" path="res://Materials/Miscellaneous/MenuSign_01.tres" id="11_23e8p"]
+[ext_resource type="Material" uid="uid://cxpd2wlfrdcej" path="res://Materials/Miscellaneous/NapkinHolder.tres" id="12_vhgo0"]
+[ext_resource type="Material" uid="uid://b6i53kkrlpl3q" path="res://Materials/Wood/Paris_Table_Terrace.tres" id="13_lmxab"]
 
 [node name="BistroProps_Props" instance=ExtResource("1_wkdhl")]
+
+[node name="Bistro_Research_Exterior__lod0_Glass_3919" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_mj2hd")
+
+[node name="Bistro_Research_Exterior__lod0_Odometer_3935" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_7rr8y")
+
+[node name="Bistro_Research_Exterior__lod0_Vespa_3937_0" parent="Bistro_Research_Exterior__lod0_Vespa_3937" index="0"]
+surface_material_override/0 = ExtResource("4_pmwha")
+
+[node name="Bistro_Research_Exterior__lod0_Vespa_3937_1" parent="Bistro_Research_Exterior__lod0_Vespa_3937" index="1"]
+surface_material_override/0 = ExtResource("5_1bnla")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh_4073" parent="." index="3"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh__4075" parent="." index="4"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___10__4077" parent="." index="5"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___2__4079" parent="." index="6"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___3__4081" parent="." index="7"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___4__4083" parent="." index="8"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___5__4085" parent="." index="9"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___6__4087" parent="." index="10"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___7__4089" parent="." index="11"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___8__4091" parent="." index="12"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___9__4093" parent="." index="13"]
+surface_material_override/0 = ExtResource("6_y51bc")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01_5907" parent="." index="14"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01__5909" parent="." index="15"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___10__5911" parent="." index="16"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___2__5913" parent="." index="17"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___3__5915" parent="." index="18"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___4__5917" parent="." index="19"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___5__5919" parent="." index="20"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___6__5921" parent="." index="21"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___7__5923" parent="." index="22"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___8__5925" parent="." index="23"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___9__5927" parent="." index="24"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02_5929" parent="." index="25"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02__5931" parent="." index="26"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___10__5933" parent="." index="27"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___2__5935" parent="." index="28"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___3__5937" parent="." index="29"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___4__5939" parent="." index="30"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___5__5941" parent="." index="31"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___6__5943" parent="." index="32"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___7__5945" parent="." index="33"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___8__5947" parent="." index="34"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___9__5949" parent="." index="35"]
+surface_material_override/0 = ExtResource("7_kb1ug")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101_0" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101" index="0"]
+surface_material_override/0 = ExtResource("8_rvkp1")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101_1" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101" index="1"]
+surface_material_override/0 = ExtResource("9_wxw4h")
+
+[node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101_2" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101" index="2"]
+surface_material_override/0 = ExtResource("10_53v7k")
+
+[node name="Bistro_Research_Exterior_Paris_MenuSign_01a1_6107" parent="." index="47"]
+surface_material_override/0 = ExtResource("11_23e8p")
+
+[node name="Bistro_Research_Exterior_Paris_MenuSign_01a_6105" parent="." index="48"]
+surface_material_override/0 = ExtResource("11_23e8p")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A_6113" parent="." index="49"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A__6115" parent="." index="50"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___10__6117" parent="." index="51"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___2__6119" parent="." index="52"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___3__6121" parent="." index="53"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___4__6123" parent="." index="54"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___5__6125" parent="." index="55"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___6__6127" parent="." index="56"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___7__6129" parent="." index="57"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___8__6131" parent="." index="58"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___9__6133" parent="." index="59"]
+surface_material_override/0 = ExtResource("12_vhgo0")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01_6489" parent="." index="60"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01__6491" parent="." index="61"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___10__6493" parent="." index="62"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___2__6495" parent="." index="63"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___3__6497" parent="." index="64"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___4__6499" parent="." index="65"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___5__6501" parent="." index="66"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___6__6503" parent="." index="67"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___7__6505" parent="." index="68"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___8__6507" parent="." index="69"]
+surface_material_override/0 = ExtResource("13_lmxab")
+
+[node name="Bistro_Research_Exterior_Paris_Table_01___9__6509" parent="." index="70"]
+surface_material_override/0 = ExtResource("13_lmxab")

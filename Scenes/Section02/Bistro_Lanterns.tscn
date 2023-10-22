@@ -6,22 +6,32 @@
 
 [node name="Bistro_Lanterns" instance=ExtResource("1_iu717")]
 
-[node name="Lantern_Wind_21" parent="." index="0"]
+[node name="Lantern_Wind_21_0" parent="Lantern_Wind_21" index="0"]
 surface_material_override/0 = ExtResource("2_gt8w3")
-surface_material_override/1 = ExtResource("3_yhwc0")
 
-[node name="Lantern_Wind_22" parent="." index="1"]
-surface_material_override/0 = ExtResource("2_gt8w3")
-surface_material_override/1 = ExtResource("3_yhwc0")
+[node name="Lantern_Wind_21_1" parent="Lantern_Wind_21" index="1"]
+surface_material_override/0 = ExtResource("3_yhwc0")
 
-[node name="Lantern_Wind_23" parent="." index="2"]
+[node name="Lantern_Wind_22_0" parent="Lantern_Wind_22" index="0"]
 surface_material_override/0 = ExtResource("2_gt8w3")
-surface_material_override/1 = ExtResource("3_yhwc0")
 
-[node name="Lantern_Wind_24" parent="." index="3"]
-surface_material_override/0 = ExtResource("2_gt8w3")
-surface_material_override/1 = ExtResource("3_yhwc0")
+[node name="Lantern_Wind_22_1" parent="Lantern_Wind_22" index="1"]
+surface_material_override/0 = ExtResource("3_yhwc0")
 
-[node name="Lantern_Wind_25" parent="." index="4"]
+[node name="Lantern_Wind_23_0" parent="Lantern_Wind_23" index="0"]
 surface_material_override/0 = ExtResource("2_gt8w3")
-surface_material_override/1 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_23_1" parent="Lantern_Wind_23" index="1"]
+surface_material_override/0 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_24_0" parent="Lantern_Wind_24" index="0"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+
+[node name="Lantern_Wind_24_1" parent="Lantern_Wind_24" index="1"]
+surface_material_override/0 = ExtResource("3_yhwc0")
+
+[node name="Lantern_Wind_25_0" parent="Lantern_Wind_25" index="0"]
+surface_material_override/0 = ExtResource("2_gt8w3")
+
+[node name="Lantern_Wind_25_1" parent="Lantern_Wind_25" index="1"]
+surface_material_override/0 = ExtResource("3_yhwc0")
