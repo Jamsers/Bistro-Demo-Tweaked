@@ -33,11 +33,11 @@ _subresources={
 "materials": {
 "@MATERIAL:0": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:1": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:10": {
 "use_external/enabled": true,
@@ -53,7 +53,7 @@ _subresources={
 },
 "@MATERIAL:13": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:14": {
 "use_external/enabled": true,
@@ -69,7 +69,7 @@ _subresources={
 },
 "@MATERIAL:17": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:18": {
 "use_external/enabled": true,
@@ -81,27 +81,11 @@ _subresources={
 },
 "@MATERIAL:2": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
-},
-"@MATERIAL:20": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:21": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:22": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:23": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:3": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:4": {
 "use_external/enabled": true,
@@ -109,7 +93,7 @@ _subresources={
 },
 "@MATERIAL:5": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:6": {
 "use_external/enabled": true,
@@ -125,7 +109,7 @@ _subresources={
 },
 "@MATERIAL:9": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 }
 }
 }
