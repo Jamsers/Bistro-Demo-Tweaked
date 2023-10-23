@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=64 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cou4bgmlcrc2" path="res://Scenes/Section03/S3B4.tscn" id="19_acyb5"]
 [ext_resource type="PackedScene" uid="uid://8lyr6devevqc" path="res://Scenes/Section03/S3Lamps.tscn" id="20_w5tey"]
 [ext_resource type="PackedScene" uid="uid://0rjacw3hrc2a" path="res://Scenes/Section04/S4B1.tscn" id="21_7egcs"]
+[ext_resource type="PackedScene" uid="uid://d0oo6ukycpqtf" path="res://Scenes/Section01/S1Lamps_Props.tscn" id="21_yopo6"]
 [ext_resource type="PackedScene" uid="uid://dg2ssh4rfvemk" path="res://Scenes/Section04/S4B2.tscn" id="22_k7idl"]
 [ext_resource type="PackedScene" uid="uid://dhbajvc40q32m" path="res://Scenes/Section04/S4B3.tscn" id="23_256hy"]
 [ext_resource type="PackedScene" uid="uid://7pvp17b3ediw" path="res://Scenes/Section02/BistroProps_Props.tscn" id="23_lunsi"]
@@ -44,11 +45,14 @@
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
+[ext_resource type="PackedScene" uid="uid://djmap33l1n2u6" path="res://Scenes/Section02/S2Lamps_Props.tscn" id="33_k0qq7"]
 [ext_resource type="Environment" uid="uid://bevtu3gehmb2j" path="res://Resources/WorldEnvironment.tres" id="33_vhloy"]
 [ext_resource type="Material" uid="uid://elgkttuqw3r" path="res://Materials/FogMaterial.tres" id="35_hsy4k"]
+[ext_resource type="PackedScene" uid="uid://bjgd3j6klx44v" path="res://Scenes/Section03/S3Lamps_Props.tscn" id="40_mmbd0"]
 [ext_resource type="PackedScene" uid="uid://cos8ymay0y3os" path="res://Scenes/Section04/S4B3_Props.tscn" id="41_renwl"]
 [ext_resource type="PackedScene" uid="uid://dfhhloubmolfj" path="res://Scenes/Section05/S5B1_Props.tscn" id="43_a2awi"]
 [ext_resource type="PackedScene" uid="uid://doh36w0se2tbx" path="res://Scenes/Section05/S5B2_Props.tscn" id="45_v1415"]
+[ext_resource type="PackedScene" uid="uid://gaq3qqqqv8xx" path="res://Scenes/Section05/S5Lamps_Props.tscn" id="50_tx67g"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 2, 85.35)
@@ -82,14 +86,13 @@ texture_filter = 5
 
 [node name="Node3D" type="Node3D"]
 
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights", "lamp_mesh_containers", "lamp_meshes", "scalable_night_lights") instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "day_lights", "lamp_mesh_containers", "scalable_night_lights") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
 day_lights = NodePath("../Day Lights")
 lamp_mesh_containers = [NodePath("../Section03/S3Lamps")]
-lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a___2__6025"), NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 
@@ -122,6 +125,8 @@ directional_shadow_pancake_size = 40.0
 
 [node name="S1Lamps" parent="Section01" instance=ExtResource("6_kx4kb")]
 
+[node name="S1Lamps_Props" parent="Section01" instance=ExtResource("21_yopo6")]
+
 [node name="S1Walls" parent="Section01" instance=ExtResource("7_2kc2q")]
 
 [node name="Section02" type="Node3D" parent="."]
@@ -146,6 +151,8 @@ directional_shadow_pancake_size = 40.0
 
 [node name="S2Lamps" parent="Section02" instance=ExtResource("13_v0ve4")]
 
+[node name="S2Lamps_Props" parent="Section02" instance=ExtResource("33_k0qq7")]
+
 [node name="S2Walls" parent="Section02" instance=ExtResource("14_v6tgn")]
 
 [node name="Section03" type="Node3D" parent="."]
@@ -159,6 +166,8 @@ directional_shadow_pancake_size = 40.0
 [node name="S3B4" parent="Section03" instance=ExtResource("19_acyb5")]
 
 [node name="S3Lamps" parent="Section03" instance=ExtResource("20_w5tey")]
+
+[node name="S3Lamps_Props" parent="Section03" instance=ExtResource("40_mmbd0")]
 
 [node name="Section04" type="Node3D" parent="."]
 
@@ -181,6 +190,8 @@ directional_shadow_pancake_size = 40.0
 [node name="S5B2_Props" parent="Section05" instance=ExtResource("45_v1415")]
 
 [node name="S5Lamps" parent="Section05" instance=ExtResource("26_xvk4t")]
+
+[node name="S5Lamps_Prop" parent="Section05" instance=ExtResource("50_tx67g")]
 
 [node name="Ground" type="Node3D" parent="."]
 

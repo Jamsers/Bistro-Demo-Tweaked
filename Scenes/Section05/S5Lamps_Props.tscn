@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gaq3qqqqv8xx"]
+
+[ext_resource type="PackedScene" uid="uid://di2gj4rl0rnji" path="res://Meshes/Section05/S5Lamps_Props.glb" id="1_4otw8"]
+
+[node name="S5Lamps_Prop" instance=ExtResource("1_4otw8")]

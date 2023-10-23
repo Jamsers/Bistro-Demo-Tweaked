@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://djmap33l1n2u6"]
+
+[ext_resource type="PackedScene" uid="uid://bfs7smi4xfcyu" path="res://Meshes/Section02/S2Lamps_Props.glb" id="1_jkvny"]
+
+[node name="S2Lamps_Props" instance=ExtResource("1_jkvny")]
