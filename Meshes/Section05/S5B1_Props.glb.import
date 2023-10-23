@@ -38,6 +38,34 @@ _subresources={
 "@MATERIAL:1": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Miscellaneous/Trashcan.tres"
+},
+"@MATERIAL:2": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+},
+"@MATERIAL:3": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+},
+"@MATERIAL:4": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:5": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+},
+"@MATERIAL:6": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:7": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:8": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
 }
 }
 }

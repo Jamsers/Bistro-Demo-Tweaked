@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfhhloubmolfj"]
+[gd_scene load_steps=6 format=3 uid="uid://dfhhloubmolfj"]
 
 [ext_resource type="PackedScene" uid="uid://bl27vya6bdfl2" path="res://Meshes/Section05/S5B1_Props.glb" id="1_citqp"]
 [ext_resource type="Material" uid="uid://6dpxfs7fuhqq" path="res://Materials/Miscellaneous/Trashcan.tres" id="2_3w0eg"]
+[ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="3_bp0ik"]
+[ext_resource type="Material" uid="uid://dartc2dlysfa5" path="res://Materials/Lights/Streetlight_Metal.tres" id="4_xt1lb"]
+[ext_resource type="Material" uid="uid://dbhonoml2uada" path="res://Materials/Lights/Streetlight_Chains.tres" id="5_5cqr6"]
 
 [node name="S5B1_Props" instance=ExtResource("1_citqp")]
 
@@ -10,3 +13,24 @@ surface_material_override/0 = ExtResource("2_3w0eg")
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527_001" parent="." index="1"]
 surface_material_override/0 = ExtResource("2_3w0eg")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___2__6003" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_bp0ik")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a___2__6025" parent="." index="3"]
+surface_material_override/0 = ExtResource("3_bp0ik")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265" index="0"]
+surface_material_override/0 = ExtResource("4_xt1lb")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265" index="1"]
+surface_material_override/0 = ExtResource("5_5cqr6")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265" index="2"]
+surface_material_override/0 = ExtResource("4_xt1lb")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265" index="3"]
+surface_material_override/0 = ExtResource("4_xt1lb")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265" index="4"]
+surface_material_override/0 = ExtResource("5_5cqr6")
