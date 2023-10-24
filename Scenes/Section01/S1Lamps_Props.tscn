@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0oo6ukycpqtf"]
+
+[ext_resource type="PackedScene" uid="uid://skun5sb54pdm" path="res://Meshes/Section01/S1Lamps_Props.glb" id="1_myiha"]
+[ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="2_56wir"]
+[ext_resource type="Material" uid="uid://dbhonoml2uada" path="res://Materials/Lights/Streetlight_Chains.tres" id="3_nenvf"]
+[ext_resource type="Material" uid="uid://dartc2dlysfa5" path="res://Materials/Lights/Streetlight_Metal.tres" id="4_8o2hq"]
+
+[node name="S1Lamps_Props" instance=ExtResource("1_myiha")]
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___10__5999" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___11__6001" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___7__6013" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___9__6017" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a___8__6037" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261" index="0"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261" index="1"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261" index="2"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261" index="3"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261" index="4"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263" index="0"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263" index="1"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263" index="2"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263" index="3"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263" index="4"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275" index="0"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275" index="1"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275" index="2"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275" index="3"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275" index="4"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277" index="0"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277" index="1"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277" index="2"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277" index="3"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277" index="4"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_002" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279" index="0"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_003" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279" index="1"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279" index="2"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279" index="3"]
+surface_material_override/0 = ExtResource("4_8o2hq")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279" index="4"]
+surface_material_override/0 = ExtResource("3_nenvf")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___7__6013_001" parent="." index="10"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___10__5999_001" parent="." index="11"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___11__6001_001" parent="." index="12"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a1___9__6017_001" parent="." index="13"]
+surface_material_override/0 = ExtResource("2_56wir")
+
+[node name="Bistro_Research_Exterior_Paris_Flowers_01a___8__6037_001" parent="." index="14"]
+surface_material_override/0 = ExtResource("2_56wir")

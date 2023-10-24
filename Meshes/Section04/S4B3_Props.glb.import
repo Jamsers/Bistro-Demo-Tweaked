@@ -20,7 +20,7 @@ nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=3
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -34,6 +34,18 @@ _subresources={
 "@MATERIAL:0": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Miscellaneous/Trashcan.tres"
+}
+},
+"meshes": {
+"S4B3_Props_Mesh_1009": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section04/S4B3_Props/S4B3_Props_Mesh_1009.res"
 }
 }
 }

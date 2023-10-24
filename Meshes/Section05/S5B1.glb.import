@@ -157,11 +157,11 @@ _subresources={
 },
 "@MATERIAL:37": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Ground/Pavement_Curbstones.tres"
 },
 "@MATERIAL:38": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Nature/Pavement_Ground_Wet.tres"
 },
 "@MATERIAL:39": {
 "use_external/enabled": true,
@@ -189,27 +189,27 @@ _subresources={
 },
 "@MATERIAL:44": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Pavement_Ground_Wet.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:45": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Ground/Pavement_Curbstones.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:46": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:47": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:48": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:49": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:5": {
 "use_external/enabled": true,
@@ -221,17 +221,9 @@ _subresources={
 },
 "@MATERIAL:51": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
-},
-"@MATERIAL:52": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
-},
-"@MATERIAL:53": {
-"use_external/enabled": true,
 "use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
-"@MATERIAL:54": {
+"@MATERIAL:52": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },

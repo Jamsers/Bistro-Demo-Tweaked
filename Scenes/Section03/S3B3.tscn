@@ -65,6 +65,7 @@ surface_material_override/0 = ExtResource("2_lravp")
 shape = SubResource("ConcavePolygonShape3D_s4tcx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_08_paris_buildi_3a3b7ce" parent="." index="3"]
+lod_bias = 5.0
 surface_material_override/0 = ExtResource("3_ivhib")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Paris_Building_08_paris_buildi_3a3b7ce" index="0"]
@@ -139,13 +140,20 @@ shape = SubResource("ConcavePolygonShape3D_3inge")
 surface_material_override/0 = ExtResource("12_xqjgv")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301_0" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301" index="0"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("14_l0j02")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301" index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("16_uoaim")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301_2" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___4__6301" index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("14_l0j02")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_Glass_01B___5__6359" parent="." index="15"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("15_ydgb0")

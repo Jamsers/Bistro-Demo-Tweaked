@@ -33,19 +33,19 @@ _subresources={
 "materials": {
 "@MATERIAL:0": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:1": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:10": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:11": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:12": {
 "use_external/enabled": true,
@@ -57,11 +57,11 @@ _subresources={
 },
 "@MATERIAL:14": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:15": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:16": {
 "use_external/enabled": true,
@@ -73,63 +73,43 @@ _subresources={
 },
 "@MATERIAL:18": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:19": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:2": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:20": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
 "@MATERIAL:21": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
 "@MATERIAL:22": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
 "@MATERIAL:23": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
 "@MATERIAL:24": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
-},
-"@MATERIAL:25": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:26": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:27": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:28": {
-"use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
-},
-"@MATERIAL:29": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Lights/Emissive_StreeLight.tres"
 },
 "@MATERIAL:3": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:4": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:5": {
 "use_external/enabled": true,
@@ -137,11 +117,11 @@ _subresources={
 },
 "@MATERIAL:6": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
 },
 "@MATERIAL:7": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/StreetLight_Bulb.tres"
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
 },
 "@MATERIAL:8": {
 "use_external/enabled": true,

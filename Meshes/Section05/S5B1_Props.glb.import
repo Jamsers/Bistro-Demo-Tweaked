@@ -20,7 +20,7 @@ nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=3
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -38,6 +38,126 @@ _subresources={
 "@MATERIAL:1": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Miscellaneous/Trashcan.tres"
+},
+"@MATERIAL:2": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+},
+"@MATERIAL:3": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+},
+"@MATERIAL:4": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:5": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+},
+"@MATERIAL:6": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:7": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Metal.tres"
+},
+"@MATERIAL:8": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Streetlight_Chains.tres"
+}
+},
+"meshes": {
+"S5B1_Props_Mesh_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_001.res"
+},
+"S5B1_Props_Mesh_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_002.res"
+},
+"S5B1_Props_Mesh_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_003.res"
+},
+"S5B1_Props_Mesh_1334": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_1334.res"
+},
+"S5B1_Props_Mesh_172_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_172_001.res"
+},
+"S5B1_Props_Mesh_172_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_172_002.res"
+},
+"S5B1_Props_Mesh_172_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_172_003.res"
+},
+"S5B1_Props_Mesh_172_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_172_004.res"
+},
+"S5B1_Props_Mesh_172_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5B1_Props/S5B1_Props_Mesh_172_005.res"
 }
 }
 }
