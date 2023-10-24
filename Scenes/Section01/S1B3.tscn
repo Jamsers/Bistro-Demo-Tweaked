@@ -120,7 +120,7 @@ surface_material_override/0 = ExtResource("5_rvxuu")
 surface_material_override/0 = ExtResource("6_dyrtr")
 
 [node name="Bistro_Research_Exterior_paris_building_10_2__5533" parent="." index="18"]
-lod_bias = 4.0
+lod_bias = 10.0
 surface_material_override/0 = ExtResource("9_qjfmq")
 
 [node name="Bistro_Research_Exterior_paris_building_10_3__5535" parent="." index="19"]
