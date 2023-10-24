@@ -76,21 +76,29 @@ surface_material_override/0 = ExtResource("21_hgorg")
 surface_material_override/0 = ExtResource("21_hgorg")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_2e56d12" parent="." index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_066tl")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_789e870" parent="." index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("4_4iyvs")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_7968011" parent="." index="3"]
 surface_material_override/0 = ExtResource("2_066tl")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_b97cabf" parent="." index="4"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("4_4iyvs")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_e45b9eb" parent="." index="5"]
 surface_material_override/0 = ExtResource("2_066tl")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_ff87bc1" parent="." index="6"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_066tl")
 
 [node name="Bistro_Research_Exterior_paris_building_04_4987" parent="." index="7"]
@@ -240,13 +248,20 @@ surface_material_override/0 = ExtResource("21_hgorg")
 surface_material_override/0 = ExtResource("22_iiu7y")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289_0" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289" index="0"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("25_tcnwm")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289_1" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289" index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("26_01orq")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289_2" parent="Bistro_Research_Exterior_Paris_StreetLight_01B___12__6289" index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("25_tcnwm")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_Glass_01B___12__6345" parent="." index="32"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("27_b08sh")

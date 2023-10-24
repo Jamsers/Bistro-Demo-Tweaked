@@ -52,27 +52,43 @@ data = PackedVector3Array(-4.7451, 0.6907, -0.8414, -4.745, -0.4001, -0.8413, -3
 [node name="S5B2" instance=ExtResource("1_mwgp6")]
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_1522daf" parent="." index="0"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_8w4gx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_4ede27c" parent="." index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_8w4gx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_6510a8f" parent="." index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_o20gk")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_7e76e1c" parent="." index="3"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_o20gk")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_8af7113" parent="." index="4"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_8w4gx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_bd013cf" parent="." index="5"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_o20gk")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_c964fa9" parent="." index="6"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_8w4gx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_de353ec" parent="." index="7"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_o20gk")
 
 [node name="Bistro_Research_Exterior_paris_building_10_5469" parent="." index="8"]
@@ -182,7 +198,9 @@ surface_material_override/0 = ExtResource("13_2agen")
 surface_material_override/0 = ExtResource("19_8fliq")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01E_6167_0" parent="Bistro_Research_Exterior_Paris_ShopSign_01E_6167" index="0"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("20_w6l4j")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01E_6167_1" parent="Bistro_Research_Exterior_Paris_ShopSign_01E_6167" index="1"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("21_eptfa")

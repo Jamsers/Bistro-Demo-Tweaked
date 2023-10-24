@@ -72,15 +72,23 @@ surface_material_override/0 = ExtResource("2_et3ox")
 surface_material_override/0 = ExtResource("2_et3ox")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_7a01338" parent="." index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_ibrb8")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_800edca" parent="." index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("3_k17gk")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_802b95e" parent="." index="3"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_ibrb8")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_b9bb09d" parent="." index="4"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("3_k17gk")
 
 [node name="Bistro_Research_Exterior_paris_building_05_5073" parent="." index="5"]
@@ -234,15 +242,21 @@ surface_material_override/0 = ExtResource("9_dn1dn")
 shape = SubResource("ConcavePolygonShape3D_2svg1")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01D_6165_0" parent="Bistro_Research_Exterior_Paris_ShopSign_01D_6165" index="0"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("26_vnljs")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01D_6165_1" parent="Bistro_Research_Exterior_Paris_ShopSign_01D_6165" index="1"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("27_h1o0v")
 
 [node name="Bistro_Research_Exterior_Spotlights_6519_0" parent="Bistro_Research_Exterior_Spotlights_6519" index="0"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("3_k17gk")
 
 [node name="Bistro_Research_Exterior_Spotlights_6519_1" parent="Bistro_Research_Exterior_Spotlights_6519" index="1"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("28_ptfb6")
 
 [node name="Bistro_Research_Exterior_Spotlights_6519_2" parent="Bistro_Research_Exterior_Spotlights_6519" index="2"]
