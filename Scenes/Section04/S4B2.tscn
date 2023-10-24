@@ -95,9 +95,11 @@ surface_material_override/0 = ExtResource("3_k17gk")
 surface_material_override/0 = ExtResource("14_nmyw3")
 
 [node name="Bistro_Research_Exterior_paris_building_05_5075" parent="." index="6"]
+visible = false
 surface_material_override/0 = ExtResource("2_ylktd")
 
 [node name="Bistro_Research_Exterior_paris_building_05_5077" parent="." index="7"]
+visible = false
 surface_material_override/0 = ExtResource("2_ylktd")
 
 [node name="Bistro_Research_Exterior_paris_building_05_5117_0" parent="Bistro_Research_Exterior_paris_building_05_5117" index="0"]
