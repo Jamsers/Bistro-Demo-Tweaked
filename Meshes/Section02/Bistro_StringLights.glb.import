@@ -20,7 +20,7 @@ nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=1
+meshes/light_baking=3
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -29,5 +29,192 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"@MATERIAL:0": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:1": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:10": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:11": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:12": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:13": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:14": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Red.tres"
+},
+"@MATERIAL:15": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Green.tres"
+},
+"@MATERIAL:16": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:17": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:18": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:19": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:2": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Red.tres"
+},
+"@MATERIAL:20": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:21": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:22": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Red.tres"
+},
+"@MATERIAL:23": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:24": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:25": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:26": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:27": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:28": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:29": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:3": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:30": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Green.tres"
+},
+"@MATERIAL:31": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:32": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:33": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:34": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:35": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:36": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Green.tres"
+},
+"@MATERIAL:37": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:38": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:39": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:4": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:40": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:41": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:42": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Green.tres"
+},
+"@MATERIAL:43": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+},
+"@MATERIAL:44": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Pink.tres"
+},
+"@MATERIAL:45": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:5": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Blue.tres"
+},
+"@MATERIAL:6": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLights.tres"
+},
+"@MATERIAL:7": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Orange.tres"
+},
+"@MATERIAL:8": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_Green.tres"
+},
+"@MATERIAL:9": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/StringLight_White.tres"
+}
+}
+}
 gltf/embedded_image_handling=1

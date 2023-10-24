@@ -1,0 +1,196 @@
+[gd_scene load_steps=9 format=3 uid="uid://ncj04jk76gn0"]
+
+[ext_resource type="PackedScene" uid="uid://clfo7vsxbdmuy" path="res://Meshes/Section02/Bistro_StringLights.glb" id="1_rjuhd"]
+[ext_resource type="Material" uid="uid://d3lja8yy8w8om" path="res://Materials/Lights/StringLights.tres" id="2_tul44"]
+[ext_resource type="Material" uid="uid://cnrxe37qqbo5e" path="res://Materials/Lights/StringLight_Orange.tres" id="3_brebl"]
+[ext_resource type="Material" uid="uid://pub4k2cqjy50" path="res://Materials/Lights/StringLight_Green.tres" id="4_g1ybc"]
+[ext_resource type="Material" uid="uid://ivcxxvgm585r" path="res://Materials/Lights/StringLight_White.tres" id="5_dyq18"]
+[ext_resource type="Material" uid="uid://bh3xso5831lxm" path="res://Materials/Lights/StringLight_Pink.tres" id="6_78hus"]
+[ext_resource type="Material" uid="uid://b6dx1tpevicfc" path="res://Materials/Lights/StringLight_Blue.tres" id="7_0lsvn"]
+[ext_resource type="Material" uid="uid://bi8tfpoad535y" path="res://Materials/Lights/StringLight_Red.tres" id="8_10hs5"]
+
+[node name="Bistro_StringLights" instance=ExtResource("1_rjuhd")]
+
+[node name="StringLight_Wind_14_0" parent="StringLight_Wind_14" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_14_1" parent="StringLight_Wind_14" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_14_2" parent="StringLight_Wind_14" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("8_10hs5")
+
+[node name="StringLight_Wind_14_3" parent="StringLight_Wind_14" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_14_4" parent="StringLight_Wind_14" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_14_5" parent="StringLight_Wind_14" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_15_0" parent="StringLight_Wind_15" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_15_1" parent="StringLight_Wind_15" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_15_2" parent="StringLight_Wind_15" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("4_g1ybc")
+
+[node name="StringLight_Wind_15_3" parent="StringLight_Wind_15" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_15_4" parent="StringLight_Wind_15" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_15_5" parent="StringLight_Wind_15" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_18_0" parent="StringLight_Wind_18" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_18_1" parent="StringLight_Wind_18" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_18_2" parent="StringLight_Wind_18" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("8_10hs5")
+
+[node name="StringLight_Wind_18_3" parent="StringLight_Wind_18" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("4_g1ybc")
+
+[node name="StringLight_Wind_18_4" parent="StringLight_Wind_18" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_18_5" parent="StringLight_Wind_18" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_19_0" parent="StringLight_Wind_19" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_19_1" parent="StringLight_Wind_19" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_19_2" parent="StringLight_Wind_19" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_19_3" parent="StringLight_Wind_19" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_19_4" parent="StringLight_Wind_19" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("8_10hs5")
+
+[node name="StringLight_Wind_20_0" parent="StringLight_Wind_20" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_20_1" parent="StringLight_Wind_20" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_20_2" parent="StringLight_Wind_20" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_20_3" parent="StringLight_Wind_20" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_20_4" parent="StringLight_Wind_20" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_21_0" parent="StringLight_Wind_21" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_21_1" parent="StringLight_Wind_21" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_21_2" parent="StringLight_Wind_21" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("4_g1ybc")
+
+[node name="StringLight_Wind_21_3" parent="StringLight_Wind_21" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_21_4" parent="StringLight_Wind_21" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_21_5" parent="StringLight_Wind_21" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_22_0" parent="StringLight_Wind_22" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_22_1" parent="StringLight_Wind_22" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_22_2" parent="StringLight_Wind_22" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("4_g1ybc")
+
+[node name="StringLight_Wind_22_3" parent="StringLight_Wind_22" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_22_4" parent="StringLight_Wind_22" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_22_5" parent="StringLight_Wind_22" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")
+
+[node name="StringLight_Wind_23_0" parent="StringLight_Wind_23" index="0"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("2_tul44")
+
+[node name="StringLight_Wind_23_1" parent="StringLight_Wind_23" index="1"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("3_brebl")
+
+[node name="StringLight_Wind_23_2" parent="StringLight_Wind_23" index="2"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("4_g1ybc")
+
+[node name="StringLight_Wind_23_3" parent="StringLight_Wind_23" index="3"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("5_dyq18")
+
+[node name="StringLight_Wind_23_4" parent="StringLight_Wind_23" index="4"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("6_78hus")
+
+[node name="StringLight_Wind_23_5" parent="StringLight_Wind_23" index="5"]
+lod_bias = 4.0
+surface_material_override/0 = ExtResource("7_0lsvn")

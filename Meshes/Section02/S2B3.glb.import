@@ -29,5 +29,516 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"@MATERIAL:1": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Ivy_Leaf.tres"
+},
+"@MATERIAL:10": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:100": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:101": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:102": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:103": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:104": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:105": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Bistro_Main_Door.tres"
+},
+"@MATERIAL:106": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:107": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Curtains.tres"
+},
+"@MATERIAL:108": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:109": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Glass/Windows_Glass.tres"
+},
+"@MATERIAL:11": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:110": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:111": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete2.tres"
+},
+"@MATERIAL:112": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:113": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Grooved.tres"
+},
+"@MATERIAL:114": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:115": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Grooved.tres"
+},
+"@MATERIAL:116": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete2.tres"
+},
+"@MATERIAL:117": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:118": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Flowers.tres"
+},
+"@MATERIAL:119": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
+},
+"@MATERIAL:12": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:120": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Balcony_Concrete.tres"
+},
+"@MATERIAL:121": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Balcony_Trims.tres"
+},
+"@MATERIAL:122": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Balcony_Ornaments.tres"
+},
+"@MATERIAL:123": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Balcony_Green_Wood.tres"
+},
+"@MATERIAL:124": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Glass/Windows_Glass.tres"
+},
+"@MATERIAL:125": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/MenuSign_02_Mesh.tres"
+},
+"@MATERIAL:126": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/MenuSign_02_Glass.tres"
+},
+"@MATERIAL:127": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Paris_StreetSign_01.tres"
+},
+"@MATERIAL:13": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:14": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:15": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:16": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:17": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:18": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:19": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Bistro_Sign_Main.tres"
+},
+"@MATERIAL:2": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Ivy_Branches.tres"
+},
+"@MATERIAL:20": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Bistro_Sign_Letters.tres"
+},
+"@MATERIAL:21": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Banner_Metal.tres"
+},
+"@MATERIAL:22": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Grooved.tres"
+},
+"@MATERIAL:23": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:24": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:25": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:26": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Focus_Ornament.tres"
+},
+"@MATERIAL:27": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:28": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:29": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Focus.tres"
+},
+"@MATERIAL:3": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Nature/Foliage_Ivy_Leaf.tres"
+},
+"@MATERIAL:30": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Grey.tres"
+},
+"@MATERIAL:31": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:32": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:33": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:34": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:35": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Green.tres"
+},
+"@MATERIAL:36": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Plastic.tres"
+},
+"@MATERIAL:37": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:38": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Grey.tres"
+},
+"@MATERIAL:39": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete1.tres"
+},
+"@MATERIAL:4": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Antenna_Metal.tres"
+},
+"@MATERIAL:40": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:41": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:42": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:43": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Focus.tres"
+},
+"@MATERIAL:44": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:45": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:46": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Glass/Windows_Glass.tres"
+},
+"@MATERIAL:47": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:48": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:49": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:5": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Antenna_Metal.tres"
+},
+"@MATERIAL:50": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Forge_Metal.tres"
+},
+"@MATERIAL:51": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Forge_Metal.tres"
+},
+"@MATERIAL:52": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:53": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Forge_Metal.tres"
+},
+"@MATERIAL:54": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:55": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:56": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:57": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Trim_Cornice.tres"
+},
+"@MATERIAL:58": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Green.tres"
+},
+"@MATERIAL:59": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:6": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Antenna_Metal.tres"
+},
+"@MATERIAL:60": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:61": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Metal.tres"
+},
+"@MATERIAL:62": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:63": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Focus.tres"
+},
+"@MATERIAL:64": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:65": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Curtains.tres"
+},
+"@MATERIAL:66": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Grooved.tres"
+},
+"@MATERIAL:67": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Green.tres"
+},
+"@MATERIAL:68": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:69": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Bistro_Main_Door.tres"
+},
+"@MATERIAL:7": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:70": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Forge_Metal.tres"
+},
+"@MATERIAL:71": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:72": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Plaster1.tres"
+},
+"@MATERIAL:73": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Side_Letters.tres"
+},
+"@MATERIAL:74": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Brown.tres"
+},
+"@MATERIAL:75": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:76": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Focus.tres"
+},
+"@MATERIAL:77": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:78": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Glass/Glass_Exterior.tres"
+},
+"@MATERIAL:79": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:8": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Beams.tres"
+},
+"@MATERIAL:80": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:81": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:82": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Brown.tres"
+},
+"@MATERIAL:83": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Bistro_Main_Door.tres"
+},
+"@MATERIAL:84": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Miscellaneous/Plastic.tres"
+},
+"@MATERIAL:85": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Wood/Wood_Painted_Green.tres"
+},
+"@MATERIAL:86": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Roofing/Roofing_Shingle_Green.tres"
+},
+"@MATERIAL:87": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:88": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Curtains.tres"
+},
+"@MATERIAL:89": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Glass/Glass_Exterior.tres"
+},
+"@MATERIAL:9": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Fabric/Awning_Fabric_Red.tres"
+},
+"@MATERIAL:90": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Yellow.tres"
+},
+"@MATERIAL:91": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:92": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:93": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:94": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/Spotlight_Glass_Emissive.tres"
+},
+"@MATERIAL:95": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete.tres"
+},
+"@MATERIAL:96": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:97": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Stone/Concrete_Smooth.tres"
+},
+"@MATERIAL:98": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+},
+"@MATERIAL:99": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Metal/Black_Metal.tres"
+}
+}
+}
 gltf/embedded_image_handling=1
