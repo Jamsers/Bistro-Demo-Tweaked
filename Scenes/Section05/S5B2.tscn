@@ -76,6 +76,7 @@ surface_material_override/0 = ExtResource("2_8w4gx")
 surface_material_override/0 = ExtResource("2_o20gk")
 
 [node name="Bistro_Research_Exterior_paris_building_10_5469" parent="." index="8"]
+lod_bias = 5.0
 surface_material_override/0 = ExtResource("2_t0rv2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_paris_building_10_5469" index="0"]

@@ -199,7 +199,9 @@ gi_mode = 0
 surface_material_override/0 = ExtResource("12_8j2jh")
 
 [node name="Bistro_Research_Exterior_Paris_TrafficSign_01A1_6513" parent="." index="18"]
+lod_bias = 5.0
 surface_material_override/0 = ExtResource("11_qscm4")
 
 [node name="Bistro_Research_Exterior_Paris_TrafficSign_01A_6511" parent="." index="19"]
+lod_bias = 5.0
 surface_material_override/0 = ExtResource("11_qscm4")

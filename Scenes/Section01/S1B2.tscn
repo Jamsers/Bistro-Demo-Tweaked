@@ -86,4 +86,5 @@ surface_material_override/0 = ExtResource("3_7o4we")
 shape = SubResource("ConcavePolygonShape3D_kfred")
 
 [node name="Bistro_Research_Exterior_paris_building_03_mirrored_9__4985" parent="." index="8"]
+lod_bias = 10.0
 surface_material_override/0 = ExtResource("5_lic4u")

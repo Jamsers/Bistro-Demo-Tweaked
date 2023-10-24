@@ -65,6 +65,7 @@ surface_material_override/0 = ExtResource("2_lravp")
 shape = SubResource("ConcavePolygonShape3D_s4tcx")
 
 [node name="Bistro_Research_Exterior_Paris_Building_08_paris_buildi_3a3b7ce" parent="." index="3"]
+lod_bias = 5.0
 surface_material_override/0 = ExtResource("3_ivhib")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bistro_Research_Exterior_Paris_Building_08_paris_buildi_3a3b7ce" index="0"]
