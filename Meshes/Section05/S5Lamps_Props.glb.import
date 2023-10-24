@@ -59,6 +59,78 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Nature/Foliage_Paris_Flowers.tres"
 }
+},
+"meshes": {
+"S5Lamps_Props_Mesh_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_001.res"
+},
+"S5Lamps_Props_Mesh_175_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_005.res"
+},
+"S5Lamps_Props_Mesh_175_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_006.res"
+},
+"S5Lamps_Props_Mesh_175_007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_007.res"
+},
+"S5Lamps_Props_Mesh_175_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_008.res"
+},
+"S5Lamps_Props_Mesh_175_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_1.res"
+},
+"S5Lamps_Props_Mesh_415": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_415.res"
+}
 }
 }
 gltf/embedded_image_handling=1
