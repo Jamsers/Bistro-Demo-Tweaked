@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://tynp4gabi3x5"]
+
+[ext_resource type="Texture2D" path="res://Textures/Stone/MASTER_Brick_Small_Red_BLENDSHADER_BaseColor.dds" id="1_w0304"]
+[ext_resource type="Texture2D" uid="uid://ylgmwx2lq0e1" path="res://Textures/Stone/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png" id="2_dp4hn"]
+
+[resource]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_w0304")
+roughness = 0.73
+normal_enabled = true
+normal_texture = ExtResource("2_dp4hn")
+uv1_scale = Vector3(3, 3, 3)
+texture_filter = 5
+proximity_fade_enabled = true
+proximity_fade_distance = 0.75
+distance_fade_mode = 1
+distance_fade_min_distance = 10.0
+distance_fade_max_distance = 2.5
