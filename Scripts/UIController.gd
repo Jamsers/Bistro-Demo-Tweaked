@@ -19,6 +19,7 @@ extends Control
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
 const TIME_CHANGE_DURATION = 4.0
+const NIGHT_SHADOW_RES = 1024
 
 var renderTargetVertical = 1080.0
 var is_time_changing = false
@@ -30,6 +31,9 @@ var frametime
 var draw_calls
 var memory
 var vram
+
+@onready var sun_orig_res = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/size")
+@onready var sun_shadow_bits = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/16_bits")
 
 func _ready():
 	refresh_performance()
@@ -161,6 +165,7 @@ func apply_time(lighting):
 	if !lighting.night_lights:
 		night_lights.visible = false
 		change_shadow_casters(true)
+		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in emissives:
 			mat.emission_enabled = false
 	
@@ -177,6 +182,7 @@ func apply_time(lighting):
 			if lighting.night_lights:
 				night_lights.visible = true
 				change_shadow_casters(false)
+				RenderingServer.directional_shadow_atlas_set_size(NIGHT_SHADOW_RES, sun_shadow_bits)
 				for mat in emissives:
 					mat.emission_enabled = true
 			is_time_changing = false
