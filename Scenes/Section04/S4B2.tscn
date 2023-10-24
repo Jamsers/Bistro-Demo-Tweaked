@@ -260,4 +260,6 @@ gi_mode = 2
 surface_material_override/0 = ExtResource("28_ptfb6")
 
 [node name="Bistro_Research_Exterior_Spotlights_6519_2" parent="Bistro_Research_Exterior_Spotlights_6519" index="2"]
+cast_shadow = 0
+gi_mode = 2
 surface_material_override/0 = ExtResource("3_k17gk")
