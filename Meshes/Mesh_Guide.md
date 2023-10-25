@@ -1,4 +1,5 @@
 ## To create ColOcc:
+ - Import GLB
  - Delete irrelevant meshes
  - Join all
  - Shade flat
