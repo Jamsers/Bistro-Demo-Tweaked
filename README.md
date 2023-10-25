@@ -17,7 +17,7 @@ H to hide/unhide control panel UI
 WASD to move  
 SHIFT to sprint  
 SPACE to jump  
-F to noclip  
+TILDE(~) to noclip  
 
 V to switch third person/first person  
 RIGHT CLICK to zoom/focus  

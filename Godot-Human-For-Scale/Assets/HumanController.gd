@@ -395,7 +395,7 @@ func _unhandled_input(event):
 				right_isdown = event.pressed
 			KEY_V:
 				cam_toggle_isdown = event.pressed
-			KEY_F:
+			KEY_QUOTELEFT:
 				noclip_isdown = event.pressed
 			KEY_SHIFT:
 				sprint_isdown = event.pressed
