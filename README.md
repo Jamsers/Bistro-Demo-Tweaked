@@ -23,6 +23,9 @@ V to switch third person/first person
 RIGHT CLICK to zoom/focus  
 TAB to switch third person camera shoulders  
 
+## *.res Files Reimported
+When opening the project for the first time, you may notice hundreds of *.res files get modified in your source control. This is a quirk of the Godot importer and these changes can be safely discarded once project has already been opened once.
+
 ## Profiler
 Also includes a profiler to see performance details. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).
 
