@@ -163,7 +163,7 @@ enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
-day_lights = NodePath("../Day Lights")
+day_lights = NodePath("")
 lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
@@ -482,58 +482,6 @@ surface_material_override/0 = ExtResource("55_ad3hv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/PlayerBlocker2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_44fte")
-
-[node name="Day Lights" type="Node3D" parent="."]
-
-[node name="HangingLight01" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -9.59775, 2.35211, -2.04602)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-distance_fade_enabled = true
-distance_fade_begin = 45.0
-omni_range = 2.665
-omni_shadow_mode = 0
-
-[node name="HangingLight02" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.5302, 2.35211, -1.85263)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-distance_fade_enabled = true
-distance_fade_begin = 45.0
-omni_range = 2.665
-omni_shadow_mode = 0
-
-[node name="HangingLight03" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -4.33624, 2.35211, -8.09314)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-distance_fade_enabled = true
-distance_fade_begin = 45.0
-omni_range = 2.665
-omni_shadow_mode = 0
-
-[node name="HangingLight04" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -4.66967, 2.35211, -11.286)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-distance_fade_enabled = true
-distance_fade_begin = 45.0
-omni_range = 2.665
-omni_shadow_mode = 0
-
-[node name="HangingLight05" type="OmniLight3D" parent="Day Lights"]
-transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -5.15294, 2.35211, -14.3496)
-light_intensity_lumens = 10000.0
-light_color = Color(1, 0.545098, 0.258824, 1)
-light_cull_mask = 4294967293
-distance_fade_enabled = true
-distance_fade_begin = 45.0
-omni_range = 2.665
-omni_shadow_mode = 0
 
 [node name="Night Lights" type="Node3D" parent="."]
 visible = false
