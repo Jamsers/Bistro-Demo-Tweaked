@@ -24,6 +24,7 @@ const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3.0
 const ANIM_RUN_SPEED = 5.5
 const ANIM_BLEND_TIME = 0.2
+const OFF_FLOOR_JUMP_TIMEOUT = 0.1
 const NOCLIP_MULT = 4.0
 const ROTATE_SPEED = 12.0
 const JUMP_FORCE = 15.0
@@ -38,6 +39,7 @@ var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
 var camera_rotation = Quaternion.IDENTITY
 var camera_rotation_no_y = Quaternion.IDENTITY
+var is_off_floor_duration = 0.0
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
@@ -91,6 +93,7 @@ func _ready():
 
 func _process(delta):
 	process_camera()
+	process_is_off_floor(delta)
 	process_movement()
 	process_animation(delta)
 	process_mousecapture(delta)
@@ -109,7 +112,7 @@ func _process(delta):
 	else:
 		velocity.x = move_direction_no_y.x * move_speed 
 		velocity.z = move_direction_no_y.z * move_speed
-		if not is_on_floor():
+		if !is_on_floor():
 			velocity.y -= GRAVITY_FORCE * delta
 		if jump_isdown and is_on_floor():
 			velocity.y = JUMP_FORCE
@@ -134,6 +137,13 @@ func _physics_process(delta):
 		var location = collision.get_position()
 		collision.get_collider().apply_central_impulse(direction * central_multiplier)
 		collision.get_collider().apply_impulse(direction * directional_multiplier, location)
+
+func process_is_off_floor(delta):
+	if !is_on_floor():
+		is_off_floor_duration += delta
+	else:
+		is_off_floor_duration = 0.0
+	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, OFF_FLOOR_JUMP_TIMEOUT)
 
 func process_camera():
 	var camera_rotation_euler = camera_rotation.get_euler()
@@ -166,7 +176,7 @@ func process_movement():
 	move_direction_no_y = move_direction_no_y.normalized()
 
 func process_animation(delta):
-	if !is_on_floor():
+	if is_off_floor_duration >= OFF_FLOOR_JUMP_TIMEOUT:
 		switch_anim("Fall")
 	elif move_direction != Vector3.ZERO:
 		if sprint_isdown:

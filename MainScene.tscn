@@ -358,7 +358,7 @@ surface_material_override/0 = ExtResource("52_6bcdg")
 transform = Transform3D(-0.0734296, 0, -0.9973, 0, 1, 0, 0.9973, 0, -0.0734296, -45.0591, 9.55, -13.9096)
 mesh = SubResource("BoxMesh_huwvf")
 skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+surface_material_override/0 = ExtResource("52_6bcdg")
 
 [node name="LightBlocker8" type="MeshInstance3D" parent="Blockers/Buildings"]
 transform = Transform3D(-0.204137, 0, -0.978942, 0, 1, 0, 0.978942, 0, -0.204137, -24.1893, 2.27743, -7.61336)
