@@ -37,15 +37,35 @@ _subresources={
 },
 "@MATERIAL:1": {
 "use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
+},
+"@MATERIAL:10": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
+},
+"@MATERIAL:11": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
+},
+"@MATERIAL:12": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
+},
+"@MATERIAL:13": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
+},
+"@MATERIAL:14": {
+"use_external/enabled": true,
 "use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
 },
 "@MATERIAL:2": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/HangingLight.tres"
+"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
 },
 "@MATERIAL:3": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
 },
 "@MATERIAL:4": {
 "use_external/enabled": true,
@@ -61,15 +81,167 @@ _subresources={
 },
 "@MATERIAL:7": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
 },
 "@MATERIAL:8": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/HangingLight.tres"
+"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
 },
 "@MATERIAL:9": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Lights/HangingLight_Emissive.tres"
+"use_external/path": "res://Materials/Lights/HangingLight.tres"
+}
+},
+"meshes": {
+"Bistro_Lanterns_Mesh_074_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_074_001.res"
+},
+"Bistro_Lanterns_Mesh_074_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_074_002.res"
+},
+"Bistro_Lanterns_Mesh_074_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_074_003.res"
+},
+"Bistro_Lanterns_Mesh_076_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_076_001.res"
+},
+"Bistro_Lanterns_Mesh_076_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_076_002.res"
+},
+"Bistro_Lanterns_Mesh_076_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_076_003.res"
+},
+"Bistro_Lanterns_Mesh_098_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_098_001.res"
+},
+"Bistro_Lanterns_Mesh_098_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_098_002.res"
+},
+"Bistro_Lanterns_Mesh_098_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_098_003.res"
+},
+"Bistro_Lanterns_Mesh_109_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_109_001.res"
+},
+"Bistro_Lanterns_Mesh_109_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_109_002.res"
+},
+"Bistro_Lanterns_Mesh_109_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_109_003.res"
+},
+"Bistro_Lanterns_Mesh_121_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_001.res"
+},
+"Bistro_Lanterns_Mesh_121_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_002.res"
+},
+"Bistro_Lanterns_Mesh_121_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_003.res"
 }
 }
 }

@@ -10,6 +10,7 @@ height = 1.778
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
+safe_margin = 0.1
 script = ExtResource("1_jh7dy")
 
 [node name="ModelRoot" type="Node3D" parent="."]
@@ -35,4 +36,5 @@ fov = 60.0
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
 target_position = Vector3(0, 0, -10000)
+hit_back_faces = false
 collide_with_areas = true
