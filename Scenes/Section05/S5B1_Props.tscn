@@ -90,6 +90,7 @@ points = PackedVector3Array(-0.188391, 0.0391923, 0.0208584, -0.166101, 0.039192
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6528" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5313, 0.727263, 3.96724)
+mass = 7.0
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A_6528"]
 gi_mode = 2
@@ -159,6 +160,7 @@ shape = SubResource("ConvexPolygonShape3D_dqc6m")
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527_002" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4391, 0.840027, 3.5875)
+mass = 7.0
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A_6527_001" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A_6527_002"]
 gi_mode = 2
@@ -191,6 +193,7 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.456899, 0.672445, -0.12846)
+mass = 9.0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_002" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"]
 gi_mode = 2
@@ -222,6 +225,7 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_006" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.458784, 0.669395, 0.126678)
+mass = 9.0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_006"]
 gi_mode = 2

@@ -44,6 +44,7 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a__6259_005")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_005" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.467918, 0.672453, -0.0802931)
+mass = 9.0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_003" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_005"]
 gi_mode = 2
@@ -75,6 +76,7 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a__6259_007")
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_007" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.469341, 0.669403, 0.0781841)
+mass = 9.0
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_007"]
 gi_mode = 2
