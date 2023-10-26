@@ -31,6 +31,7 @@ const JUMP_FORCE = 15.0
 const GRAVITY_FORCE = 50.0
 # 285 seems to be enough to move a max of 200kg
 const COLLIDE_FORCE = 250.0
+const MAX_PUSHABLE_WEIGHT = 200.0
 const TOGGLE_COOLDOWN = 0.5
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
@@ -133,8 +134,10 @@ func _physics_process(delta):
 	var central_multiplier = input_velocity.length() * collide_force
 	
 	for collision in rigidbody_collisions:
+		var weight = collision.get_collider().mass
 		var direction = -collision.get_normal()
-		collision.get_collider().apply_central_impulse(direction * central_multiplier)
+		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
+		collision.get_collider().apply_central_impulse(direction * mult_actual)
 
 func process_is_off_floor(delta):
 	if !is_on_floor():
@@ -415,4 +418,7 @@ func basis_rotate_toward(from: Basis, to: Basis, delta: float) -> Basis:
 	return Basis(quat_rotate_toward(from.get_rotation_quaternion(), to.get_rotation_quaternion(), delta)).orthonormalized()
 
 func ease_in_out_sine(lerp: float) -> float:
-	return -(cos(PI * lerp) - 1.0) / 2.0;
+	return -(cos(PI * lerp) - 1.0) / 2.0
+
+func ease_out_circ(lerp: float) -> float:
+	return sqrt(1.0 - pow(lerp - 1.0, 2.0))
