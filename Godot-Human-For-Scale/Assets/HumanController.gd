@@ -29,8 +29,8 @@ const NOCLIP_MULT = 4.0
 const ROTATE_SPEED = 12.0
 const JUMP_FORCE = 15.0
 const GRAVITY_FORCE = 50.0
-const COLLIDE_FORCE = 0.05
-const DIRECTIONAL_FORCE_DIV = 30.0
+# 285 seems to be enough to move a max of 200kg
+const COLLIDE_FORCE = 250.0
 const TOGGLE_COOLDOWN = 0.5
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
@@ -129,14 +129,12 @@ func _process(delta):
 			rigidbody_collisions.append(collision)
 
 func _physics_process(delta):
-	var central_multiplier = input_velocity.length() * COLLIDE_FORCE
-	var directional_multiplier = input_velocity.length() * (COLLIDE_FORCE/DIRECTIONAL_FORCE_DIV)
+	var collide_force = COLLIDE_FORCE * delta
+	var central_multiplier = input_velocity.length() * collide_force
 	
 	for collision in rigidbody_collisions:
 		var direction = -collision.get_normal()
-		var location = collision.get_position()
 		collision.get_collider().apply_central_impulse(direction * central_multiplier)
-		collision.get_collider().apply_impulse(direction * directional_multiplier, location)
 
 func process_is_off_floor(delta):
 	if !is_on_floor():
