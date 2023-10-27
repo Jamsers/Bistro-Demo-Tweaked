@@ -32,7 +32,6 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:Bistro_Research_Exterior_Paris_Streetlight_Glass_01a__6315": {
-"generate/occluder": 1,
 "generate/physics": true,
 "physics/shape_type": 2
 }
