@@ -358,15 +358,16 @@ func hijack_camera_attributes():
 				hijacked_attributes = node.camera_attributes
 				break
 	
-	camera.attributes = create_practical_attributes(hijacked_attributes)
+	camera.attributes = assert_practical_attributes(hijacked_attributes)
 
-func create_practical_attributes(attributes):
+func assert_practical_attributes(attributes):
 	var practical_attributes = CameraAttributesPractical.new()
 	
 	if attributes != null:
 		if attributes is CameraAttributesPractical:
-			practical_attributes = attributes.duplicate()
+			practical_attributes = attributes
 		else:
+			push_warning("CameraAttributesPhysical not supported. Making a CameraAttributesPractical duplicate for Godot-Human-For-Scale's camera.")
 			practical_attributes.auto_exposure_enabled = attributes.auto_exposure_enabled
 			practical_attributes.auto_exposure_scale = attributes.auto_exposure_scale
 			practical_attributes.auto_exposure_speed = attributes.auto_exposure_speed
