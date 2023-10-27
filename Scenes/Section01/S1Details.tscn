@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://1h46fckn3rr5"]
+[gd_scene load_steps=13 format=3 uid="uid://1h46fckn3rr5"]
 
 [ext_resource type="PackedScene" uid="uid://oto1chsphj0p" path="res://Meshes/Section01/S1Details.glb" id="1_7k3jf"]
 [ext_resource type="Material" uid="uid://s4fjd3sv062x" path="res://Materials/Nature/Foliage_Hedges.tres" id="2_dni3b"]
@@ -11,6 +11,9 @@
 [ext_resource type="Material" uid="uid://dc1wfrmhnqn02" path="res://Materials/Nature/Foliage_Linde_Green_Leaves.tres" id="6_liwfw"]
 [ext_resource type="Material" uid="uid://cdhjpxnvdt6f" path="res://Materials/Nature/Foliage_Linde_Orange_Leaves.tres" id="7_br7th"]
 [ext_resource type="Material" uid="uid://bo2aklfwm1br8" path="res://Materials/Metal/Paris_StreetPivot.tres" id="10_quhxj"]
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_bxvrf"]
+size = Vector2(7.424, 7.41516)
 
 [node name="S1Details" instance=ExtResource("1_7k3jf")]
 
@@ -75,6 +78,10 @@ surface_material_override/0 = ExtResource("2_jxixr")
 
 [node name="Bistro_Research_Exterior_Paris_Street_6195" parent="." index="15"]
 surface_material_override/0 = ExtResource("4_c72v3")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Bistro_Research_Exterior_Paris_Street_6195" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.0856311, 0)
+occluder = SubResource("QuadOccluder3D_bxvrf")
 
 [node name="Bistro_Research_Exterior_Paris_Street_6197" parent="." index="16"]
 surface_material_override/0 = ExtResource("2_jxixr")
