@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=183 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -61,6 +61,7 @@
 [ext_resource type="PackedScene" uid="uid://1mxrxl0bqyot" path="res://Scenes/FillOut/Lamp.tscn" id="57_tqvip"]
 [ext_resource type="PackedScene" uid="uid://cgkwgso15wixk" path="res://Scenes/FillOut/Lamp_Props.tscn" id="58_yuy0n"]
 [ext_resource type="PackedScene" uid="uid://cwpykn2ipsb3b" path="res://Scenes/FillOut/Bollard.tscn" id="59_1o5tg"]
+[ext_resource type="PackedScene" uid="uid://bvncoo1ii0yaq" path="res://Scenes/FillOut/Cobblestone.tscn" id="60_n6d5o"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -1624,8 +1625,14 @@ transform = Transform3D(0.479488, 0, -0.877548, 0, 1, 0, 0.877548, 0, 0.479488, 
 [node name="Bollard3" parent="Patches/Fill Out" instance=ExtResource("59_1o5tg")]
 transform = Transform3D(0.489748, 0, -0.871864, 0, 1, 0, 0.871864, 0, 0.489748, -9.82195, 0.00660169, 24.0918)
 
+[node name="Cobblestone" parent="Patches/Fill Out" instance=ExtResource("60_n6d5o")]
+transform = Transform3D(0.0577883, -0.000502294, 0.998329, 0.00869163, 0.999962, 0, -0.998291, 0.0086771, 0.0577905, -40.2123, -0.014561, -1.41423)
+
+[node name="Cobblestone2" parent="Patches/Fill Out" instance=ExtResource("60_n6d5o")]
+transform = Transform3D(0.0577879, 0.000551715, 0.998329, -0.00954681, 0.999954, -5.82077e-11, -0.998283, -0.00953085, 0.0577905, -40.1605, -0.017877, -2.49495)
+
 [node name="Bollard2" parent="Patches/Fill Out" instance=ExtResource("59_1o5tg")]
-transform = Transform3D(-0.0531551, 0, -0.998586, 0, 1, 0, 0.998586, 0, -0.0531551, -39.894, 0.007, -1.9842)
+transform = Transform3D(-0.0531551, 0, -0.998586, 0, 1, 0, 0.998586, 0, -0.0531551, -39.9819, 0.01, -1.93446)
 
 [node name="Lamp3" parent="Patches/Fill Out" instance=ExtResource("57_tqvip")]
 transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, -46.9843, 1.90735e-06, 0.722859)
