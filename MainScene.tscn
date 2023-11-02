@@ -57,18 +57,6 @@
 [ext_resource type="Material" uid="uid://bbgxykd37frx0" path="res://Materials/Stone/Brick_Small_Red_Blend.tres" id="53_ta26q"]
 [ext_resource type="Material" uid="uid://tynp4gabi3x5" path="res://Materials/Blocker.tres" id="55_ad3hv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0oho"]
-metallic = 1.0
-roughness = 0.0
-texture_filter = 5
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gxu67"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72mn7"]
-texture_filter = 5
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
 
@@ -156,6 +144,18 @@ size = Vector2(11.765, 12)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_44fte"]
 data = PackedVector3Array(5.8825, 0, 6, -5.8825, 0, 6, 5.8825, 0, -6, -5.8825, 0, 6, -5.8825, 0, -6, 5.8825, 0, -6)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0oho"]
+metallic = 1.0
+roughness = 0.0
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gxu67"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72mn7"]
+texture_filter = 5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights") instance=ExtResource("32_q35xk")]
@@ -163,7 +163,7 @@ enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
-lamp_meshes = [NodePath("../Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004")]
+lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Level Geometry/Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Level Geometry/Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 
@@ -182,307 +182,323 @@ light_temperature = 4250.0
 shadow_enabled = true
 directional_shadow_pancake_size = 40.0
 
-[node name="Section01" type="Node3D" parent="."]
+[node name="Level Geometry" type="Node3D" parent="."]
 
-[node name="S1B1" parent="Section01" instance=ExtResource("1_17a2u")]
+[node name="Section01" type="Node3D" parent="Level Geometry"]
 
-[node name="S1B2" parent="Section01" instance=ExtResource("2_8mtnr")]
+[node name="S1B1" parent="Level Geometry/Section01" instance=ExtResource("1_17a2u")]
 
-[node name="S1B3" parent="Section01" instance=ExtResource("3_bis43")]
+[node name="S1B2" parent="Level Geometry/Section01" instance=ExtResource("2_8mtnr")]
 
-[node name="S1B4" parent="Section01" instance=ExtResource("4_ll7ne")]
+[node name="S1B3" parent="Level Geometry/Section01" instance=ExtResource("3_bis43")]
 
-[node name="S1Details" parent="Section01" instance=ExtResource("5_l1708")]
+[node name="S1B4" parent="Level Geometry/Section01" instance=ExtResource("4_ll7ne")]
 
-[node name="S1Lamps" parent="Section01" instance=ExtResource("6_kx4kb")]
+[node name="S1Details" parent="Level Geometry/Section01" instance=ExtResource("5_l1708")]
 
-[node name="S1Lamps_Props" parent="Section01" instance=ExtResource("21_yopo6")]
+[node name="S1Lamps" parent="Level Geometry/Section01" instance=ExtResource("6_kx4kb")]
 
-[node name="S1Walls" parent="Section01" instance=ExtResource("7_2kc2q")]
+[node name="S1Walls" parent="Level Geometry/Section01" instance=ExtResource("7_2kc2q")]
 
-[node name="Section02" type="Node3D" parent="."]
+[node name="Section02" type="Node3D" parent="Level Geometry"]
 
-[node name="BistroProps" parent="Section02" instance=ExtResource("11_e4jub")]
+[node name="BistroProps" parent="Level Geometry/Section02" instance=ExtResource("11_e4jub")]
 
-[node name="BistroProps_Props" parent="Section02" instance=ExtResource("23_lunsi")]
+[node name="S2B1" parent="Level Geometry/Section02" instance=ExtResource("8_anouh")]
 
-[node name="Bistro_Lanterns" parent="Section02" instance=ExtResource("16_1sf6e")]
+[node name="S2B2" parent="Level Geometry/Section02" instance=ExtResource("9_u4tpu")]
 
-[node name="Bistro_StringLights" parent="Section02" instance=ExtResource("17_j1o0m")]
+[node name="S2B3" parent="Level Geometry/Section02" instance=ExtResource("10_ypp8l")]
 
-[node name="S2B1" parent="Section02" instance=ExtResource("8_anouh")]
+[node name="S2Details" parent="Level Geometry/Section02" instance=ExtResource("15_uu4ux")]
 
-[node name="S2B2" parent="Section02" instance=ExtResource("9_u4tpu")]
+[node name="S2Ivy" parent="Level Geometry/Section02" instance=ExtResource("12_lc6cf")]
 
-[node name="S2B3" parent="Section02" instance=ExtResource("10_ypp8l")]
+[node name="S2Lamps" parent="Level Geometry/Section02" instance=ExtResource("13_v0ve4")]
 
-[node name="S2Details" parent="Section02" instance=ExtResource("15_uu4ux")]
+[node name="S2Walls" parent="Level Geometry/Section02" instance=ExtResource("14_v6tgn")]
 
-[node name="S2Ivy" parent="Section02" instance=ExtResource("12_lc6cf")]
+[node name="Section03" type="Node3D" parent="Level Geometry"]
 
-[node name="S2Lamps" parent="Section02" instance=ExtResource("13_v0ve4")]
+[node name="S3B1" parent="Level Geometry/Section03" instance=ExtResource("16_m1vvn")]
 
-[node name="S2Lamps_Props" parent="Section02" instance=ExtResource("33_k0qq7")]
+[node name="S3B2" parent="Level Geometry/Section03" instance=ExtResource("17_4e0xd")]
 
-[node name="S2Walls" parent="Section02" instance=ExtResource("14_v6tgn")]
+[node name="S3B3" parent="Level Geometry/Section03" instance=ExtResource("18_4ij38")]
 
-[node name="Section03" type="Node3D" parent="."]
+[node name="S3B4" parent="Level Geometry/Section03" instance=ExtResource("19_acyb5")]
 
-[node name="S3B1" parent="Section03" instance=ExtResource("16_m1vvn")]
+[node name="S3Lamps" parent="Level Geometry/Section03" instance=ExtResource("20_w5tey")]
 
-[node name="S3B2" parent="Section03" instance=ExtResource("17_4e0xd")]
+[node name="Section04" type="Node3D" parent="Level Geometry"]
 
-[node name="S3B3" parent="Section03" instance=ExtResource("18_4ij38")]
+[node name="S4B1" parent="Level Geometry/Section04" instance=ExtResource("21_7egcs")]
 
-[node name="S3B4" parent="Section03" instance=ExtResource("19_acyb5")]
+[node name="S4B2" parent="Level Geometry/Section04" instance=ExtResource("22_k7idl")]
 
-[node name="S3Lamps" parent="Section03" instance=ExtResource("20_w5tey")]
+[node name="S4B3" parent="Level Geometry/Section04" instance=ExtResource("23_256hy")]
 
-[node name="S3Lamps_Props" parent="Section03" instance=ExtResource("40_mmbd0")]
+[node name="Section05" type="Node3D" parent="Level Geometry"]
 
-[node name="Section04" type="Node3D" parent="."]
+[node name="S5B1" parent="Level Geometry/Section05" instance=ExtResource("24_0u2lm")]
 
-[node name="S4B1" parent="Section04" instance=ExtResource("21_7egcs")]
+[node name="S5B2" parent="Level Geometry/Section05" instance=ExtResource("25_tcv6v")]
 
-[node name="S4B2" parent="Section04" instance=ExtResource("22_k7idl")]
+[node name="S5Lamps" parent="Level Geometry/Section05" instance=ExtResource("26_xvk4t")]
 
-[node name="S4B3" parent="Section04" instance=ExtResource("23_256hy")]
+[node name="Ground" type="Node3D" parent="Level Geometry"]
 
-[node name="S4B3_Props" parent="Section04" instance=ExtResource("41_renwl")]
+[node name="Ground" parent="Level Geometry/Ground" instance=ExtResource("3_e3k7r")]
 
-[node name="Section05" type="Node3D" parent="."]
+[node name="Props" type="Node3D" parent="."]
 
-[node name="S5B1" parent="Section05" instance=ExtResource("24_0u2lm")]
+[node name="Section01" type="Node3D" parent="Props"]
 
-[node name="S5B1_Props" parent="Section05" instance=ExtResource("43_a2awi")]
+[node name="S1Lamps_Props" parent="Props/Section01" instance=ExtResource("21_yopo6")]
 
-[node name="S5B2" parent="Section05" instance=ExtResource("25_tcv6v")]
+[node name="Section02" type="Node3D" parent="Props"]
 
-[node name="S5B2_Props" parent="Section05" instance=ExtResource("45_v1415")]
+[node name="BistroProps_Props" parent="Props/Section02" instance=ExtResource("23_lunsi")]
 
-[node name="S5Lamps" parent="Section05" instance=ExtResource("26_xvk4t")]
+[node name="Bistro_Lanterns" parent="Props/Section02" instance=ExtResource("16_1sf6e")]
 
-[node name="S5Lamps_Prop" parent="Section05" instance=ExtResource("50_tx67g")]
+[node name="Bistro_StringLights" parent="Props/Section02" instance=ExtResource("17_j1o0m")]
 
-[node name="Ground" type="Node3D" parent="."]
+[node name="S2Lamps_Props" parent="Props/Section02" instance=ExtResource("33_k0qq7")]
 
-[node name="Ground" parent="Ground" instance=ExtResource("3_e3k7r")]
+[node name="Section03" type="Node3D" parent="Props"]
 
-[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Ground"]
+[node name="S3Lamps_Props" parent="Props/Section03" instance=ExtResource("40_mmbd0")]
+
+[node name="Section04" type="Node3D" parent="Props"]
+
+[node name="S4B3_Props" parent="Props/Section04" instance=ExtResource("41_renwl")]
+
+[node name="Section05" type="Node3D" parent="Props"]
+
+[node name="S5B1_Props" parent="Props/Section05" instance=ExtResource("43_a2awi")]
+
+[node name="S5B2_Props" parent="Props/Section05" instance=ExtResource("45_v1415")]
+
+[node name="S5Lamps_Props" parent="Props/Section05" instance=ExtResource("50_tx67g")]
+
+[node name="Patches" type="Node3D" parent="."]
+
+[node name="Blockers" type="Node3D" parent="Patches"]
+
+[node name="Ground" type="Node3D" parent="Patches/Blockers"]
+
+[node name="GroundBlocker" type="MeshInstance3D" parent="Patches/Blockers/Ground"]
+transform = Transform3D(0.204683, 0, 0.978828, 0, 1, 0, -0.978828, 0, 0.204683, -26.1256, -1.66976, 4.19985)
+mesh = SubResource("BoxMesh_u4h6w")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Ground/GroundBlocker"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Ground/GroundBlocker/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4t7qv")
+
+[node name="GroundBlocker2" type="MeshInstance3D" parent="Patches/Blockers/Ground"]
+transform = Transform3D(-0.982261, 0, 0.187518, 0, 1, 0, -0.187518, 0, -0.982261, -8.17619, -1.66976, 10.8598)
+mesh = SubResource("BoxMesh_u4h6w")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Ground/GroundBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Ground/GroundBlocker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_67qw4")
+
+[node name="GroundBlocker3" type="MeshInstance3D" parent="Patches/Blockers/Ground"]
+transform = Transform3D(-0.997512, 0, -0.070488, 0, 1, 0, 0.070488, 0, -0.997512, -3.0548, -1.66976, -55.1226)
+mesh = SubResource("BoxMesh_78hf1")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Ground/GroundBlocker3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Ground/GroundBlocker3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_xtpi4")
+
+[node name="Buildings" type="Node3D" parent="Patches/Blockers"]
+
+[node name="LightBlocker4" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.914917, 0, -0.403641, 0, 1, 0, 0.403641, 0, 0.914917, 4.04016, 8.65851, 17.2965)
+mesh = SubResource("BoxMesh_k30le")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="LightBlocker12" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.0852604, 0, -0.996358, 0, 1, 0, 0.996358, 0, 0.0852604, -14.0012, 5.62648, 32.9417)
+mesh = SubResource("BoxMesh_v6q4x")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="LightBlocker19" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.0852604, 0, -0.996358, 0, 1, 0, 0.996358, 0, 0.0852604, -14.3683, 5.62648, 37.688)
+mesh = SubResource("BoxMesh_ob6v6")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="LightBlocker5" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(-0.0734296, 0, -0.9973, 0, 1, 0, 0.9973, 0, -0.0734296, -38.0313, 9.55, -10.5921)
+mesh = SubResource("BoxMesh_4g2qu")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker20" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(-0.0734296, 0, -0.9973, 0, 1, 0, 0.9973, 0, -0.0734296, -45.0591, 9.55, -13.9096)
+mesh = SubResource("BoxMesh_huwvf")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker8" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(-0.204137, 0, -0.978942, 0, 1, 0, 0.978942, 0, -0.204137, -24.1893, 2.27743, -7.61336)
+mesh = SubResource("BoxMesh_riqcp")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker7" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, -5.83142, 8.58574, -79.5219)
+mesh = SubResource("BoxMesh_k30le")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
+
+[node name="LightBlocker15" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, -17.7737, 8.83916, -83.499)
+mesh = SubResource("BoxMesh_jlhyi")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker16" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, 4.59924, 8.83916, -85.4602)
+mesh = SubResource("BoxMesh_a5vt8")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker17" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.925613, 0, -0.378471, 0, 1, 0, 0.378471, 0, 0.925613, 13.1574, 8.83916, 9.00389)
+mesh = SubResource("BoxMesh_rrpqd")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker18" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.925613, 0, -0.378471, 0, 1, 0, 0.378471, 0, 0.925613, 4.76002, 8.83916, 29.541)
+mesh = SubResource("BoxMesh_wfs5p")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker11" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(0.994382, 0, 0.105848, 0, 1, 0, -0.105848, 0, 0.994382, 9.28695, 7.31685, -26.3161)
+mesh = SubResource("BoxMesh_gy2lw")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="LightBlocker6" type="MeshInstance3D" parent="Patches/Blockers/Buildings"]
+transform = Transform3D(-0.996377, 0, -0.0850343, 0, 1, 0, 0.0850343, 0, -0.996377, -12.3024, 9.71202, -37.4235)
+mesh = SubResource("BoxMesh_25hkn")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("52_6bcdg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Buildings/LightBlocker6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Buildings/LightBlocker6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1ciot")
+
+[node name="Walls" type="Node3D" parent="Patches/Blockers"]
+
+[node name="LightBlocker9" type="MeshInstance3D" parent="Patches/Blockers/Walls"]
+transform = Transform3D(0.995264, 0, 0.0972007, 0, 1, 0, -0.0972007, 0, 0.995264, 7.14993, 2.10968, -32.267)
+mesh = SubResource("BoxMesh_bw15w")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("53_ta26q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Walls/LightBlocker9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Walls/LightBlocker9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d4wt5")
+
+[node name="LightBlocker14" type="MeshInstance3D" parent="Patches/Blockers/Walls"]
+transform = Transform3D(0.0717934, 0, 0.997419, 0, 1, 0, -0.997419, 0, 0.0717934, -29.8883, 1.52072, -7.45267)
+mesh = SubResource("BoxMesh_qa7ce")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("53_ta26q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Walls/LightBlocker14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Walls/LightBlocker14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d4wt5")
+
+[node name="LightBlocker13" type="MeshInstance3D" parent="Patches/Blockers/Walls"]
+transform = Transform3D(0.926895, 0, -0.375318, 0, 1, 0, 0.375318, 0, 0.926895, -4.16359, 2.10968, 27.6039)
+mesh = SubResource("BoxMesh_e24dl")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("53_ta26q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Walls/LightBlocker13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Walls/LightBlocker13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_d4wt5")
+
+[node name="LightBlocker10" type="MeshInstance3D" parent="Patches/Blockers/Walls"]
+transform = Transform3D(-0.251681, 0, -0.96781, 0, 1, 0, 0.96781, 0, -0.251681, -31.29, 2.08925, 8.86907)
+mesh = SubResource("BoxMesh_1y0m7")
+skeleton = NodePath("../../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("53_ta26q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/Walls/LightBlocker10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/Walls/LightBlocker10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_05ah1")
+
+[node name="PlayerBlocker" type="MeshInstance3D" parent="Patches/Blockers"]
+transform = Transform3D(-0.291053, 0.956707, 0, 4.1819e-08, 1.27223e-08, 1, 0.956707, 0.291053, -4.37114e-08, -21.2568, 5.56138, 22.6059)
+gi_mode = 2
+mesh = SubResource("PlaneMesh_yi46n")
+skeleton = NodePath("../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("55_ad3hv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/PlayerBlocker"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/PlayerBlocker/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_n2o7p")
+
+[node name="PlayerBlocker2" type="MeshInstance3D" parent="Patches/Blockers"]
+transform = Transform3D(0.996563, 0.0828429, 0, 3.62117e-09, -4.35611e-08, 1, 0.0828429, -0.996563, -4.37114e-08, -50.5145, 5.56138, 4.72579)
+gi_mode = 2
+mesh = SubResource("PlaneMesh_e8sj3")
+skeleton = NodePath("../../../Level Geometry/Ground")
+surface_material_override/0 = ExtResource("55_ad3hv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patches/Blockers/PlayerBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Blockers/PlayerBlocker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_44fte")
+
+[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
 mass = 20.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeSpecular"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Patches/MaterialCubeSpecular"]
 gi_mode = 2
 mesh = ExtResource("33_6648h")
 surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeSpecular"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/MaterialCubeSpecular"]
 shape = SubResource("BoxShape3D_gxu67")
 
-[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Ground"]
+[node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(0.267238, -0.422428, 0.866105, 0, 0.898794, 0.438371, -0.96363, -0.117149, 0.240192, -44.7202, 0.666692, 2.55184)
 mass = 20.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/MaterialCubeAlbedo"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Patches/MaterialCubeAlbedo"]
 gi_mode = 2
 mesh = ExtResource("33_6648h")
 surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MaterialCubeAlbedo"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/MaterialCubeAlbedo"]
 shape = SubResource("BoxShape3D_ra78n")
-
-[node name="Blockers" type="Node3D" parent="."]
-
-[node name="Ground" type="Node3D" parent="Blockers"]
-
-[node name="GroundBlocker" type="MeshInstance3D" parent="Blockers/Ground"]
-transform = Transform3D(0.204683, 0, 0.978828, 0, 1, 0, -0.978828, 0, 0.204683, -26.1256, -1.66976, 4.19985)
-mesh = SubResource("BoxMesh_u4h6w")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Ground/GroundBlocker"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Ground/GroundBlocker/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_4t7qv")
-
-[node name="GroundBlocker2" type="MeshInstance3D" parent="Blockers/Ground"]
-transform = Transform3D(-0.982261, 0, 0.187518, 0, 1, 0, -0.187518, 0, -0.982261, -8.17619, -1.66976, 10.8598)
-mesh = SubResource("BoxMesh_u4h6w")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Ground/GroundBlocker2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Ground/GroundBlocker2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_67qw4")
-
-[node name="GroundBlocker3" type="MeshInstance3D" parent="Blockers/Ground"]
-transform = Transform3D(-0.997512, 0, -0.070488, 0, 1, 0, 0.070488, 0, -0.997512, -3.0548, -1.66976, -55.1226)
-mesh = SubResource("BoxMesh_78hf1")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Ground/GroundBlocker3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Ground/GroundBlocker3/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_xtpi4")
-
-[node name="Buildings" type="Node3D" parent="Blockers"]
-
-[node name="LightBlocker4" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.914917, 0, -0.403641, 0, 1, 0, 0.403641, 0, 0.914917, 4.04016, 8.65851, 17.2965)
-mesh = SubResource("BoxMesh_k30le")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="LightBlocker12" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.0852604, 0, -0.996358, 0, 1, 0, 0.996358, 0, 0.0852604, -14.0012, 5.62648, 32.9417)
-mesh = SubResource("BoxMesh_v6q4x")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="LightBlocker19" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.0852604, 0, -0.996358, 0, 1, 0, 0.996358, 0, 0.0852604, -14.3683, 5.62648, 37.688)
-mesh = SubResource("BoxMesh_ob6v6")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="LightBlocker5" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(-0.0734296, 0, -0.9973, 0, 1, 0, 0.9973, 0, -0.0734296, -38.0313, 9.55, -10.5921)
-mesh = SubResource("BoxMesh_4g2qu")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker20" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(-0.0734296, 0, -0.9973, 0, 1, 0, 0.9973, 0, -0.0734296, -45.0591, 9.55, -13.9096)
-mesh = SubResource("BoxMesh_huwvf")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker8" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(-0.204137, 0, -0.978942, 0, 1, 0, 0.978942, 0, -0.204137, -24.1893, 2.27743, -7.61336)
-mesh = SubResource("BoxMesh_riqcp")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker7" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, -5.83142, 8.58574, -79.5219)
-mesh = SubResource("BoxMesh_k30le")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_5sixh")
-
-[node name="LightBlocker15" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, -17.7737, 8.83916, -83.499)
-mesh = SubResource("BoxMesh_jlhyi")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker16" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.132879, 0, -0.991132, 0, 1, 0, 0.991132, 0, 0.132879, 4.59924, 8.83916, -85.4602)
-mesh = SubResource("BoxMesh_a5vt8")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker17" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.925613, 0, -0.378471, 0, 1, 0, 0.378471, 0, 0.925613, 13.1574, 8.83916, 9.00389)
-mesh = SubResource("BoxMesh_rrpqd")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker18" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.925613, 0, -0.378471, 0, 1, 0, 0.378471, 0, 0.925613, 4.76002, 8.83916, 29.541)
-mesh = SubResource("BoxMesh_wfs5p")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker11" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(0.994382, 0, 0.105848, 0, 1, 0, -0.105848, 0, 0.994382, 9.28695, 7.31685, -26.3161)
-mesh = SubResource("BoxMesh_gy2lw")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="LightBlocker6" type="MeshInstance3D" parent="Blockers/Buildings"]
-transform = Transform3D(-0.996377, 0, -0.0850343, 0, 1, 0, 0.0850343, 0, -0.996377, -12.3024, 9.71202, -37.4235)
-mesh = SubResource("BoxMesh_25hkn")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("52_6bcdg")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Buildings/LightBlocker6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Buildings/LightBlocker6/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_1ciot")
-
-[node name="Walls" type="Node3D" parent="Blockers"]
-
-[node name="LightBlocker9" type="MeshInstance3D" parent="Blockers/Walls"]
-transform = Transform3D(0.995264, 0, 0.0972007, 0, 1, 0, -0.0972007, 0, 0.995264, 7.14993, 2.10968, -32.267)
-mesh = SubResource("BoxMesh_bw15w")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("53_ta26q")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Walls/LightBlocker9"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Walls/LightBlocker9/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_d4wt5")
-
-[node name="LightBlocker14" type="MeshInstance3D" parent="Blockers/Walls"]
-transform = Transform3D(0.0717934, 0, 0.997419, 0, 1, 0, -0.997419, 0, 0.0717934, -29.8883, 1.52072, -7.45267)
-mesh = SubResource("BoxMesh_qa7ce")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("53_ta26q")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Walls/LightBlocker14"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Walls/LightBlocker14/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_d4wt5")
-
-[node name="LightBlocker13" type="MeshInstance3D" parent="Blockers/Walls"]
-transform = Transform3D(0.926895, 0, -0.375318, 0, 1, 0, 0.375318, 0, 0.926895, -4.16359, 2.10968, 27.6039)
-mesh = SubResource("BoxMesh_e24dl")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("53_ta26q")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Walls/LightBlocker13"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Walls/LightBlocker13/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_d4wt5")
-
-[node name="LightBlocker10" type="MeshInstance3D" parent="Blockers/Walls"]
-transform = Transform3D(-0.251681, 0, -0.96781, 0, 1, 0, 0.96781, 0, -0.251681, -31.29, 2.08925, 8.86907)
-mesh = SubResource("BoxMesh_1y0m7")
-skeleton = NodePath("../../../Ground")
-surface_material_override/0 = ExtResource("53_ta26q")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/Walls/LightBlocker10"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/Walls/LightBlocker10/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_05ah1")
-
-[node name="PlayerBlocker" type="MeshInstance3D" parent="Blockers"]
-transform = Transform3D(-0.291053, 0.956707, 0, 4.1819e-08, 1.27223e-08, 1, 0.956707, 0.291053, -4.37114e-08, -21.2568, 5.56138, 22.6059)
-gi_mode = 2
-mesh = SubResource("PlaneMesh_yi46n")
-skeleton = NodePath("../../Ground")
-surface_material_override/0 = ExtResource("55_ad3hv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/PlayerBlocker"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/PlayerBlocker/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_n2o7p")
-
-[node name="PlayerBlocker2" type="MeshInstance3D" parent="Blockers"]
-transform = Transform3D(0.996563, 0.0828429, 0, 3.62117e-09, -4.35611e-08, 1, 0.0828429, -0.996563, -4.37114e-08, -50.5145, 5.56138, 4.72579)
-gi_mode = 2
-mesh = SubResource("PlaneMesh_e8sj3")
-skeleton = NodePath("../../Ground")
-surface_material_override/0 = ExtResource("55_ad3hv")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Blockers/PlayerBlocker2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Blockers/PlayerBlocker2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_44fte")
 
 [node name="Night Lights" type="Node3D" parent="."]
 visible = false
