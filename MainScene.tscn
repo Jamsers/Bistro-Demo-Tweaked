@@ -1,4 +1,4 @@
-[gd_scene load_steps=183 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=184 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -62,6 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://cgkwgso15wixk" path="res://Scenes/FillOut/Lamp_Props.tscn" id="58_yuy0n"]
 [ext_resource type="PackedScene" uid="uid://cwpykn2ipsb3b" path="res://Scenes/FillOut/Bollard.tscn" id="59_1o5tg"]
 [ext_resource type="PackedScene" uid="uid://bvncoo1ii0yaq" path="res://Scenes/FillOut/Cobblestone.tscn" id="60_n6d5o"]
+[ext_resource type="PackedScene" uid="uid://cxvf7w2qy63uv" path="res://Scenes/FillOut/PotPlants.tscn" id="61_77adx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -1638,6 +1639,11 @@ transform = Transform3D(-0.0531551, 0, -0.998586, 0, 1, 0, 0.998586, 0, -0.05315
 transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, -46.9843, 1.90735e-06, 0.722859)
 
 [node name="Lamp_Props" parent="Patches/Fill Out/Lamp3" instance=ExtResource("58_yuy0n")]
+
+[node name="Pot Plants" type="Node3D" parent="Patches"]
+
+[node name="PotPlants" parent="Patches/Pot Plants" instance=ExtResource("61_77adx")]
+transform = Transform3D(0.0702961, 0, -0.997526, 0, 1, 0, 0.997526, 0, 0.0702961, 4.70636, 9.77112, -36.4342)
 
 [node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
