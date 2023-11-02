@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=175 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -284,70 +284,76 @@ size = Vector2(0.985, 1.34)
 size = Vector2(0.995, 1.095)
 
 [sub_resource type="QuadMesh" id="QuadMesh_3kx6k"]
-size = Vector2(1.805, 6.535)
+size = Vector2(1.415, 6.62)
 
 [sub_resource type="QuadMesh" id="QuadMesh_58rsk"]
-size = Vector2(2.8, 2.52)
+size = Vector2(2.725, 2.06)
 
 [sub_resource type="QuadMesh" id="QuadMesh_oeb45"]
-size = Vector2(2.8, 2.52)
+size = Vector2(2.685, 2.82)
 
 [sub_resource type="QuadMesh" id="QuadMesh_qrxuj"]
-size = Vector2(5, 6.555)
+size = Vector2(4.605, 6.79)
 
 [sub_resource type="QuadMesh" id="QuadMesh_81chb"]
-size = Vector2(5.595, 1.98)
+size = Vector2(4.74, 2.1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_uos8l"]
+size = Vector2(0.795, 1.475)
 
 [sub_resource type="QuadMesh" id="QuadMesh_lckqs"]
-size = Vector2(2.365, 6.755)
+size = Vector2(1.46, 6.58)
 
 [sub_resource type="QuadMesh" id="QuadMesh_7sxyj"]
-size = Vector2(2.365, 2.66)
+size = Vector2(2.615, 2.08)
 
 [sub_resource type="QuadMesh" id="QuadMesh_m2k76"]
-size = Vector2(2.365, 2.66)
+size = Vector2(2.73, 2.81)
 
 [sub_resource type="QuadMesh" id="QuadMesh_6qjuc"]
-size = Vector2(4.945, 7.48)
+size = Vector2(4.525, 6.75)
 
 [sub_resource type="QuadMesh" id="QuadMesh_2wwf4"]
-size = Vector2(5.355, 2.49)
+size = Vector2(4.815, 2.07)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n2dut"]
+size = Vector2(0.805, 1.52)
 
 [sub_resource type="QuadMesh" id="QuadMesh_qfl8r"]
-size = Vector2(14.66, 9.31)
+size = Vector2(13.91, 9.195)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ewb2h"]
-size = Vector2(0.77, 9.31)
+size = Vector2(1.135, 9.395)
 
 [sub_resource type="QuadMesh" id="QuadMesh_3aifm"]
-size = Vector2(3.915, 1.475)
+size = Vector2(4.36, 1.87)
 
 [sub_resource type="QuadMesh" id="QuadMesh_e0fna"]
-size = Vector2(2.045, 2.195)
+size = Vector2(2.23, 2.125)
 
 [sub_resource type="QuadMesh" id="QuadMesh_xvmn6"]
-size = Vector2(0.775, 2.195)
+size = Vector2(0.825, 2.135)
 
 [sub_resource type="QuadMesh" id="QuadMesh_xyc7b"]
-size = Vector2(10.595, 11.875)
+size = Vector2(11.155, 12.25)
 
 [sub_resource type="QuadMesh" id="QuadMesh_4gs6l"]
-size = Vector2(11.03, 2.025)
+size = Vector2(10.875, 2.26)
 
 [sub_resource type="QuadMesh" id="QuadMesh_joyqo"]
-size = Vector2(2.63, 2.345)
+size = Vector2(2.59, 2.465)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ugf57"]
-size = Vector2(0.605, 2.345)
+size = Vector2(0.675, 2.215)
 
 [sub_resource type="QuadMesh" id="QuadMesh_wmsck"]
-size = Vector2(1.045, 2)
+size = Vector2(1.085, 2.025)
 
 [sub_resource type="QuadMesh" id="QuadMesh_2tgi0"]
-size = Vector2(1.04, 1.36)
+size = Vector2(1, 1.305)
 
 [sub_resource type="QuadMesh" id="QuadMesh_r5th0"]
-size = Vector2(1.04, 1.36)
+size = Vector2(1.065, 1.4)
 
 [sub_resource type="QuadMesh" id="QuadMesh_8mgbd"]
 size = Vector2(1.785, 5.16)
@@ -468,6 +474,7 @@ visible = false
 [node name="S2Walls" parent="Level Geometry/Section02" instance=ExtResource("14_v6tgn")]
 
 [node name="Section03" type="Node3D" parent="Level Geometry"]
+visible = false
 
 [node name="S3B1" parent="Level Geometry/Section03" instance=ExtResource("16_m1vvn")]
 
@@ -480,7 +487,6 @@ visible = false
 [node name="S3Lamps" parent="Level Geometry/Section03" instance=ExtResource("20_w5tey")]
 
 [node name="Section04" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="S4B1" parent="Level Geometry/Section04" instance=ExtResource("21_7egcs")]
 
@@ -1051,6 +1057,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="Section03" type="Node3D" parent="Patches/Window Panes"]
+visible = false
 
 [node name="WindowPane53" type="MeshInstance3D" parent="Patches/Window Panes/Section03"]
 transform = Transform3D(-0.376273, 0, -0.926508, 0, 1, 0, 0.926508, 0, -0.376273, 6.32511, 7.81744, -0.775283)
@@ -1185,190 +1192,201 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="Section04" type="Node3D" parent="Patches/Window Panes"]
-visible = false
 
 [node name="WindowPane69" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(-0.623115, 0, 0.782129, 0, 1, 0, -0.782129, 0, -0.623115, -55.8839, 13.5131, 4.00215)
+transform = Transform3D(-0.632867, 0, 0.774259, 0, 1, 0, -0.774259, 0, -0.632867, -55.9265, 13.3513, 4.03578)
 mesh = SubResource("QuadMesh_3kx6k")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane70" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(-0.623115, 0, 0.782129, 0, 1, 0, -0.782129, 0, -0.623115, -55.8843, 6.6947, 4.00248)
+transform = Transform3D(-0.633758, 0, 0.77353, 0, 1, 0, -0.77353, 0, -0.633758, -55.9537, 6.92827, 3.92034)
 mesh = SubResource("QuadMesh_58rsk")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane71" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(-0.623115, 0, 0.782129, 0, 1, 0, -0.782129, 0, -0.623115, -56.0266, 3.11216, 4.11589)
+transform = Transform3D(-0.631596, 0, 0.775297, 0, 1, 0, -0.775297, 0, -0.631596, -56.2621, 2.93833, 4.16762)
 mesh = SubResource("QuadMesh_oeb45")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane72" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.46924, 0, 0.88307, 0, 1, 0, -0.88307, 0, 0.46924, -55.6172, 13.3633, -0.29241)
+transform = Transform3D(0.436472, 0, 0.899717, 0, 1, 0, -0.899717, 0, 0.436472, -55.7011, 13.3266, -0.319044)
 mesh = SubResource("QuadMesh_qrxuj")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane73" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.46924, 0, 0.88307, 0, 1, 0, -0.88307, 0, 0.46924, -55.6172, 6.93009, -0.29241)
+transform = Transform3D(0.435231, 0, 0.900318, 0, 1, 0, -0.900318, 0, 0.435231, -55.4928, 6.93009, -0.729627)
 mesh = SubResource("QuadMesh_81chb")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
+[node name="WindowPane75" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
+transform = Transform3D(0.435231, 0, 0.900318, 0, 1, 0, -0.900318, 0, 0.435231, -56.7514, 7.18907, 1.87408)
+mesh = SubResource("QuadMesh_uos8l")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("55_nqv5d")
+
 [node name="WindowPane74" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.46924, 0, 0.88307, 0, 1, 0, -0.88307, 0, 0.46924, -53.5806, 13.234, -4.12499)
+transform = Transform3D(0.427421, 0, 0.904052, 0, 1, 0, -0.904052, 0, 0.427421, -53.5439, 13.3328, -4.44568)
 mesh = SubResource("QuadMesh_lckqs")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane76" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.46924, 0, 0.88307, 0, 1, 0, -0.88307, 0, 0.46924, -53.3634, 6.89573, -4.5339)
+transform = Transform3D(0.422618, 0, 0.906307, 0, 1, 0, -0.906307, 0, 0.422618, -53.4312, 6.92993, -4.50698)
 mesh = SubResource("QuadMesh_7sxyj")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane77" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.46924, 0, 0.88307, 0, 1, 0, -0.88307, 0, 0.46924, -53.5699, 3.36558, -4.64364)
+transform = Transform3D(0.425147, 0, 0.905124, 0, 1, 0, -0.905124, 0, 0.425147, -53.7975, 2.91842, -4.67025)
 mesh = SubResource("QuadMesh_m2k76")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane78" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999397, 0, 0.0347076, 0, 1, 0, -0.0347076, 0, 0.999397, -49.5347, 13.471, -5.96591)
+transform = Transform3D(0.999997, 0, 0.00211183, 0, 1, 0, -0.00211183, 0, 0.999997, -49.4935, 13.2894, -6.13221)
 mesh = SubResource("QuadMesh_6qjuc")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane79" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999397, 0, 0.0347076, 0, 1, 0, -0.0347076, 0, 0.999397, -49.5347, 6.7807, -5.96591)
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -49.0238, 6.93194, -6.13468)
 mesh = SubResource("QuadMesh_2wwf4")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
+[node name="WindowPane101" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -51.9215, 7.20492, -6.11403)
+mesh = SubResource("QuadMesh_n2dut")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("55_nqv5d")
+
 [node name="WindowPane80" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -38.0146, 10.2636, -5.87489)
+transform = Transform3D(0.997734, 0, -0.0672839, 0, 1, 0, 0.0672839, 0, 0.997734, -38.2829, 10.2418, -5.94793)
 mesh = SubResource("QuadMesh_qfl8r")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane81" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -38.2497, 10.2636, -5.69655)
+transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -38.2474, 10.2636, -5.73349)
 mesh = SubResource("QuadMesh_ewb2h")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane82" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -43.1278, 2.17996, -6.24898)
+transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -43.0837, 2.1572, -6.31192)
 mesh = SubResource("QuadMesh_3aifm")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane83" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -34.1936, 1.60831, -5.41538)
+transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -34.1553, 1.65943, -5.41312)
 mesh = SubResource("QuadMesh_e0fna")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane84" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -31.2333, 1.60831, -5.22881)
+transform = Transform3D(0.99802, 0, -0.062895, 0, 1, 0, 0.062895, 0, 0.99802, -31.2343, 1.66864, -5.21262)
 mesh = SubResource("QuadMesh_xvmn6")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane85" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -23.8944, 11.0888, -3.67197)
+transform = Transform3D(0.979074, 0, -0.203505, 0, 1, 0, 0.203505, 0, 0.979074, -23.8253, 11.1448, -3.87366)
 mesh = SubResource("QuadMesh_xyc7b")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane86" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -23.6762, 19.5576, -4.74059)
+transform = Transform3D(0.979074, 0, -0.203505, 0, 1, 0, 0.203505, 0, 0.979074, -23.5892, 19.6238, -4.83753)
 mesh = SubResource("QuadMesh_4gs6l")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane87" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -25.2127, 2.3123, -3.97926)
+transform = Transform3D(0.978509, 0, -0.206204, 0, 1, 0, 0.206204, 0, 0.978509, -25.3217, 2.24716, -4.01024)
 mesh = SubResource("QuadMesh_joyqo")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane88" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -19.3054, 2.24218, -2.7731)
+transform = Transform3D(0.978509, 0, -0.206204, 0, 1, 0, 0.206204, 0, 0.978509, -19.2081, 2.20123, -2.71943)
 mesh = SubResource("QuadMesh_joyqo")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane89" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -23.5709, 2.24218, -3.43307)
+transform = Transform3D(0.978509, 0, -0.206204, 0, 1, 0, 0.206204, 0, 0.978509, -23.5534, 2.28988, -3.44265)
 mesh = SubResource("QuadMesh_ugf57")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane90" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -21.0382, 2.24218, -2.94613)
+transform = Transform3D(0.978509, 0, -0.206204, 0, 1, 0, 0.206204, 0, 0.978509, -21.0483, 2.29637, -2.89837)
 mesh = SubResource("QuadMesh_ugf57")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane91" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.979785, 0, -0.200052, 0, 1, 0, 0.200052, 0, 0.979785, -22.2824, 2.24218, -3.30435)
+transform = Transform3D(0.978509, 0, -0.206204, 0, 1, 0, 0.206204, 0, 0.978509, -22.2816, 2.17708, -3.3082)
 mesh = SubResource("QuadMesh_wmsck")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane92" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(-0.671086, 0, 0.741378, 0, 1, 0, -0.741378, 0, -0.671086, -55.989, 19.6422, 3.81767)
+transform = Transform3D(-0.608207, 0, 0.793777, 0, 1, 0, -0.793777, 0, -0.608207, -55.977, 19.6174, 3.88153)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane93" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.45069, 0, 0.89268, 0, 1, 0, -0.89268, 0, 0.45069, -56.1986, 19.6422, 1.16425)
+transform = Transform3D(0.435121, 0, 0.900372, 0, 1, 0, -0.900372, 0, 0.435121, -56.2459, 19.6422, 1.14052)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane94" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.45069, 0, 0.89268, 0, 1, 0, -0.89268, 0, 0.45069, -54.7819, 19.6422, -1.64193)
+transform = Transform3D(0.429975, 0, 0.90284, 0, 1, 0, -0.90284, 0, 0.429975, -54.8709, 19.6422, -1.73106)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane95" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.45069, 0, 0.89268, 0, 1, 0, -0.89268, 0, 0.45069, -53.3687, 19.6422, -4.44093)
+transform = Transform3D(0.450441, 0, 0.892806, 0, 1, 0, -0.892806, 0, 0.450441, -53.386, 19.6112, -4.56843)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane96" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999602, 0, -0.028201, 0, 1, 0, 0.028201, 0, 0.999602, -51.0829, 19.6422, -5.96179)
+transform = Transform3D(0.999992, 0, -0.0039272, 0, 1, 0, 0.0039272, 0, 0.999992, -51.0555, 19.5978, -5.97944)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane97" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999602, 0, -0.028201, 0, 1, 0, 0.028201, 0, 0.999602, -47.8856, 19.6422, -5.95241)
+transform = Transform3D(0.999998, 0, 0.00162293, 0, 1, 0, -0.00162293, 0, 0.999998, -47.8659, 19.6037, -5.99566)
 mesh = SubResource("QuadMesh_2tgi0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane98" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999602, 0, -0.028201, 0, 1, 0, 0.028201, 0, 0.999602, -43.1587, 16.8573, -6.00946)
+transform = Transform3D(0.997544, 0, -0.0700353, 0, 1, 0, 0.0700353, 0, 0.997544, -43.1475, 16.8446, -6.09197)
 mesh = SubResource("QuadMesh_r5th0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane99" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999602, 0, -0.028201, 0, 1, 0, 0.028201, 0, 0.999602, -38.334, 16.8573, -5.53759)
+transform = Transform3D(0.998308, 0, -0.0581392, 0, 1, 0, 0.0581392, 0, 0.998308, -38.3334, 16.7852, -5.55743)
 mesh = SubResource("QuadMesh_r5th0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="WindowPane100" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
-transform = Transform3D(0.999602, 0, -0.028201, 0, 1, 0, 0.028201, 0, 0.999602, -33.4904, 16.8573, -5.40094)
+transform = Transform3D(0.998349, 0, -0.0574423, 0, 1, 0, 0.0574423, 0, 0.998349, -33.4751, 16.7967, -5.45182)
 mesh = SubResource("QuadMesh_r5th0")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
