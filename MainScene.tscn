@@ -447,7 +447,6 @@ directional_shadow_pancake_size = 40.0
 [node name="Level Geometry" type="Node3D" parent="."]
 
 [node name="Section01" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="S1B1" parent="Level Geometry/Section01" instance=ExtResource("1_17a2u")]
 
@@ -464,7 +463,6 @@ visible = false
 [node name="S1Walls" parent="Level Geometry/Section01" instance=ExtResource("7_2kc2q")]
 
 [node name="Section02" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="BistroProps" parent="Level Geometry/Section02" instance=ExtResource("11_e4jub")]
 
@@ -483,7 +481,6 @@ visible = false
 [node name="S2Walls" parent="Level Geometry/Section02" instance=ExtResource("14_v6tgn")]
 
 [node name="Section03" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="S3B1" parent="Level Geometry/Section03" instance=ExtResource("16_m1vvn")]
 
@@ -496,7 +493,6 @@ visible = false
 [node name="S3Lamps" parent="Level Geometry/Section03" instance=ExtResource("20_w5tey")]
 
 [node name="Section04" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="S4B1" parent="Level Geometry/Section04" instance=ExtResource("21_7egcs")]
 
@@ -513,12 +509,10 @@ visible = false
 [node name="S5Lamps" parent="Level Geometry/Section05" instance=ExtResource("26_xvk4t")]
 
 [node name="Ground" type="Node3D" parent="Level Geometry"]
-visible = false
 
 [node name="Ground" parent="Level Geometry/Ground" instance=ExtResource("3_e3k7r")]
 
 [node name="Props" type="Node3D" parent="."]
-visible = false
 
 [node name="Section01" type="Node3D" parent="Props"]
 
@@ -553,7 +547,6 @@ visible = false
 [node name="Patches" type="Node3D" parent="."]
 
 [node name="Blockers" type="Node3D" parent="Patches"]
-visible = false
 
 [node name="Ground" type="Node3D" parent="Patches/Blockers"]
 
@@ -748,7 +741,6 @@ shape = SubResource("ConcavePolygonShape3D_44fte")
 [node name="Window Panes" type="Node3D" parent="Patches"]
 
 [node name="Section01" type="Node3D" parent="Patches/Window Panes"]
-visible = false
 
 [node name="WindowPane" type="MeshInstance3D" parent="Patches/Window Panes/Section01"]
 transform = Transform3D(0.990748, 0, 0.135716, 0, 1, 0, -0.135716, 0, 0.990748, -5.16739, 4.65967, -75.077)
@@ -895,7 +887,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="Section02" type="Node3D" parent="Patches/Window Panes"]
-visible = false
 
 [node name="WindowPane38" type="MeshInstance3D" parent="Patches/Window Panes/Section02"]
 transform = Transform3D(0.994522, 0, 0.104528, 0, 1, 0, -0.104528, 0, 0.994522, 6.30132, 17.5123, -20.0687)
@@ -1066,7 +1057,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="Section03" type="Node3D" parent="Patches/Window Panes"]
-visible = false
 
 [node name="WindowPane53" type="MeshInstance3D" parent="Patches/Window Panes/Section03"]
 transform = Transform3D(-0.376273, 0, -0.926508, 0, 1, 0, 0.926508, 0, -0.376273, 6.32511, 7.81744, -0.775283)
@@ -1201,7 +1191,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
 [node name="Section04" type="Node3D" parent="Patches/Window Panes"]
-visible = false
 
 [node name="WindowPane69" type="MeshInstance3D" parent="Patches/Window Panes/Section04"]
 transform = Transform3D(-0.632867, 0, 0.774259, 0, 1, 0, -0.774259, 0, -0.632867, -55.9265, 13.3513, 4.03578)
