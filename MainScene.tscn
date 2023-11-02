@@ -429,7 +429,7 @@ enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = NodePath("../Night Lights")
-lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Level Geometry/Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Level Geometry/Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004")]
+lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Level Geometry/Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Level Geometry/Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004"), NodePath("../Patches/Fill Out/Lamp/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp2/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp3/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 
@@ -1784,6 +1784,39 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp05" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.8739, 4.42269, 23.3404)
+light_intensity_lumens = 200000.0
+light_temperature = 2685.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 75.0
+distance_fade_shadow = 20.0
+omni_range = 10.0
+omni_shadow_mode = 0
+
+[node name="FilloutLamp" type="OmniLight3D" parent="Night Lights/StreetLamps"]
+transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -14.8969, 4.42269, -56.4258)
+light_intensity_lumens = 200000.0
+light_temperature = 2685.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 75.0
+distance_fade_shadow = 20.0
+omni_range = 10.0
+omni_shadow_mode = 0
+
+[node name="FilloutLamp2" type="OmniLight3D" parent="Night Lights/StreetLamps"]
+transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.2909, 4.42269, -67.7446)
+light_intensity_lumens = 200000.0
+light_temperature = 2685.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 75.0
+distance_fade_shadow = 20.0
+omni_range = 10.0
+omni_shadow_mode = 0
+
+[node name="FilloutLamp3" type="OmniLight3D" parent="Night Lights/StreetLamps"]
+transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -46.981, 4.42269, 0.730994)
 light_intensity_lumens = 200000.0
 light_temperature = 2685.0
 shadow_enabled = true
