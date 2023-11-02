@@ -1,4 +1,4 @@
-[gd_scene load_steps=178 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=182 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -57,6 +57,10 @@
 [ext_resource type="Material" uid="uid://bbgxykd37frx0" path="res://Materials/Stone/Brick_Small_Red_Blend.tres" id="53_ta26q"]
 [ext_resource type="Material" uid="uid://tynp4gabi3x5" path="res://Materials/Blocker.tres" id="55_ad3hv"]
 [ext_resource type="Material" uid="uid://cubayex8gukre" path="res://Materials/Glass/Windows_Glass.tres" id="55_nqv5d"]
+[ext_resource type="PackedScene" uid="uid://bh4suu1710wbn" path="res://Scenes/FillOut/BushTree.tscn" id="56_y454e"]
+[ext_resource type="PackedScene" uid="uid://1mxrxl0bqyot" path="res://Scenes/FillOut/Lamp.tscn" id="57_tqvip"]
+[ext_resource type="PackedScene" uid="uid://cgkwgso15wixk" path="res://Scenes/FillOut/Lamp_Props.tscn" id="58_yuy0n"]
+[ext_resource type="PackedScene" uid="uid://cwpykn2ipsb3b" path="res://Scenes/FillOut/Bollard.tscn" id="59_1o5tg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -1595,6 +1599,38 @@ transform = Transform3D(-0.971445, 0, 0.237262, 0, 1, 0, -0.237262, 0, -0.971445
 mesh = SubResource("QuadMesh_xlh4s")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
+
+[node name="Fill Out" type="Node3D" parent="Patches"]
+
+[node name="BushTree" parent="Patches/Fill Out" instance=ExtResource("56_y454e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7084, 0, -50.5379)
+
+[node name="Lamp" parent="Patches/Fill Out" instance=ExtResource("57_tqvip")]
+transform = Transform3D(0.380312, 0, -0.924858, 0, 1, 0, 0.924858, 0, 0.380312, -14.8938, 0, -56.4228)
+
+[node name="Lamp_Props" parent="Patches/Fill Out/Lamp" instance=ExtResource("58_yuy0n")]
+
+[node name="BushTree2" parent="Patches/Fill Out" instance=ExtResource("56_y454e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9175, 0, -62.7204)
+
+[node name="Lamp2" parent="Patches/Fill Out" instance=ExtResource("57_tqvip")]
+transform = Transform3D(0.679236, 0, 0.73392, 0, 1, 0, -0.73392, 0, 0.679236, -12.2914, 1.90735e-06, -67.7385)
+
+[node name="Lamp_Props" parent="Patches/Fill Out/Lamp2" instance=ExtResource("58_yuy0n")]
+
+[node name="Bollard" parent="Patches/Fill Out" instance=ExtResource("59_1o5tg")]
+transform = Transform3D(0.479488, 0, -0.877548, 0, 1, 0, 0.877548, 0, 0.479488, -8.177, 0.00660169, 27.1407)
+
+[node name="Bollard3" parent="Patches/Fill Out" instance=ExtResource("59_1o5tg")]
+transform = Transform3D(0.489748, 0, -0.871864, 0, 1, 0, 0.871864, 0, 0.489748, -9.82195, 0.00660169, 24.0918)
+
+[node name="Bollard2" parent="Patches/Fill Out" instance=ExtResource("59_1o5tg")]
+transform = Transform3D(-0.0531551, 0, -0.998586, 0, 1, 0, 0.998586, 0, -0.0531551, -39.894, 0.007, -1.9842)
+
+[node name="Lamp3" parent="Patches/Fill Out" instance=ExtResource("57_tqvip")]
+transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, -46.9843, 1.90735e-06, 0.722859)
+
+[node name="Lamp_Props" parent="Patches/Fill Out/Lamp3" instance=ExtResource("58_yuy0n")]
 
 [node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
