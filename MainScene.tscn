@@ -426,7 +426,7 @@ texture_filter = 5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
 
-[node name="Node3D" type="Node3D"]
+[node name="MainScene" type="Node3D"]
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights") instance=ExtResource("32_q35xk")]
 enable_profiler = true
