@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=186 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -63,6 +63,8 @@
 [ext_resource type="PackedScene" uid="uid://cwpykn2ipsb3b" path="res://Scenes/FillOut/Bollard.tscn" id="59_1o5tg"]
 [ext_resource type="PackedScene" uid="uid://bvncoo1ii0yaq" path="res://Scenes/FillOut/Cobblestone.tscn" id="60_n6d5o"]
 [ext_resource type="PackedScene" uid="uid://cxvf7w2qy63uv" path="res://Scenes/FillOut/PotPlants.tscn" id="61_77adx"]
+[ext_resource type="Material" uid="uid://d0cd8fe6hpv6t" path="res://Materials/windowlight.tres" id="63_8uykn"]
+[ext_resource type="ArrayMesh" uid="uid://npyvb0up4qr6" path="res://Meshes/Bent_Quad.obj" id="63_l4mn6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -2331,6 +2333,330 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 2.5
 omni_shadow_mode = 0
+
+[node name="WindowLights" type="Node3D" parent="Night Lights"]
+
+[node name="Section01" type="Node3D" parent="Night Lights/WindowLights"]
+
+[node name="WindowLight" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.567916, 1.08049e-07, -0.823087, -1.50996e-07, 1.26, 1.00107e-14, 0.823087, 1.56596e-07, 0.567916, 12.9363, 6.10067, -70.9841)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight2" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.567916, 1.08049e-07, -0.823087, -1.50996e-07, 1.26, 1.00107e-14, 0.823087, 1.56596e-07, 0.567916, 11.2945, 9.38027, -73.3636)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight3" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.792205, 1.02046e-07, 0.139259, -5.40878e-08, 1.19, -1.35014e-07, -0.111408, 1.47896e-07, 0.990256, 5.45618, 15.4167, -76.5826)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight4" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.787253, 9.77583e-08, 0.139259, -5.37498e-08, 1.14, -1.35014e-07, -0.110711, 1.41682e-07, 0.990256, 2.52363, 11.0317, -76.1315)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight5" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.722887, 8.70391e-08, 0.139259, -4.93551e-08, 1.015, -1.35014e-07, -0.101659, 1.26147e-07, 0.990256, -12.7767, 11.1184, -74.0893)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight6" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.876377, 8.14652e-08, 0.104445, -5.98346e-08, 0.95, -1.0126e-07, -0.123245, 1.18069e-07, 0.742692, -12.8407, 6.57937, -74.4958)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight7" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.896182, 8.1894e-08, 0.104445, -6.11868e-08, 0.955, -1.0126e-07, -0.12603, 1.1869e-07, 0.742692, -0.573798, 6.52967, -76.1728)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight8" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(-0.0457864, 6.17421e-08, 0.748193, 8.57553e-08, 0.72, -5.76933e-08, -0.65841, 8.94835e-08, -0.05203, -7.67064, 16.8496, -38.5724)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight9" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.101134, 9.17555e-08, -0.990743, -1.00406e-07, 1.07, 6.80877e-08, 0.738104, 1.32982e-07, 0.13575, -17.8858, 15.5096, -77.7473)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight10" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(0.102491, 9.30418e-08, -0.990743, -1.01754e-07, 1.085, 6.80876e-08, 0.748011, 1.34847e-07, 0.13575, -17.4941, 11.0994, -74.7825)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight11" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(-0.440355, 5.05942e-08, -0.441897, -2.14701e-09, 0.59, 1.13208e-07, 0.321112, 7.33268e-08, -0.605992, 13.2651, 12.9255, -76.5381)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight12" type="MeshInstance3D" parent="Night Lights/WindowLights/Section01"]
+transform = Transform3D(-0.440355, 5.05942e-08, -0.441897, -2.14701e-09, 0.59, 1.13208e-07, 0.321112, 7.33268e-08, -0.605992, 22.7629, 12.918, -83.1917)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="Section02" type="Node3D" parent="Night Lights/WindowLights"]
+
+[node name="WindowLight9" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(-0.714627, 1.06334e-07, -0.121939, 5.03699e-08, 1.24, 1.33812e-07, 0.0877958, 1.5411e-07, -0.992538, -4.92942, 9.65186, -30.5223)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight10" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(-0.714627, 1.06334e-07, -0.121939, 5.03699e-08, 1.24, 1.33812e-07, 0.0877958, 1.5411e-07, -0.992538, 1.76759, 13.2852, -31.2502)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight11" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(-0.609528, 1.12765e-07, -0.0998279, 4.20951e-08, 1.315, 1.00943e-07, 0.0818589, 1.63432e-07, -0.743327, 1.83669, 17.4583, -31.2611)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight12" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(-0.610411, 1.12765e-07, -0.091454, 4.30243e-08, 1.315, 1.00359e-07, 0.0749923, 1.63432e-07, -0.744403, -4.97039, 17.4985, -30.5288)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight13" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(-0.609378, 1.12765e-07, -0.101177, 4.19448e-08, 1.315, 1.01036e-07, 0.0829652, 1.63432e-07, -0.743144, -11.7693, 17.4361, -29.8182)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight14" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.608734, 1.12765e-07, 0.10679, -4.13175e-08, 1.315, -1.0142e-07, -0.0875681, 1.63432e-07, 0.742358, 2.98073, 17.5224, -19.8961)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight15" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.609138, 1.12765e-07, 0.103304, -4.17075e-08, 1.315, -1.01182e-07, -0.0847091, 1.63432e-07, 0.742851, -3.74123, 17.5011, -19.1669)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight16" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.718726, 1.01617e-07, 0.13127, -4.98047e-08, 1.185, -1.34464e-07, -0.0951709, 1.47275e-07, 0.991347, 2.91934, 13.3906, -20.2728)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight17" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.673686, 1.03761e-07, 0.135958, -4.62804e-08, 1.21, -1.34787e-07, -0.0924512, 1.50382e-07, 0.990715, -3.79813, 9.70889, -19.5702)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight18" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.0608977, 7.67488e-08, -0.993501, -7.12812e-08, 0.895, 7.10488e-08, 0.531523, 1.11233e-07, 0.113828, 6.5904, 9.65533, -15.1669)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight19" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.447583, 7.24612e-08, 0.103504, -3.25928e-08, 0.845, -1.32491e-07, -0.046577, 1.05019e-07, 0.994629, 8.05209, 9.84115, -10.7636)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight20" type="MeshInstance3D" parent="Night Lights/WindowLights/Section02"]
+transform = Transform3D(0.784571, 0.0154544, -0.0282599, -7.01845e-08, 0.769143, 0.51928, 0.0259583, -0.467097, 0.854137, -13.4122, 15.7328, -3.21589)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="Section03" type="Node3D" parent="Night Lights/WindowLights"]
+
+[node name="WindowLight21" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.720257, 0, 0.319141, 0, 1.24, 0, -0.242547, 0, -0.947707, 8.30953, 15.4035, 6.02368)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight22" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.806817, 0, 0.330959, 0, 1.13, 0, -0.28297, 0, -0.943645, 15.0677, 9.61244, -1.87841)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight23" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(0.146895, 0, 0.721717, 0, 0.55, 0, -0.519636, 0, 0.204021, -15.1426, 12.9002, 33.9101)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight33" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(0.155455, 0, 0.71825, 0, 0.55, 0, -0.51714, 0, 0.215909, -18.5068, 12.9086, 44.9913)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight24" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.334596, 0, -0.928324, 0, 1.09, 0, 0.835491, 0, -0.371773, 6.47678, 6.10723, -0.710694)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight25" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.307255, 0, -0.926213, 0, 1.1, 0, 0.754864, 0, -0.377, 3.67881, 15.509, 5.73577)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight26" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.284608, 0, -0.936238, 0, 1.165, 0, 0.758352, 0, -0.351368, 2.52347, 11.0315, 8.5184)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight27" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.360035, 0, -0.69466, 0, 0.95, 0, 0.884534, 0, -0.28275, -1.79173, 6.60938, 20.1888)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight28" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.274303, 0, -0.932595, 0, 1.065, 0, 0.708772, 0, -0.360925, -4.45725, 15.4503, 25.5418)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight29" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.36569, 0, -0.69466, 0, 1.04, 0, 0.898427, 0, -0.28275, -4.07553, 6.5893, 25.7373)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight30" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.792287, 0, -0.0825472, 0, 1.165, 0, 0.0656251, 0, -0.996587, -8.72566, 11.2339, 31.0298)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight31" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.773537, 0, 0.296658, 0, 1.145, 0, -0.240293, 0, -0.954984, -15.5476, 9.51315, 30.1957)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight32" type="MeshInstance3D" parent="Night Lights/WindowLights/Section03"]
+transform = Transform3D(-0.802663, 0, 0.294824, 0, 1.175, 0, -0.247652, 0, -0.955552, -18.3087, 5.99735, 29.383)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="Section04" type="Node3D" parent="Night Lights/WindowLights"]
+
+[node name="WindowLight33" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.310456, 0, 0.902262, 0, 1.095, 0, -0.649629, 0, 0.431188, -56.5653, 11.2697, 0.970245)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight34" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.327307, 0, 0.899748, 0, 1.135, 0, -0.674811, 0, 0.436409, -55.225, 11.2419, -1.79681)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight35" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.799985, 0, 0.00603882, 0, 1.085, 0, -0.00483106, 0, 0.999982, -47.9639, 11.2616, -6.34835)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight36" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.558635, 0, -0.0523435, 0, 0.71, 0, 0.0390831, 0, 0.748171, -43.1306, 16.7896, -6.19015)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight37" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.534028, 0, -0.0451854, 0, 0.71, 0, 0.0322322, 0, 0.748638, -38.313, 16.8219, -5.66703)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight38" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.64578, 0, -0.20646, 0, 1.135, 0, 0.136264, 0, 0.978455, -25.0866, 19.5776, -5.49622)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight39" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.641989, 0, -0.198325, 0, 1.24, 0, 0.129903, 0, 0.980136, -28.4733, 12.6885, -5.02115)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight40" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.80938, 0, -0.193669, 0, 1.3, 0, 0.159777, 0, 0.981067, -25.3325, 9.50446, -4.3756)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight41" type="MeshInstance3D" parent="Night Lights/WindowLights/Section04"]
+transform = Transform3D(0.788226, 0, -0.203078, 0, 1.375, 0, 0.163478, 0, 0.979163, -19.0348, 6.30938, -3.03451)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="Section05" type="Node3D" parent="Night Lights/WindowLights"]
+
+[node name="WindowLight42" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(0.191808, 0, 0.964368, 0, 1.115, 0, -0.699167, 0, 0.264563, -11.0326, 10.8463, 14.1352)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight43" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(0.195341, 0, 0.960847, 0, 1.16, 0, -0.677397, 0, 0.27708, -9.97519, 10.7659, 11.0853)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight44" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(-0.683272, 0, 0.271793, 0, 1.01, 0, -0.192973, 0, -0.962356, -24.384, 10.9001, 5.97108)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight45" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(-0.710792, 0, 0.254534, 0, 0.97, 0, -0.187083, 0, -0.967064, -17.6353, 6.83599, 7.74039)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight46" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(-0.180638, 0, -0.964603, 0, 1.045, 0, 0.660753, 0, -0.263705, -30.6905, 10.8591, 12.6197)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
+
+[node name="WindowLight47" type="MeshInstance3D" parent="Night Lights/WindowLights/Section05"]
+transform = Transform3D(-0.165288, 0, -0.961956, 0, 1.005, 0, 0.581984, 0, -0.273204, -29.6049, 10.9101, 9.64084)
+mesh = ExtResource("63_l4mn6")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("63_8uykn")
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
