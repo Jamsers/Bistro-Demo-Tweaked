@@ -9,4 +9,3 @@ emission = Color(0.913725, 0.509804, 0.309804, 1)
 emission_intensity = 500.0
 emission_texture = ExtResource("1_t5u7t")
 texture_filter = 5
-disable_receive_shadows = true
