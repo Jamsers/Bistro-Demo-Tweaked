@@ -2658,6 +2658,13 @@ mesh = ExtResource("63_l4mn6")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("63_8uykn")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Night Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 15.7515, -3.00468)
+light_intensity_lumens = 40000.0
+light_temperature = 2000.0
+omni_range = 4.0
+omni_shadow_mode = 0
+
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
 enable_depth_of_field = true
