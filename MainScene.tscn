@@ -1602,6 +1602,68 @@ mesh = SubResource("QuadMesh_xlh4s")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("55_nqv5d")
 
+[node name="Pot Plants" type="Node3D" parent="Patches"]
+
+[node name="Section01" type="Node3D" parent="Patches/Pot Plants"]
+
+[node name="PotPlants" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(0.0702961, 0, -0.997526, 0, 1, 0, 0.997526, 0, 0.0702961, 4.70636, 9.77112, -36.4342)
+
+[node name="PotPlants2" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(0.0702961, 0, -0.997526, 0, 1, 0, 0.997526, 0, 0.0702961, 5.446, 6.37974, -37.3626)
+
+[node name="PotPlants3" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.06941, 12.9467, -32.1723)
+
+[node name="PotPlants4" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.07036, 9.33999, -32.1858)
+
+[node name="PotPlants5" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.35014, 5.86092, -35.3713)
+
+[node name="PotPlants6" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.10272, 1.53306, -35.3665)
+
+[node name="PotPlants7" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.90907, 12.9724, -41.8069)
+
+[node name="PotPlants8" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -7.91153, 9.32042, -41.8055)
+
+[node name="PotPlants9" parent="Patches/Pot Plants/Section01" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.0697565, 0, 0.997564, 0, 1, 0, -0.997564, 0, -0.0697565, -8.196, 5.84136, -44.9979)
+
+[node name="Section04" type="Node3D" parent="Patches/Pot Plants"]
+
+[node name="PotPlants10" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.6894, 12.9524, -6.0151)
+
+[node name="PotPlants11" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.6609, 9.32392, -6.00273)
+
+[node name="PotPlants12" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4773, 5.85917, -5.78145)
+
+[node name="PotPlants13" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.5093, 1.55709, -5.53938)
+
+[node name="PotPlants14" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.0242, 12.9583, -5.35388)
+
+[node name="PotPlants15" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.031, 9.32796, -5.36321)
+
+[node name="PotPlants16" parent="Patches/Pot Plants/Section04" instance=ExtResource("61_77adx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.8287, 5.86665, -5.15112)
+
+[node name="Section05" type="Node3D" parent="Patches/Pot Plants"]
+
+[node name="PotPlants17" parent="Patches/Pot Plants/Section05" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.963453, 0, 0.267877, 0, 1, 0, -0.267877, 0, -0.963453, -39.5352, 9.76995, 1.41121)
+
+[node name="PotPlants18" parent="Patches/Pot Plants/Section05" instance=ExtResource("61_77adx")]
+transform = Transform3D(-0.975688, 0, 0.219165, 0, 1, 0, -0.219165, 0, -0.975688, -38.8809, 6.38531, 2.36378)
+
 [node name="Fill Out" type="Node3D" parent="Patches"]
 
 [node name="BushTree" parent="Patches/Fill Out" instance=ExtResource("56_y454e")]
@@ -1639,11 +1701,6 @@ transform = Transform3D(-0.0531551, 0, -0.998586, 0, 1, 0, 0.998586, 0, -0.05315
 transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, -46.9843, 1.90735e-06, 0.722859)
 
 [node name="Lamp_Props" parent="Patches/Fill Out/Lamp3" instance=ExtResource("58_yuy0n")]
-
-[node name="Pot Plants" type="Node3D" parent="Patches"]
-
-[node name="PotPlants" parent="Patches/Pot Plants" instance=ExtResource("61_77adx")]
-transform = Transform3D(0.0702961, 0, -0.997526, 0, 1, 0, 0.997526, 0, 0.0702961, 4.70636, 9.77112, -36.4342)
 
 [node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
