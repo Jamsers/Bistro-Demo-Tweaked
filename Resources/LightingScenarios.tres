@@ -10,6 +10,7 @@ temp = 4250.0
 lux = 75000.0
 sky_nits = 22500.0
 night_lights = false
+exposure_mult = 1.0
 
 [sub_resource type="Resource" id="Resource_kk6fo"]
 script = ExtResource("1_j2wa8")
@@ -18,6 +19,7 @@ temp = 2000.0
 lux = 20000.0
 sky_nits = 6000.0
 night_lights = false
+exposure_mult = 1.0
 
 [sub_resource type="Resource" id="Resource_jdngv"]
 script = ExtResource("1_j2wa8")
@@ -26,6 +28,7 @@ temp = 4000.0
 lux = 0.3
 sky_nits = 0.09
 night_lights = true
+exposure_mult = 700.0
 
 [sub_resource type="Resource" id="Resource_1garo"]
 script = ExtResource("1_j2wa8")
@@ -34,6 +37,7 @@ temp = 5500.0
 lux = 100000.0
 sky_nits = 30000.0
 night_lights = false
+exposure_mult = 1.0
 
 [resource]
 script = ExtResource("1_whetd")

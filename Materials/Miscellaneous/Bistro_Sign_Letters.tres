@@ -7,6 +7,5 @@ albedo_texture = ExtResource("1_etfig")
 roughness = 0.73
 emission_enabled = true
 emission = Color(0, 0.741176, 0.172549, 1)
-emission_energy_multiplier = 2.0
-emission_intensity = 7500.0
+emission_intensity = 200.0
 texture_filter = 5

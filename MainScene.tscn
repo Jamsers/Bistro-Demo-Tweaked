@@ -1735,7 +1735,7 @@ visible = false
 
 [node name="S2Lamp01" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -1.12651, 4.40562, -17.089)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1746,7 +1746,7 @@ omni_shadow_mode = 0
 
 [node name="S2Lamp02" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 4.86286, 4.40562, -8.59835)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1757,7 +1757,7 @@ omni_shadow_mode = 0
 
 [node name="S2Lamp03" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -0.13826, 4.40562, -5.67691)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1768,7 +1768,7 @@ omni_shadow_mode = 0
 
 [node name="S2Lamp04" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -7.38251, 4.40562, 0.756411)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1779,7 +1779,7 @@ omni_shadow_mode = 0
 
 [node name="S3Lamp01" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 1.08493, 4.40562, 2.79209)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1790,7 +1790,7 @@ omni_shadow_mode = 0
 
 [node name="S5Lamp01" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -27.6943, 4.40562, 1.3743)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1801,7 +1801,7 @@ omni_shadow_mode = 0
 
 [node name="S1Lamp01" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 1.86657, 4.40562, -35.1456)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1812,7 +1812,7 @@ omni_shadow_mode = 0
 
 [node name="S1Lamp02" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -5.17382, 4.40562, -47.8143)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1823,7 +1823,7 @@ omni_shadow_mode = 0
 
 [node name="S1Lamp03" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 1.18969, 4.40562, -48.9017)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1834,7 +1834,7 @@ omni_shadow_mode = 0
 
 [node name="S1Lamp04" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 7.95176, 4.40562, -58.9159)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1845,7 +1845,7 @@ omni_shadow_mode = 0
 
 [node name="S1Lamp05" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 3.21388, 4.40562, -69.1854)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1856,7 +1856,7 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp05" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.8739, 4.42269, 23.3404)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1867,7 +1867,7 @@ omni_shadow_mode = 0
 
 [node name="FilloutLamp" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -14.8969, 4.42269, -56.4258)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1878,7 +1878,7 @@ omni_shadow_mode = 0
 
 [node name="FilloutLamp2" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.2909, 4.42269, -67.7446)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1889,7 +1889,7 @@ omni_shadow_mode = 0
 
 [node name="FilloutLamp3" type="OmniLight3D" parent="Night Lights/StreetLamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -46.981, 4.42269, 0.730994)
-light_intensity_lumens = 200000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2685.0
 shadow_enabled = true
 distance_fade_enabled = true
@@ -1902,35 +1902,35 @@ omni_shadow_mode = 0
 
 [node name="BistroSpotlight_01" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(0.0879386, 0.533354, -0.841308, 0, 0.84458, 0.535429, 0.996126, -0.0470849, 0.0742712, -4.31723, 4.11749, -7.55808)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
 
 [node name="BistroSpotlight_02" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(0.0879386, 0.533354, -0.841308, 0, 0.84458, 0.535429, 0.996126, -0.0470849, 0.0742712, -4.55149, 4.11749, -10.2117)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
 
 [node name="BistroSpotlight_03" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(0.0879386, 0.533354, -0.841308, 0, 0.84458, 0.535429, 0.996126, -0.0470849, 0.0742712, -4.75046, 4.11749, -12.4655)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
 
 [node name="BistroSpotlight_04" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(0.0879386, 0.533354, -0.841308, 0, 0.84458, 0.535429, 0.996126, -0.0470849, 0.0742712, -4.97261, 4.11749, -14.9819)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
 
 [node name="BistroSpotlight_05" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.615688, 0.724993, -0.308727, 0, 0.391791, 0.920054, 0.78799, 0.566467, -0.241221, -4.6536, 2.58611, -5.32084)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1938,7 +1938,7 @@ spot_angle = 40.0
 
 [node name="BistroSpotlight_06" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.615688, 0.726296, -0.30565, -7.45058e-09, 0.387886, 0.921707, 0.78799, 0.567485, -0.238817, -6.83811, 2.6351, -2.58086)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1946,7 +1946,7 @@ spot_angle = 40.0
 
 [node name="BistroSpotlight_07" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.999539, -0.0246411, 0.0177423, 1.86265e-08, 0.58432, 0.811523, -0.030364, 0.811149, -0.584051, -16.556, 4.12105, -2.29738)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1954,7 +1954,7 @@ spot_angle = 34.4106
 
 [node name="BistroSpotlight_08" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.999539, -0.0246411, 0.0177423, 1.86265e-08, 0.58432, 0.811523, -0.030364, 0.811149, -0.584051, -13.9278, 4.12105, -2.21755)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1962,7 +1962,7 @@ spot_angle = 34.4106
 
 [node name="BistroSpotlight_09" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.999539, -0.0246411, 0.0177423, 1.86265e-08, 0.58432, 0.811523, -0.030364, 0.811149, -0.584051, -11.604, 4.12105, -2.14696)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1970,7 +1970,7 @@ spot_angle = 34.4106
 
 [node name="BistroSpotlight_10" type="SpotLight3D" parent="Night Lights/Bistro Spotlights"]
 transform = Transform3D(-0.999539, -0.0246411, 0.0177423, 1.86265e-08, 0.58432, 0.811523, -0.030364, 0.811149, -0.584051, -9.13468, 4.12105, -2.07194)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 3000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1980,7 +1980,7 @@ spot_angle = 34.4106
 
 [node name="GallerySpotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.399181, -0.870748, -0.287146, -1.86264e-09, 0.31318, -0.949694, 0.916872, -0.379099, -0.125015, 2.61484, 9.03777, 5.33599)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1988,7 +1988,7 @@ spot_angle = 34.4106
 
 [node name="GallerySpotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.399181, -0.870748, -0.287146, -1.86265e-09, 0.31318, -0.949694, 0.916872, -0.379099, -0.125015, 0.30083, 9.07438, 10.9489)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -1996,7 +1996,7 @@ spot_angle = 34.4106
 
 [node name="GallerySpotlight03" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.399181, -0.870748, -0.287146, -1.86265e-09, 0.31318, -0.949694, 0.916872, -0.379099, -0.125015, -2.2604, 9.07438, 15.017)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2004,7 +2004,7 @@ spot_angle = 34.4106
 
 [node name="GallerySpotlight04" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.399181, -0.870748, -0.287146, -1.86265e-09, 0.31318, -0.949694, 0.916872, -0.379099, -0.125015, -3.35136, 9.07438, 19.7487)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2012,7 +2012,7 @@ spot_angle = 34.4106
 
 [node name="GallerySpotlight05" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.399181, -0.870748, -0.287146, -1.86265e-09, 0.31318, -0.949694, 0.916872, -0.379099, -0.125015, -5.5986, 9.07438, 25.4001)
-light_intensity_lumens = 15000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2020,7 +2020,7 @@ spot_angle = 34.4106
 
 [node name="S1B4Spotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.967818, 0.238937, 0, -0.239686, 0.97085, 0.996876, -0.0766787, -0.0189306, -8.23595, 2.72101, -42.6372)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2030,7 +2030,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S1B4Spotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.967818, 0.238937, 0, -0.239686, 0.97085, 0.996876, -0.0766787, -0.0189306, -8.51958, 2.7277, -45.5472)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2040,7 +2040,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S1B3Spotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.984581, -0.156083, -1.49012e-08, 0.156572, 0.987667, 0.996876, -0.0780068, 0.0123662, 5.24875, 2.34098, -42.7708)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2050,7 +2050,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S1B3Spotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.984581, -0.156083, -1.49012e-08, 0.156572, 0.987667, 0.996876, -0.0780068, 0.0123662, 5.2931, 2.42414, -44.1988)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2060,7 +2060,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S1B3Spotlight03" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.984581, -0.156083, -1.49012e-08, 0.156572, 0.987667, 0.996876, -0.0780068, 0.0123662, 5.5123, 2.4211, -41.3683)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2070,7 +2070,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S1B3Spotlight04" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.078981, 0.984581, -0.156083, -1.49012e-08, 0.156572, 0.987667, 0.996876, -0.0780068, 0.0123662, 6.41558, 3.15161, -36.9362)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2080,7 +2080,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S5B2Spotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.955253, 0.295756, -0.004548, -2.98023e-08, 0.0153758, 0.999882, 0.295791, -0.95514, 0.0146878, -32.4059, 2.37371, 4.64527)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2090,7 +2090,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S5B2Spotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.955253, 0.295756, -0.004548, -2.98023e-08, 0.0153758, 0.999882, 0.295791, -0.95514, 0.0146878, -33.7528, 2.3744, 4.18158)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2100,7 +2100,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S5B2Spotlight03" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(0.955253, 0.295756, -0.004548, -2.98023e-08, 0.0153758, 0.999882, 0.295791, -0.95514, 0.0146878, -35.1123, 2.37359, 3.81576)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2110,7 +2110,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S4B2Spotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.99708, -0.0762322, -0.00454798, -0.00341456, -0.0149918, 0.999882, -0.0762914, 0.996977, 0.0146877, -34.0977, 2.65988, -5.57127)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2120,7 +2120,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S4B2Spotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.99708, -0.0762322, -0.00454798, -0.00341456, -0.0149918, 0.999882, -0.0762914, 0.996977, 0.0146877, -31.1903, 2.70051, -5.38301)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2130,7 +2130,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S4B1Spotlight01" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.970391, -0.210285, -0.118837, -0.000865773, -0.488965, 0.872303, -0.241539, 0.846578, 0.474305, -25.208, 3.22442, -4.10977)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2140,7 +2140,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="S4B1Spotlight02" type="SpotLight3D" parent="Night Lights/Building Spotlights"]
 transform = Transform3D(-0.970391, -0.210285, -0.118837, -0.000865773, -0.488965, 0.872303, -0.241539, 0.846578, 0.474305, -19.1887, 3.26987, -2.80223)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
 distance_fade_shadow = 20.0
@@ -2152,7 +2152,7 @@ spot_angle_attenuation = 0.840896
 
 [node name="GalleryLamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, 2.06258, 4.01243, 6.79796)
-light_intensity_lumens = 60000.0
+light_intensity_lumens = 3000.0
 light_temperature = 4000.0
 light_color = Color(1, 0.792157, 0.6, 1)
 light_energy = 0.639
@@ -2163,7 +2163,7 @@ omni_shadow_mode = 0
 
 [node name="GalleryLamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -0.839651, 4.01243, 12.8304)
-light_intensity_lumens = 60000.0
+light_intensity_lumens = 3000.0
 light_temperature = 4000.0
 light_color = Color(1, 0.792157, 0.6, 1)
 light_energy = 0.639
@@ -2174,7 +2174,7 @@ omni_shadow_mode = 0
 
 [node name="GalleryLamp03" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -2.68006, 4.01243, 17.3394)
-light_intensity_lumens = 60000.0
+light_intensity_lumens = 3000.0
 light_temperature = 4000.0
 light_color = Color(1, 0.792157, 0.6, 1)
 light_energy = 0.639
@@ -2185,7 +2185,7 @@ omni_shadow_mode = 0
 
 [node name="GalleryLamp04" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -4.91972, 4.01748, 23.7676)
-light_intensity_lumens = 60000.0
+light_intensity_lumens = 3000.0
 light_temperature = 4000.0
 light_color = Color(1, 0.792157, 0.6, 1)
 light_energy = 0.639
@@ -2196,7 +2196,7 @@ omni_shadow_mode = 0
 
 [node name="S1B4Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -7.28938, 4.01704, -40.609)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2206,7 +2206,7 @@ omni_shadow_mode = 0
 
 [node name="S2B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -3.51947, 4.01704, -31.4288)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2216,7 +2216,7 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -11.208, 4.01748, 18.797)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2226,7 +2226,7 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -8.95845, 4.01748, 10.6706)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2236,7 +2236,7 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp03" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.3868, 4.01748, 8.18672)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2246,7 +2246,7 @@ omni_shadow_mode = 0
 
 [node name="S5B1Lamp04" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -22.0024, 4.19774, 5.50787)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2256,7 +2256,7 @@ omni_shadow_mode = 0
 
 [node name="S3B3Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -8.14743, 3.2133, 30.1669)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2266,7 +2266,7 @@ omni_shadow_mode = 0
 
 [node name="S3B3Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -12.6135, 3.2133, 30.492)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2276,7 +2276,7 @@ omni_shadow_mode = 0
 
 [node name="S4B1Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -29.1337, 4.56285, -4.19289)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2286,7 +2286,7 @@ omni_shadow_mode = 0
 
 [node name="S4B3Lamp01" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -46.9975, 4.48853, -5.51909)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2296,7 +2296,7 @@ omni_shadow_mode = 0
 
 [node name="S4B3Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -54.0111, 4.48853, -2.38736)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2306,7 +2306,7 @@ omni_shadow_mode = 0
 
 [node name="S1B4Lamp02" type="OmniLight3D" parent="Night Lights/Building_Lamps"]
 transform = Transform3D(-0.221485, 0.32077, -0.920897, 0, 0.944351, 0.32894, 0.975164, 0.0728553, -0.20916, 4.60982, 4.64486, -39.9983)
-light_intensity_lumens = 50000.0
+light_intensity_lumens = 3000.0
 light_temperature = 2700.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2318,7 +2318,7 @@ omni_shadow_mode = 0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Night Lights/Sign_Lights"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -43.1364, 4.24368, 0.516972)
-light_intensity_lumens = 30000.0
+light_intensity_lumens = 2000.0
 light_color = Color(0.741176, 1, 0.74902, 1)
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2327,7 +2327,7 @@ omni_shadow_mode = 0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Night Lights/Sign_Lights"]
 transform = Transform3D(-0.453991, 0, 0.891006, 0, 1, 0, -0.891006, 0, -0.453991, -36.1872, 3.10125, -5.0267)
-light_intensity_lumens = 30000.0
+light_intensity_lumens = 2000.0
 light_color = Color(1, 0.654902, 0.647059, 1)
 distance_fade_enabled = true
 distance_fade_begin = 45.0
@@ -2660,7 +2660,7 @@ surface_material_override/0 = ExtResource("63_8uykn")
 
 [node name="AtticLight" type="SpotLight3D" parent="Night Lights"]
 transform = Transform3D(1, 0, 0, 0, -0.897281, -0.441459, 0, 0.441459, -0.897281, -13.3911, 15.6656, -3.36303)
-light_intensity_lumens = 10000.0
+light_intensity_lumens = 2000.0
 light_temperature = 2000.0
 distance_fade_enabled = true
 distance_fade_begin = 45.0
