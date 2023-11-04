@@ -10,7 +10,6 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_wl7x4")
 roughness = 0.73
-emission_enabled = true
 emission_texture = ExtResource("2_spfdb")
 normal_enabled = true
 normal_texture = ExtResource("3_sy55k")

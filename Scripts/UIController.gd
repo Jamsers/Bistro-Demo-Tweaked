@@ -199,8 +199,12 @@ func apply_time(lighting):
 		sun_light.light_temperature = lerp(orig_light, lighting.temp, easeInOutSine(lerp))
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
-		environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeInOutSine(lerp))
-		environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInOutSine(lerp))
+		if lighting.night_lights:
+			environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
+		else:
+			environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
@@ -232,5 +236,11 @@ func _unhandled_input(event):
 					is_ui_hidden = !is_ui_hidden
 					switch_visibility()
 
-func easeInOutSine(lerp):
-	return -(cos(PI * lerp) - 1) / 2;
+func easeInOutSine(lerp: float) -> float:
+	return -(cos(PI * lerp) - 1.0) / 2.0;
+
+func easeInExp(x: float, exp: int) -> float:
+	return pow(x, exp)
+
+func easeOutExp(x: float, exp: int) -> float:
+	return 1.0 - pow(1.0 - x, exp)
