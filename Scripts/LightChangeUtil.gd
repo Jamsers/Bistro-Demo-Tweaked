@@ -42,6 +42,10 @@ func apply_lighting(lighting):
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in UI.emissives:
 			mat.emission_enabled = false
+	
+	UI.environment.environment.sdfgi_enabled = false
+	await get_tree().create_timer(0.1).timeout
+	UI.environment.environment.sdfgi_enabled = true
 
 func change_shadow_casters(is_cast_on):
 	var shadow_mode
