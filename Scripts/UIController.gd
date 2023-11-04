@@ -201,10 +201,10 @@ func apply_time(lighting):
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
 		if orig_exp_mult < lighting.exposure_mult:
 			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
-			#environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
 		else:
 			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
-			#environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
