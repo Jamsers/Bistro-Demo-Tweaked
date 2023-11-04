@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dh3e0lbmuvd5o" path="res://Meshes/Section05/S5B2.glb" id="1_mwgp6"]
 [ext_resource type="PackedScene" uid="uid://cv1vwvx2ccp2w" path="res://Meshes/CollisionOcclusion/Section05/S5B2_ColOcc.glb" id="2_5ojkw"]
 [ext_resource type="Material" uid="uid://bw1jumvewrd6k" path="res://Materials/Stone/Concrete_Smooth.tres" id="2_5un8b"]
-[ext_resource type="Material" uid="uid://c20b24omxemih" path="res://Materials/Lights/Spotlight_Glass_Warm.tres" id="2_8w4gx"]
 [ext_resource type="Material" uid="uid://dh86ldgjwcoyi" path="res://Materials/Lights/Focus.tres" id="2_o20gk"]
 [ext_resource type="Material" uid="uid://dnqjx5gjjdfb1" path="res://Materials/Stone/Concrete_Plaster1.tres" id="2_t0rv2"]
 [ext_resource type="Material" uid="uid://bl2w134l3gppw" path="res://Materials/Metal/Forge_Metal.tres" id="3_15lgt"]
 [ext_resource type="Material" uid="uid://hy1wu02oyqvf" path="res://Materials/Stone/Brick_Large_Beige.tres" id="3_218bf"]
+[ext_resource type="Material" uid="uid://blcwr4ltx5kto" path="res://Materials/Lights/Spotlight_Glass_Emissive.tres" id="3_i0qe7"]
 [ext_resource type="Material" uid="uid://cim2036mxsb7k" path="res://Materials/Wood/Wood_Painted_White.tres" id="4_6isxt"]
 [ext_resource type="Material" uid="uid://dhwvp6mpytwc0" path="res://Materials/Wood/Wood_Brown.tres" id="4_fjiiv"]
 [ext_resource type="Material" uid="uid://ddafiav24hit3" path="res://Materials/Fabric/Awning_Beams.tres" id="5_mhmjl"]
@@ -33,12 +33,12 @@ visible = false
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_1522daf" parent="." index="1"]
 cast_shadow = 0
 gi_mode = 2
-surface_material_override/0 = ExtResource("2_8w4gx")
+surface_material_override/0 = ExtResource("3_i0qe7")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_4ede27c" parent="." index="2"]
 cast_shadow = 0
 gi_mode = 2
-surface_material_override/0 = ExtResource("2_8w4gx")
+surface_material_override/0 = ExtResource("3_i0qe7")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_6510a8f" parent="." index="3"]
 cast_shadow = 0
@@ -53,7 +53,7 @@ surface_material_override/0 = ExtResource("2_o20gk")
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_8af7113" parent="." index="5"]
 cast_shadow = 0
 gi_mode = 2
-surface_material_override/0 = ExtResource("2_8w4gx")
+surface_material_override/0 = ExtResource("3_i0qe7")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_bd013cf" parent="." index="6"]
 cast_shadow = 0
@@ -63,7 +63,7 @@ surface_material_override/0 = ExtResource("2_o20gk")
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_c964fa9" parent="." index="7"]
 cast_shadow = 0
 gi_mode = 2
-surface_material_override/0 = ExtResource("2_8w4gx")
+surface_material_override/0 = ExtResource("3_i0qe7")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_de353ec" parent="." index="8"]
 cast_shadow = 0
