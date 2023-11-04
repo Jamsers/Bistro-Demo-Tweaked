@@ -27,11 +27,11 @@ exposure_min_sens = 80.0
 script = ExtResource("1_j2wa8")
 rotation = Quaternion(-0.36791, 0.550002, 0.669467, 0.33757)
 temp = 15000.0
-lux = 0.3
-sky_nits = 0.09
+lux = 3.0
+sky_nits = 0.9
 night_lights = true
 exposure_mult = 2500.0
-exposure_min_sens = 140.0
+exposure_min_sens = 200.0
 
 [sub_resource type="Resource" id="Resource_1garo"]
 script = ExtResource("1_j2wa8")
