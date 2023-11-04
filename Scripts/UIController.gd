@@ -199,7 +199,7 @@ func apply_time(lighting):
 		sun_light.light_temperature = lerp(orig_light, lighting.temp, easeInOutSine(lerp))
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
-		if lighting.night_lights:
+		if orig_exp_mult < lighting.exposure_mult:
 			environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
 			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
 		else:
