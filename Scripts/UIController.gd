@@ -237,10 +237,10 @@ func _unhandled_input(event):
 					switch_visibility()
 
 func easeInOutSine(lerp: float) -> float:
-	return -(cos(PI * lerp) - 1.0) / 2.0;
+	return clamp(-(cos(PI * lerp) - 1.0) / 2.0, 0.0, 1.0)
 
 func easeInExp(x: float, exp: int) -> float:
-	return pow(x, exp)
+	return clamp(pow(x, exp), 0.0, 1.0)
 
 func easeOutExp(x: float, exp: int) -> float:
-	return 1.0 - pow(1.0 - x, exp)
+	return clamp(1.0 - pow(1.0 - x, exp), 0.0, 1.0)
