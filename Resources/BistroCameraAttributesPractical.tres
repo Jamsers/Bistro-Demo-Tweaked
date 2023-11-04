@@ -11,4 +11,4 @@ dof_blur_near_enabled = true
 dof_blur_near_distance = 0.06
 dof_blur_near_transition = 0.02
 auto_exposure_min_sensitivity = 360.0
-auto_exposure_max_sensitivity = 1e+06
+auto_exposure_max_sensitivity = 1e+07
