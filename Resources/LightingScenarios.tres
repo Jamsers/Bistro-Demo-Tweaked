@@ -24,7 +24,7 @@ exposure_mult = 14.0
 [sub_resource type="Resource" id="Resource_jdngv"]
 script = ExtResource("1_j2wa8")
 rotation = Quaternion(-0.36791, 0.550002, 0.669467, 0.33757)
-temp = 4000.0
+temp = 15000.0
 lux = 0.3
 sky_nits = 0.09
 night_lights = true
