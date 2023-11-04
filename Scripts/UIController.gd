@@ -21,7 +21,7 @@ class_name UIController
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
 const TIME_CHANGE_DURATION = 4.0
-const NIGHT_SHADOW_RES = 1024
+const NIGHT_SHADOW_RES = 512
 
 var renderTargetVertical = 1080.0
 var is_time_changing = false
