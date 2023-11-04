@@ -28,7 +28,7 @@ temp = 15000.0
 lux = 0.3
 sky_nits = 0.09
 night_lights = true
-exposure_mult = 700.0
+exposure_mult = 1750.0
 
 [sub_resource type="Resource" id="Resource_1garo"]
 script = ExtResource("1_j2wa8")
