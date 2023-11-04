@@ -29,7 +29,7 @@ func apply_lighting(lighting):
 	UI.sun_light.light_temperature = lighting.temp
 	UI.sun_light.quaternion = lighting.rotation
 	UI.environment.environment.background_intensity = lighting.sky_nits
-	UI.environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
+	UI.environment.camera_attributes.exposure_sensitivity = lighting.exposure_mult
 	UI.environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 	if lighting.night_lights:
 		for node in UI.night_lights:

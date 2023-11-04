@@ -163,7 +163,7 @@ func apply_time(lighting):
 	var orig_light = sun_light.light_temperature
 	var orig_rot = sun_light.quaternion
 	var orig_sky = environment.environment.background_intensity
-	var orig_exp_mult = environment.camera_attributes.exposure_multiplier
+	var orig_exp_mult = environment.camera_attributes.exposure_sensitivity
 	var orig_min_sens = environment.camera_attributes.auto_exposure_min_sensitivity
 	
 	if !lighting.night_lights:
@@ -184,7 +184,7 @@ func apply_time(lighting):
 			sun_light.light_temperature = lighting.temp
 			sun_light.quaternion = lighting.rotation
 			environment.environment.background_intensity = lighting.sky_nits
-			environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
+			environment.camera_attributes.exposure_sensitivity = lighting.exposure_mult
 			environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 			if lighting.night_lights:
 				for node in night_lights:
@@ -200,11 +200,11 @@ func apply_time(lighting):
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
 		if orig_exp_mult < lighting.exposure_mult:
-			environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
-			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
+			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
+			#environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
 		else:
-			environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
-			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
+			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
+			#environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
