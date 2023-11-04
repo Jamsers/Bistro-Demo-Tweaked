@@ -2643,7 +2643,35 @@ mesh = ExtResource("63_l4mn6")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("63_8uykn")
 
-[node name="AtticLight" type="SpotLight3D" parent="Night Lights"]
+[node name="PatchLight" type="Node3D" parent="Night Lights"]
+
+[node name="PatchLight" type="SpotLight3D" parent="Night Lights/PatchLight"]
+transform = Transform3D(-0.886349, -0.457307, 0.0724956, -1.39728e-08, 0.156572, 0.987667, -0.463018, 0.875417, -0.138777, -39.5842, 3.04845, 3.21816)
+light_intensity_lumens = 100.0
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 20.0
+spot_range = 2.86
+spot_angle = 35.95
+spot_angle_attenuation = 0.840896
+
+[node name="PatchLight2" type="SpotLight3D" parent="Night Lights/PatchLight"]
+transform = Transform3D(-0.99466, -0.0837566, 0.0603072, 1.11474e-08, 0.58432, 0.811523, -0.103209, 0.80719, -0.5812, -30.3558, 3.50815, -4.62269)
+light_intensity_lumens = 250.0
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 20.0
+spot_angle = 34.4106
+
+[node name="PatchLight3" type="SpotLight3D" parent="Night Lights/PatchLight"]
+transform = Transform3D(-0.99466, -0.0837566, 0.0603072, 1.11474e-08, 0.58432, 0.811523, -0.103209, 0.80719, -0.5812, -35.5303, 3.50815, -4.95642)
+light_intensity_lumens = 250.0
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+distance_fade_shadow = 20.0
+spot_angle = 34.4106
+
+[node name="AtticLight" type="SpotLight3D" parent="Night Lights/PatchLight"]
 transform = Transform3D(1, 0, 0, 0, -0.897281, -0.441459, 0, 0.441459, -0.897281, -13.3911, 15.6656, -3.36303)
 light_intensity_lumens = 200.0
 light_temperature = 2000.0
