@@ -32,13 +32,15 @@ func apply_lighting(lighting):
 	UI.environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
 	UI.environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 	if lighting.night_lights:
-		UI.night_lights.visible = true
+		for node in UI.night_lights:
+			node.visible = true
 		change_shadow_casters(false)
 		RenderingServer.directional_shadow_atlas_set_size(UI.NIGHT_SHADOW_RES, sun_shadow_bits)
 		for mat in UI.emissives:
 			mat.emission_enabled = true
 	else:
-		UI.night_lights.visible = false
+		for node in UI.night_lights:
+			node.visible = false
 		change_shadow_casters(true)
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in UI.emissives:

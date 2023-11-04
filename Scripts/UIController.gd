@@ -11,7 +11,7 @@ class_name UIController
 @export var profiler: Array[Control]
 @export var sun_light: DirectionalLight3D
 @export var environment: WorldEnvironment
-@export var night_lights: Node3D
+@export var night_lights: Array[Node3D]
 @export var day_lights: Node3D
 @export var lamp_mesh_containers: Array[Node3D]
 @export var lamp_meshes: Array[MeshInstance3D]
@@ -167,7 +167,8 @@ func apply_time(lighting):
 	var orig_min_sens = environment.camera_attributes.auto_exposure_min_sensitivity
 	
 	if !lighting.night_lights:
-		night_lights.visible = false
+		for node in night_lights:
+			node.visible = false
 		change_shadow_casters(true)
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in emissives:
@@ -186,7 +187,8 @@ func apply_time(lighting):
 			environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
 			environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 			if lighting.night_lights:
-				night_lights.visible = true
+				for node in night_lights:
+					node.visible = true
 				change_shadow_casters(false)
 				RenderingServer.directional_shadow_atlas_set_size(NIGHT_SHADOW_RES, sun_shadow_bits)
 				for mat in emissives:
