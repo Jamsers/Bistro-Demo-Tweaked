@@ -438,7 +438,7 @@ lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exteri
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 
-[node name="LightChangeUtil" type="Node" parent="." node_paths=PackedStringArray("UI")]
+[node name="Light Change Utility" type="Node" parent="." node_paths=PackedStringArray("UI")]
 script = ExtResource("12_p7w1a")
 UI = NodePath("../UI")
 
