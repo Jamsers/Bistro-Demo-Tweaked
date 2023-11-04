@@ -451,7 +451,7 @@ shape = 4
 material = ExtResource("35_hsy4k")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.154711, -0.78694, 0.59732, -5.96046e-08, 0.604599, 0.79653, -0.98796, 0.123231, -0.0935379, 0, 0, 0)
+transform = Transform3D(-0.154712, -0.786939, 0.59732, -8.9407e-08, 0.6046, 0.79653, -0.98796, 0.123232, -0.0935387, 0, 0, 0)
 light_intensity_lux = 75000.0
 light_temperature = 4250.0
 shadow_enabled = true
