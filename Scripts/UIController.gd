@@ -1,5 +1,7 @@
 extends Control
 
+class_name UIController
+
 @export var settings: ScalabilitySettings
 @export var lighting_scenarios: LightingScenarios
 @export var enable_profiler : bool
