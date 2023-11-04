@@ -30,6 +30,7 @@ func apply_lighting(lighting):
 	UI.sun_light.quaternion = lighting.rotation
 	UI.environment.environment.background_intensity = lighting.sky_nits
 	UI.environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
+	UI.environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 	if lighting.night_lights:
 		UI.night_lights.visible = true
 		change_shadow_casters(false)

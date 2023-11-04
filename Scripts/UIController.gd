@@ -164,6 +164,7 @@ func apply_time(lighting):
 	var orig_rot = sun_light.quaternion
 	var orig_sky = environment.environment.background_intensity
 	var orig_exp_mult = environment.camera_attributes.exposure_multiplier
+	var orig_min_sens = environment.camera_attributes.auto_exposure_min_sensitivity
 	
 	if !lighting.night_lights:
 		night_lights.visible = false
@@ -183,6 +184,7 @@ func apply_time(lighting):
 			sun_light.quaternion = lighting.rotation
 			environment.environment.background_intensity = lighting.sky_nits
 			environment.camera_attributes.exposure_multiplier = lighting.exposure_mult
+			environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 			if lighting.night_lights:
 				night_lights.visible = true
 				change_shadow_casters(false)
@@ -196,6 +198,7 @@ func apply_time(lighting):
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
 		environment.camera_attributes.exposure_multiplier = lerp(orig_exp_mult, lighting.exposure_mult, easeInOutSine(lerp))
+		environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInOutSine(lerp))
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):

@@ -8,3 +8,4 @@ class_name Lighting
 @export var sky_nits: float = 0.0
 @export var night_lights: bool = false
 @export var exposure_mult: float = 0.0
+@export var exposure_min_sens: float = 0.0
