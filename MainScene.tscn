@@ -2681,6 +2681,15 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 spot_angle = 82.4
 
+[node name="SignLight" type="SpotLight3D" parent="Night Lights/PatchLight"]
+transform = Transform3D(-0.61529, 0, -0.788301, 0, 1, 0, 0.788301, 0, -0.61529, -5.56689, 3.71275, -3.85662)
+light_intensity_lumens = 700.0
+light_color = Color(0, 0.741176, 0.172549, 1)
+distance_fade_enabled = true
+distance_fade_begin = 45.0
+spot_range = 4.0
+spot_angle = 80.0
+
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
 enable_depth_of_field = true
