@@ -1,5 +1,7 @@
 extends Control
 
+class_name UIController
+
 @export var settings: ScalabilitySettings
 @export var lighting_scenarios: LightingScenarios
 @export var enable_profiler : bool
@@ -9,7 +11,7 @@ extends Control
 @export var profiler: Array[Control]
 @export var sun_light: DirectionalLight3D
 @export var environment: WorldEnvironment
-@export var night_lights: Node3D
+@export var night_lights: Array[Node3D]
 @export var day_lights: Node3D
 @export var lamp_mesh_containers: Array[Node3D]
 @export var lamp_meshes: Array[MeshInstance3D]
@@ -19,7 +21,7 @@ extends Control
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
 const TIME_CHANGE_DURATION = 4.0
-const NIGHT_SHADOW_RES = 1024
+const NIGHT_SHADOW_RES = 512
 
 var renderTargetVertical = 1080.0
 var is_time_changing = false
@@ -161,9 +163,12 @@ func apply_time(lighting):
 	var orig_light = sun_light.light_temperature
 	var orig_rot = sun_light.quaternion
 	var orig_sky = environment.environment.background_intensity
+	var orig_exp_mult = environment.camera_attributes.exposure_sensitivity
+	var orig_min_sens = environment.camera_attributes.auto_exposure_min_sensitivity
 	
 	if !lighting.night_lights:
-		night_lights.visible = false
+		for node in night_lights:
+			node.visible = false
 		change_shadow_casters(true)
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in emissives:
@@ -179,8 +184,11 @@ func apply_time(lighting):
 			sun_light.light_temperature = lighting.temp
 			sun_light.quaternion = lighting.rotation
 			environment.environment.background_intensity = lighting.sky_nits
+			environment.camera_attributes.exposure_sensitivity = lighting.exposure_mult
+			environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
 			if lighting.night_lights:
-				night_lights.visible = true
+				for node in night_lights:
+					node.visible = true
 				change_shadow_casters(false)
 				RenderingServer.directional_shadow_atlas_set_size(NIGHT_SHADOW_RES, sun_shadow_bits)
 				for mat in emissives:
@@ -191,6 +199,12 @@ func apply_time(lighting):
 		sun_light.light_temperature = lerp(orig_light, lighting.temp, easeInOutSine(lerp))
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
+		if orig_exp_mult < lighting.exposure_mult:
+			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
+		else:
+			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
+			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
@@ -222,5 +236,11 @@ func _unhandled_input(event):
 					is_ui_hidden = !is_ui_hidden
 					switch_visibility()
 
-func easeInOutSine(lerp):
-	return -(cos(PI * lerp) - 1) / 2;
+func easeInOutSine(lerp: float) -> float:
+	return clamp(-(cos(PI * lerp) - 1.0) / 2.0, 0.0, 1.0)
+
+func easeInExp(x: float, exp: int) -> float:
+	return clamp(pow(x, exp), 0.0, 1.0)
+
+func easeOutExp(x: float, exp: int) -> float:
+	return clamp(1.0 - pow(1.0 - x, exp), 0.0, 1.0)

@@ -124,7 +124,8 @@ shape = SubResource("ConvexPolygonShape3D_p5f16")
 shape = SubResource("ConvexPolygonShape3D_ms26h")
 
 [node name="HangingLight01" type="OmniLight3D" parent="Lantern_Wind_21/Lantern_Wind_21_2"]
-light_intensity_lumens = 10000.0
+visible = false
+light_intensity_lumens = 500.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 distance_fade_enabled = true
@@ -188,7 +189,8 @@ shape = SubResource("ConvexPolygonShape3D_lvvgm")
 shape = SubResource("ConvexPolygonShape3D_8ymal")
 
 [node name="HangingLight02" type="OmniLight3D" parent="Lantern_Wind_22/Lantern_Wind_22_2"]
-light_intensity_lumens = 10000.0
+visible = false
+light_intensity_lumens = 500.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 distance_fade_enabled = true
@@ -252,7 +254,8 @@ shape = SubResource("ConvexPolygonShape3D_nmda3")
 shape = SubResource("ConvexPolygonShape3D_g58ct")
 
 [node name="HangingLight03" type="OmniLight3D" parent="Lantern_Wind_23/Lantern_Wind_23_2"]
-light_intensity_lumens = 10000.0
+visible = false
+light_intensity_lumens = 500.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 distance_fade_enabled = true
@@ -316,7 +319,8 @@ shape = SubResource("ConvexPolygonShape3D_4n3jr")
 shape = SubResource("ConvexPolygonShape3D_6b4v1")
 
 [node name="HangingLight03" type="OmniLight3D" parent="Lantern_Wind_24/Lantern_Wind_24_2"]
-light_intensity_lumens = 10000.0
+visible = false
+light_intensity_lumens = 500.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 distance_fade_enabled = true
@@ -380,7 +384,8 @@ shape = SubResource("ConvexPolygonShape3D_dm3di")
 shape = SubResource("ConvexPolygonShape3D_7pfkl")
 
 [node name="HangingLight04" type="OmniLight3D" parent="Lantern_Wind_25/Lantern_Wind_25_2"]
-light_intensity_lumens = 10000.0
+visible = false
+light_intensity_lumens = 500.0
 light_color = Color(1, 0.545098, 0.258824, 1)
 light_cull_mask = 4294967293
 distance_fade_enabled = true

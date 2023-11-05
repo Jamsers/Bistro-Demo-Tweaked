@@ -52,6 +52,7 @@
 visible = false
 
 [node name="Bistro_Research_Exterior_Ivy_Ivy_4011" parent="." index="2"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("2_2b72b")
 
 [node name="Bistro_Research_Exterior_Ivy_Ivy_4049_0" parent="Bistro_Research_Exterior_Ivy_Ivy_4049" index="0"]
@@ -106,12 +107,15 @@ surface_material_override/0 = ExtResource("2_wjy6c")
 surface_material_override/0 = ExtResource("3_t2yb1")
 
 [node name="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131_0" parent="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131" index="0"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("7_yxbsp")
 
 [node name="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131_1" parent="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131" index="1"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("8_dx55t")
 
 [node name="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131_2" parent="Bistro_Research_Exterior_Paris_BistroFrontBanner_01_4131" index="2"]
+gi_mode = 2
 surface_material_override/0 = ExtResource("9_k5xmf")
 
 [node name="Bistro_Research_Exterior_Paris_Building_01_paris_buildi_0095f3f" parent="." index="12"]

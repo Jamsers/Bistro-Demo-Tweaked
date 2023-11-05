@@ -1,13 +1,13 @@
 [gd_resource type="Environment" load_steps=3 format=3 uid="uid://bevtu3gehmb2j"]
 
-[ext_resource type="Material" uid="uid://kgrcufewquxd" path="res://Materials/SkyMaterial.tres" id="1_nfxgk"]
+[ext_resource type="Material" uid="uid://kgrcufewquxd" path="res://Materials/SkyMaterial.tres" id="1_nc131"]
 
 [sub_resource type="Sky" id="Sky_u3ie7"]
-sky_material = ExtResource("1_nfxgk")
+sky_material = ExtResource("1_nc131")
 
 [resource]
 background_mode = 2
-background_intensity = 25000.0
+background_intensity = 22500.0
 sky = SubResource("Sky_u3ie7")
 tonemap_mode = 3
 tonemap_white = 6.0

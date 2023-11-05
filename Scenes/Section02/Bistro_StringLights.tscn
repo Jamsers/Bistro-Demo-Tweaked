@@ -171,6 +171,9 @@ surface_material_override/0 = ExtResource("6_78hus")
 lod_bias = 4.0
 surface_material_override/0 = ExtResource("7_0lsvn")
 
+[node name="StringLight_Wind_23" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01786, 4.26388, -11.1834)
+
 [node name="StringLight_Wind_23_0" parent="StringLight_Wind_23" index="0"]
 lod_bias = 4.0
 surface_material_override/0 = ExtResource("2_tul44")
