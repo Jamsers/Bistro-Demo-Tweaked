@@ -161,6 +161,7 @@ func _process(delta):
 			rigidbody_collisions.append(collision)
 
 var colliders_in_contact = []
+var collider_bump_cooldowns = []
 
 func _physics_process(delta):
 	var collide_force = COLLIDE_FORCE * delta
@@ -181,7 +182,14 @@ func _physics_process(delta):
 		if !colliders_in_contact.has(collider):
 			colliders_in_contact.append(collider)
 			if mult_actual > audio_play_threshold:
-				play_bump_audio(collision.get_position())
+				var has_collider = false
+				for cooldown in collider_bump_cooldowns:
+					if cooldown["collider"] == collider:
+						has_collider = true
+				if !has_collider:
+					play_bump_audio(collision.get_position())
+					var cooldown = {"collider": collider, "cooldown": 0.1}
+					collider_bump_cooldowns.append(cooldown)
 		
 		collider_indexes_still_in_contact.append(colliders_in_contact.find(collider))
 		
@@ -197,6 +205,17 @@ func _physics_process(delta):
 		colliders_still_in_contact.append(colliders_in_contact[index])
 	
 	colliders_in_contact = colliders_still_in_contact
+	
+	for cooldown in collider_bump_cooldowns:
+		cooldown["cooldown"] -= delta
+	
+	var non_expired_cooldowns = []
+	
+	for cooldown in collider_bump_cooldowns:
+		if cooldown["cooldown"] > 0.0:
+			non_expired_cooldowns.append(cooldown)
+	
+	collider_bump_cooldowns = non_expired_cooldowns
 
 func play_bump_audio(global_position):
 	var spawned_bump_audio = bump_audio.instantiate()
