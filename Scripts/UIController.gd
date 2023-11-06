@@ -177,8 +177,8 @@ func apply_time(lighting):
 	var target_music_audio = -15.0
 	
 	if lighting.night_lights:
-		if orig_night_music_volume != target_music_audio:
-			night_music.seek(0)
+		if day_music.playing:
+			night_music.stop()
 	else:
 		for node in night_lights:
 			node.visible = false
@@ -186,8 +186,8 @@ func apply_time(lighting):
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in emissives:
 			mat.emission_enabled = false
-		if orig_day_music_volume != target_music_audio:
-			day_music.seek(0)
+		if night_music.playing:
+			day_music.stop()
 	
 	is_time_changing = true
 	
@@ -215,11 +215,17 @@ func apply_time(lighting):
 				night_ambient_audio.volume_db = 0.0
 				day_music.volume_db = -80.0
 				night_music.volume_db = target_music_audio
+				if day_music.playing:
+					day_music.stop()
+					night_music.play()
 			else:
 				day_ambient_audio.volume_db = 0.0
 				night_ambient_audio.volume_db = -80.0
 				day_music.volume_db = target_music_audio
 				night_music.volume_db = -80.0
+				if night_music.playing:
+					night_music.stop()
+					day_music.play()
 			
 			is_time_changing = false
 			break

@@ -477,7 +477,6 @@ autoplay = true
 [node name="NightMusic" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("21_nqn7s")
 volume_db = -80.0
-autoplay = true
 
 [node name="DayAmbient" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("18_kwmnc")
