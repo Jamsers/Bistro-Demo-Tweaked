@@ -17,6 +17,8 @@ class_name UIController
 @export var lamp_meshes: Array[MeshInstance3D]
 @export var emissives: Array[StandardMaterial3D]
 @export var scalable_night_lights: Node3D
+@export var day_ambient_audio: AudioStreamPlayer
+@export var night_ambient_audio: AudioStreamPlayer
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -205,6 +207,14 @@ func apply_time(lighting):
 		else:
 			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
 			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
+		
+		if lighting.night_lights:
+			day_ambient_audio.volume_db = lerp(0.0, -80.0, easeInExp(lerp, 4))
+			night_ambient_audio.volume_db = lerp(-80.0, 0.0, easeOutExp(lerp, 4))
+		else:
+			day_ambient_audio.volume_db = lerp(-80.0, 0.0, easeOutExp(lerp, 4))
+			night_ambient_audio.volume_db = lerp(0.0, -80.0, easeInExp(lerp, 4))
+			
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
