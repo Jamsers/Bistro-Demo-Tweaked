@@ -34,6 +34,7 @@ const MAX_PUSHABLE_WEIGHT = 200.0
 const TOGGLE_COOLDOWN = 0.5
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
+const BUMP_AUDIO_TIMEOUT = 0.2
 
 var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
@@ -43,6 +44,7 @@ var is_off_floor_duration = 0.0
 var is_on_floor_duration = 0.0
 var has_landed_from_fall = false
 var boot_sound_timeout = true
+var bump_audio_last_play = 0.0
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
@@ -82,11 +84,19 @@ var shoulder_isdown = false
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
 @onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
 
+@onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
+
 @onready var footstep_sounds = [
 	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav"),
 	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep2.wav"),
 	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep3.wav"),
 	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep4.wav")
+	]
+
+@onready var bump_sounds = [
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump1.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump2.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump3.wav")
 	]
 
 func _ready():
@@ -108,6 +118,7 @@ func _ready():
 func _process(delta):
 	process_camera()
 	process_off_on_floor_time(delta)
+	process_bump_audio_timeout(delta)
 	process_movement()
 	process_animation(delta)
 	process_mousecapture(delta)
@@ -149,15 +160,52 @@ func _process(delta):
 		if collision.get_collider() is RigidBody3D:
 			rigidbody_collisions.append(collision)
 
+var colliders_in_contact = []
+
 func _physics_process(delta):
 	var collide_force = COLLIDE_FORCE * delta
 	var central_multiplier = input_velocity.length() * collide_force
+	
+	var collider_indexes_still_in_contact = []
 	
 	for collision in rigidbody_collisions:
 		var weight = collision.get_collider().mass
 		var direction = -collision.get_normal()
 		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
 		collision.get_collider().apply_central_impulse(direction * mult_actual)
+		
+		var audio_play_threshold = lerp(0.0, 1000 * delta, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
+		
+		var collider = collision.get_collider()
+		
+		if !colliders_in_contact.has(collider):
+			colliders_in_contact.append(collider)
+			if mult_actual > audio_play_threshold:
+				play_bump_audio(collision.get_position())
+		
+		collider_indexes_still_in_contact.append(colliders_in_contact.find(collider))
+		
+		#if bump_audio_last_play >= BUMP_AUDIO_TIMEOUT and mult_actual > audio_play_threshold:
+			#bump_audio_last_play = 0.0
+			##bump_audio.stream = bump_sounds.pick_random()
+			##bump_audio.play()
+			#play_bump_audio(collision.get_position())
+	
+	var colliders_still_in_contact = []
+	
+	for index in collider_indexes_still_in_contact:
+		colliders_still_in_contact.append(colliders_in_contact[index])
+	
+	colliders_in_contact = colliders_still_in_contact
+
+func play_bump_audio(global_position):
+	var spawned_bump_audio = bump_audio.instantiate()
+	get_tree().root.get_child(0).add_child(spawned_bump_audio)
+	spawned_bump_audio.global_position = global_position
+	spawned_bump_audio.stream = bump_sounds.pick_random()
+	spawned_bump_audio.play()
+	await get_tree().create_timer(0.5).timeout
+	spawned_bump_audio.queue_free()
 
 func _on_right_footstep():
 	right_footstep.stream = footstep_sounds.pick_random()
@@ -183,6 +231,10 @@ func process_off_on_floor_time(delta):
 		is_off_floor_duration += delta
 	is_on_floor_duration = clamp(is_on_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
+
+func process_bump_audio_timeout(delta):
+	bump_audio_last_play += delta
+	bump_audio_last_play = clamp(bump_audio_last_play, 0.0, BUMP_AUDIO_TIMEOUT)
 
 func process_camera():
 	var camera_rotation_euler = camera_rotation.get_euler()
