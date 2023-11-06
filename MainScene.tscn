@@ -437,6 +437,7 @@ texture_filter = 5
 
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
 enable_profiler = true
+enable_music = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = [NodePath("../Night Lights"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_21/Lantern_Wind_21_2/HangingLight01"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_22/Lantern_Wind_22_2/HangingLight02"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_23/Lantern_Wind_23_2/HangingLight03"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_24/Lantern_Wind_24_2/HangingLight03"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_25/Lantern_Wind_25_2/HangingLight04")]

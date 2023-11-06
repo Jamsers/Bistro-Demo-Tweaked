@@ -2,9 +2,10 @@ extends Control
 
 class_name UIController
 
+@export var enable_profiler : bool
+@export var enable_music : bool
 @export var settings: ScalabilitySettings
 @export var lighting_scenarios: LightingScenarios
-@export var enable_profiler : bool
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
 @export var custom_res: Array[Control]
@@ -174,7 +175,11 @@ func apply_time(lighting):
 	var orig_day_music_volume = day_music.volume_db
 	var orig_night_music_volume = night_music.volume_db
 	
-	var target_music_audio = -15.0
+	var target_music_audio
+	if enable_music:
+		target_music_audio = -15.0
+	else:
+		target_music_audio = -80.0
 	
 	if lighting.night_lights:
 		if day_music.playing:
