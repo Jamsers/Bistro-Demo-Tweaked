@@ -23,7 +23,7 @@ const LOOK_LIMIT_UPPER = 1.25
 const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3.0
 const ANIM_RUN_SPEED = 5.5
-const OFF_FLOOR_JUMP_TIMEOUT = 0.1
+const JUMP_LAND_TIMEOUT = 0.1
 const NOCLIP_MULT = 4.0
 const ROTATE_SPEED = 12.0
 const JUMP_FORCE = 15.0
@@ -40,6 +40,8 @@ var move_direction_no_y = Vector3.ZERO
 var camera_rotation = Quaternion.IDENTITY
 var camera_rotation_no_y = Quaternion.IDENTITY
 var is_off_floor_duration = 0.0
+var is_on_floor_duration = 0.0
+var has_landed_from_fall = false
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
@@ -77,6 +79,7 @@ var shoulder_isdown = false
 @onready var focus_ray = $"CameraPivot/SpringArm/Camera/RayCast3D"
 @onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
+@onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
 
 @onready var footstep_sounds = [
 	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav"),
@@ -100,7 +103,7 @@ func _ready():
 
 func _process(delta):
 	process_camera()
-	process_is_off_floor(delta)
+	process_off_on_floor_time(delta)
 	process_movement()
 	process_animation(delta)
 	process_mousecapture(delta)
@@ -123,6 +126,13 @@ func _process(delta):
 			velocity.y -= GRAVITY_FORCE * delta
 		if jump_isdown and is_on_floor():
 			velocity.y = JUMP_FORCE
+			play_jump_land_sound()
+	
+	if is_on_floor_duration >= JUMP_LAND_TIMEOUT and !has_landed_from_fall:
+		has_landed_from_fall = true
+		play_jump_land_sound()
+	if is_off_floor_duration >= JUMP_LAND_TIMEOUT and has_landed_from_fall:
+		has_landed_from_fall = false
 	
 	input_velocity = velocity
 	
@@ -153,12 +163,19 @@ func _on_left_footstep():
 	left_footstep.stream = footstep_sounds.pick_random()
 	left_footstep.play()
 
-func process_is_off_floor(delta):
-	if !is_on_floor():
-		is_off_floor_duration += delta
-	else:
+func play_jump_land_sound():
+	jump_land_audio.stream = footstep_sounds.pick_random()
+	jump_land_audio.play()
+
+func process_off_on_floor_time(delta):
+	if is_on_floor():
+		is_on_floor_duration += delta
 		is_off_floor_duration = 0.0
-	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, OFF_FLOOR_JUMP_TIMEOUT)
+	else:
+		is_on_floor_duration = 0.0
+		is_off_floor_duration += delta
+	is_on_floor_duration = clamp(is_on_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
+	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 
 func process_camera():
 	var camera_rotation_euler = camera_rotation.get_euler()
@@ -191,7 +208,7 @@ func process_movement():
 	move_direction_no_y = move_direction_no_y.normalized()
 
 func process_animation(delta):
-	if is_off_floor_duration >= OFF_FLOOR_JUMP_TIMEOUT:
+	if is_off_floor_duration >= JUMP_LAND_TIMEOUT:
 		switch_anim("Fall")
 	elif move_direction != Vector3.ZERO:
 		if sprint_isdown:

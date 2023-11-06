@@ -13,12 +13,12 @@ dest_files=["res://.godot/imported/Footstep3.wav-2d3212a8f55f6b6c9bf422c7aeac7e6
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=1
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=0
