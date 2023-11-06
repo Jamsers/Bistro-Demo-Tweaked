@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var enable_depth_of_field: bool = false
 @export var disable_shadow_in_first_person: bool = false
+@export var enable_audio: bool = false
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
@@ -82,6 +83,7 @@ var shoulder_isdown = false
 @onready var spring_arm = $"CameraPivot/SpringArm"
 @onready var camera = $"CameraPivot/SpringArm/Camera"
 @onready var focus_ray = $"CameraPivot/SpringArm/Camera/RayCast3D"
+@onready var audio_listener = $"CameraPivot/SpringArm/Camera/AudioListener3D"
 @onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
 @onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
@@ -111,8 +113,13 @@ func _ready():
 	camera_rotation = Quaternion.from_euler(camera_pivot.global_rotation)
 	camera_rotation_no_y = Quaternion.from_euler(camera_pivot.global_rotation)
 	
+	camera.make_current()
+	
 	if enable_depth_of_field:
 		hijack_camera_attributes()
+	
+	if enable_audio:
+		audio_listener.make_current()
 	
 	await get_tree().create_timer(0.25).timeout
 	boot_sound_timeout = false
@@ -207,21 +214,27 @@ func _physics_process(delta):
 	collider_bump_cooldowns = non_expired_cooldowns
 
 func _on_right_footstep():
+	if !enable_audio:
+		return
 	right_footstep.stream = footstep_sounds.pick_random()
 	right_footstep.play()
 
 func _on_left_footstep():
+	if !enable_audio:
+		return
 	left_footstep.stream = footstep_sounds.pick_random()
 	left_footstep.play()
 
 func play_jump_land_sound():
-	if boot_sound_timeout:
+	if !enable_audio or boot_sound_timeout:
 		return
 	if !left_footstep.playing or !right_footstep.playing:
 		jump_land_audio.stream = footstep_sounds.pick_random()
 		jump_land_audio.play()
 
 func play_bump_audio(global_position):
+	if !enable_audio:
+		return
 	var spawned_bump_audio = bump_audio.instantiate()
 	get_tree().root.get_child(0).add_child(spawned_bump_audio)
 	spawned_bump_audio.global_position = global_position

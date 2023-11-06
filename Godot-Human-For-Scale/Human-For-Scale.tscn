@@ -35,11 +35,9 @@ shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 2.1
 
 [node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm"]
-current = true
 fov = 60.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
-current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
 target_position = Vector3(0, 0, -10000)
