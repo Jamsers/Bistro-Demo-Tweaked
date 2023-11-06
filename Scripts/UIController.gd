@@ -242,16 +242,18 @@ func apply_time(lighting):
 			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeOutExp(lerp, 150))
 			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		
+		var music_lerp_exp = 5
+		
 		if lighting.night_lights:
 			day_ambient_audio.volume_db = lerp(orig_day_volume, -80.0, easeInExp(lerp, 4))
 			night_ambient_audio.volume_db = lerp(orig_night_volume, 0.0, easeOutExp(lerp, 4))
-			day_music.volume_db = lerp(orig_day_music_volume, -80.0, easeInExp(lerp, 10))
-			night_music.volume_db = lerp(orig_night_music_volume, target_music_audio, easeOutExp(lerp, 10))
+			day_music.volume_db = lerp(orig_day_music_volume, -80.0, easeInExp(lerp, music_lerp_exp))
+			night_music.volume_db = lerp(orig_night_music_volume, target_music_audio, easeOutExp(lerp, music_lerp_exp))
 		else:
 			day_ambient_audio.volume_db = lerp(orig_day_volume, 0.0, easeOutExp(lerp, 4))
 			night_ambient_audio.volume_db = lerp(orig_night_volume, -80.0, easeInExp(lerp, 4))
-			day_music.volume_db = lerp(orig_day_music_volume, target_music_audio, easeOutExp(lerp, 10))
-			night_music.volume_db = lerp(orig_night_music_volume, -80.0, easeInExp(lerp, 10))
+			day_music.volume_db = lerp(orig_day_music_volume, target_music_audio, easeOutExp(lerp, music_lerp_exp))
+			night_music.volume_db = lerp(orig_night_music_volume, -80.0, easeInExp(lerp, music_lerp_exp))
 		
 		await get_tree().process_frame
 
