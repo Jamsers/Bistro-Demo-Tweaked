@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5i411e430syd"]
 
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
-[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="2_hypur"]
+[ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/mannequiny-0.3.0.tscn" id="2_ajgv1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bca87"]
 radius = 0.285
@@ -15,8 +15,8 @@ script = ExtResource("1_jh7dy")
 
 [node name="ModelRoot" type="Node3D" parent="."]
 
-[node name="mannequiny-0_3_0" parent="ModelRoot" instance=ExtResource("2_hypur")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="mannequiny-0_3_0" parent="ModelRoot" instance=ExtResource("2_ajgv1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.889, 0)

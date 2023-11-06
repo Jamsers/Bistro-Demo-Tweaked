@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://73ou0sg30v8f"]
+
+[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="1_3duc2"]
+
+[node name="mannequiny-0_3_0" instance=ExtResource("1_3duc2")]
