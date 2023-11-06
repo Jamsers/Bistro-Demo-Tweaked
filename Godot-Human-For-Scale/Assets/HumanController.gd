@@ -164,8 +164,9 @@ func _on_left_footstep():
 	left_footstep.play()
 
 func play_jump_land_sound():
-	jump_land_audio.stream = footstep_sounds.pick_random()
-	jump_land_audio.play()
+	if !left_footstep.playing or !right_footstep.playing:
+		jump_land_audio.stream = footstep_sounds.pick_random()
+		jump_land_audio.play()
 
 func process_off_on_floor_time(delta):
 	if is_on_floor():

@@ -38,6 +38,9 @@ spring_length = 2.1
 current = true
 fov = 60.0
 
+[node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
+current = true
+
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
 target_position = Vector3(0, 0, -10000)
 hit_back_faces = false
