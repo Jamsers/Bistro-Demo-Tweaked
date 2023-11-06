@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c5r7pinh8okrp"]
+
+[node name="BumpAudio" type="AudioStreamPlayer3D"]
+volume_db = -25.0
