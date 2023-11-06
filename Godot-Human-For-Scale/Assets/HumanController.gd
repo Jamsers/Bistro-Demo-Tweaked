@@ -75,6 +75,15 @@ var shoulder_isdown = false
 @onready var spring_arm = $"CameraPivot/SpringArm"
 @onready var camera = $"CameraPivot/SpringArm/Camera"
 @onready var focus_ray = $"CameraPivot/SpringArm/Camera/RayCast3D"
+@onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
+@onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
+
+@onready var footstep_sounds = [
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep2.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep3.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep4.wav")
+	]
 
 func _ready():
 	var y_rotation = Vector3(0.0, global_rotation.y, 0.0)
@@ -135,6 +144,14 @@ func _physics_process(delta):
 		var direction = -collision.get_normal()
 		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
 		collision.get_collider().apply_central_impulse(direction * mult_actual)
+
+func _on_right_footstep():
+	right_footstep.stream = footstep_sounds.pick_random()
+	right_footstep.play()
+
+func _on_left_footstep():
+	left_footstep.stream = footstep_sounds.pick_random()
+	left_footstep.play()
 
 func process_is_off_floor(delta):
 	if !is_on_floor():
