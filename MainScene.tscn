@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=193 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -37,8 +37,10 @@
 [ext_resource type="AudioStream" uid="uid://b6rc81y5wriln" path="res://Audio/day_bg.ogg" id="18_kwmnc"]
 [ext_resource type="PackedScene" uid="uid://cou4bgmlcrc2" path="res://Scenes/Section03/S3B4.tscn" id="19_acyb5"]
 [ext_resource type="AudioStream" uid="uid://cngxal8rdb5mj" path="res://Audio/night_bg.ogg" id="19_ida67"]
+[ext_resource type="AudioStream" uid="uid://ck4j2cl1itpcg" path="res://Audio/daymusic.ogg" id="20_mwu7t"]
 [ext_resource type="PackedScene" uid="uid://8lyr6devevqc" path="res://Scenes/Section03/S3Lamps.tscn" id="20_w5tey"]
 [ext_resource type="PackedScene" uid="uid://0rjacw3hrc2a" path="res://Scenes/Section04/S4B1.tscn" id="21_7egcs"]
+[ext_resource type="AudioStream" uid="uid://uie3maxhbtg1" path="res://Audio/nightmusic.ogg" id="21_nqn7s"]
 [ext_resource type="PackedScene" uid="uid://d0oo6ukycpqtf" path="res://Scenes/Section01/S1Lamps_Props.tscn" id="21_yopo6"]
 [ext_resource type="PackedScene" uid="uid://dg2ssh4rfvemk" path="res://Scenes/Section04/S4B2.tscn" id="22_k7idl"]
 [ext_resource type="PackedScene" uid="uid://dhbajvc40q32m" path="res://Scenes/Section04/S4B3.tscn" id="23_256hy"]
@@ -433,7 +435,7 @@ texture_filter = 5
 
 [node name="MainScene" type="Node3D"]
 
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "day_ambient_audio", "night_ambient_audio") instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
@@ -443,6 +445,8 @@ emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_41
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
 day_ambient_audio = NodePath("../Audio/DayAmbient")
 night_ambient_audio = NodePath("../Audio/NightAmbient")
+day_music = NodePath("../Audio/DayMusic")
+night_music = NodePath("../Audio/NightMusic")
 
 [node name="Light Change Utility" type="Node" parent="." node_paths=PackedStringArray("UI")]
 script = ExtResource("12_p7w1a")
@@ -465,12 +469,23 @@ directional_shadow_pancake_size = 40.0
 
 [node name="Audio" type="Node" parent="."]
 
+[node name="DayMusic" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("20_mwu7t")
+volume_db = -15.0
+autoplay = true
+
+[node name="NightMusic" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("21_nqn7s")
+volume_db = -80.0
+autoplay = true
+
 [node name="DayAmbient" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("18_kwmnc")
 autoplay = true
 
 [node name="NightAmbient" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("19_ida67")
+volume_db = -80.0
 autoplay = true
 
 [node name="Level Geometry" type="Node3D" parent="."]

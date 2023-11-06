@@ -19,6 +19,8 @@ class_name UIController
 @export var scalable_night_lights: Node3D
 @export var day_ambient_audio: AudioStreamPlayer
 @export var night_ambient_audio: AudioStreamPlayer
+@export var day_music: AudioStreamPlayer
+@export var night_music: AudioStreamPlayer
 
 const UPPER_RES_LIMIT = 8640.0
 const LOWER_RES_LIMIT = 96.0
@@ -167,20 +169,32 @@ func apply_time(lighting):
 	var orig_sky = environment.environment.background_intensity
 	var orig_exp_mult = environment.camera_attributes.exposure_sensitivity
 	var orig_min_sens = environment.camera_attributes.auto_exposure_min_sensitivity
+	var orig_day_volume = day_ambient_audio.volume_db
+	var orig_night_volume = night_ambient_audio.volume_db
+	var orig_day_music_volume = day_music.volume_db
+	var orig_night_music_volume = night_music.volume_db
 	
-	if !lighting.night_lights:
+	var target_music_audio = -15.0
+	
+	if lighting.night_lights:
+		if orig_night_music_volume != target_music_audio:
+			night_music.seek(0)
+	else:
 		for node in night_lights:
 			node.visible = false
 		change_shadow_casters(true)
 		RenderingServer.directional_shadow_atlas_set_size(sun_orig_res, sun_shadow_bits)
 		for mat in emissives:
 			mat.emission_enabled = false
+		if orig_day_music_volume != target_music_audio:
+			day_music.seek(0)
 	
 	is_time_changing = true
 	
 	while is_time_changing:
 		var current_time = Time.get_ticks_msec() / 1000.0
 		var lerp = (current_time - time)/TIME_CHANGE_DURATION
+		
 		if lerp > 1:
 			sun_light.light_intensity_lux = lighting.lux
 			sun_light.light_temperature = lighting.temp
@@ -188,6 +202,7 @@ func apply_time(lighting):
 			environment.environment.background_intensity = lighting.sky_nits
 			environment.camera_attributes.exposure_sensitivity = lighting.exposure_mult
 			environment.camera_attributes.auto_exposure_min_sensitivity = lighting.exposure_min_sens
+			
 			if lighting.night_lights:
 				for node in night_lights:
 					node.visible = true
@@ -195,12 +210,25 @@ func apply_time(lighting):
 				RenderingServer.directional_shadow_atlas_set_size(NIGHT_SHADOW_RES, sun_shadow_bits)
 				for mat in emissives:
 					mat.emission_enabled = true
+				
+				day_ambient_audio.volume_db = -80.0
+				night_ambient_audio.volume_db = 0.0
+				day_music.volume_db = -80.0
+				night_music.volume_db = target_music_audio
+			else:
+				day_ambient_audio.volume_db = 0.0
+				night_ambient_audio.volume_db = -80.0
+				day_music.volume_db = target_music_audio
+				night_music.volume_db = -80.0
+			
 			is_time_changing = false
 			break
+		
 		sun_light.light_intensity_lux = lerp(orig_lux, lighting.lux, easeInOutSine(lerp))
 		sun_light.light_temperature = lerp(orig_light, lighting.temp, easeInOutSine(lerp))
 		sun_light.quaternion = orig_rot.slerp(lighting.rotation, easeInOutSine(lerp))
 		environment.environment.background_intensity = lerp(orig_sky, lighting.sky_nits, easeInOutSine(lerp))
+		
 		if orig_exp_mult < lighting.exposure_mult:
 			environment.camera_attributes.exposure_sensitivity = lerp(orig_exp_mult, lighting.exposure_mult, easeInExp(lerp, 150))
 			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeInExp(lerp, 150))
@@ -209,12 +237,16 @@ func apply_time(lighting):
 			environment.camera_attributes.auto_exposure_min_sensitivity = lerp(orig_min_sens, lighting.exposure_min_sens, easeOutExp(lerp, 150))
 		
 		if lighting.night_lights:
-			day_ambient_audio.volume_db = lerp(0.0, -80.0, easeInExp(lerp, 4))
-			night_ambient_audio.volume_db = lerp(-80.0, 0.0, easeOutExp(lerp, 4))
+			day_ambient_audio.volume_db = lerp(orig_day_volume, -80.0, easeInExp(lerp, 4))
+			night_ambient_audio.volume_db = lerp(orig_night_volume, 0.0, easeOutExp(lerp, 4))
+			day_music.volume_db = lerp(orig_day_music_volume, -80.0, easeInExp(lerp, 10))
+			night_music.volume_db = lerp(orig_night_music_volume, target_music_audio, easeOutExp(lerp, 10))
 		else:
-			day_ambient_audio.volume_db = lerp(-80.0, 0.0, easeOutExp(lerp, 4))
-			night_ambient_audio.volume_db = lerp(0.0, -80.0, easeInExp(lerp, 4))
-			
+			day_ambient_audio.volume_db = lerp(orig_day_volume, 0.0, easeOutExp(lerp, 4))
+			night_ambient_audio.volume_db = lerp(orig_night_volume, -80.0, easeInExp(lerp, 4))
+			day_music.volume_db = lerp(orig_day_music_volume, target_music_audio, easeOutExp(lerp, 10))
+			night_music.volume_db = lerp(orig_night_music_volume, -80.0, easeInExp(lerp, 10))
+		
 		await get_tree().process_frame
 
 func change_shadow_casters(is_cast_on):
