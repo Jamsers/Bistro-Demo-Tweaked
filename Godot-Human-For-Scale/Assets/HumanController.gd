@@ -23,7 +23,6 @@ const LOOK_LIMIT_UPPER = 1.25
 const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3.0
 const ANIM_RUN_SPEED = 5.5
-const ANIM_BLEND_TIME = 0.2
 const OFF_FLOOR_JUMP_TIMEOUT = 0.1
 const NOCLIP_MULT = 4.0
 const ROTATE_SPEED = 12.0
@@ -69,8 +68,8 @@ var zoom_isdown = false
 var shoulder_isdown = false
 
 @onready var model_root = $"ModelRoot"
-@onready var anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
-@onready var player_mesh = $"ModelRoot/mannequiny-0_3_0/root/Skeleton3D/mannequiny"
+@onready var anim_player = $"ModelRoot/HumanModel/AnimationPlayer"
+@onready var player_mesh = $"ModelRoot/HumanModel/root/Skeleton3D/mannequiny"
 @onready var collision_shape = $"CollisionShape"
 @onready var camera_pivot = $"CameraPivot"
 @onready var spring_arm = $"CameraPivot/SpringArm"
@@ -86,8 +85,6 @@ func _ready():
 	model_root.global_rotation = y_rotation
 	camera_rotation = Quaternion.from_euler(camera_pivot.global_rotation)
 	camera_rotation_no_y = Quaternion.from_euler(camera_pivot.global_rotation)
-	
-	anim_player.playback_default_blend_time = ANIM_BLEND_TIME
 	
 	if enable_depth_of_field:
 		hijack_camera_attributes()

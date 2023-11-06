@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 func _on_right_footstep():
-	pass
+	$"root/Skeleton3D/RightFootLocation/FootstepPlayer".play()
 
 func _on_left_footstep():
-	pass
+	$"root/Skeleton3D/LeftFootLocation/FootstepPlayer".play()

@@ -81,3 +81,6 @@ bone_idx = 4
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="root/Skeleton3D/LeftFootLocation" index="0"]
 stream = ExtResource("2_be2ba")
+
+[node name="AnimationPlayer" parent="." index="1"]
+playback_default_blend_time = 0.2
