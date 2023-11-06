@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://c5r7pinh8okrp"]
+[gd_scene load_steps=2 format=3 uid="uid://c5r7pinh8okrp"]
+
+[ext_resource type="AudioStream" uid="uid://wlfxh2fk3uo4" path="res://Godot-Human-For-Scale/Assets/Audio/Bump1.wav" id="1_dljov"]
 
 [node name="BumpAudio" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_dljov")
 volume_db = -25.0
