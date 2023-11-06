@@ -42,6 +42,7 @@ var camera_rotation_no_y = Quaternion.IDENTITY
 var is_off_floor_duration = 0.0
 var is_on_floor_duration = 0.0
 var has_landed_from_fall = false
+var boot_sound_timeout = true
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
@@ -100,6 +101,9 @@ func _ready():
 	
 	if enable_depth_of_field:
 		hijack_camera_attributes()
+	
+	await get_tree().create_timer(0.25).timeout
+	boot_sound_timeout = false
 
 func _process(delta):
 	process_camera()
@@ -164,6 +168,8 @@ func _on_left_footstep():
 	left_footstep.play()
 
 func play_jump_land_sound():
+	if boot_sound_timeout:
+		return
 	if !left_footstep.playing or !right_footstep.playing:
 		jump_land_audio.stream = footstep_sounds.pick_random()
 		jump_land_audio.play()

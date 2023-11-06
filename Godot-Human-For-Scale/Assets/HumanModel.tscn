@@ -67,7 +67,7 @@ bones/53/rotation = Quaternion(-0.304913, -0.00323433, 0.0384061, 0.9516)
 bones/54/rotation = Quaternion(-0.150196, 0.00207417, 0.0192268, 0.988467)
 
 [node name="RightFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="1"]
-transform = Transform3D(0.904752, -0.414882, 0.0687062, 0.00636296, -0.153731, -0.999411, 0.425688, 0.885467, -0.132885, -0.220493, 0.02089, 0.0610073)
+transform = Transform3D(0.904753, -0.414883, 0.0687072, 0.00636362, -0.153729, -0.999408, 0.42569, 0.885466, -0.132885, -0.220492, 0.0208944, 0.0610069)
 bone_name = "ball.r"
 bone_idx = 9
 
@@ -75,7 +75,7 @@ bone_idx = 9
 stream = ExtResource("2_be2ba")
 
 [node name="LeftFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="2"]
-transform = Transform3D(0.946923, 0.306886, -0.0410573, 0.000469239, -0.138152, -1.01809, -0.319583, 0.91721, -0.115601, 0.164829, 0.0227495, 0.0514789)
+transform = Transform3D(0.946916, 0.306886, -0.0410574, 0.000468319, -0.138153, -1.0181, -0.319583, 0.917211, -0.1156, 0.164829, 0.0227461, 0.0514796)
 bone_name = "ball.l"
 bone_idx = 4
 
