@@ -3,8 +3,6 @@ extends Node3D
 @export var prop_sounds: Array[AudioStreamWAV]
 @export var scrape_sound: AudioStreamWAV
 
-@export var phys_sound_player: AudioStreamPlayer3D
-@export var scrape_sound_player: AudioStreamPlayer3D
 @export var helper_script: GDScript
 
 var prop_sounds_loaded = []
@@ -13,6 +11,8 @@ var on_cooldown = false
 var scraping_on_cooldown = false
 
 @onready var parent_with_helper = $"../"
+@onready var phys_sound_player = $"Prop"
+@onready var scrape_sound_player = $"Scrape"
 
 func _ready():
 	parent_with_helper.set_script(load(helper_script.resource_path))

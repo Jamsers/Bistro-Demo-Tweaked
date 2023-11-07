@@ -7,12 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://bn5hg5d1ypbxh" path="res://Audio/Prop Sounds/Placeholder/Bump3.wav" id="4_3hkru"]
 [ext_resource type="AudioStream" uid="uid://qi7xfi47dn6t" path="res://Audio/Prop Sounds/Placeholder/Scrape.wav" id="5_ddfad"]
 
-[node name="PropAudioPlayer" type="Node3D" node_paths=PackedStringArray("phys_sound_player", "scrape_sound_player")]
+[node name="PropAudioPlayer" type="Node3D"]
 script = ExtResource("1_hl2k7")
 prop_sounds = Array[AudioStreamWAV]([ExtResource("2_s6y1h"), ExtResource("3_oopeh"), ExtResource("4_3hkru")])
 scrape_sound = ExtResource("5_ddfad")
-phys_sound_player = NodePath("Prop")
-scrape_sound_player = NodePath("Scrape")
 helper_script = ExtResource("2_q782f")
 
 [node name="Prop" type="AudioStreamPlayer3D" parent="."]
