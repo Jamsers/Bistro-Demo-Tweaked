@@ -1,4 +1,4 @@
-[gd_scene load_steps=277 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=278 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -435,6 +435,8 @@ texture_filter = 5
 texture_filter = 5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra78n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86uke"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ej0wg"]
 points = PackedVector3Array(-2.28986, 3.00226, 1.15334, 1.81357, 6.13986, 1.87729, 1.81357, 6.13986, 1.39458, 1.57217, 3.00226, 2.60123, 1.81357, 4.20957, 0.6704, 0.123355, 4.69145, 3.08418, -2.28986, 4.69145, 1.39458, -0.841447, 3.24396, 2.84271, 0.364756, 3.00226, 0.6704, -1.80705, 3.96817, 0.6704, 1.57217, 3.00226, 3.08418, -2.28986, 4.69145, 1.87729, 1.57217, 5.89846, 0.911872, -2.04845, 3.00226, 2.11853, -2.04845, 3.00226, 0.6704, 1.33076, 6.13986, 1.39458, 0.606158, 4.69145, 3.08418, 1.81357, 4.93285, 2.36, 0.606158, 3.00226, 3.08418, 1.57217, 6.13986, 1.87729, 1.08936, 4.69145, 0.6704, 1.81357, 3.96817, 2.11853, 1.57217, 3.48537, 3.08418, -0.841447, 3.72677, 2.84271, -2.39148, 3.17823, 1.11749, -2.28986, 3.24396, 1.87729, 1.81357, 5.89846, 0.911872, 0.606158, 3.00226, 0.911872, -2.04845, 4.20957, 0.911872, -0.600046, 4.45097, 2.84271)
@@ -2018,10 +2020,15 @@ shape = SubResource("BoxShape3D_ra78n")
 
 [node name="PropAudioPlayer" parent="Patches/MaterialCubeAlbedo" instance=ExtResource("70_yq80p")]
 
-[node name="Foliage Areas" type="Area3D" parent="."]
+[node name="Foliage Areas" type="Area3D" parent="." node_paths=PackedStringArray("placeholder")]
 monitorable = false
 script = ExtResource("75_mt554")
 rustle_sounds = ExtResource("76_oe8ap")
+placeholder = NodePath("PlaceholderCollider")
+
+[node name="PlaceholderCollider" type="CollisionShape3D" parent="Foliage Areas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_86uke")
 
 [node name="Section01" type="Node3D" parent="Foliage Areas"]
 

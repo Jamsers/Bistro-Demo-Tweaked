@@ -3,10 +3,12 @@ extends Area3D
 var collider_audio_pair = []
 
 @export var rustle_sounds: PackedScene
+@export var placeholder: CollisionShape3D
 
 @onready var rustle_sounds_loaded = load(rustle_sounds.resource_path)
 
 func _ready():
+	placeholder.queue_free()
 	var colliders = find_children("*", "CollisionShape3D", true)
 	for collider in colliders:
 		collider.reparent(self, true)
