@@ -1,4 +1,4 @@
-[gd_scene load_steps=280 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=281 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -77,6 +77,7 @@
 [ext_resource type="AudioStream" uid="uid://bstv5aj6pm5xu" path="res://Audio/Prop Sounds/Placeholder/Bump2.wav" id="71_4j4sv"]
 [ext_resource type="AudioStream" uid="uid://bn5hg5d1ypbxh" path="res://Audio/Prop Sounds/Placeholder/Bump3.wav" id="72_dbo5n"]
 [ext_resource type="AudioStream" uid="uid://qi7xfi47dn6t" path="res://Audio/Prop Sounds/Placeholder/Scrape.wav" id="73_rk1t6"]
+[ext_resource type="Script" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -2041,6 +2042,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
 shape = SubResource("BoxShape3D_jre3u")
 
 [node name="Foliage Areas" type="Area3D" parent="."]
+script = ExtResource("75_mt554")
 
 [node name="Section01" type="Node3D" parent="Foliage Areas"]
 
