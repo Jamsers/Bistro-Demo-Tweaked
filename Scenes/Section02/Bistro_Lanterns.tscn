@@ -85,6 +85,8 @@ node_b = NodePath("../Lantern_Wind_21_003")
 [node name="Lantern_Wind_21_003" type="RigidBody3D" parent="Lantern_Wind_21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000276566, 0.383939, 0.00192642)
 mass = 0.7
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_21_002" type="MeshInstance3D" parent="Lantern_Wind_21/Lantern_Wind_21_003"]
 gi_mode = 2
@@ -102,6 +104,8 @@ node_b = NodePath("../Lantern_Wind_21_2")
 
 [node name="Lantern_Wind_21_2" type="RigidBody3D" parent="Lantern_Wind_21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05855e-05, -0.119456, -0.000506401)
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_21_0" type="MeshInstance3D" parent="Lantern_Wind_21/Lantern_Wind_21_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96454e-05, 0.175511, 0.000512123)
@@ -150,6 +154,8 @@ node_b = NodePath("../Lantern_Wind_22_003")
 [node name="Lantern_Wind_22_003" type="RigidBody3D" parent="Lantern_Wind_22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00341272, 0.383933, 0.000535965)
 mass = 0.7
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_22_002" type="MeshInstance3D" parent="Lantern_Wind_22/Lantern_Wind_22_003"]
 gi_mode = 2
@@ -167,6 +173,8 @@ node_b = NodePath("../Lantern_Wind_22_2")
 
 [node name="Lantern_Wind_22_2" type="RigidBody3D" parent="Lantern_Wind_22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00102234, -0.119447, -0.000166893)
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_22_0" type="MeshInstance3D" parent="Lantern_Wind_22/Lantern_Wind_22_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00121069, 0.175507, 0.000207901)
@@ -215,6 +223,8 @@ node_b = NodePath("../Lantern_Wind_23_003")
 [node name="Lantern_Wind_23_003" type="RigidBody3D" parent="Lantern_Wind_23"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00183487, 0.383942, 0.000405312)
 mass = 0.7
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_23_002" type="MeshInstance3D" parent="Lantern_Wind_23/Lantern_Wind_23_003"]
 gi_mode = 2
@@ -232,6 +242,8 @@ node_b = NodePath("../Lantern_Wind_23_2")
 
 [node name="Lantern_Wind_23_2" type="RigidBody3D" parent="Lantern_Wind_23"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000541687, -0.119452, -0.000110149)
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_23_0" type="MeshInstance3D" parent="Lantern_Wind_23/Lantern_Wind_23_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000495911, 0.175511, 0.000122309)
@@ -280,6 +292,8 @@ node_b = NodePath("../Lantern_Wind_24_003")
 [node name="Lantern_Wind_24_003" type="RigidBody3D" parent="Lantern_Wind_24"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000565529, 0.383899, 0.00643551)
 mass = 0.7
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_24_002" type="MeshInstance3D" parent="Lantern_Wind_24/Lantern_Wind_24_003"]
 gi_mode = 2
@@ -297,6 +311,8 @@ node_b = NodePath("../Lantern_Wind_24_2")
 
 [node name="Lantern_Wind_24_2" type="RigidBody3D" parent="Lantern_Wind_24"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000177383, -0.119431, -0.0019598)
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_24_0" type="MeshInstance3D" parent="Lantern_Wind_24/Lantern_Wind_24_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000211716, 0.175492, 0.00259256)
@@ -345,6 +361,8 @@ node_b = NodePath("../Lantern_Wind_25_003")
 [node name="Lantern_Wind_25_003" type="RigidBody3D" parent="Lantern_Wind_25"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00520086, 0.383908, 0.000465393)
 mass = 0.7
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_25_002" type="MeshInstance3D" parent="Lantern_Wind_25/Lantern_Wind_25_003"]
 gi_mode = 2
@@ -362,6 +380,8 @@ node_b = NodePath("../Lantern_Wind_25_2")
 
 [node name="Lantern_Wind_25_2" type="RigidBody3D" parent="Lantern_Wind_25"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00158119, -0.119447, -0.000106812)
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Lantern_Wind_25_0" type="MeshInstance3D" parent="Lantern_Wind_25/Lantern_Wind_25_2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00202703, 0.1755, 0.000188828)
