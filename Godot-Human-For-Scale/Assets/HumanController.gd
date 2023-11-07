@@ -199,6 +199,7 @@ func _physics_process(delta):
 						has_collider = true
 						break
 				if !has_collider:
+					# louder bump sound depending on mult_actual/AUDIO_MAX_VOLUME_FORCE_THRESHOLD * delta
 					play_bump_audio(collision.get_position())
 					var cooldown = {"collider": collider, "cooldown": BUMP_AUDIO_TIMEOUT}
 					collider_bump_cooldowns.append(cooldown)

@@ -22,6 +22,9 @@ func _integrate_forces(state):
 	if on_cooldown:
 		return
 	for index in state.get_contact_count():
+		# 10.0 should probably be a percentage of this rigidbody weight
+		# lerp volume between 0 and (rigidbody weight * IMPULSE_FORCE_MAX_VOLUME_CAP)
+		#lerp between -80? -40? and 0? 20?
 		if state.get_contact_impulse(index).length() > 10.0:
 			on_cooldown = true
 			phys_sound_player.stream = prop_sounds_loaded.pick_random()
