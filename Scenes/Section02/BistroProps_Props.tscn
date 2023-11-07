@@ -1,4 +1,4 @@
-[gd_scene load_steps=1195 format=3 uid="uid://7pvp17b3ediw"]
+[gd_scene load_steps=1196 format=3 uid="uid://7pvp17b3ediw"]
 
 [ext_resource type="ArrayMesh" uid="uid://bmeug5iwtycvp" path="res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_646.res" id="1_xj4hw"]
 [ext_resource type="Material" uid="uid://xicenicxivp1" path="res://Materials/Miscellaneous/Vespa_Headlight.tres" id="2_mj2hd"]
@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b3cer67vl5fhx" path="res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_1282_007.res" id="7_0l5n1"]
 [ext_resource type="Material" uid="uid://bp6iv34uya44q" path="res://Materials/Wood/Paris_Chair_01.tres" id="7_kb1ug"]
 [ext_resource type="Material" uid="uid://db74sosdrefu6" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Glass_Wine.tres" id="8_rvkp1"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="9_csk3v"]
 [ext_resource type="ArrayMesh" uid="uid://b2jrhq05l6tau" path="res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_658.res" id="9_qu4qo"]
 [ext_resource type="Material" uid="uid://ubcyckfuisi6" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Caps.tres" id="9_wxw4h"]
 [ext_resource type="Material" uid="uid://dn141k7dgev6e" path="res://Materials/Miscellaneous/Paris_LiquorBottle_01_Labels.tres" id="10_53v7k"]
@@ -3491,6 +3492,8 @@ shape = SubResource("ConvexPolygonShape3D_7pfc0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.39098e-05, -0.00039202, -0.000185013)
 shape = SubResource("ConvexPolygonShape3D_y6y36")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior__lod0_Vespa_3937" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh_4074" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80063, 0.915601, -14.353)
 mass = 0.2
@@ -3505,6 +3508,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh_4074"]
 shape = SubResource("ConvexPolygonShape3D_nabsu")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh_4074" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh__4076" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50189, 0.915599, -11.1603)
@@ -3521,6 +3526,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh__4076"]
 shape = SubResource("ConvexPolygonShape3D_aw75v")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh__4076" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___10__4078" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08147, 0.915601, 0.202237)
 mass = 0.2
@@ -3535,6 +3542,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___10__4078"]
 shape = SubResource("ConvexPolygonShape3D_23cmr")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___10__4078" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___2__4080" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20497, 0.9156, -7.98691)
@@ -3551,6 +3560,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___2__4080"]
 shape = SubResource("ConvexPolygonShape3D_kd0tq")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___2__4080" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___3__4082" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56186, 0.9156, -15.9056)
 mass = 0.2
@@ -3565,6 +3576,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___3__4082"]
 shape = SubResource("ConvexPolygonShape3D_p5jhc")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___3__4082" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___4__4084" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32814, 0.9156, -13.1535)
@@ -3581,6 +3594,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___4__4084"]
 shape = SubResource("ConvexPolygonShape3D_fyh6u")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___4__4084" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___5__4086" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06452, 0.9156, -10.0491)
 mass = 0.2
@@ -3595,6 +3610,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___5__4086"]
 shape = SubResource("ConvexPolygonShape3D_a46po")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___5__4086" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___6__4088" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7897, 0.915599, -6.8129)
@@ -3611,6 +3628,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___6__4088"]
 shape = SubResource("ConvexPolygonShape3D_vsghu")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___6__4088" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___7__4090" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.60522, 0.915601, -2.00445)
 mass = 0.2
@@ -3625,6 +3644,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___7__4090"]
 shape = SubResource("ConvexPolygonShape3D_omqf2")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___7__4090" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___8__4092" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7176, 0.9156, -2.05005)
@@ -3641,6 +3662,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___8__4092"]
 shape = SubResource("ConvexPolygonShape3D_3y1jy")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___8__4092" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___9__4094" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.759, 0.915601, -2.0946)
 mass = 0.2
@@ -3655,6 +3678,8 @@ surface_material_override/0 = ExtResource("6_y51bc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___9__4094"]
 shape = SubResource("ConvexPolygonShape3D_23xf7")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Ashtray_01_mesh___9__4094" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01_5908" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51197, 0.593587, -13.575)
@@ -3761,6 +3786,8 @@ shape = SubResource("ConvexPolygonShape3D_ymc0a")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01_5908"]
 shape = SubResource("ConvexPolygonShape3D_y5fx1")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01_5908" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01__5910" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21324, 0.593587, -10.3823)
 mass = 12.0
@@ -3865,6 +3892,8 @@ shape = SubResource("ConvexPolygonShape3D_xc35w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01__5910"]
 shape = SubResource("ConvexPolygonShape3D_p1mcr")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01__5910" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___10__5912" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.90566, 0.593587, 0.29818)
@@ -3974,6 +4003,8 @@ shape = SubResource("ConvexPolygonShape3D_q3ikh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___10__5912"]
 shape = SubResource("ConvexPolygonShape3D_8bymd")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___10__5912" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___2__5914" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.91633, 0.593587, -7.20896)
 mass = 12.0
@@ -4079,6 +4110,8 @@ shape = SubResource("ConvexPolygonShape3D_ompoi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___2__5914"]
 shape = SubResource("ConvexPolygonShape3D_6k86y")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___2__5914" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___3__5916" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.84381, 0.593586, -16.686)
 mass = 12.0
@@ -4180,6 +4213,8 @@ shape = SubResource("ConvexPolygonShape3D_8sbl7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___3__5916"]
 shape = SubResource("ConvexPolygonShape3D_y666u")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___3__5916" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___4__5918" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6101, 0.593586, -13.9339)
@@ -4289,6 +4324,8 @@ shape = SubResource("ConvexPolygonShape3D_2vo28")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___4__5918"]
 shape = SubResource("ConvexPolygonShape3D_etamn")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___4__5918" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___5__5920" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34648, 0.593588, -10.8295)
 mass = 12.0
@@ -4396,6 +4433,8 @@ shape = SubResource("ConvexPolygonShape3D_h0kv4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___5__5920"]
 shape = SubResource("ConvexPolygonShape3D_it6af")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___5__5920" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___6__5922" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07166, 0.593587, -7.59331)
@@ -4505,6 +4544,8 @@ shape = SubResource("ConvexPolygonShape3D_378tq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___6__5922"]
 shape = SubResource("ConvexPolygonShape3D_0nkyt")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___6__5922" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___7__5924" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4097, 0.593587, -1.8013)
 mass = 12.0
@@ -4612,6 +4653,8 @@ shape = SubResource("ConvexPolygonShape3D_lpwb1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___7__5924"]
 shape = SubResource("ConvexPolygonShape3D_lfktq")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___7__5924" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___8__5926" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5222, 0.593587, -1.84689)
@@ -4721,6 +4764,8 @@ shape = SubResource("ConvexPolygonShape3D_tjefe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___8__5926"]
 shape = SubResource("ConvexPolygonShape3D_uvj3c")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___8__5926" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___9__5928" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5635, 0.593587, -1.89144)
 mass = 12.0
@@ -4825,6 +4870,8 @@ shape = SubResource("ConvexPolygonShape3D_8r103")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___9__5928"]
 shape = SubResource("ConvexPolygonShape3D_g3g2p")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_01___9__5928" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02_5930" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67448, 0.593586, -15.311)
@@ -4934,6 +4981,8 @@ shape = SubResource("ConvexPolygonShape3D_bnfrg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02_5930"]
 shape = SubResource("ConvexPolygonShape3D_5l2k1")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02_5930" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02__5932" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37575, 0.593588, -12.1183)
 mass = 12.0
@@ -5041,6 +5090,8 @@ shape = SubResource("ConvexPolygonShape3D_sckjp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02__5932"]
 shape = SubResource("ConvexPolygonShape3D_ri610")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02__5932" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___10__5934" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18066, 0.593588, 0.551935)
@@ -5150,6 +5201,8 @@ shape = SubResource("ConvexPolygonShape3D_so880")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___10__5934"]
 shape = SubResource("ConvexPolygonShape3D_0sdyp")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___10__5934" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___2__5936" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07883, 0.593587, -8.94488)
 mass = 12.0
@@ -5257,6 +5310,8 @@ shape = SubResource("ConvexPolygonShape3D_imc34")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___2__5936"]
 shape = SubResource("ConvexPolygonShape3D_b54n4")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___2__5936" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___3__5938" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6962, 0.593587, -14.9487)
@@ -5366,6 +5421,8 @@ shape = SubResource("ConvexPolygonShape3D_oaibm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___3__5938"]
 shape = SubResource("ConvexPolygonShape3D_5rve1")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___3__5938" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___4__5940" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46248, 0.593587, -12.1966)
 mass = 12.0
@@ -5473,6 +5530,8 @@ shape = SubResource("ConvexPolygonShape3D_tyc62")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___4__5940"]
 shape = SubResource("ConvexPolygonShape3D_ij28u")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___4__5940" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___5__5942" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19886, 0.593587, -9.09221)
@@ -5582,6 +5641,8 @@ shape = SubResource("ConvexPolygonShape3D_63ra5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___5__5942"]
 shape = SubResource("ConvexPolygonShape3D_8ppi2")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___5__5942" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___6__5944" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92404, 0.593587, -5.85601)
 mass = 12.0
@@ -5690,6 +5751,8 @@ shape = SubResource("ConvexPolygonShape3D_jmq8i")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___6__5944"]
 shape = SubResource("ConvexPolygonShape3D_55juw")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___6__5944" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___7__5946" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66636, 0.593587, -1.77584)
 mass = 12.0
@@ -5794,6 +5857,8 @@ shape = SubResource("ConvexPolygonShape3D_hbjro")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___7__5946"]
 shape = SubResource("ConvexPolygonShape3D_1q6j8")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___7__5946" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___8__5948" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7788, 0.593587, -1.82144)
@@ -5900,6 +5965,8 @@ shape = SubResource("ConvexPolygonShape3D_enf3b")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___8__5948"]
 shape = SubResource("ConvexPolygonShape3D_xu4dd")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___8__5948" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___9__5950" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8201, 0.593587, -1.86598)
 mass = 12.0
@@ -6005,6 +6072,8 @@ shape = SubResource("ConvexPolygonShape3D_7js1g")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___9__5950"]
 shape = SubResource("ConvexPolygonShape3D_l44p8")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Chair_01_Mesh_02___9__5950" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.87399, 1.06292, -14.4628)
 mass = 0.7
@@ -6039,6 +6108,8 @@ shape = SubResource("ConvexPolygonShape3D_f4t3h")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000277042, 0.196802, 0.00267601)
 shape = SubResource("ConvexPolygonShape3D_1pxdw")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A_6081" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57524, 1.06292, -11.2701)
@@ -6075,6 +6146,8 @@ shape = SubResource("ConvexPolygonShape3D_shwpg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000263691, 0.196802, 0.0027132)
 shape = SubResource("ConvexPolygonShape3D_tcsvx")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A__6083" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.95741, 1.06292, 0.157017)
 mass = 0.7
@@ -6109,6 +6182,8 @@ shape = SubResource("ConvexPolygonShape3D_kc8sx")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00265694, 0.196802, -0.000375599)
 shape = SubResource("ConvexPolygonShape3D_mdv6v")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___10__6085" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27833, 1.06292, -8.09673)
@@ -6145,6 +6220,8 @@ shape = SubResource("ConvexPolygonShape3D_di50j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000278473, 0.196801, 0.00269699)
 shape = SubResource("ConvexPolygonShape3D_nf0mj")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___2__6087" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48945, 1.06292, -15.7952)
 mass = 0.7
@@ -6179,6 +6256,8 @@ shape = SubResource("ConvexPolygonShape3D_73ihr")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000245571, 0.196801, -0.00267696)
 shape = SubResource("ConvexPolygonShape3D_rc6j1")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___3__6089" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25574, 1.06292, -13.043)
@@ -6215,6 +6294,8 @@ shape = SubResource("ConvexPolygonShape3D_isy4x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00024271, 0.196801, -0.00272083)
 shape = SubResource("ConvexPolygonShape3D_oqtuo")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___4__6091" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99212, 1.06292, -9.93868)
 mass = 0.7
@@ -6249,6 +6330,8 @@ shape = SubResource("ConvexPolygonShape3D_ux6jl")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000239611, 0.196801, -0.00267982)
 shape = SubResource("ConvexPolygonShape3D_q1lft")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___5__6093" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7173, 1.06292, -6.70248)
@@ -6285,6 +6368,8 @@ shape = SubResource("ConvexPolygonShape3D_drvyn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000241756, 0.196801, -0.00267601)
 shape = SubResource("ConvexPolygonShape3D_mw0xk")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___6__6095" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48817, 1.06292, -2.06555)
 mass = 0.7
@@ -6319,6 +6404,8 @@ shape = SubResource("ConvexPolygonShape3D_qovi8")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00268269, 0.196801, -1.81198e-05)
 shape = SubResource("ConvexPolygonShape3D_qu5vv")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___7__6097" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6006, 1.06292, -2.11114)
@@ -6355,6 +6442,8 @@ shape = SubResource("ConvexPolygonShape3D_tjfu4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00267601, 0.196802, -2.07424e-05)
 shape = SubResource("ConvexPolygonShape3D_44036")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___8__6099" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6419, 1.06292, -2.15569)
 mass = 0.7
@@ -6389,6 +6478,8 @@ shape = SubResource("ConvexPolygonShape3D_baigj")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00271034, 0.196802, -2.12193e-05)
 shape = SubResource("ConvexPolygonShape3D_e00u3")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_LiquorBottle_01A___9__6101" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_MenuSign_01a1_6108" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.630282, 0.587893, -4.79886)
@@ -6453,6 +6544,8 @@ shape = SubResource("ConvexPolygonShape3D_ehjtv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_MenuSign_01a1_6108"]
 shape = SubResource("ConvexPolygonShape3D_yk43t")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_MenuSign_01a1_6108" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_MenuSign_01a_6106" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46098, 0.587894, 0.46688)
 mass = 4.0
@@ -6492,6 +6585,8 @@ shape = SubResource("ConvexPolygonShape3D_dwn72")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_MenuSign_01a_6106"]
 shape = SubResource("ConvexPolygonShape3D_unu4c")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_MenuSign_01a_6106" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A_6114" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99189, 0.97881, -14.3931)
 mass = 0.5
@@ -6506,6 +6601,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A_6114"]
 shape = SubResource("ConvexPolygonShape3D_3komk")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A_6114" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A__6116" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69315, 0.978809, -11.2004)
@@ -6522,6 +6619,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A__6116"]
 shape = SubResource("ConvexPolygonShape3D_mhsc1")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A__6116" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___10__6118" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9971, 0.978811, 0.0259508)
 mass = 0.5
@@ -6536,6 +6635,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___10__6118"]
 shape = SubResource("ConvexPolygonShape3D_jhskj")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___10__6118" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___2__6120" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39623, 0.97881, -8.02705)
@@ -6552,6 +6653,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___2__6120"]
 shape = SubResource("ConvexPolygonShape3D_ap351")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___2__6120" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___3__6122" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37094, 0.97881, -15.8638)
 mass = 0.5
@@ -6566,6 +6669,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___3__6122"]
 shape = SubResource("ConvexPolygonShape3D_j5vqu")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___3__6122" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___4__6124" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13723, 0.97881, -13.1117)
@@ -6582,6 +6687,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___4__6124"]
 shape = SubResource("ConvexPolygonShape3D_s041g")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___4__6124" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___5__6126" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87361, 0.978809, -10.0073)
 mass = 0.5
@@ -6596,6 +6703,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___5__6126"]
 shape = SubResource("ConvexPolygonShape3D_qebyo")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___5__6126" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___6__6128" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59879, 0.978811, -6.77111)
@@ -6612,6 +6721,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___6__6128"]
 shape = SubResource("ConvexPolygonShape3D_10qcn")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___6__6128" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___7__6130" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.54469, 0.978811, -2.19028)
 mass = 0.5
@@ -6626,6 +6737,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___7__6130"]
 shape = SubResource("ConvexPolygonShape3D_asksk")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___7__6130" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___8__6132" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6571, 0.978811, -2.23587)
@@ -6642,6 +6755,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___8__6132"]
 shape = SubResource("ConvexPolygonShape3D_ldeyw")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___8__6132" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_NapkinHolder_01A___9__6134" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6985, 0.978811, -2.28042)
 mass = 0.5
@@ -6656,6 +6771,8 @@ surface_material_override/0 = ExtResource("12_vhgo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___9__6134"]
 shape = SubResource("ConvexPolygonShape3D_n4jel")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_NapkinHolder_01A___9__6134" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Table_01_6490" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59147, 0.794792, -14.4262)
@@ -6765,6 +6882,8 @@ shape = SubResource("ConvexPolygonShape3D_dm7xl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01_6490"]
 shape = SubResource("ConvexPolygonShape3D_kts3d")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01_6490" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01__6492" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29274, 0.794791, -11.2334)
 mass = 15.0
@@ -6866,6 +6985,8 @@ shape = SubResource("ConvexPolygonShape3D_41w4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01__6492"]
 shape = SubResource("ConvexPolygonShape3D_jn3i7")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01__6492" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Table_01___10__6494" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.06015, 0.794792, 0.422773)
@@ -6975,6 +7096,8 @@ shape = SubResource("ConvexPolygonShape3D_1h3ja")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___10__6494"]
 shape = SubResource("ConvexPolygonShape3D_ptyjb")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___10__6494" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01___2__6496" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99581, 0.794791, -8.06002)
 mass = 15.0
@@ -7077,6 +7200,8 @@ shape = SubResource("ConvexPolygonShape3D_xkg6k")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___2__6496"]
 shape = SubResource("ConvexPolygonShape3D_7xugg")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___2__6496" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01___3__6498" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77166, 0.794793, -15.8344)
 mass = 15.0
@@ -7154,6 +7279,8 @@ shape = SubResource("ConvexPolygonShape3D_qd13x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___3__6498"]
 shape = SubResource("ConvexPolygonShape3D_2hgjx")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___3__6498" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Table_01___4__6500" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53795, 0.79479, -13.0823)
@@ -7233,6 +7360,8 @@ shape = SubResource("ConvexPolygonShape3D_2qfa5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___4__6500"]
 shape = SubResource("ConvexPolygonShape3D_ex5w6")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___4__6500" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01___5__6502" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27432, 0.794791, -9.97788)
 mass = 15.0
@@ -7307,6 +7436,8 @@ shape = SubResource("ConvexPolygonShape3D_blk2e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___5__6502"]
 shape = SubResource("ConvexPolygonShape3D_n3c51")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___5__6502" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Table_01___6__6504" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9995, 0.79479, -6.74166)
@@ -7388,6 +7519,8 @@ shape = SubResource("ConvexPolygonShape3D_72e1e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___6__6504"]
 shape = SubResource("ConvexPolygonShape3D_wcoq2")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___6__6504" instance=ExtResource("9_csk3v")]
 
 [node name="Bistro_Research_Exterior_Paris_Table_01___7__6506" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55517, 0.794792, -1.78864)
@@ -7491,6 +7624,8 @@ shape = SubResource("ConvexPolygonShape3D_ruqo3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___7__6506"]
 shape = SubResource("ConvexPolygonShape3D_7ad4x")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___7__6506" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01___8__6508" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6676, 0.794792, -1.83423)
 mass = 15.0
@@ -7593,6 +7728,8 @@ shape = SubResource("ConvexPolygonShape3D_7hxj1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___8__6508"]
 shape = SubResource("ConvexPolygonShape3D_n2y1i")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___8__6508" instance=ExtResource("9_csk3v")]
+
 [node name="Bistro_Research_Exterior_Paris_Table_01___9__6510" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.709, 0.794793, -1.87878)
 mass = 15.0
@@ -7694,3 +7831,5 @@ shape = SubResource("ConvexPolygonShape3D_clxdi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_Table_01___9__6510"]
 shape = SubResource("ConvexPolygonShape3D_eekdc")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_Table_01___9__6510" instance=ExtResource("9_csk3v")]

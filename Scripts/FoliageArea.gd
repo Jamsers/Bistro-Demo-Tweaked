@@ -28,6 +28,8 @@ func _process(delta):
 			pair["audio"].stream_paused = false
 		else:
 			pair["audio"].stream_paused = true
+		
+		#consider checking rotational velocity as well
 
 func _on_body_entered(body):
 	if body is RigidBody3D or CharacterBody3D:
