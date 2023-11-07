@@ -164,6 +164,8 @@ func _process(delta):
 	rigidbody_collisions = []
 	
 	for index in get_slide_collision_count():
+		if get_slide_collision(index) == null:
+			continue
 		var collision = get_slide_collision(index)
 		if collision.get_collider() is RigidBody3D:
 			rigidbody_collisions.append(collision)
@@ -177,6 +179,8 @@ func _physics_process(delta):
 	var non_expired_cooldowns = []
 	
 	for collision in rigidbody_collisions:
+		if collision == null:
+			continue
 		var collider = collision.get_collider()
 		var weight = collider.mass
 		var direction = -collision.get_normal()
@@ -191,7 +195,7 @@ func _physics_process(delta):
 			if mult_actual > audio_play_threshold:
 				var has_collider = false
 				for cooldown in collider_bump_cooldowns:
-					if cooldown["collider"] == collider:
+					if cooldown["collider"] != null and cooldown["collider"] == collider:
 						has_collider = true
 						break
 				if !has_collider:
