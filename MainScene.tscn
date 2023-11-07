@@ -1,4 +1,4 @@
-[gd_scene load_steps=282 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=278 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -72,11 +72,7 @@
 [ext_resource type="PackedScene" uid="uid://cxvf7w2qy63uv" path="res://Scenes/FillOut/PotPlants.tscn" id="61_77adx"]
 [ext_resource type="Material" uid="uid://d0cd8fe6hpv6t" path="res://Materials/windowlight.tres" id="63_8uykn"]
 [ext_resource type="ArrayMesh" uid="uid://npyvb0up4qr6" path="res://Meshes/Bent_Quad.obj" id="63_l4mn6"]
-[ext_resource type="Script" path="res://Scripts/PhysicsPropSoundPlayer.gd" id="69_1rxvg"]
-[ext_resource type="AudioStream" uid="uid://brle6bd58h4h2" path="res://Audio/Prop Sounds/Placeholder/Bump1.wav" id="70_tmql6"]
-[ext_resource type="AudioStream" uid="uid://bstv5aj6pm5xu" path="res://Audio/Prop Sounds/Placeholder/Bump2.wav" id="71_4j4sv"]
-[ext_resource type="AudioStream" uid="uid://bn5hg5d1ypbxh" path="res://Audio/Prop Sounds/Placeholder/Bump3.wav" id="72_dbo5n"]
-[ext_resource type="AudioStream" uid="uid://qi7xfi47dn6t" path="res://Audio/Prop Sounds/Placeholder/Scrape.wav" id="73_rk1t6"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="70_yq80p"]
 [ext_resource type="Script" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
 [ext_resource type="PackedScene" uid="uid://dph2jwqw0jaw" path="res://Scenes/FoliageSound.tscn" id="76_oe8ap"]
 
@@ -2020,23 +2016,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_72mn7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/MaterialCubeAlbedo"]
 shape = SubResource("BoxShape3D_ra78n")
 
-[node name="Phys_Audio_test" type="RigidBody3D" parent="Patches" node_paths=PackedStringArray("phys_sound_player", "scrape_sound_player")]
+[node name="Phys_Audio_test" type="RigidBody3D" parent="Patches"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.245, 1, 10.688)
 mass = 20.0
 max_contacts_reported = 5
 contact_monitor = true
-script = ExtResource("69_1rxvg")
-phys_sound_player = NodePath("Prop")
-scrape_sound_player = NodePath("Scrape")
-prop_sounds = Array[AudioStreamWAV]([ExtResource("70_tmql6"), ExtResource("71_4j4sv"), ExtResource("72_dbo5n")])
-
-[node name="Prop" type="AudioStreamPlayer3D" parent="Patches/Phys_Audio_test"]
-volume_db = -10.0
-
-[node name="Scrape" type="AudioStreamPlayer3D" parent="Patches/Phys_Audio_test"]
-stream = ExtResource("73_rk1t6")
-volume_db = -15.0
-autoplay = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Patches/Phys_Audio_test"]
 gi_mode = 2
@@ -2045,6 +2029,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_n0oho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Patches/Phys_Audio_test"]
 shape = SubResource("BoxShape3D_jre3u")
+
+[node name="PropAudioPlayer" parent="Patches/Phys_Audio_test" instance=ExtResource("70_yq80p")]
 
 [node name="Foliage Areas" type="Area3D" parent="."]
 monitorable = false

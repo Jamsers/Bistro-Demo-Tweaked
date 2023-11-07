@@ -1,28 +1,35 @@
-extends RigidBody3D
+extends Node3D
+
+@export var prop_sounds: Array[AudioStreamWAV]
+@export var scrape_sound: AudioStreamWAV
 
 @export var phys_sound_player: AudioStreamPlayer3D
 @export var scrape_sound_player: AudioStreamPlayer3D
-
-@export var prop_sounds: Array[AudioStreamWAV]
+@export var helper_script: GDScript
 
 var prop_sounds_loaded = []
 
 var on_cooldown = false
 var scraping_on_cooldown = false
 
+@onready var parent_with_helper = $"../"
+
 func _ready():
+	parent_with_helper.set_script(load(helper_script.resource_path))
 	for resource in prop_sounds:
 		prop_sounds_loaded.append(load(resource.resource_path))
-	scrape_sound_player.stream_paused = true
+	scrape_sound_player.stream = load(scrape_sound.resource_path)
+	scrape_sound_player.play()
+	#scrape_sound_player.stream_paused = true
 
 func _process(delta):
 	pass
 
-func _physics_process(delta):
+func recieve_physics_process(delta):
 	var is_scraping = false
 	
-	if get_contact_count() > 0:
-		if linear_velocity.length() > 2.0:
+	if parent_with_helper.get_contact_count() > 0:
+		if parent_with_helper.linear_velocity.length() > 2.0:
 			#higher speed, higher volume
 			is_scraping = true
 	
@@ -37,7 +44,7 @@ func set_scraping_pause(play):
 	await get_tree().create_timer(0.15).timeout
 	scraping_on_cooldown = false
 
-func _integrate_forces(state):
+func recieve_integrate_forces(state):
 	if on_cooldown:
 		return
 	for index in state.get_contact_count():
