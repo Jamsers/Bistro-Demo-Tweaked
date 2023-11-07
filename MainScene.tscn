@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=197 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -72,6 +72,10 @@
 [ext_resource type="PackedScene" uid="uid://cxvf7w2qy63uv" path="res://Scenes/FillOut/PotPlants.tscn" id="61_77adx"]
 [ext_resource type="Material" uid="uid://d0cd8fe6hpv6t" path="res://Materials/windowlight.tres" id="63_8uykn"]
 [ext_resource type="ArrayMesh" uid="uid://npyvb0up4qr6" path="res://Meshes/Bent_Quad.obj" id="63_l4mn6"]
+[ext_resource type="Script" path="res://Scripts/PhysicsPropSoundPlayer.gd" id="69_1rxvg"]
+[ext_resource type="AudioStream" uid="uid://brle6bd58h4h2" path="res://Audio/Prop Sounds/Placeholder/Bump1.wav" id="70_tmql6"]
+[ext_resource type="AudioStream" uid="uid://bstv5aj6pm5xu" path="res://Audio/Prop Sounds/Placeholder/Bump2.wav" id="71_4j4sv"]
+[ext_resource type="AudioStream" uid="uid://bn5hg5d1ypbxh" path="res://Audio/Prop Sounds/Placeholder/Bump3.wav" id="72_dbo5n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 size = Vector3(42.825, 3, 85.35)
@@ -1740,9 +1744,16 @@ transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, 
 
 [node name="Lamp_Props" parent="Patches/Fill Out/Lamp3" instance=ExtResource("58_yuy0n")]
 
-[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
+[node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches" node_paths=PackedStringArray("phys_sound_player")]
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
 mass = 20.0
+max_contacts_reported = 5
+contact_monitor = true
+script = ExtResource("69_1rxvg")
+phys_sound_player = NodePath("AudioStreamPlayer3D")
+prop_sounds = Array[AudioStreamWAV]([ExtResource("70_tmql6"), ExtResource("71_4j4sv"), ExtResource("72_dbo5n")])
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Patches/MaterialCubeSpecular"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Patches/MaterialCubeSpecular"]
 gi_mode = 2
@@ -2722,4 +2733,3 @@ spot_angle = 80.0
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
 enable_depth_of_field = true
-enable_audio = true

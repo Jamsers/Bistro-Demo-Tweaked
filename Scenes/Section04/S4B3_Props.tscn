@@ -72,6 +72,8 @@ points = PackedVector3Array(-0.557978, -0.258469, 0.105669, -0.34215, -0.0858214
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6530" type="RigidBody3D" parent="." node_paths=PackedStringArray("phys_sound_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.6374, 0.727263, -4.58878)
 mass = 7.0
+max_contacts_reported = 5
+contact_monitor = true
 script = ExtResource("1_mil45")
 phys_sound_player = NodePath("AudioStreamPlayer3D")
 prop_sounds = Array[AudioStreamWAV]([ExtResource("2_w8etr"), ExtResource("3_iql7o"), ExtResource("4_oijt1")])
