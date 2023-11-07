@@ -14,7 +14,7 @@ scrape_sound = ExtResource("5_ddfad")
 helper_script = ExtResource("2_q782f")
 
 [node name="Prop" type="AudioStreamPlayer3D" parent="."]
-volume_db = -10.0
+volume_db = -80.0
 
 [node name="Scrape" type="AudioStreamPlayer3D" parent="."]
-volume_db = -15.0
+volume_db = -80.0
