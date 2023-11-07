@@ -177,7 +177,7 @@ func apply_time(lighting):
 	
 	var target_music_audio
 	if enable_music:
-		target_music_audio = -15.0
+		target_music_audio = -22.0
 	else:
 		target_music_audio = -80.0
 	

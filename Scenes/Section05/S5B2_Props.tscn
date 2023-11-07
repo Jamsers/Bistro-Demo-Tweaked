@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://doh36w0se2tbx"]
+[gd_scene load_steps=12 format=3 uid="uid://doh36w0se2tbx"]
 
 [ext_resource type="ArrayMesh" uid="uid://dtvsrbmltf46n" path="res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_002.res" id="1_rmmar"]
 [ext_resource type="Material" uid="uid://ckg7ld30v27im" path="res://Materials/Metal/Metal.tres" id="2_pdmkb"]
@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cf28lmggauy5" path="res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_004.res" id="3_kc6fr"]
 [ext_resource type="ArrayMesh" uid="uid://dw2ouh6a63t3h" path="res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_003.res" id="4_s6tgp"]
 [ext_resource type="ArrayMesh" uid="uid://cnjm10maurbw1" path="res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_005.res" id="6_16amj"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="6_ebsm6"]
 [ext_resource type="ArrayMesh" uid="uid://dur46eewl8g5b" path="res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_001.res" id="7_fjxsj"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iyxqa"]
@@ -59,6 +60,8 @@ surface_material_override/0 = ExtResource("3_k7dxa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000732422, 0.233151, 0.00202608)
 shape = SubResource("ConvexPolygonShape3D_1s7i8")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_3" instance=ExtResource("6_ebsm6")]
+
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_004" type="HingeJoint3D" parent="."]
 transform = Transform3D(0.960211, 0, -0.279276, 0, 1, 0, 0.279276, 0, 0.960211, -39.8533, 4.23756, 1.53754)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_2")
@@ -86,3 +89,5 @@ gi_mode = 2
 mesh = ExtResource("7_fjxsj")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("3_k7dxa")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003" instance=ExtResource("6_ebsm6")]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://c7x2605gbo88t"]
+[gd_scene load_steps=35 format=3 uid="uid://c7x2605gbo88t"]
 
 [ext_resource type="ArrayMesh" uid="uid://b086ectctirpt" path="res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_001.res" id="1_ynixu"]
 [ext_resource type="Material" uid="uid://dsm0qamubvq5h" path="res://Materials/Lights/HangingLight.tres" id="2_gt8w3"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="3_6oxrc"]
 [ext_resource type="ArrayMesh" uid="uid://bkimgbrrqan1m" path="res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_002.res" id="3_u02kb"]
 [ext_resource type="Material" uid="uid://uyoltu5ukmtw" path="res://Materials/Lights/HangingLight_Emissive.tres" id="3_yhwc0"]
 [ext_resource type="ArrayMesh" uid="uid://wb1tohk6h7rx" path="res://Meshes/Section02/Bistro_Lanterns/Bistro_Lanterns_Mesh_121_003.res" id="4_uqddy"]
@@ -97,6 +98,8 @@ surface_material_override/0 = ExtResource("2_gt8w3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern_Wind_21/Lantern_Wind_21_003"]
 shape = SubResource("ConvexPolygonShape3D_2qsr3")
 
+[node name="PropAudioPlayer" parent="Lantern_Wind_21/Lantern_Wind_21_003" instance=ExtResource("3_6oxrc")]
+
 [node name="Lantern_Wind_21_005" type="ConeTwistJoint3D" parent="Lantern_Wind_21"]
 transform = Transform3D(0.147809, 0, -0.989016, 0, 1, 0, 0.989016, 0, 0.147809, 0.000276566, 0.100198, 0.00192642)
 node_a = NodePath("../Lantern_Wind_21_003")
@@ -137,6 +140,8 @@ distance_fade_begin = 45.0
 omni_range = 2.665
 omni_shadow_mode = 0
 
+[node name="PropAudioPlayer" parent="Lantern_Wind_21/Lantern_Wind_21_2" instance=ExtResource("3_6oxrc")]
+
 [node name="Lantern_Wind_22" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37073, 2.45908, -8.08775)
 
@@ -165,6 +170,8 @@ surface_material_override/0 = ExtResource("2_gt8w3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern_Wind_22/Lantern_Wind_22_003"]
 shape = SubResource("ConvexPolygonShape3D_45fyo")
+
+[node name="PropAudioPlayer" parent="Lantern_Wind_22/Lantern_Wind_22_003" instance=ExtResource("3_6oxrc")]
 
 [node name="Lantern_Wind_22_005" type="ConeTwistJoint3D" parent="Lantern_Wind_22"]
 transform = Transform3D(0.128796, 0, -0.991671, 0, 1, 0, 0.991671, 0, 0.128796, -0.00341272, 0.100192, 0.000535965)
@@ -206,6 +213,8 @@ distance_fade_begin = 45.0
 omni_range = 2.665
 omni_shadow_mode = 0
 
+[node name="PropAudioPlayer" parent="Lantern_Wind_22/Lantern_Wind_22_2" instance=ExtResource("3_6oxrc")]
+
 [node name="Lantern_Wind_23" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.58457, 2.45907, -2.04457)
 
@@ -234,6 +243,8 @@ surface_material_override/0 = ExtResource("2_gt8w3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern_Wind_23/Lantern_Wind_23_003"]
 shape = SubResource("ConvexPolygonShape3D_qskee")
+
+[node name="PropAudioPlayer" parent="Lantern_Wind_23/Lantern_Wind_23_003" instance=ExtResource("3_6oxrc")]
 
 [node name="Lantern_Wind_23_005" type="ConeTwistJoint3D" parent="Lantern_Wind_23"]
 transform = Transform3D(-0.997916, 0, -0.0645324, 0, 1, 0, 0.0645324, 0, -0.997916, -0.00183487, 0.100201, 0.000405312)
@@ -275,6 +286,8 @@ distance_fade_begin = 45.0
 omni_range = 2.665
 omni_shadow_mode = 0
 
+[node name="PropAudioPlayer" parent="Lantern_Wind_23/Lantern_Wind_23_2" instance=ExtResource("3_6oxrc")]
+
 [node name="Lantern_Wind_24" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5406, 2.42684, -1.86328)
 
@@ -303,6 +316,8 @@ surface_material_override/0 = ExtResource("2_gt8w3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern_Wind_24/Lantern_Wind_24_003"]
 shape = SubResource("ConvexPolygonShape3D_y8c2q")
+
+[node name="PropAudioPlayer" parent="Lantern_Wind_24/Lantern_Wind_24_003" instance=ExtResource("3_6oxrc")]
 
 [node name="Lantern_Wind_24_005" type="ConeTwistJoint3D" parent="Lantern_Wind_24"]
 transform = Transform3D(-0.99945, 0, -0.0331552, 0, 1, 0, 0.0331552, 0, -0.99945, -0.000565529, 0.100158, 0.00643551)
@@ -344,6 +359,8 @@ distance_fade_begin = 45.0
 omni_range = 2.665
 omni_shadow_mode = 0
 
+[node name="PropAudioPlayer" parent="Lantern_Wind_24/Lantern_Wind_24_2" instance=ExtResource("3_6oxrc")]
+
 [node name="Lantern_Wind_25" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15502, 2.43503, -14.351)
 
@@ -372,6 +389,8 @@ surface_material_override/0 = ExtResource("2_gt8w3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lantern_Wind_25/Lantern_Wind_25_003"]
 shape = SubResource("ConvexPolygonShape3D_yex5n")
+
+[node name="PropAudioPlayer" parent="Lantern_Wind_25/Lantern_Wind_25_003" instance=ExtResource("3_6oxrc")]
 
 [node name="Lantern_Wind_25_005" type="ConeTwistJoint3D" parent="Lantern_Wind_25"]
 transform = Transform3D(0.147809, 0, -0.989016, 0, 1, 0, 0.989016, 0, 0.147809, -0.00520086, 0.100167, 0.000465393)
@@ -412,3 +431,5 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 omni_range = 2.665
 omni_shadow_mode = 0
+
+[node name="PropAudioPlayer" parent="Lantern_Wind_25/Lantern_Wind_25_2" instance=ExtResource("3_6oxrc")]

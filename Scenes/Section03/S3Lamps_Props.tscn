@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjgd3j6klx44v"]
+[gd_scene load_steps=15 format=3 uid="uid://bjgd3j6klx44v"]
 
 [ext_resource type="ArrayMesh" uid="uid://2yw551ffn6fd" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_171_002.res" id="1_aoa58"]
 [ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="2_3jafo"]
@@ -8,6 +8,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bjpl52jkdotp8" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_367.res" id="5_8x11r"]
 [ext_resource type="ArrayMesh" uid="uid://bma44o7ninw1v" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_171_004.res" id="7_hhdls"]
 [ext_resource type="ArrayMesh" uid="uid://16pnktl2awxt" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_171_003.res" id="8_761d3"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="8_d3awq"]
 [ext_resource type="ArrayMesh" uid="uid://dtb2rodb75cgy" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_001.res" id="9_ua3mi"]
 [ext_resource type="ArrayMesh" uid="uid://xs5f1lhbn2lv" path="res://Meshes/Section03/S3Lamps_Props/S3Lamps_Props_Mesh_171_005.res" id="10_kbe0g"]
 
@@ -71,6 +72,8 @@ surface_material_override/0 = ExtResource("2_3jafo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"]
 shape = SubResource("ConvexPolygonShape3D_jm2cf")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004" instance=ExtResource("8_d3awq")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_008" type="ConeTwistJoint3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267"]
 transform = Transform3D(0.755362, 0, -0.655308, 0, 1, 0, 0.655308, 0, 0.755362, 0.310998, 1.0118, -0.360312)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_006")
@@ -104,3 +107,5 @@ surface_material_override/0 = ExtResource("2_3jafo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_005"]
 shape = SubResource("ConvexPolygonShape3D_6fv1g")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_005" instance=ExtResource("8_d3awq")]
