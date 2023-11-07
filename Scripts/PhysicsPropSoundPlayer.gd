@@ -31,6 +31,7 @@ func _physics_process(delta):
 func set_scraping_pause(play):
 	if scraping_on_cooldown:
 		return
+	#the scraping sound needs to fade in and out
 	scraping_on_cooldown = true
 	scrape_sound_player.stream_paused = !play
 	await get_tree().create_timer(0.15).timeout

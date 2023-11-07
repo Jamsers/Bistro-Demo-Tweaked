@@ -1782,11 +1782,11 @@ scrape_sound_player = NodePath("Scrape")
 prop_sounds = Array[AudioStreamWAV]([ExtResource("70_tmql6"), ExtResource("71_4j4sv"), ExtResource("72_dbo5n")])
 
 [node name="Prop" type="AudioStreamPlayer3D" parent="Patches/Phys_Audio_test"]
-volume_db = -20.0
+volume_db = -10.0
 
 [node name="Scrape" type="AudioStreamPlayer3D" parent="Patches/Phys_Audio_test"]
 stream = ExtResource("73_rk1t6")
-volume_db = -30.0
+volume_db = -15.0
 autoplay = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Patches/Phys_Audio_test"]
