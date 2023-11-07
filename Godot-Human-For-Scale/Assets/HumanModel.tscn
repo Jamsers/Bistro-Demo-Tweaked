@@ -1,14 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://73ou0sg30v8f"]
+[gd_scene load_steps=9 format=3 uid="uid://73ou0sg30v8f"]
 
 [ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="1_3duc2"]
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/AnimationEventReciever.gd" id="2_18j06"]
 [ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="2_be2ba"]
+[ext_resource type="Animation" uid="uid://cacaxk4m7r6l2" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Fall.res" id="4_e7ttl"]
+[ext_resource type="Animation" uid="uid://dqxlpgixueq2i" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Idle.res" id="5_ajc8x"]
+[ext_resource type="Animation" uid="uid://bg3x42c3k07nv" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Jog.res" id="6_mcv6c"]
+[ext_resource type="Animation" uid="uid://da1wm70ulke5c" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Run.res" id="7_lqrri"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_brjo7"]
+_data = {
+"Fall": ExtResource("4_e7ttl"),
+"Idle": ExtResource("5_ajc8x"),
+"Jog": ExtResource("6_mcv6c"),
+"Run": ExtResource("7_lqrri")
+}
 
 [node name="HumanModel" instance=ExtResource("1_3duc2")]
 script = ExtResource("2_18j06")
 
 [node name="root" parent="." index="0"]
-transform = Transform3D(0.999967, 0.0077059, -0.00241611, -0.00763905, 0.999618, 0.0265542, 0.00261982, -0.0265349, 0.999644, -0.00898413, -0.00822556, 0.0141531)
+transform = Transform3D(0.999967, 0.0077059, -0.00241611, -0.00763905, 0.999618, 0.0265542, 0.00261981, -0.0265349, 0.999644, -0.00898413, -0.00822556, 0.0141531)
 
 [node name="Skeleton3D" parent="root" index="0"]
 bones/1/rotation = Quaternion(0.623379, 0.170163, 0.75412, 0.117246)
@@ -67,7 +79,7 @@ bones/53/rotation = Quaternion(-0.304913, -0.00323433, 0.0384061, 0.9516)
 bones/54/rotation = Quaternion(-0.150196, 0.00207417, 0.0192268, 0.988467)
 
 [node name="RightFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="1"]
-transform = Transform3D(0.904753, -0.414883, 0.0687072, 0.00636362, -0.153729, -0.999408, 0.42569, 0.885466, -0.132885, -0.220492, 0.0208944, 0.0610069)
+transform = Transform3D(0.904752, -0.414882, 0.0687062, 0.00636296, -0.153731, -0.999411, 0.425688, 0.885467, -0.132885, -0.220493, 0.02089, 0.0610073)
 bone_name = "ball.r"
 bone_idx = 9
 
@@ -75,7 +87,7 @@ bone_idx = 9
 stream = ExtResource("2_be2ba")
 
 [node name="LeftFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="2"]
-transform = Transform3D(0.946916, 0.306886, -0.0410574, 0.000468319, -0.138153, -1.0181, -0.319583, 0.917211, -0.1156, 0.164829, 0.0227461, 0.0514796)
+transform = Transform3D(0.946923, 0.306886, -0.0410573, 0.000469239, -0.138152, -1.01809, -0.319583, 0.91721, -0.115601, 0.164829, 0.0227495, 0.0514789)
 bone_name = "ball.l"
 bone_idx = 4
 
@@ -83,4 +95,7 @@ bone_idx = 4
 stream = ExtResource("2_be2ba")
 
 [node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_brjo7")
+}
 playback_default_blend_time = 0.2
