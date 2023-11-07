@@ -420,7 +420,7 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 		await get_tree().process_frame
 
 func process_dof(delta):
-	if !enable_depth_of_field:
+	if camera.attributes == null or !enable_depth_of_field:
 		return
 	
 	var near_distance = 0.5
