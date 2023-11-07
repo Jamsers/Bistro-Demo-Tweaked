@@ -179,7 +179,7 @@ func _physics_process(delta):
 	var non_expired_cooldowns = []
 	
 	for collision in rigidbody_collisions:
-		if collision == null:
+		if collision.get_collider() == null:
 			continue
 		var collider = collision.get_collider()
 		var weight = collider.mass
