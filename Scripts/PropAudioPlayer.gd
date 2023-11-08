@@ -10,7 +10,7 @@ const AUDIO_START_TIMEOUT = 0.75
 const IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY = 1200.0
 const ATTENUATION_PERCENT_THRESHOLD_TO_PLAY = 0.2
 const PROP_PLAY_TIMEOUT = 0.15
-const VELOCITY_CEILING_FOR_SCRAPE_PLAY = 400.0
+const VELOCITY_CEILING_FOR_SCRAPE_PLAY = 10.0
 const SCRAPE_PLAY_TIMEOUT = 0.15
 
 var prop_sounds_loaded = []
@@ -42,7 +42,7 @@ func recieve_physics_process(delta):
 	var scrape_attenuation
 	
 	if parent_with_helper.get_contact_count() > 0:
-		scrape_attenuation = parent_with_helper.linear_velocity.length()/(VELOCITY_CEILING_FOR_SCRAPE_PLAY * delta)
+		scrape_attenuation = parent_with_helper.linear_velocity.length()/VELOCITY_CEILING_FOR_SCRAPE_PLAY
 		scrape_attenuation = clamp(scrape_attenuation, 0.0, 1.0)
 	else:
 		scrape_attenuation = 0.0

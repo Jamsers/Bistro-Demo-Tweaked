@@ -5,6 +5,8 @@ var collider_audio_pair = []
 @export var rustle_sounds: PackedScene
 @export var placeholder: CollisionShape3D
 
+const VELOCITY_ATTENUATION_THRESHOLD = 3.0
+
 @onready var rustle_sounds_loaded = load(rustle_sounds.resource_path)
 
 func _ready():
@@ -16,7 +18,7 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
-func _process(delta):
+func _physics_process(delta):
 	for pair in collider_audio_pair:
 		pair["audio"].global_position = pair["collider"].global_position
 		
@@ -24,14 +26,14 @@ func _process(delta):
 		if pair["collider"] is CharacterBody3D:
 			collider_velocity = pair["collider"].get_real_velocity()
 		else:
-			collider_velocity = pair["collider"].linear_velocity
+			if pair["collider"].linear_velocity > pair["collider"].angular_velocity:
+				collider_velocity = pair["collider"].linear_velocity
+			else:
+				collider_velocity = pair["collider"].angular_velocity
 		
-		if collider_velocity.length() > 2.0:
-			pair["audio"].stream_paused = false
-		else:
-			pair["audio"].stream_paused = true
-		
-		#consider checking rotational velocity as well
+		var rustle_atten = collider_velocity.length()/VELOCITY_ATTENUATION_THRESHOLD
+		rustle_atten = clamp(rustle_atten, 0.0, 1.0)
+		pair["audio"].volume_db = lerp(-80.0, 0.0, ease_out_circ(rustle_atten))
 
 func _on_body_entered(body):
 	if body is RigidBody3D or CharacterBody3D:
@@ -46,3 +48,6 @@ func _on_body_exited(body):
 			pair["audio"].queue_free()
 			collider_audio_pair.erase(pair)
 			break
+
+func ease_out_circ(lerp: float) -> float:
+	return sqrt(1.0 - pow(lerp - 1.0, 2.0))

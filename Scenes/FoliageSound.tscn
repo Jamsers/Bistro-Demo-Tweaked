@@ -4,4 +4,5 @@
 
 [node name="FoliageSound" type="AudioStreamPlayer3D"]
 stream = ExtResource("1_3pde2")
+volume_db = -80.0
 autoplay = true
