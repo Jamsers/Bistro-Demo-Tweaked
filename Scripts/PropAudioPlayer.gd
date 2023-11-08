@@ -5,10 +5,15 @@ extends Node3D
 
 @export var helper_script: GDScript
 
+const IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY = 1200.0
+const ATTENUATION_PERCENT_THRESHOLD_TO_PLAY = 0.2
+const VELOCITY_CEILING_FOR_SCRAPE_PLAY = 400.0
+
 var prop_sounds_loaded = []
 
 var on_cooldown = false
 var scraping_on_cooldown = false
+var audio_lock = true
 
 @onready var parent_with_helper = $"../"
 @onready var phys_sound_player = $"Prop"
@@ -21,43 +26,56 @@ func _ready():
 	scrape_sound_player.stream = load(scrape_sound.resource_path)
 	scrape_sound_player.play()
 	await get_tree().create_timer(0.25).timeout
-	phys_sound_player.volume_db = -0
-	scrape_sound_player.volume_db = -0
+	audio_lock = false
 
 func _process(delta):
 	pass
 
 func recieve_physics_process(delta):
-	var is_scraping = false
+	if audio_lock:
+		return
+	
+	var scrape_attenuation
 	
 	if parent_with_helper.get_contact_count() > 0:
-		if parent_with_helper.linear_velocity.length() > 2.0:
-			#higher speed, higher volume
-			is_scraping = true
+		scrape_attenuation = parent_with_helper.linear_velocity.length()/(VELOCITY_CEILING_FOR_SCRAPE_PLAY * delta)
+		scrape_attenuation = clamp(scrape_attenuation, 0.0, 1.0)
+	else:
+		scrape_attenuation = 0.0
 	
-	set_scraping_pause(is_scraping)
+	set_scraping_pause(scrape_attenuation)
 
-func set_scraping_pause(play):
+func set_scraping_pause(attenuation):
 	if scraping_on_cooldown:
 		return
-	#the scraping sound needs to fade in and out
+	
+	#the scraping sound needs to fade in and out?
 	scraping_on_cooldown = true
-	scrape_sound_player.stream_paused = !play
+	scrape_sound_player.volume_db = lerp(-80.0, 0.0, ease_out_circ(attenuation))
 	await get_tree().create_timer(0.15).timeout
 	scraping_on_cooldown = false
 
 func recieve_integrate_forces(state):
+	if audio_lock:
+		return
 	if on_cooldown:
 		return
+		
+	var strongest_contact_impulse = 0.0
 	for index in state.get_contact_count():
-		# 10.0 should probably be a percentage of this rigidbody weight
-		# lerp volume between 0 and (rigidbody weight * IMPULSE_FORCE_MAX_VOLUME_CAP)
-		#lerp between -80? -40? and 0? 20?
-		if state.get_contact_impulse(index).length() > 10.0:
-			on_cooldown = true
-			phys_sound_player.stream = prop_sounds_loaded.pick_random()
-			phys_sound_player.play()
-			await get_tree().create_timer(0.15).timeout
-			on_cooldown = false
-			break
+		if state.get_contact_impulse(index).length() > strongest_contact_impulse:
+			strongest_contact_impulse = state.get_contact_impulse(index).length()
+	
+	var loud_scale = strongest_contact_impulse/(IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY * state.step)
+	loud_scale = clamp(loud_scale, 0.0, 1.0)
+	
+	if loud_scale > ATTENUATION_PERCENT_THRESHOLD_TO_PLAY:
+		on_cooldown = true
+		phys_sound_player.stream = prop_sounds_loaded.pick_random()
+		phys_sound_player.volume_db = lerp(-80.0, 0.0, ease_out_circ(loud_scale))
+		phys_sound_player.play()
+		await get_tree().create_timer(0.15).timeout
+		on_cooldown = false
 
+func ease_out_circ(lerp: float) -> float:
+	return sqrt(1.0 - pow(lerp - 1.0, 2.0))

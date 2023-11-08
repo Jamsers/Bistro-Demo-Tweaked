@@ -38,6 +38,7 @@ const DOF_INTENSITY = 0.25
 const BUMP_AUDIO_TIMEOUT = 0.15
 const BUMP_AUDIO_FORCE_THRESHOLD = 400.0
 const BUMP_AUDIO_VOLUME_DB = -20.0
+const BUMP_AUDIO_ATTENUATION_THRESHOLD = 0.2
 
 var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
@@ -193,7 +194,7 @@ func _physics_process(delta):
 		if !colliders_in_contact.has(collider):
 			colliders_in_contact.append(collider)
 			var volume_scale = mult_actual/(BUMP_AUDIO_FORCE_THRESHOLD * delta)
-			if volume_scale > 0.1:
+			if volume_scale > BUMP_AUDIO_ATTENUATION_THRESHOLD:
 				var has_collider = false
 				for cooldown in collider_bump_cooldowns:
 					if cooldown["collider"] != null and cooldown["collider"] == collider:
