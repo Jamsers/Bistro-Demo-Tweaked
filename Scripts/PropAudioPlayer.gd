@@ -21,8 +21,8 @@ func _ready():
 	scrape_sound_player.stream = load(scrape_sound.resource_path)
 	scrape_sound_player.play()
 	await get_tree().create_timer(0.25).timeout
-	phys_sound_player.volume_db = -10
-	scrape_sound_player.volume_db = -15
+	phys_sound_player.volume_db = -0
+	scrape_sound_player.volume_db = -0
 
 func _process(delta):
 	pass
