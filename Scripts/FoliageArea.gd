@@ -6,6 +6,7 @@ var collider_audio_pair = []
 @export var placeholder: CollisionShape3D
 
 const VELOCITY_ATTENUATION_THRESHOLD = 3.0
+const FADE_IN_OUT = 0.15
 
 @onready var rustle_sounds_loaded = load(rustle_sounds.resource_path)
 
@@ -21,32 +22,56 @@ func _ready():
 func _physics_process(delta):
 	for pair in collider_audio_pair:
 		pair["audio"].global_position = pair["collider"].global_position
-		
-		var collider_velocity
-		if pair["collider"] is CharacterBody3D:
-			collider_velocity = pair["collider"].get_real_velocity().length()
+		set_atten(pair["collider"], pair["audio"])
+
+func set_atten(phys_obj, audio, get_vol := false):
+	var collider_velocity
+	if phys_obj is CharacterBody3D:
+		collider_velocity = phys_obj.get_real_velocity().length()
+	else:
+		if phys_obj.linear_velocity.length() > phys_obj.angular_velocity.length():
+			collider_velocity = phys_obj.linear_velocity.length()
 		else:
-			if pair["collider"].linear_velocity.length() > pair["collider"].angular_velocity.length():
-				collider_velocity = pair["collider"].linear_velocity.length()
-			else:
-				collider_velocity = pair["collider"].angular_velocity.length()
-		
-		var rustle_atten = collider_velocity/VELOCITY_ATTENUATION_THRESHOLD
-		rustle_atten = clamp(rustle_atten, 0.0, 1.0)
-		pair["audio"].volume_db = lerp(-80.0, 0.0, ease_out_circ(rustle_atten))
+			collider_velocity = phys_obj.angular_velocity.length()
+	
+	var rustle_atten = collider_velocity/VELOCITY_ATTENUATION_THRESHOLD
+	rustle_atten = clamp(rustle_atten, 0.0, 1.0)
+	
+	var vol = lerp(-80.0, 0.0, ease_out_circ(rustle_atten))
+	if get_vol:
+		return vol
+	else:
+		audio.volume_db = vol
 
 func _on_body_entered(body):
 	if body is RigidBody3D or CharacterBody3D:
 		var rustle_sounds = rustle_sounds_loaded.instantiate()
 		get_tree().root.get_child(0).add_child(rustle_sounds)
-		rustle_sounds.global_position = body.global_position
+		
+		var fade_time = FADE_IN_OUT
+		while fade_time > 0.0:
+			rustle_sounds.global_position = body.global_position
+			rustle_sounds.volume_db = lerp(-80.0, set_atten(body, rustle_sounds, true), (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
+			fade_time -= get_process_delta_time()
+			await get_tree().process_frame
+		
 		collider_audio_pair.append({"collider": body, "audio": rustle_sounds})
 
 func _on_body_exited(body):
 	for pair in collider_audio_pair:
 		if pair["collider"] == body:
-			pair["audio"].queue_free()
+			var temp_audio = pair["audio"]
+			var temp_obj = pair["collider"]
 			collider_audio_pair.erase(pair)
+			
+			var fade_time = FADE_IN_OUT
+			while fade_time > 0.0:
+				temp_audio.global_position = temp_obj.global_position
+				temp_audio.volume_db = lerp(set_atten(temp_obj, temp_audio, true), -80.0, (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
+				fade_time -= get_process_delta_time()
+				await get_tree().process_frame
+			
+			temp_audio.queue_free()
 			break
 
 func ease_out_circ(lerp: float) -> float:
