@@ -55,7 +55,16 @@ func _on_body_entered(body):
 			fade_time -= get_process_delta_time()
 			await get_tree().process_frame
 		
-		collider_audio_pair.append({"collider": body, "audio": rustle_sounds})
+		if overlaps_body(body):
+			collider_audio_pair.append({"collider": body, "audio": rustle_sounds})
+		else:
+			var fade_time2 = FADE_IN_OUT
+			while fade_time2 > 0.0:
+				rustle_sounds.global_position = body.global_position
+				rustle_sounds.volume_db = lerp(set_atten(body, rustle_sounds, true), -80.0, (FADE_IN_OUT-fade_time2)/FADE_IN_OUT)
+				fade_time2 -= get_process_delta_time()
+				await get_tree().process_frame
+			rustle_sounds.queue_free()
 
 func _on_body_exited(body):
 	for pair in collider_audio_pair:
