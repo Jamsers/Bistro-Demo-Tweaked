@@ -24,14 +24,14 @@ func _physics_process(delta):
 		
 		var collider_velocity
 		if pair["collider"] is CharacterBody3D:
-			collider_velocity = pair["collider"].get_real_velocity()
+			collider_velocity = pair["collider"].get_real_velocity().length()
 		else:
-			if pair["collider"].linear_velocity > pair["collider"].angular_velocity:
-				collider_velocity = pair["collider"].linear_velocity
+			if pair["collider"].linear_velocity.length() > pair["collider"].angular_velocity.length():
+				collider_velocity = pair["collider"].linear_velocity.length()
 			else:
-				collider_velocity = pair["collider"].angular_velocity
+				collider_velocity = pair["collider"].angular_velocity.length()
 		
-		var rustle_atten = collider_velocity.length()/VELOCITY_ATTENUATION_THRESHOLD
+		var rustle_atten = collider_velocity/VELOCITY_ATTENUATION_THRESHOLD
 		rustle_atten = clamp(rustle_atten, 0.0, 1.0)
 		pair["audio"].volume_db = lerp(-80.0, 0.0, ease_out_circ(rustle_atten))
 
