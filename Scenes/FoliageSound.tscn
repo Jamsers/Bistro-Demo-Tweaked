@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dph2jwqw0jaw"]
+
+[ext_resource type="AudioStream" uid="uid://wurbxhuocgd0" path="res://Audio/foliage_rustling.wav" id="1_3pde2"]
+
+[node name="FoliageSound" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_3pde2")
+volume_db = -80.0
+autoplay = true

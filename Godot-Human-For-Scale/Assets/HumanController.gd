@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var enable_depth_of_field: bool = false
 @export var disable_shadow_in_first_person: bool = false
+@export var enable_audio: bool = false
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
@@ -23,8 +24,7 @@ const LOOK_LIMIT_UPPER = 1.25
 const LOOK_LIMIT_LOWER = -1.25
 const ANIM_MOVE_SPEED = 3.0
 const ANIM_RUN_SPEED = 5.5
-const ANIM_BLEND_TIME = 0.2
-const OFF_FLOOR_JUMP_TIMEOUT = 0.1
+const JUMP_LAND_TIMEOUT = 0.1
 const NOCLIP_MULT = 4.0
 const ROTATE_SPEED = 12.0
 const JUMP_FORCE = 15.0
@@ -35,12 +35,19 @@ const MAX_PUSHABLE_WEIGHT = 200.0
 const TOGGLE_COOLDOWN = 0.5
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
+const BUMP_AUDIO_TIMEOUT = 0.15
+const BUMP_AUDIO_FORCE_THRESHOLD = 400.0
+const BUMP_AUDIO_VOLUME_DB = -20.0
+const BUMP_AUDIO_ATTENUATION_THRESHOLD = 0.2
 
 var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
 var camera_rotation = Quaternion.IDENTITY
 var camera_rotation_no_y = Quaternion.IDENTITY
 var is_off_floor_duration = 0.0
+var is_on_floor_duration = 0.0
+var has_landed_from_fall = false
+var boot_sound_timeout = true
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var cam_is_fp = false
@@ -54,6 +61,8 @@ var mousecapture_toggle_cooldown = 0.0
 var is_cam_transitioning = false
 var input_velocity = Vector3.ZERO
 var rigidbody_collisions = []
+var colliders_in_contact = []
+var collider_bump_cooldowns = []
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
@@ -69,13 +78,32 @@ var zoom_isdown = false
 var shoulder_isdown = false
 
 @onready var model_root = $"ModelRoot"
-@onready var anim_player = $"ModelRoot/mannequiny-0_3_0/AnimationPlayer"
-@onready var player_mesh = $"ModelRoot/mannequiny-0_3_0/root/Skeleton3D/mannequiny"
+@onready var anim_player = $"ModelRoot/HumanModel/AnimationPlayer"
+@onready var player_mesh = $"ModelRoot/HumanModel/root/Skeleton3D/mannequiny"
 @onready var collision_shape = $"CollisionShape"
 @onready var camera_pivot = $"CameraPivot"
 @onready var spring_arm = $"CameraPivot/SpringArm"
 @onready var camera = $"CameraPivot/SpringArm/Camera"
 @onready var focus_ray = $"CameraPivot/SpringArm/Camera/RayCast3D"
+@onready var audio_listener = $"CameraPivot/SpringArm/Camera/AudioListener3D"
+@onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
+@onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
+@onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
+
+@onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
+
+@onready var footstep_sounds = [
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep2.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep3.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Footstep4.wav")
+	]
+
+@onready var bump_sounds = [
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump1.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump2.wav"),
+	load("res://Godot-Human-For-Scale/Assets/Audio/Bump3.wav")
+	]
 
 func _ready():
 	var y_rotation = Vector3(0.0, global_rotation.y, 0.0)
@@ -87,14 +115,20 @@ func _ready():
 	camera_rotation = Quaternion.from_euler(camera_pivot.global_rotation)
 	camera_rotation_no_y = Quaternion.from_euler(camera_pivot.global_rotation)
 	
-	anim_player.playback_default_blend_time = ANIM_BLEND_TIME
+	camera.make_current()
 	
 	if enable_depth_of_field:
 		hijack_camera_attributes()
+	
+	if enable_audio:
+		audio_listener.make_current()
+	
+	await get_tree().create_timer(0.25).timeout
+	boot_sound_timeout = false
 
 func _process(delta):
 	process_camera()
-	process_is_off_floor(delta)
+	process_off_on_floor_time(delta)
 	process_movement()
 	process_animation(delta)
 	process_mousecapture(delta)
@@ -117,6 +151,13 @@ func _process(delta):
 			velocity.y -= GRAVITY_FORCE * delta
 		if jump_isdown and is_on_floor():
 			velocity.y = JUMP_FORCE
+			play_jump_land_sound()
+	
+	if is_on_floor_duration >= JUMP_LAND_TIMEOUT and !has_landed_from_fall:
+		has_landed_from_fall = true
+		play_jump_land_sound()
+	if is_off_floor_duration >= JUMP_LAND_TIMEOUT and has_landed_from_fall:
+		has_landed_from_fall = false
 	
 	input_velocity = velocity
 	
@@ -125,6 +166,8 @@ func _process(delta):
 	rigidbody_collisions = []
 	
 	for index in get_slide_collision_count():
+		if get_slide_collision(index) == null:
+			continue
 		var collision = get_slide_collision(index)
 		if collision.get_collider() is RigidBody3D:
 			rigidbody_collisions.append(collision)
@@ -133,18 +176,90 @@ func _physics_process(delta):
 	var collide_force = COLLIDE_FORCE * delta
 	var central_multiplier = input_velocity.length() * collide_force
 	
+	var collider_indexes_still_in_contact = []
+	var colliders_still_in_contact = []
+	var non_expired_cooldowns = []
+	
 	for collision in rigidbody_collisions:
-		var weight = collision.get_collider().mass
+		if collision.get_collider() == null:
+			continue
+		var collider = collision.get_collider()
+		var weight = collider.mass
 		var direction = -collision.get_normal()
 		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
-		collision.get_collider().apply_central_impulse(direction * mult_actual)
+		
+		collider.apply_central_impulse(direction * mult_actual)
+		collider_indexes_still_in_contact.append(colliders_in_contact.find(collider))
+		
+		if !colliders_in_contact.has(collider):
+			colliders_in_contact.append(collider)
+			var volume_scale = mult_actual/(BUMP_AUDIO_FORCE_THRESHOLD * delta)
+			if volume_scale > BUMP_AUDIO_ATTENUATION_THRESHOLD:
+				var has_collider = false
+				for cooldown in collider_bump_cooldowns:
+					if cooldown["collider"] != null and cooldown["collider"] == collider:
+						has_collider = true
+						break
+				if !has_collider:
+					play_bump_audio(collision.get_position(), volume_scale)
+					var cooldown = {"collider": collider, "cooldown": BUMP_AUDIO_TIMEOUT}
+					collider_bump_cooldowns.append(cooldown)
+	
+	for index in collider_indexes_still_in_contact:
+		colliders_still_in_contact.append(colliders_in_contact[index])
+	
+	colliders_in_contact = colliders_still_in_contact
+	
+	for cooldown in collider_bump_cooldowns:
+		cooldown["cooldown"] -= delta
+	
+	for cooldown in collider_bump_cooldowns:
+		if cooldown["cooldown"] > 0.0:
+			non_expired_cooldowns.append(cooldown)
+	
+	collider_bump_cooldowns = non_expired_cooldowns
 
-func process_is_off_floor(delta):
-	if !is_on_floor():
-		is_off_floor_duration += delta
-	else:
+func _on_right_footstep():
+	if !enable_audio:
+		return
+	right_footstep.stream = footstep_sounds.pick_random()
+	right_footstep.play()
+
+func _on_left_footstep():
+	if !enable_audio:
+		return
+	left_footstep.stream = footstep_sounds.pick_random()
+	left_footstep.play()
+
+func play_jump_land_sound():
+	if !enable_audio or boot_sound_timeout:
+		return
+	if !left_footstep.playing or !right_footstep.playing:
+		jump_land_audio.stream = footstep_sounds.pick_random()
+		jump_land_audio.play()
+
+func play_bump_audio(global_position, volume_scale):
+	if !enable_audio:
+		return
+	var spawned_bump_audio = bump_audio.instantiate()
+	get_tree().root.get_child(0).add_child(spawned_bump_audio)
+	spawned_bump_audio.global_position = global_position
+	spawned_bump_audio.stream = bump_sounds.pick_random()
+	volume_scale = clamp(volume_scale, 0.0, 1.0)
+	spawned_bump_audio.volume_db = lerp(-80.0, BUMP_AUDIO_VOLUME_DB, ease_out_circ(volume_scale))
+	spawned_bump_audio.play()
+	await get_tree().create_timer(0.5).timeout
+	spawned_bump_audio.queue_free()
+
+func process_off_on_floor_time(delta):
+	if is_on_floor():
+		is_on_floor_duration += delta
 		is_off_floor_duration = 0.0
-	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, OFF_FLOOR_JUMP_TIMEOUT)
+	else:
+		is_on_floor_duration = 0.0
+		is_off_floor_duration += delta
+	is_on_floor_duration = clamp(is_on_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
+	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 
 func process_camera():
 	var camera_rotation_euler = camera_rotation.get_euler()
@@ -177,7 +292,7 @@ func process_movement():
 	move_direction_no_y = move_direction_no_y.normalized()
 
 func process_animation(delta):
-	if is_off_floor_duration >= OFF_FLOOR_JUMP_TIMEOUT:
+	if is_off_floor_duration >= JUMP_LAND_TIMEOUT:
 		switch_anim("Fall")
 	elif move_direction != Vector3.ZERO:
 		if sprint_isdown:
@@ -309,7 +424,7 @@ func cam_transitioning(height, offset, length, fov, mesh_visible):
 		await get_tree().process_frame
 
 func process_dof(delta):
-	if !enable_depth_of_field:
+	if camera.attributes == null or !enable_depth_of_field:
 		return
 	
 	var near_distance = 0.5

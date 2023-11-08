@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://djmap33l1n2u6"]
+[gd_scene load_steps=45 format=3 uid="uid://djmap33l1n2u6"]
 
 [ext_resource type="ArrayMesh" uid="uid://dux0va5om5gm2" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_002.res" id="1_1scag"]
 [ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="2_otre6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://dbhonoml2uada" path="res://Materials/Lights/Streetlight_Chains.tres" id="4_jxecb"]
 [ext_resource type="ArrayMesh" uid="uid://ews2sohjabtr" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_039.res" id="6_hqecs"]
 [ext_resource type="ArrayMesh" uid="uid://crwvv7dbjmndr" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_004.res" id="8_2jgko"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="8_sh1ws"]
 [ext_resource type="ArrayMesh" uid="uid://bpynbjxub7mtt" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_001.res" id="9_0fgwv"]
 [ext_resource type="ArrayMesh" uid="uid://boff5q38okqbo" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_001.res" id="10_5s60u"]
 [ext_resource type="ArrayMesh" uid="uid://b6b1tspidbx2" path="res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_002.res" id="11_n2af3"]
@@ -93,6 +94,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a_6257_005")
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a_6257_005" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.467773, 0.672461, -0.0802935)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a_6257_002" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_005"]
 gi_mode = 2
@@ -117,6 +120,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_005"]
 shape = SubResource("ConvexPolygonShape3D_yoqs3")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_005" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a_6257_009" type="ConeTwistJoint3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257"]
 transform = Transform3D(-0.175779, 0, -0.98443, 0, 1, 0, 0.98443, 0, -0.175779, 0.469485, 1.00943, 0.0781838)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a_6257_006")
@@ -125,6 +130,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a_6257_007")
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a_6257_007" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.469485, 0.669412, 0.0781838)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_007"]
 gi_mode = 2
@@ -149,6 +156,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_007"]
 shape = SubResource("ConvexPolygonShape3D_n5mma")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_007" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.147921, 2.40704, -5.66846)
 
@@ -172,6 +181,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_005" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0129105, 0.698491, 0.474347)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_002" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_005"]
 gi_mode = 2
@@ -196,6 +207,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_005"]
 shape = SubResource("ConvexPolygonShape3D_4338p")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_005" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_009" type="ConeTwistJoint3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269"]
 transform = Transform3D(0.999164, 0, 0.0408817, 0, 1, 0, -0.0408817, 0, 0.999164, -0.0153606, 1.03546, -0.475795)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_006")
@@ -204,6 +217,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_007" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153606, 0.695442, -0.475795)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_007"]
 gi_mode = 2
@@ -228,6 +243,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_007"]
 shape = SubResource("ConvexPolygonShape3D_xhkps")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_007" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83335, 2.43308, -8.60496)
 
@@ -251,6 +268,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_005" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0734634, 0.672452, 0.46879)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_002" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_005"]
 gi_mode = 2
@@ -275,6 +294,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_005"]
 shape = SubResource("ConvexPolygonShape3D_xf7j7")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_005" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_009" type="ConeTwistJoint3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271"]
 transform = Transform3D(0.986432, 0, 0.16417, 0, 1, 0, -0.16417, 0, 0.986432, -0.0760016, 1.00942, -0.469948)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_006")
@@ -283,6 +304,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_007" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0760016, 0.669403, -0.469948)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_007"]
 gi_mode = 2
@@ -307,6 +330,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_007"]
 shape = SubResource("ConvexPolygonShape3D_1iafr")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_007" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13772, 2.43308, -17.0658)
 
@@ -330,6 +355,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_005" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0734447, 0.672451, 0.468826)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_002" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_005"]
 gi_mode = 2
@@ -354,6 +381,8 @@ surface_material_override/0 = ExtResource("2_otre6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_005"]
 shape = SubResource("ConvexPolygonShape3D_u2c3m")
 
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_005" instance=ExtResource("8_sh1ws")]
+
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_009" type="ConeTwistJoint3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273"]
 transform = Transform3D(0.988314, 0, 0.152434, 0, 1, 0, -0.152434, 0, 0.988314, -0.0760201, 1.00942, -0.46991)
 node_a = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_006")
@@ -362,6 +391,8 @@ node_b = NodePath("../Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_0
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_007" type="RigidBody3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0760201, 0.669402, -0.46991)
 mass = 9.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_007"]
 gi_mode = 2
@@ -385,3 +416,5 @@ surface_material_override/0 = ExtResource("2_otre6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_007"]
 shape = SubResource("ConvexPolygonShape3D_bdbdb")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_007" instance=ExtResource("8_sh1ws")]

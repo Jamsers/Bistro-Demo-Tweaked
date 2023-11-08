@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5i411e430syd"]
+[gd_scene load_steps=6 format=3 uid="uid://b5i411e430syd"]
 
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
-[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="2_hypur"]
+[ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
+[ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="3_4ysf2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bca87"]
 radius = 0.285
@@ -15,8 +16,11 @@ script = ExtResource("1_jh7dy")
 
 [node name="ModelRoot" type="Node3D" parent="."]
 
-[node name="mannequiny-0_3_0" parent="ModelRoot" instance=ExtResource("2_hypur")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="HumanModel" parent="ModelRoot" instance=ExtResource("2_ajgv1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="JumpLandPlayer" type="AudioStreamPlayer3D" parent="ModelRoot"]
+stream = ExtResource("3_4ysf2")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.889, 0)
@@ -31,8 +35,9 @@ shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 2.1
 
 [node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm"]
-current = true
 fov = 60.0
+
+[node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
 target_position = Vector3(0, 0, -10000)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cos8ymay0y3os"]
+[gd_scene load_steps=24 format=3 uid="uid://cos8ymay0y3os"]
 
 [ext_resource type="ArrayMesh" uid="uid://gyruaqmqgjbf" path="res://Meshes/Section04/S4B3_Props/S4B3_Props_Mesh_1009.res" id="1_pjxvb"]
 [ext_resource type="Material" uid="uid://6dpxfs7fuhqq" path="res://Materials/Miscellaneous/Trashcan.tres" id="2_se1uu"]
+[ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="3_ooa7u"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0ryxk"]
 points = PackedVector3Array(0.478082, -0.495865, -0.0885094, 0.327045, 0.432132, 0.472664, 0.370217, 0.432132, 0.429434, 0.527006, 0.46737, -0.107209, 0.305447, -0.560561, 0.170545, 0.327045, -0.603726, 0.299907, 0.460461, 0.0693434, -0.139916, 0.542826, 0.388967, -0.00215808, 0.305447, 0.432132, 0.407846, 0.413363, -0.625361, -0.0885094, 0.456509, -0.603726, -0.0237459, 0.300647, -0.64496, 0.281516, 0.564425, 0.432132, -0.0885094, 0.305447, 0.108342, 0.299907, 0.370217, 0.173142, 0.386258, 0.305447, 0.108342, 0.451021, 0.327045, 0.108342, 0.451021, 0.542826, 0.194672, -0.0453337, 0.499655, 0.410498, -0.0885094, 0.456509, -0.625361, -0.0885094, 0.39179, -0.560561, -0.0453337, 0.305447, -0.625361, 0.170545, 0.521253, 0.129977, -0.00215808, 0.305447, 0.324168, 0.472664, 0.370217, 0.388967, 0.429434, 0.542826, 0.432132, -0.00215808, 0.542826, 0.151507, -0.0885094, 0.434936, -0.625361, 0.0194297, 0.348618, 0.151507, 0.429434, 0.305447, -0.517396, 0.321495, 0.478082, -0.495865, -0.0669216, 0.564425, 0.410498, -0.0669216)
@@ -68,6 +69,8 @@ points = PackedVector3Array(-0.557978, -0.258469, 0.105669, -0.34215, -0.0858214
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6530" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.6374, 0.727263, -4.58878)
 mass = 7.0
+max_contacts_reported = 5
+contact_monitor = true
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6529" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A1_6530"]
 gi_mode = 2
@@ -134,3 +137,5 @@ shape = SubResource("ConvexPolygonShape3D_6tymr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A1_6530"]
 shape = SubResource("ConvexPolygonShape3D_si30k")
+
+[node name="PropAudioPlayer" parent="Bistro_Research_Exterior_TrashCanOpen_01A1_6530" instance=ExtResource("3_ooa7u")]
