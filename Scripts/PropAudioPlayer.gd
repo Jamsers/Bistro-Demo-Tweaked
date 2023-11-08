@@ -5,9 +5,13 @@ extends Node3D
 
 @export var helper_script: GDScript
 
+#set to 99999 to mute prop audio
+const AUDIO_START_TIMEOUT = 0.75
 const IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY = 1200.0
 const ATTENUATION_PERCENT_THRESHOLD_TO_PLAY = 0.2
+const PROP_PLAY_TIMEOUT = 0.15
 const VELOCITY_CEILING_FOR_SCRAPE_PLAY = 400.0
+const SCRAPE_PLAY_TIMEOUT = 0.15
 
 var prop_sounds_loaded = []
 
@@ -25,7 +29,7 @@ func _ready():
 		prop_sounds_loaded.append(load(resource.resource_path))
 	scrape_sound_player.stream = load(scrape_sound.resource_path)
 	scrape_sound_player.play()
-	await get_tree().create_timer(0.25).timeout
+	await get_tree().create_timer(AUDIO_START_TIMEOUT).timeout
 	audio_lock = false
 
 func _process(delta):
@@ -52,7 +56,7 @@ func set_scraping_pause(attenuation):
 	#the scraping sound needs to fade in and out?
 	scraping_on_cooldown = true
 	scrape_sound_player.volume_db = lerp(-80.0, 0.0, ease_out_circ(attenuation))
-	await get_tree().create_timer(0.15).timeout
+	await get_tree().create_timer(SCRAPE_PLAY_TIMEOUT).timeout
 	scraping_on_cooldown = false
 
 func recieve_integrate_forces(state):
@@ -74,7 +78,7 @@ func recieve_integrate_forces(state):
 		phys_sound_player.stream = prop_sounds_loaded.pick_random()
 		phys_sound_player.volume_db = lerp(-80.0, 0.0, ease_out_circ(loud_scale))
 		phys_sound_player.play()
-		await get_tree().create_timer(0.15).timeout
+		await get_tree().create_timer(PROP_PLAY_TIMEOUT).timeout
 		on_cooldown = false
 
 func ease_out_circ(lerp: float) -> float:
