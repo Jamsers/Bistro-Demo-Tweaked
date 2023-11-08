@@ -4,4 +4,3 @@
 
 [node name="BumpAudio" type="AudioStreamPlayer3D"]
 stream = ExtResource("1_dljov")
-volume_db = -20.0

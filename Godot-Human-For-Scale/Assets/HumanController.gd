@@ -36,7 +36,8 @@ const TOGGLE_COOLDOWN = 0.5
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
 const BUMP_AUDIO_TIMEOUT = 0.15
-const BUMP_AUDIO_FORCE_THRESHOLD = 1000.0
+const BUMP_AUDIO_FORCE_THRESHOLD = 400.0
+const BUMP_AUDIO_VOLUME_DB = -20.0
 
 var move_direction = Vector3.ZERO
 var move_direction_no_y = Vector3.ZERO
@@ -185,22 +186,21 @@ func _physics_process(delta):
 		var weight = collider.mass
 		var direction = -collision.get_normal()
 		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
-		var audio_play_threshold = lerp(0.0, BUMP_AUDIO_FORCE_THRESHOLD * delta, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
 		
 		collider.apply_central_impulse(direction * mult_actual)
 		collider_indexes_still_in_contact.append(colliders_in_contact.find(collider))
 		
 		if !colliders_in_contact.has(collider):
 			colliders_in_contact.append(collider)
-			if mult_actual > audio_play_threshold:
+			var volume_scale = mult_actual/(BUMP_AUDIO_FORCE_THRESHOLD * delta)
+			if volume_scale > 0.1:
 				var has_collider = false
 				for cooldown in collider_bump_cooldowns:
 					if cooldown["collider"] != null and cooldown["collider"] == collider:
 						has_collider = true
 						break
 				if !has_collider:
-					# louder bump sound depending on mult_actual/AUDIO_MAX_VOLUME_FORCE_THRESHOLD * delta
-					play_bump_audio(collision.get_position())
+					play_bump_audio(collision.get_position(), volume_scale)
 					var cooldown = {"collider": collider, "cooldown": BUMP_AUDIO_TIMEOUT}
 					collider_bump_cooldowns.append(cooldown)
 	
@@ -237,13 +237,15 @@ func play_jump_land_sound():
 		jump_land_audio.stream = footstep_sounds.pick_random()
 		jump_land_audio.play()
 
-func play_bump_audio(global_position):
+func play_bump_audio(global_position, volume_scale):
 	if !enable_audio:
 		return
 	var spawned_bump_audio = bump_audio.instantiate()
 	get_tree().root.get_child(0).add_child(spawned_bump_audio)
 	spawned_bump_audio.global_position = global_position
 	spawned_bump_audio.stream = bump_sounds.pick_random()
+	volume_scale = clamp(volume_scale, 0.0, 1.0)
+	spawned_bump_audio.volume_db = lerp(-80.0, BUMP_AUDIO_VOLUME_DB, ease_out_circ(volume_scale))
 	spawned_bump_audio.play()
 	await get_tree().create_timer(0.5).timeout
 	spawned_bump_audio.queue_free()
