@@ -720,7 +720,6 @@ directional_shadow_pancake_size = 40.0
 
 [node name="DayMusic" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("20_mwu7t")
-volume_db = -15.0
 autoplay = true
 
 [node name="NightMusic" type="AudioStreamPlayer" parent="Audio"]
