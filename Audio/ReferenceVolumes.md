@@ -12,3 +12,4 @@ Physics prop scrape: -35 dB normalized RMS
 
 Futzed:  
 Foliage rustling: -46 dB normalized RMS  
+Music: -24 dB normalized RMS, at least for this demo specifically due to the demo's low audio in general  
