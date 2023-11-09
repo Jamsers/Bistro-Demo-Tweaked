@@ -683,6 +683,10 @@ points = PackedVector3Array(0.510391, -1.06574, 0.344101, -0.637138, 0.368819, 0
 
 [node name="MainScene" type="Node"]
 
+[node name="Light Change Utility" type="Node" parent="." node_paths=PackedStringArray("UI")]
+script = ExtResource("12_p7w1a")
+UI = NodePath("../UI")
+
 [node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 enable_music = true
@@ -696,10 +700,6 @@ day_ambient_audio = NodePath("../Audio/DayAmbient")
 night_ambient_audio = NodePath("../Audio/NightAmbient")
 day_music = NodePath("../Audio/DayMusic")
 night_music = NodePath("../Audio/NightMusic")
-
-[node name="Light Change Utility" type="Node" parent="." node_paths=PackedStringArray("UI")]
-script = ExtResource("12_p7w1a")
-UI = NodePath("../UI")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("33_vhloy")
