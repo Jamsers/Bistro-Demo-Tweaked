@@ -54,10 +54,12 @@ func _on_body_entered(body):
 		var rustle_sounds = rustle_sounds_loaded.instantiate()
 		get_tree().root.get_child(0).add_child(rustle_sounds)
 		
+		# is this fade in necessary? the move_towards behavior should already act as its own fade in right? only fade out is necessary due to abrupt deletion without it?
+		var target_vol = set_atten(body, rustle_sounds, true)
 		var fade_time = FADE_IN_OUT
 		while fade_time > 0.0:
 			rustle_sounds.global_position = body.global_position
-			rustle_sounds.volume_db = lerp(-80.0, set_atten(body, rustle_sounds, true), (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
+			rustle_sounds.volume_db = lerp(-80.0, target_vol, (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
 			await get_tree().process_frame
 			fade_time -= get_process_delta_time()
 		
@@ -68,10 +70,11 @@ func _on_body_entered(body):
 			# interestingly enough i've run into this bug in other AAA games as well
 			collider_audio_pair.append({"collider": body, "audio": rustle_sounds})
 		else:
-			var fade_time2 = FADE_IN_OUT * 1.5
+			var from_vol = set_atten(body, rustle_sounds, true)
+			var fade_time2 = FADE_IN_OUT
 			while fade_time2 > 0.0:
 				rustle_sounds.global_position = body.global_position
-				rustle_sounds.volume_db = lerp(set_atten(body, rustle_sounds, true), -80.0, (FADE_IN_OUT-fade_time2)/FADE_IN_OUT)
+				rustle_sounds.volume_db = lerp(from_vol, -80.0, (FADE_IN_OUT-fade_time2)/FADE_IN_OUT)
 				await get_tree().process_frame
 				fade_time2 -= get_process_delta_time()
 			rustle_sounds.queue_free()
@@ -83,10 +86,11 @@ func _on_body_exited(body):
 			var temp_obj = pair["collider"]
 			collider_audio_pair.erase(pair)
 			
-			var fade_time = FADE_IN_OUT * 1.5
+			var from_vol = set_atten(body, rustle_sounds, true)
+			var fade_time = FADE_IN_OUT
 			while fade_time > 0.0:
 				temp_audio.global_position = temp_obj.global_position
-				temp_audio.volume_db = lerp(set_atten(temp_obj, temp_audio, true), -80.0, (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
+				temp_audio.volume_db = lerp(from_vol, -80.0, (FADE_IN_OUT-fade_time)/FADE_IN_OUT)
 				await get_tree().process_frame
 				fade_time -= get_process_delta_time()
 			

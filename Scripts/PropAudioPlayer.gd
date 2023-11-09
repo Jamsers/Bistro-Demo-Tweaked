@@ -1,14 +1,18 @@
 extends Node3D
 
+@export_category("ceiling/floor to play audio")
+@export var impulse_force_ceiling_for_prop_impact_play: float = 1200.0
+@export_range (0.0, 1.0) var attenuation_percent_threshold_to_play: float = 0.2
+
+@export_category("sounds to use")
 @export var prop_sounds: Array[AudioStreamWAV]
 @export var scrape_sound: AudioStreamWAV
 
+@export_category("system")
 @export var helper_script: GDScript
 
 #set to 99999 to mute prop audio
 const AUDIO_START_TIMEOUT = 0.75
-const IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY = 1200.0
-const ATTENUATION_PERCENT_THRESHOLD_TO_PLAY = 0.2
 const PROP_PLAY_TIMEOUT = 0.15
 const VELOCITY_CEILING_FOR_SCRAPE_PLAY = 10.0
 const SCRAPE_PLAY_TIMEOUT = 0.15
@@ -70,10 +74,10 @@ func recieve_integrate_forces(state):
 		if state.get_contact_impulse(index).length() > strongest_contact_impulse:
 			strongest_contact_impulse = state.get_contact_impulse(index).length()
 	
-	var loud_scale = strongest_contact_impulse/(IMPULSE_FORCE_CEILING_FOR_PROP_IMPACT_PLAY * state.step)
+	var loud_scale = strongest_contact_impulse/(impulse_force_ceiling_for_prop_impact_play * state.step)
 	loud_scale = clamp(loud_scale, 0.0, 1.0)
 	
-	if loud_scale > ATTENUATION_PERCENT_THRESHOLD_TO_PLAY:
+	if loud_scale > attenuation_percent_threshold_to_play:
 		on_cooldown = true
 		phys_sound_player.stream = prop_sounds_loaded.pick_random()
 		phys_sound_player.volume_db = lerp(-80.0, 0.0, ease_out_circ(loud_scale))

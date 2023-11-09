@@ -3493,6 +3493,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.39098e-05, -0.00039202, -0.
 shape = SubResource("ConvexPolygonShape3D_y6y36")
 
 [node name="PropAudioPlayer" parent="Bistro_Research_Exterior__lod0_Vespa_3937" instance=ExtResource("9_csk3v")]
+impulse_force_ceiling_for_prop_impact_play = 12000.0
+attenuation_percent_threshold_to_play = 0.4
 
 [node name="Bistro_Research_Exterior_Paris_Ashtray_01_mesh_4074" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80063, 0.915601, -14.353)
