@@ -1,8 +1,16 @@
 extends CharacterBody3D
 
+@export_category("Extra Options")
 @export var enable_depth_of_field: bool = false
 @export var disable_shadow_in_first_person: bool = false
 @export var enable_audio: bool = false
+
+@export_category("Physics Gun")
+@export var enable_physics_gun: bool = false
+@export var physics_gun_object: RigidBody3D = null
+@export var physics_gun_force: float = 12.5
+@export var physics_gun_initial_distance: float = 1.5
+
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
@@ -58,6 +66,7 @@ var shoulder_is_swapped = false
 var shoulder_cooldown = 0.0
 var mousecapture_on = true
 var mousecapture_toggle_cooldown = 0.0
+var physics_gun_cooldown = 0.0
 var is_cam_transitioning = false
 var input_velocity = Vector3.ZERO
 var rigidbody_collisions = []
@@ -76,6 +85,7 @@ var jump_isdown = false
 var mousecapture_isdown = false
 var zoom_isdown = false
 var shoulder_isdown = false
+var physics_gun_fire_isdown = false
 
 @onready var model_root = $"ModelRoot"
 @onready var anim_player = $"ModelRoot/HumanModel/AnimationPlayer"
@@ -136,6 +146,7 @@ func _process(delta):
 	process_cam_toggle(delta)
 	process_cam_zoom(delta)
 	process_shoulder_swap(delta)
+	process_physics_gun_fire(delta)
 	process_dof(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
@@ -354,6 +365,25 @@ func process_shoulder_swap(delta):
 	shoulder_cooldown -= delta
 	shoulder_cooldown = clamp(shoulder_cooldown, 0.0, TOGGLE_COOLDOWN)
 
+func process_physics_gun_fire(delta):
+	if physics_gun_fire_isdown and physics_gun_cooldown == 0.0:
+		fire_physics_gun()
+		physics_gun_cooldown = TOGGLE_COOLDOWN
+	
+	physics_gun_cooldown -= delta
+	physics_gun_cooldown = clamp(physics_gun_cooldown, 0.0, TOGGLE_COOLDOWN)
+
+func fire_physics_gun():
+	if !enable_physics_gun:
+		return
+	if physics_gun_object == null:
+		return
+	
+	physics_gun_object.linear_velocity = Vector3.ZERO
+	physics_gun_object.angular_velocity = Vector3.ZERO
+	physics_gun_object.global_position = camera_pivot.global_position + (-camera_pivot.basis.z * physics_gun_initial_distance)
+	physics_gun_object.apply_central_impulse(-camera_pivot.basis.z * (physics_gun_force * physics_gun_object.mass))
+
 func cam_transition():
 	if is_cam_transitioning:
 		return
@@ -497,6 +527,8 @@ func _unhandled_input(event):
 	
 	if event is InputEventMouseButton:
 		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				physics_gun_fire_isdown = event.pressed
 			MOUSE_BUTTON_RIGHT:
 				zoom_isdown = event.pressed
 	
