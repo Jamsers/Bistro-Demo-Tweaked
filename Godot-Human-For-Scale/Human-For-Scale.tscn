@@ -18,9 +18,19 @@ radius = 0.25
 height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oip5q"]
-albedo_color = Color(0.498039, 0.498039, 0.498039, 1)
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.235294, 0.235294, 0.235294, 0.862745)
 metallic = 0.1
 roughness = 0.9
+rim_enabled = true
+rim = 0.9
+rim_tint = 0.1
+proximity_fade_enabled = true
+proximity_fade_distance = 0.1
+distance_fade_min_distance = 0.1
+distance_fade_max_distance = 0.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ehy56"]
 radius = 0.25
