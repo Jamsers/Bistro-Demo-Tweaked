@@ -2,10 +2,15 @@ extends Control
 
 class_name UIController
 
+@export_category("Toggles")
 @export var enable_profiler : bool
 @export var enable_music : bool
+
+@export_category("Resources")
 @export var settings: ScalabilitySettings
 @export var lighting_scenarios: LightingScenarios
+
+@export_category("")
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
 @export var custom_res: Array[Control]

@@ -2,11 +2,13 @@
 
 extends Node
 
+@export_category("Set Lighting Scenario")
 @export var set_dusk: bool = false : set = apply_dusk
 @export var set_noon: bool = false : set = apply_noon
 @export var set_afternoon: bool = false : set = apply_afternoon
 @export var set_night: bool = false : set = apply_night
 
+@export_category("")
 @export var UI: UIController
 
 @onready var sun_orig_res = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/size")
