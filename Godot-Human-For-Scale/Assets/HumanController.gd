@@ -99,6 +99,9 @@ var physics_gun_fire_isdown = false
 @onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
 @onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
+@onready var default_physics_gun_object = $"DefaultGunObject"
+@onready var default_physics_gun_mesh = $"DefaultGunObject/MeshInstance3D"
+@onready var default_physics_gun_collider = $"DefaultGunObject/CollisionShape3D"
 
 @onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
 
@@ -367,11 +370,21 @@ func process_shoulder_swap(delta):
 
 func process_physics_gun_fire(delta):
 	if physics_gun_fire_isdown and physics_gun_cooldown == 0.0:
+		if physics_gun_object == null:
+			init_physics_gun_default()
 		fire_physics_gun()
 		physics_gun_cooldown = TOGGLE_COOLDOWN
 	
 	physics_gun_cooldown -= delta
 	physics_gun_cooldown = clamp(physics_gun_cooldown, 0.0, TOGGLE_COOLDOWN)
+
+func init_physics_gun_default():
+	physics_gun_object = default_physics_gun_object
+	remove_child(default_physics_gun_object)
+	get_tree().root.get_child(0).add_child(default_physics_gun_object)
+	default_physics_gun_object.freeze = false
+	default_physics_gun_mesh.visible = true
+	default_physics_gun_collider.disabled = false
 
 func fire_physics_gun():
 	if !enable_physics_gun:
