@@ -379,6 +379,8 @@ func process_physics_gun_fire(delta):
 	physics_gun_cooldown = clamp(physics_gun_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func init_physics_gun_default():
+	if !enable_physics_gun:
+		return
 	physics_gun_object = default_physics_gun_object
 	remove_child(default_physics_gun_object)
 	get_tree().root.get_child(0).add_child(default_physics_gun_object)
