@@ -42,7 +42,7 @@ You can disable the character's shadow in first person view.
 You can enable audio, which will enable the audio listener, footstep sounds, and physics interactions sounds.  
 You can enable the physics gun, which throws a physics object of your choosing in front of you.
 
-![human-for-scale-options](https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/80a466c6-9890-41cf-8303-5225a2106b78)
+![options](https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/01ca7799-021c-46c1-a98a-c68c1dee7035)
 
 ## Credits
 
