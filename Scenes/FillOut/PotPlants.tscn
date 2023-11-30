@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxvf7w2qy63uv"]
+
+[ext_resource type="PackedScene" uid="uid://ch48wwc4tetgp" path="res://Meshes/PotPlants.glb" id="1_ma7e0"]
+[ext_resource type="Material" uid="uid://47a1fxw6b4x1" path="res://Materials/Nature/Foliage_Flowers.tres" id="2_1vqr7"]
+[ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="3_y6py7"]
+
+[node name="PotPlants" instance=ExtResource("1_ma7e0")]
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01d_6047_0" parent="Bistro_Research_Exterior_Paris_flowers_01d_6047" index="0"]
+surface_material_override/0 = ExtResource("2_1vqr7")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01d_6047_1" parent="Bistro_Research_Exterior_Paris_flowers_01d_6047" index="1"]
+surface_material_override/0 = ExtResource("3_y6py7")

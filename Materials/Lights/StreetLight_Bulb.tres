@@ -6,9 +6,8 @@
 [resource]
 albedo_texture = ExtResource("1_qxhil")
 roughness = 0.73
-emission_enabled = true
 emission = Color(1, 0.690196, 0.309804, 1)
-emission_energy_multiplier = 2.0
+emission_intensity = 125.0
 normal_enabled = true
 normal_texture = ExtResource("2_y013g")
 texture_filter = 5

@@ -1,3 +1,4 @@
-[gd_resource type="PhysicalSkyMaterial" format=3 uid="uid://kgrcufewquxd"]
+[gd_resource type="ProceduralSkyMaterial" format=3 uid="uid://kgrcufewquxd"]
 
 [resource]
+sun_angle_max = 5.0

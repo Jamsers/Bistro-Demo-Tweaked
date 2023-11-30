@@ -1,2 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Export folders
+Build/Windows/*
+!Build/Windows/.gitkeep
+Build/Mac/*
+!Build/Mac/.gitkeep
+Build/Linux/*
+!Build/Linux/.gitkeep

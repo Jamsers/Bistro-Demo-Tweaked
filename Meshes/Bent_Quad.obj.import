@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://npyvb0up4qr6"
+path="res://.godot/imported/Bent_Quad.obj-e865e873f768cd69b910f430bdfeeae6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bent_Quad.obj-e865e873f768cd69b910f430bdfeeae6.mesh"]
+
+source_file="res://Meshes/Bent_Quad.obj"
+dest_files=["res://.godot/imported/Bent_Quad.obj-e865e873f768cd69b910f430bdfeeae6.mesh", "res://.godot/imported/Bent_Quad.obj-e865e873f768cd69b910f430bdfeeae6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(2, 2, -5)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

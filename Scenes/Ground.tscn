@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://bumtkl0ox2bxf"]
+
+[ext_resource type="PackedScene" uid="uid://bktru7bm6maat" path="res://Meshes/Ground.glb" id="1_y6r4x"]
+[ext_resource type="Material" uid="uid://bmt2o3dfnoopb" path="res://Materials/Ground/Pavement_Curbstones.tres" id="2_1nsbc"]
+[ext_resource type="PackedScene" uid="uid://bolcdyjru4tf2" path="res://Meshes/CollisionOcclusion/Ground_ColOcc.glb" id="2_h7fuv"]
+[ext_resource type="Material" uid="uid://b1crws0o8dm3c" path="res://Materials/Ground/Pavement_Cobblestone_Small.tres" id="3_6mjxb"]
+[ext_resource type="Material" uid="uid://cyxqjuvathim8" path="res://Materials/Ground/Pavement_Cobblestone_Big.tres" id="4_b2wid"]
+[ext_resource type="Material" uid="uid://yyjlkr1o1s61" path="res://Materials/Ground/Pavement_Brick.tres" id="5_tt3nh"]
+[ext_resource type="Material" uid="uid://cvyv4xmbk2x5b" path="res://Materials/Ground/Pavement_Cobblestone_02.tres" id="6_5kcuh"]
+[ext_resource type="Material" uid="uid://cqvv0g76deyid" path="res://Materials/Ground/Pavement_Cobblestone_Wet.tres" id="7_r7ip5"]
+[ext_resource type="Material" uid="uid://dhtdy1tq3oauo" path="res://Materials/Ground/Pavement_Manhole_Cover.tres" id="8_glmhl"]
+
+[node name="Ground" instance=ExtResource("1_y6r4x")]
+
+[node name="Ground_ColOcc" parent="." index="0" instance=ExtResource("2_h7fuv")]
+
+[node name="Bistro_Research_Exterior_Paris_Street_13_NormalFix_14" parent="Ground_ColOcc" index="0"]
+visible = false
+
+[node name="Bistro_Research_Exterior_Paris_Street_13_NormalFix_14" parent="." index="1"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("2_1nsbc")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6181" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_1nsbc")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6183" parent="." index="3"]
+surface_material_override/0 = ExtResource("3_6mjxb")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6185_0" parent="Bistro_Research_Exterior_Paris_Street_6185" index="0"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("3_6mjxb")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6185_1" parent="Bistro_Research_Exterior_Paris_Street_6185" index="1"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("4_b2wid")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6185_2" parent="Bistro_Research_Exterior_Paris_Street_6185" index="2"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("5_tt3nh")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6185_3" parent="Bistro_Research_Exterior_Paris_Street_6185" index="3"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("6_5kcuh")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6225_0" parent="Bistro_Research_Exterior_Paris_Street_6225" index="0"]
+lod_bias = 4.671
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6225_1" parent="Bistro_Research_Exterior_Paris_Street_6225" index="1"]
+lod_bias = 4.671
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6231_0" parent="Bistro_Research_Exterior_Paris_Street_6231" index="0"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6231_1" parent="Bistro_Research_Exterior_Paris_Street_6231" index="1"]
+lod_bias = 5.0
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Bistro_Research_Exterior_Paris_Street_6251" parent="." index="7"]
+surface_material_override/0 = ExtResource("2_1nsbc")
+
+[node name="Manhole2_0" parent="Manhole2" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole2_1" parent="Manhole2" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Manhole3_0" parent="Manhole3" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole3_1" parent="Manhole3" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Manhole4_0" parent="Manhole4" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole4_1" parent="Manhole4" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Manhole5_0" parent="Manhole5" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole5_1" parent="Manhole5" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Manhole6_0" parent="Manhole6" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole6_1" parent="Manhole6" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[node name="Manhole_2_0" parent="Manhole_2" index="0"]
+surface_material_override/0 = ExtResource("8_glmhl")
+
+[node name="Manhole_2_1" parent="Manhole_2" index="1"]
+surface_material_override/0 = ExtResource("7_r7ip5")
+
+[editable path="Ground_ColOcc"]

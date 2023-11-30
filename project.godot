@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="LumberyardBistro_Godot4"
+config/name="Bistro-Demo-Tweaked"
+config/description="Lumberyard Bistro demo for Godot"
+config/version="1.0"
 run/main_scene="res://MainScene.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Textures/bistro_godot_loading.png"
+boot_splash/fullsize=false
+config/icon="res://Textures/bistro_godot.png"
 
 [display]
 
@@ -28,10 +33,10 @@ window/vsync/vsync_mode=0
 
 theme/default_font_hinting=0
 theme/default_font_subpixel_positioning=0
+theme/default_font_multichannel_signed_distance_field=true
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=2
 lights_and_shadows/use_physical_light_units=true
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
@@ -41,9 +46,11 @@ camera/depth_of_field/depth_of_field_bokeh_quality=2
 environment/ssao/half_size=false
 environment/ssil/half_size=false
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+scaling_3d/mode=2
 textures/decals/filter=5
 textures/light_projectors/filter=5
 environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
 global_illumination/sdfgi/probe_ray_count=2
-anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/use_taa=true
+lights_and_shadows/positional_shadow/atlas_size=2048

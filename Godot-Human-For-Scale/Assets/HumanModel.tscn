@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://73ou0sg30v8f"]
+
+[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="1_3duc2"]
+[ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/AnimationEventReciever.gd" id="2_18j06"]
+[ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="2_be2ba"]
+[ext_resource type="Animation" uid="uid://cacaxk4m7r6l2" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Fall.res" id="4_e7ttl"]
+[ext_resource type="Animation" uid="uid://dqxlpgixueq2i" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Idle.res" id="5_ajc8x"]
+[ext_resource type="Animation" uid="uid://bg3x42c3k07nv" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Jog.res" id="6_mcv6c"]
+[ext_resource type="Animation" uid="uid://da1wm70ulke5c" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Run.res" id="7_lqrri"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_brjo7"]
+_data = {
+"Fall": ExtResource("4_e7ttl"),
+"Idle": ExtResource("5_ajc8x"),
+"Jog": ExtResource("6_mcv6c"),
+"Run": ExtResource("7_lqrri")
+}
+
+[node name="HumanModel" instance=ExtResource("1_3duc2")]
+script = ExtResource("2_18j06")
+
+[node name="root" parent="." index="0"]
+transform = Transform3D(0.999967, 0.0077059, -0.00241611, -0.00763905, 0.999618, 0.0265542, 0.00261981, -0.0265349, 0.999644, -0.00898413, -0.00822556, 0.0141531)
+
+[node name="Skeleton3D" parent="root" index="0"]
+bones/1/rotation = Quaternion(0.623379, 0.170163, 0.75412, 0.117246)
+bones/1/scale = Vector3(0.999998, 1.02948, 1)
+bones/2/rotation = Quaternion(-0.0339712, -0.0766686, 0.258708, 0.962309)
+bones/3/rotation = Quaternion(0.397912, 0.446693, -0.312425, 0.737917)
+bones/3/scale = Vector3(0.999276, 0.988352, 0.984898)
+bones/4/rotation = Quaternion(0.0445843, 0.944741, 0.324771, 6.96345e-05)
+bones/4/scale = Vector3(1.00017, 0.98632, 1.01332)
+bones/6/rotation = Quaternion(-0.690329, 0.159451, 0.701374, -0.0780745)
+bones/6/scale = Vector3(0.999997, 1.01196, 0.999997)
+bones/7/rotation = Quaternion(-0.0197414, 0.035997, -0.168215, 0.984895)
+bones/8/rotation = Quaternion(0.342098, -0.453762, 0.278344, 0.774334)
+bones/8/scale = Vector3(0.999917, 0.994349, 0.994111)
+bones/9/rotation = Quaternion(-0.0447127, 0.946473, 0.319672, 0.000639243)
+bones/9/scale = Vector3(1.00002, 0.994301, 1.00566)
+bones/11/rotation = Quaternion(-0.114042, -0.0181651, -0.00332899, 0.993304)
+bones/12/rotation = Quaternion(-0.052832, -0.0262887, -0.00159427, 0.998256)
+bones/13/rotation = Quaternion(0.189847, 0.0136276, -0.0115613, 0.981651)
+bones/14/rotation = Quaternion(-0.147989, -0.00124491, -0.0145878, 0.988881)
+bones/16/rotation = Quaternion(-0.466666, 0.616072, -0.478841, -0.416402)
+bones/17/rotation = Quaternion(0.506634, 0.586758, 0.387859, 0.498601)
+bones/18/rotation = Quaternion(0.183408, -2.99254e-09, 0.145737, 0.972174)
+bones/18/scale = Vector3(1, 0.999753, 1)
+bones/19/rotation = Quaternion(-0.0720714, 0.450376, -0.124458, 0.881179)
+bones/19/scale = Vector3(0.999999, 1.00024, 1)
+bones/20/rotation = Quaternion(-0.0722769, -0.812991, 0.176529, 0.550144)
+bones/21/rotation = Quaternion(0.00266666, -0.347864, 0.0252803, 0.9372)
+bones/22/rotation = Quaternion(-0.00242808, 0.437221, -0.0326412, 0.898758)
+bones/24/rotation = Quaternion(-0.24984, -0.0106175, -0.0327461, 0.967675)
+bones/25/rotation = Quaternion(-0.192278, 0.00222989, -0.0241458, 0.981041)
+bones/26/rotation = Quaternion(-0.0732215, 0.0165047, -0.0106947, 0.997122)
+bones/28/rotation = Quaternion(-0.173602, -0.0121098, -0.0508073, 0.98343)
+bones/29/rotation = Quaternion(-0.252216, 0.00484741, -0.0332366, 0.967088)
+bones/30/rotation = Quaternion(-0.0464128, 0.0115742, -0.00695809, 0.998831)
+bones/32/rotation = Quaternion(-0.0916006, -0.00785466, -0.0305605, 0.995296)
+bones/33/rotation = Quaternion(-0.331406, 0.00311819, -0.0420273, 0.942547)
+bones/34/rotation = Quaternion(-0.0693759, -0.00208656, -0.00901579, 0.997548)
+bones/36/rotation = Quaternion(0.427543, 0.63573, -0.535348, 0.355608)
+bones/37/rotation = Quaternion(-0.47353, 0.596702, 0.377069, -0.526816)
+bones/38/rotation = Quaternion(0.197979, -1.54881e-07, -0.157316, 0.9675)
+bones/38/scale = Vector3(1, 0.999931, 1)
+bones/39/rotation = Quaternion(-0.158283, -0.376941, 0.0816361, 0.908954)
+bones/39/scale = Vector3(0.999999, 1.00007, 1)
+bones/40/rotation = Quaternion(0.0368374, 0.719893, -0.229686, 0.653943)
+bones/41/rotation = Quaternion(-0.116325, 0.328737, -0.0801228, 0.933799)
+bones/42/rotation = Quaternion(-0.0309248, -0.438234, 0.0121705, 0.898247)
+bones/44/rotation = Quaternion(-0.284929, 0.00105015, 0.00155206, 0.958547)
+bones/45/rotation = Quaternion(-0.150705, -0.00229084, 0.0188063, 0.988397)
+bones/46/rotation = Quaternion(-0.0958382, -0.000542188, 0.0122974, 0.995321)
+bones/48/rotation = Quaternion(-0.233364, 0.0028998, 0.00652633, 0.972363)
+bones/49/rotation = Quaternion(-0.20706, -0.0049347, 0.0270706, 0.977941)
+bones/50/rotation = Quaternion(-0.128683, 0.00229792, 0.0172236, 0.991534)
+bones/52/rotation = Quaternion(-0.180132, 0.00343017, -0.00411695, 0.983628)
+bones/53/rotation = Quaternion(-0.304913, -0.00323433, 0.0384061, 0.9516)
+bones/54/rotation = Quaternion(-0.150196, 0.00207417, 0.0192268, 0.988467)
+
+[node name="RightFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="1"]
+transform = Transform3D(0.904752, -0.414882, 0.0687062, 0.00636296, -0.153731, -0.999411, 0.425688, 0.885467, -0.132885, -0.220493, 0.02089, 0.0610073)
+bone_name = "ball.r"
+bone_idx = 9
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="root/Skeleton3D/RightFootLocation" index="0"]
+stream = ExtResource("2_be2ba")
+
+[node name="LeftFootLocation" type="BoneAttachment3D" parent="root/Skeleton3D" index="2"]
+transform = Transform3D(0.946923, 0.306886, -0.0410573, 0.000469239, -0.138152, -1.01809, -0.319583, 0.91721, -0.115601, 0.164829, 0.0227495, 0.0514789)
+bone_name = "ball.l"
+bone_idx = 4
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="root/Skeleton3D/LeftFootLocation" index="0"]
+stream = ExtResource("2_be2ba")
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_brjo7")
+}
+playback_default_blend_time = 0.2

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="ScalabilitySettings" load_steps=6 format=3 uid="uid://cn0mwoakbtfhb"]
+
+[ext_resource type="Script" path="res://Scripts/Settings.gd" id="1_6ypcq"]
+[ext_resource type="Script" path="res://Scripts/ScalabilitySettings.gd" id="1_fleix"]
+
+[sub_resource type="Resource" id="Resource_1wfjf"]
+script = ExtResource("1_6ypcq")
+sun_angle = 0.5
+ssr = true
+ssao = false
+ssil = true
+sdfgi = true
+night_shadows = true
+msaa = 0
+fxaa = 0
+scaling = 2
+
+[sub_resource type="Resource" id="Resource_qtm60"]
+script = ExtResource("1_6ypcq")
+sun_angle = 0.0
+ssr = false
+ssao = true
+ssil = false
+sdfgi = false
+night_shadows = false
+msaa = 0
+fxaa = 0
+scaling = 2
+
+[sub_resource type="Resource" id="Resource_sovee"]
+script = ExtResource("1_6ypcq")
+sun_angle = 0.0
+ssr = false
+ssao = true
+ssil = false
+sdfgi = true
+night_shadows = false
+msaa = 0
+fxaa = 0
+scaling = 2
+
+[resource]
+script = ExtResource("1_fleix")
+low = SubResource("Resource_qtm60")
+normal = SubResource("Resource_sovee")
+high = SubResource("Resource_1wfjf")

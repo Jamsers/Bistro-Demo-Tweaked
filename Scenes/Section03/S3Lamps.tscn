@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://8lyr6devevqc"]
+
+[ext_resource type="PackedScene" uid="uid://dqjmxqg1uyr11" path="res://Meshes/Section03/S3Lamps.glb" id="1_at2d6"]
+[ext_resource type="PackedScene" uid="uid://cbmkkvsng1huw" path="res://Meshes/CollisionOcclusion/Section03/S3Lamps_ColOcc.glb" id="2_0b35g"]
+[ext_resource type="Material" uid="uid://dartc2dlysfa5" path="res://Materials/Lights/Streetlight_Metal.tres" id="3_wkky4"]
+[ext_resource type="Material" uid="uid://t1kioepb34kc" path="res://Materials/Lights/StreetLight_Bulb.tres" id="5_8eghs"]
+[ext_resource type="Material" uid="uid://dfcnpxsv3ak8d" path="res://Materials/Lights/Emissive_StreeLight.tres" id="5_j78o5"]
+
+[node name="S3Lamps" instance=ExtResource("1_at2d6")]
+
+[node name="S3Lamps_ColOcc" parent="." index="0" instance=ExtResource("2_0b35g")]
+
+[node name="Bistro_Research_Exterior_Paris_Streetlight_Glass_01a___3__6323" parent="S3Lamps_ColOcc" index="0"]
+visible = false
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_0" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="0"]
+surface_material_override/0 = ExtResource("3_wkky4")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="1"]
+gi_mode = 2
+surface_material_override/0 = ExtResource("3_wkky4")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_2" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="2"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("5_8eghs")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_3" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="3"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("3_wkky4")
+
+[node name="Bistro_Research_Exterior_Paris_Streetlight_Glass_01a___3__6323" parent="." index="2"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("5_j78o5")
+
+[editable path="S3Lamps_ColOcc"]

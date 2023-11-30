@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckb5gvf1swqgf"]
+
+[ext_resource type="PackedScene" uid="uid://6s1ov1j83pe7" path="res://Meshes/Section05/S5Lamps.glb" id="1_0sdqp"]
+[ext_resource type="PackedScene" uid="uid://c5xnmwnpnjse5" path="res://Meshes/CollisionOcclusion/Section05/S5Lamps_ColOcc.glb" id="2_o3ucd"]
+[ext_resource type="Material" uid="uid://dartc2dlysfa5" path="res://Materials/Lights/Streetlight_Metal.tres" id="3_56e8j"]
+[ext_resource type="Material" uid="uid://t1kioepb34kc" path="res://Materials/Lights/StreetLight_Bulb.tres" id="5_fnrgv"]
+[ext_resource type="Material" uid="uid://dfcnpxsv3ak8d" path="res://Materials/Lights/Emissive_StreeLight.tres" id="6_cbu1c"]
+
+[node name="S5Lamps" instance=ExtResource("1_0sdqp")]
+
+[node name="S5Lamps_ColOcc" parent="." index="0" instance=ExtResource("2_o3ucd")]
+
+[node name="Bistro_Research_Exterior_Paris_Streetlight_Glass_01a__6315" parent="S5Lamps_ColOcc" index="0"]
+visible = false
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_0" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" index="0"]
+surface_material_override/0 = ExtResource("3_56e8j")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" index="1"]
+gi_mode = 2
+surface_material_override/0 = ExtResource("3_56e8j")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_2" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" index="2"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("5_fnrgv")
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a__6259_3" parent="Bistro_Research_Exterior_Paris_StreetLight_01a__6259" index="3"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("3_56e8j")
+
+[node name="Bistro_Research_Exterior_Paris_Streetlight_Glass_01a__6315" parent="." index="2"]
+cast_shadow = 0
+gi_mode = 2
+surface_material_override/0 = ExtResource("6_cbu1c")
+
+[editable path="S5Lamps_ColOcc"]

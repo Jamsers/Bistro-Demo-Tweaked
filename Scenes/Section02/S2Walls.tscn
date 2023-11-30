@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://u5uvyrtg8ns"]
+
+[ext_resource type="PackedScene" uid="uid://ceslr652nfvmu" path="res://Meshes/Section02/S2Walls.glb" id="1_uy3vq"]
+[ext_resource type="Material" uid="uid://bbgxykd37frx0" path="res://Materials/Stone/Brick_Small_Red_Blend.tres" id="2_ggaqj"]
+[ext_resource type="PackedScene" uid="uid://bl31nqp8gmv0q" path="res://Meshes/CollisionOcclusion/Section02/S2Walls_ColOcc.glb" id="2_ysgwv"]
+[ext_resource type="Material" uid="uid://bal8eo7owcg2n" path="res://Materials/Stone/Concrete.tres" id="3_iijoh"]
+
+[node name="S2Walls" instance=ExtResource("1_uy3vq")]
+
+[node name="S2Walls_ColOcc" parent="." index="0" instance=ExtResource("2_ysgwv")]
+
+[node name="Bistro_Research_Exterior_paris_building_06_5311" parent="S2Walls_ColOcc" index="0"]
+visible = false
+
+[node name="Bistro_Research_Exterior_paris_building_06_5311" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_ggaqj")
+
+[node name="Bistro_Research_Exterior_paris_building_06_5313" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_iijoh")
+
+[editable path="S2Walls_ColOcc"]

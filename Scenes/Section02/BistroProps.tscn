@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpgfbsr7n2bm8"]
+
+[ext_resource type="PackedScene" uid="uid://bradsegij6aqv" path="res://Meshes/Section02/BistroProps.glb" id="1_bnlab"]
+[ext_resource type="PackedScene" uid="uid://bwtem7qxjxl6j" path="res://Meshes/CollisionOcclusion/Section02/BistroProps_ColOcc.glb" id="2_nduu3"]
+[ext_resource type="Material" uid="uid://s4fjd3sv062x" path="res://Materials/Nature/Foliage_Hedges.tres" id="2_s7hyy"]
+[ext_resource type="Material" uid="uid://dldeiqc2dro4q" path="res://Materials/Nature/Foliage_Paris_Flowers.tres" id="3_ugqmv"]
+[ext_resource type="Material" uid="uid://ddvvfp7jwl5m5" path="res://Materials/Stone/PlantPots.tres" id="4_cq1ef"]
+[ext_resource type="Material" uid="uid://bw487gtmyo1ga" path="res://Materials/Metal/SideWalkBarrier.tres" id="5_l23u6"]
+
+[node name="BistroProps" instance=ExtResource("1_bnlab")]
+
+[node name="BistroProps_ColOcc" parent="." index="0" instance=ExtResource("2_nduu3")]
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A6_6147" parent="BistroProps_ColOcc" index="0"]
+visible = false
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3939" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3941" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3943" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3945" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3947" parent="." index="5"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3949" parent="." index="6"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3951" parent="." index="7"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3953" parent="." index="8"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_bux_hedge_ball_small_3955" parent="." index="9"]
+surface_material_override/0 = ExtResource("2_s7hyy")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01e2_6055" parent="." index="10"]
+surface_material_override/0 = ExtResource("3_ugqmv")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01e5_6061" parent="." index="11"]
+surface_material_override/0 = ExtResource("3_ugqmv")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01e7_6065" parent="." index="12"]
+surface_material_override/0 = ExtResource("3_ugqmv")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01e9_6069" parent="." index="13"]
+surface_material_override/0 = ExtResource("3_ugqmv")
+
+[node name="Bistro_Research_Exterior_Paris_flowers_01e_6051" parent="." index="14"]
+surface_material_override/0 = ExtResource("3_ugqmv")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A1_6137" parent="." index="15"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A2_6139" parent="." index="16"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A3_6141" parent="." index="17"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A4_6143" parent="." index="18"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A5_6145" parent="." index="19"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A6_6147" parent="." index="20"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A7_6149" parent="." index="21"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A8_6151" parent="." index="22"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_PlantPot_01A_6135" parent="." index="23"]
+surface_material_override/0 = ExtResource("4_cq1ef")
+
+[node name="Bistro_Research_Exterior_Paris_SidewalkBarrier_01A1_6171" parent="." index="24"]
+surface_material_override/0 = ExtResource("5_l23u6")
+
+[node name="Bistro_Research_Exterior_Paris_SidewalkBarrier_01A2_6173" parent="." index="25"]
+surface_material_override/0 = ExtResource("5_l23u6")
+
+[node name="Bistro_Research_Exterior_Paris_SidewalkBarrier_01A3_6175" parent="." index="26"]
+surface_material_override/0 = ExtResource("5_l23u6")
+
+[node name="Bistro_Research_Exterior_Paris_SidewalkBarrier_01A4_6177" parent="." index="27"]
+surface_material_override/0 = ExtResource("5_l23u6")
+
+[node name="Bistro_Research_Exterior_Paris_SidewalkBarrier_01A_6169" parent="." index="28"]
+surface_material_override/0 = ExtResource("5_l23u6")
+
+[editable path="BistroProps_ColOcc"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5i411e430syd"]
+[gd_scene load_steps=10 format=3 uid="uid://b5i411e430syd"]
 
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
-[ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="2_hypur"]
+[ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
+[ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="3_4ysf2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bca87"]
 radius = 0.285
@@ -9,20 +10,49 @@ height = 1.778
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i0ny5"]
+bounce = 0.25
+
+[sub_resource type="SphereMesh" id="SphereMesh_wewu6"]
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oip5q"]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.235294, 0.235294, 0.235294, 0.784314)
+metallic = 0.1
+roughness = 0.9
+rim_enabled = true
+rim = 0.9
+rim_tint = 0.1
+proximity_fade_enabled = true
+proximity_fade_distance = 0.1
+distance_fade_min_distance = 0.1
+distance_fade_max_distance = 0.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ehy56"]
+radius = 0.25
+
 [node name="Human-For-Scale" type="CharacterBody3D"]
+safe_margin = 0.1
 script = ExtResource("1_jh7dy")
 
 [node name="ModelRoot" type="Node3D" parent="."]
 
-[node name="mannequiny-0_3_0" parent="ModelRoot" instance=ExtResource("2_hypur")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="HumanModel" parent="ModelRoot" instance=ExtResource("2_ajgv1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="JumpLandPlayer" type="AudioStreamPlayer3D" parent="ModelRoot"]
+stream = ExtResource("3_4ysf2")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.889, 0)
 shape = SubResource("CapsuleShape3D_bca87")
 
 [node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54387, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.544, 0)
 
 [node name="SpringArm" type="SpringArm3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
@@ -30,5 +60,26 @@ shape = SubResource("SeparationRayShape3D_xemv2")
 spring_length = 2.1
 
 [node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm"]
-current = true
 fov = 60.0
+
+[node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
+target_position = Vector3(0, 0, -10000)
+hit_back_faces = false
+collide_with_areas = true
+
+[node name="DefaultGunObject" type="RigidBody3D" parent="."]
+mass = 7.5
+physics_material_override = SubResource("PhysicsMaterial_i0ny5")
+freeze = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DefaultGunObject"]
+visible = false
+gi_mode = 2
+mesh = SubResource("SphereMesh_wewu6")
+surface_material_override/0 = SubResource("StandardMaterial3D_oip5q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DefaultGunObject"]
+shape = SubResource("SphereShape3D_ehy56")
+disabled = true
