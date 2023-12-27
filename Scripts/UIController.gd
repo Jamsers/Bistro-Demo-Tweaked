@@ -50,7 +50,7 @@ var vram
 func _ready():
 	refresh_performance()
 	
-	_on_res_selected(3)
+	_on_res_selected(2)
 	_on_quality_selected(1)
 	_on_time_selected(2)
 	
