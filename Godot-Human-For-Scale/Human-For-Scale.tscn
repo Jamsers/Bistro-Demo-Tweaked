@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5i411e430syd"]
+[gd_scene load_steps=7 format=3 uid="uid://b5i411e430syd"]
 
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
 [ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
@@ -10,30 +10,9 @@ height = 1.778
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i0ny5"]
-bounce = 0.25
-
-[sub_resource type="SphereMesh" id="SphereMesh_wewu6"]
-radius = 0.25
-height = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oip5q"]
-transparency = 3
-alpha_hash_scale = 1.0
-alpha_antialiasing_mode = 0
-albedo_color = Color(0.235294, 0.235294, 0.235294, 0.784314)
-metallic = 0.1
-roughness = 0.9
-rim_enabled = true
-rim = 0.9
-rim_tint = 0.1
-proximity_fade_enabled = true
-proximity_fade_distance = 0.1
-distance_fade_min_distance = 0.1
-distance_fade_max_distance = 0.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_ehy56"]
-radius = 0.25
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bidro"]
+radius = 0.2
+height = 3.0
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
 safe_margin = 0.01
@@ -69,17 +48,11 @@ target_position = Vector3(0, 0, -10000)
 hit_back_faces = false
 collide_with_areas = true
 
-[node name="DefaultGunObject" type="RigidBody3D" parent="."]
-mass = 7.5
-physics_material_override = SubResource("PhysicsMaterial_i0ny5")
-freeze = true
+[node name="PhysicsGunTrace" type="Area3D" parent="CameraPivot/SpringArm"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DefaultGunObject"]
-visible = false
-gi_mode = 2
-mesh = SubResource("SphereMesh_wewu6")
-surface_material_override/0 = SubResource("StandardMaterial3D_oip5q")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/SpringArm/PhysicsGunTrace"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -1.5)
+shape = SubResource("CapsuleShape3D_bidro")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DefaultGunObject"]
-shape = SubResource("SphereShape3D_ehy56")
-disabled = true
+[node name="PhysicsGun" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38731, 0)

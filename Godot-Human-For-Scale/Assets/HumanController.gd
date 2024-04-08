@@ -7,7 +7,6 @@ extends CharacterBody3D
 
 @export_category("Physics Gun")
 @export var enable_physics_gun: bool = false
-@export var physics_gun_object: RigidBody3D = null
 @export var physics_gun_force: float = 12.5
 @export var physics_gun_initial_distance: float = 1.5
 
@@ -74,6 +73,7 @@ var orig_transform = Transform3D.IDENTITY
 var rigidbody_collisions = []
 var colliders_in_contact = []
 var collider_bump_cooldowns = []
+var physics_gun_object = null
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
@@ -101,9 +101,8 @@ var physics_gun_fire_isdown = false
 @onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
 @onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
-@onready var default_physics_gun_object = $"DefaultGunObject"
-@onready var default_physics_gun_mesh = $"DefaultGunObject/MeshInstance3D"
-@onready var default_physics_gun_collider = $"DefaultGunObject/CollisionShape3D"
+@onready var physics_gun_trace = $"CameraPivot/SpringArm/PhysicsGunTrace"
+@onready var physics_gun = $"PhysicsGun"
 
 @onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
 
@@ -176,7 +175,7 @@ func _process(delta):
 		has_landed_from_fall = false
 	
 	input_velocity = velocity
-	orig_transform = transform
+	orig_transform = global_transform
 	
 	move_and_slide()
 	
@@ -188,54 +187,9 @@ func _process(delta):
 	if !has_stairstepped:
 		collate_rigidbody_interactions()
 
-func stairstepping(starting_transform, delta):
-	if (input_velocity.x == 0 and input_velocity.z == 0) or noclip_on or !is_on_floor() or !is_on_wall():
-		return false
-	
-	var collision_out = KinematicCollision3D.new()
-	var begin_transform = starting_transform
-	var test_direction = Vector3.UP * STEP_HEIGHT
-	# Test to above current position
-	var can_not_step = test_move(begin_transform, test_direction)
-	
-	if can_not_step:
-		return false
-	
-	begin_transform.origin = begin_transform.origin + test_direction
-	test_direction = Vector3(input_velocity.x, 0, input_velocity.z) * delta
-	# Then, test towards player's direction running into wall
-	can_not_step = test_move(begin_transform, test_direction)
-	
-	if can_not_step:
-		return false
-	
-	begin_transform.origin = begin_transform.origin + test_direction
-	test_direction = Vector3.DOWN * STEP_HEIGHT
-	# Then, test downwards
-	can_not_step = test_move(begin_transform, test_direction, collision_out)
-	
-	if can_not_step:
-		# If we hit something, teleport towards hit location
-		begin_transform.origin = begin_transform.origin + collision_out.get_travel()
-	else:
-		# If we hit nothing, teleport back to original height
-		begin_transform.origin = begin_transform.origin + test_direction
-	
-	# Without the buffer the player can fail to make steps, especially at higher framerates
-	var step_landing_buffer = floor_snap_length - safe_margin
-	begin_transform.origin = begin_transform.origin + (Vector3.UP * step_landing_buffer)
-	transform = begin_transform
-	return true
-
-func collate_rigidbody_interactions():
-	for index in get_slide_collision_count():
-		if get_slide_collision(index) == null:
-			continue
-		var collision = get_slide_collision(index)
-		if collision.get_collider() is RigidBody3D:
-			rigidbody_collisions.append(collision)
-
 func _physics_process(delta):
+	process_physics_gun(delta)
+	
 	var collide_force = COLLIDE_FORCE * delta
 	var central_multiplier = input_velocity.length() * collide_force
 	
@@ -281,6 +235,53 @@ func _physics_process(delta):
 			non_expired_cooldowns.append(cooldown)
 	
 	collider_bump_cooldowns = non_expired_cooldowns
+
+func stairstepping(starting_transform, delta):
+	if (input_velocity.x == 0 and input_velocity.z == 0) or noclip_on or !is_on_floor() or !is_on_wall():
+		return false
+	
+	var collision_out = KinematicCollision3D.new()
+	var begin_transform = starting_transform
+	var test_direction = Vector3.UP * STEP_HEIGHT
+	# Test to above current position
+	var can_not_step = test_move(begin_transform, test_direction)
+	
+	if can_not_step:
+		return false
+	
+	begin_transform.origin = begin_transform.origin + test_direction
+	test_direction = Vector3(input_velocity.x, 0, input_velocity.z) * delta
+	# Then, test towards player's direction running into wall
+	can_not_step = test_move(begin_transform, test_direction)
+	
+	if can_not_step:
+		return false
+	
+	begin_transform.origin = begin_transform.origin + test_direction
+	test_direction = Vector3.DOWN * STEP_HEIGHT
+	# Then, test downwards
+	can_not_step = test_move(begin_transform, test_direction, collision_out)
+	
+	if can_not_step:
+		# If we hit something, teleport towards hit location
+		begin_transform.origin = begin_transform.origin + collision_out.get_travel()
+	else:
+		# If we hit nothing, teleport back to original height
+		begin_transform.origin = begin_transform.origin + test_direction
+	
+	# Without the buffer the player can fail to make steps, especially at higher framerates
+	var step_landing_buffer = floor_snap_length - safe_margin
+	begin_transform.origin = begin_transform.origin + (Vector3.UP * step_landing_buffer)
+	global_transform = begin_transform
+	return true
+
+func collate_rigidbody_interactions():
+	for index in get_slide_collision_count():
+		if get_slide_collision(index) == null:
+			continue
+		var collision = get_slide_collision(index)
+		if collision.get_collider() is RigidBody3D:
+			rigidbody_collisions.append(collision)
 
 func _on_right_footstep():
 	if !enable_audio:
@@ -418,35 +419,72 @@ func process_shoulder_swap(delta):
 	shoulder_cooldown = clamp(shoulder_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func process_physics_gun_fire(delta):
+	if !enable_physics_gun:
+		return
+	
 	if physics_gun_fire_isdown and physics_gun_cooldown == 0.0:
-		if physics_gun_object == null:
-			init_physics_gun_default()
-		fire_physics_gun()
+		if physics_gun_has_grabbed:
+			fire_physics_gun()
+		else:
+			grab_physics_gun()
 		physics_gun_cooldown = TOGGLE_COOLDOWN
 	
 	physics_gun_cooldown -= delta
 	physics_gun_cooldown = clamp(physics_gun_cooldown, 0.0, TOGGLE_COOLDOWN)
 
-func init_physics_gun_default():
-	if !enable_physics_gun:
-		return
-	physics_gun_object = default_physics_gun_object
-	remove_child(default_physics_gun_object)
-	get_tree().root.get_child(0).add_child(default_physics_gun_object)
-	default_physics_gun_object.freeze = false
-	default_physics_gun_mesh.visible = true
-	default_physics_gun_collider.disabled = false
+var physics_gun_has_grabbed = false
+
+func grab_physics_gun():
+	var rigidbodies_detected = []
+	
+	for node in physics_gun_trace.get_overlapping_bodies():
+		if node is RigidBody3D:
+			rigidbodies_detected.append(node)
+			
+	rigidbodies_detected.sort_custom(rigidbody_distance_sort)
+	
+	if rigidbodies_detected.size() != 0 and rigidbodies_detected[0] != null:
+		physics_gun_object = rigidbodies_detected[0]
+		physics_gun_has_grabbed = true
+
+func rigidbody_distance_sort(rigidbody_a, rigidbody_b):
+	if global_position.distance_to(rigidbody_a.global_position) < global_position.distance_to(rigidbody_b.global_position):
+		return true
+	else:
+		return false
 
 func fire_physics_gun():
-	if !enable_physics_gun:
-		return
-	if physics_gun_object == null:
-		return
-	
+	physics_gun_has_grabbed = false
 	physics_gun_object.linear_velocity = Vector3.ZERO
 	physics_gun_object.angular_velocity = Vector3.ZERO
-	physics_gun_object.global_position = camera_pivot.global_position + (-camera_pivot.basis.z * physics_gun_initial_distance)
 	physics_gun_object.apply_central_impulse(-camera_pivot.basis.z * (physics_gun_force * physics_gun_object.mass))
+
+func process_physics_gun(delta):
+	if !enable_physics_gun or !physics_gun_has_grabbed:
+		print("physics_gun_has_grabbed = false")
+		return
+	
+	if physics_gun_object == null:
+		physics_gun_has_grabbed = false
+		return
+	
+	var physics_gun_distance = 3
+	var physics_gun_hold_location = physics_gun.global_position + (-camera_pivot.global_basis.z * physics_gun_distance)
+	
+	var physics_gun_suck_force = 1000.0
+	var physics_gun_suck_min_force = 100.0
+	
+	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * physics_gun_suck_force
+	physics_gun_suck = physics_gun_suck * physics_gun_object.mass
+	
+	var physics_gun_suck_min = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * physics_gun_suck_min_force
+	physics_gun_suck_min = physics_gun_suck_min * physics_gun_object.mass
+	
+	physics_gun_suck = clamp(physics_gun_suck * physics_gun_hold_location.distance_to(physics_gun_object.global_position), physics_gun_suck_min, physics_gun_suck)
+	physics_gun_suck = physics_gun_suck * delta
+	
+	physics_gun_object.apply_central_force(physics_gun_suck)
+	print("physics_gun_has_grabbed = true")
 
 func cam_transition():
 	if is_cam_transitioning:
