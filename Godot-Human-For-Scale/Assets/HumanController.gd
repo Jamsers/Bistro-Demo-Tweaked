@@ -18,9 +18,9 @@ const DOF_AREA_SIZE_MULTIPLIER = 0.0
 # WARNING: in Godot Jolt physics damping seems to have inconsistent behavior between different physics tick rates
 const PHYSICS_GUN_DAMPING = 30.0
 const PHYSICS_GUN_PULL_FORCE = 800.0
-const PHYSICS_GUN_SHOOT_FORCE = 15.0
+const PHYSICS_GUN_SHOOT_FORCE = 13.0
 const PHYSICS_GUN_HOLD_DISTANCE = 2.5
-const PHYSICS_GUN_PULL_RANGE = 50
+const PHYSICS_GUN_PULL_RANGE = 15.0
 # --- Stuff you might be interested in tweaking ---
 
 const FP_CAMERA_HEIGHT = 1.655
@@ -42,8 +42,8 @@ const GRAVITY_FORCE = 50.0
 const COLLIDE_FORCE = 200.0
 const MAX_PUSHABLE_WEIGHT = 200.0
 const PHYSICS_GUN_PULL_MARGIN = 2.0
-const PHYSICS_GUN_PULL_WIDTH = 0.2
-const TOGGLE_COOLDOWN = 0.5
+const PHYSICS_GUN_PULL_WIDTH = 0.8
+const TOGGLE_COOLDOWN = 0.25
 const DOF_MOVE_SPEED = 40.0
 const DOF_INTENSITY = 0.25
 const BUMP_AUDIO_TIMEOUT = 0.15
@@ -80,6 +80,7 @@ var physics_gun_has_grabbed = false
 var physics_gun_object = null
 var physis_gun_object_linear_damp = 0.0
 var physis_gun_object_angular_damp = 0.0
+var physics_gun_hit_point = Vector3.ZERO
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
@@ -107,11 +108,9 @@ var physics_gun_fire_isdown = false
 @onready var right_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/RightFootLocation/FootstepPlayer"
 @onready var left_footstep = $"ModelRoot/HumanModel/root/Skeleton3D/LeftFootLocation/FootstepPlayer"
 @onready var jump_land_audio = $"ModelRoot/JumpLandPlayer"
-@onready var physics_object_collector = $"CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollector"
-@onready var physics_object_collector_collider = $"CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollector/CollisionShape3D"
-@onready var physics_object_collider = $"CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollider"
-@onready var physics_object_collider_collider = $"CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollider/CollisionShape3D"
-@onready var physics_gun = $"PhysicsGun"
+@onready var physics_object_collector = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector"
+@onready var physics_object_collector_collider = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector/CollisionShape3D"
+@onready var physics_gun_raycast = $"CameraPivot/SpringArm/PhysicsGun/RayCast3D"
 
 @onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
 
@@ -136,8 +135,7 @@ func _ready():
 	physics_object_collector_collider.shape.height = PHYSICS_GUN_PULL_RANGE
 	physics_object_collector_collider.shape.radius = PHYSICS_GUN_PULL_WIDTH
 	physics_object_collector_collider.position.z = -(PHYSICS_GUN_PULL_RANGE/2)
-	physics_object_collider_collider.shape.radius = PHYSICS_GUN_PULL_WIDTH
-	physics_object_collider_collider.position.z = -PHYSICS_GUN_PULL_WIDTH
+	physics_gun_raycast.target_position.z = -PHYSICS_GUN_PULL_RANGE
 	
 	camera_pivot.global_rotation = y_rotation
 	model_root.global_rotation = y_rotation
@@ -450,16 +448,13 @@ func process_physics_gun_fire(delta):
 func grab_physics_gun():
 	var rigidbodies_detected = []
 	
-	var grab_hit = KinematicCollision3D.new()
-	var has_hit = physics_object_collider.test_move(physics_object_collider.global_transform, -camera_pivot.basis.z * PHYSICS_GUN_PULL_RANGE, grab_hit)
-	
 	for node in physics_object_collector.get_overlapping_bodies():
 		if node is RigidBody3D:
 			rigidbodies_detected.append(node)
 	
-	if has_hit:
+	if physics_gun_raycast.is_colliding():
 		print("has_hit")
-		physics_gun_hit_point = grab_hit.get_position()
+		physics_gun_hit_point = physics_gun_raycast.get_collision_point()
 	else:
 		print("has_not_hit")
 		physics_gun_hit_point = spring_arm.global_position
@@ -477,8 +472,6 @@ func grab_physics_gun():
 	physics_gun_object.angular_damp = PHYSICS_GUN_DAMPING
 	
 	physics_gun_has_grabbed = true
-
-var physics_gun_hit_point = Vector3.ZERO
 
 func rigidbody_distance_sort(rigidbody_a, rigidbody_b):
 	if physics_gun_hit_point.distance_to(rigidbody_a.global_position) < physics_gun_hit_point.distance_to(rigidbody_b.global_position):
@@ -506,7 +499,7 @@ func process_physics_gun(delta):
 		physics_gun_has_grabbed = false
 		return
 	
-	var physics_gun_hold_location = physics_gun.global_position + (-camera_pivot.global_basis.z * PHYSICS_GUN_HOLD_DISTANCE)
+	var physics_gun_hold_location = camera_pivot.global_position + (-camera_pivot.global_basis.z * PHYSICS_GUN_HOLD_DISTANCE)
 	
 	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * PHYSICS_GUN_PULL_FORCE
 	physics_gun_suck = physics_gun_suck * physics_gun_object.mass
