@@ -78,8 +78,8 @@ var colliders_in_contact = []
 var collider_bump_cooldowns = []
 var physics_gun_has_grabbed = false
 var physics_gun_object = null
-var physis_gun_object_linear_damp = 0.0
-var physis_gun_object_angular_damp = 0.0
+var physics_gun_object_linear_damp = 0.0
+var physics_gun_object_angular_damp = 0.0
 var physics_gun_hit_point = Vector3.ZERO
 
 var mouse_movement = Vector2.ZERO
@@ -414,6 +414,9 @@ func process_cam_toggle(delta):
 	cam_toggle_cooldown = clamp(cam_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func process_cam_zoom(delta):
+	if !mousecapture_on:
+		return
+	
 	if zoom_isdown and cam_zoom_cooldown == 0.0 and !is_cam_transitioning:
 		cam_is_zoomed = !cam_is_zoomed
 		cam_zoom_cooldown = TOGGLE_COOLDOWN
@@ -432,7 +435,7 @@ func process_shoulder_swap(delta):
 	shoulder_cooldown = clamp(shoulder_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func process_physics_gun_fire(delta):
-	if !enable_physics_gun:
+	if !enable_physics_gun or !mousecapture_on:
 		return
 	
 	if physics_gun_fire_isdown and physics_gun_cooldown == 0.0:
@@ -453,10 +456,8 @@ func grab_physics_gun():
 			rigidbodies_detected.append(node)
 	
 	if physics_gun_raycast.is_colliding():
-		print("has_hit")
 		physics_gun_hit_point = physics_gun_raycast.get_collision_point()
 	else:
-		print("has_not_hit")
 		physics_gun_hit_point = spring_arm.global_position
 	
 	rigidbodies_detected.sort_custom(rigidbody_distance_sort)
@@ -466,8 +467,8 @@ func grab_physics_gun():
 	
 	physics_gun_object = rigidbodies_detected[0]
 	
-	physis_gun_object_linear_damp = physics_gun_object.linear_damp
-	physis_gun_object_angular_damp = physics_gun_object.angular_damp
+	physics_gun_object_linear_damp = physics_gun_object.linear_damp
+	physics_gun_object_angular_damp = physics_gun_object.angular_damp
 	physics_gun_object.linear_damp = PHYSICS_GUN_DAMPING
 	physics_gun_object.angular_damp = PHYSICS_GUN_DAMPING
 	
@@ -482,8 +483,8 @@ func rigidbody_distance_sort(rigidbody_a, rigidbody_b):
 func fire_physics_gun():
 	physics_gun_has_grabbed = false
 	
-	physics_gun_object.linear_damp = physis_gun_object_linear_damp
-	physics_gun_object.angular_damp = physis_gun_object_angular_damp
+	physics_gun_object.linear_damp = physics_gun_object_linear_damp
+	physics_gun_object.angular_damp = physics_gun_object_angular_damp
 	
 	physics_gun_object.linear_velocity = Vector3.ZERO
 	physics_gun_object.angular_velocity = Vector3.ZERO
@@ -501,11 +502,13 @@ func process_physics_gun(delta):
 	
 	var physics_gun_hold_location = camera_pivot.global_position + (-camera_pivot.global_basis.z * PHYSICS_GUN_HOLD_DISTANCE)
 	
+	var lerp_force = physics_gun_hold_location.distance_to(physics_gun_object.global_position) / PHYSICS_GUN_PULL_MARGIN
+	lerp_force = clamp(lerp_force, 0.0, 1.0)
+	
 	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * PHYSICS_GUN_PULL_FORCE
 	physics_gun_suck = physics_gun_suck * physics_gun_object.mass
-	
-	var lerp_force = clamp(physics_gun_hold_location.distance_to(physics_gun_object.global_position)/PHYSICS_GUN_PULL_MARGIN, 0.0, 1.0)
 	physics_gun_suck = lerp(Vector3.ZERO, physics_gun_suck, lerp_force)
+	
 	physics_gun_object.constant_force = physics_gun_suck
 
 func cam_transition():
