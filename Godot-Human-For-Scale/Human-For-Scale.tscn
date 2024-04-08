@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5i411e430syd"]
+[gd_scene load_steps=8 format=3 uid="uid://b5i411e430syd"]
 
 [ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
 [ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
@@ -10,9 +10,11 @@ height = 1.778
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_xemv2"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bidro"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0vq4h"]
 radius = 0.2
-height = 50.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kyxew"]
+radius = 0.2
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
 safe_margin = 0.01
@@ -48,11 +50,19 @@ target_position = Vector3(0, 0, -10000)
 hit_back_faces = false
 collide_with_areas = true
 
-[node name="PhysicsGunTrace" type="Area3D" parent="CameraPivot/SpringArm"]
+[node name="PhysicsGunTrace" type="Node3D" parent="CameraPivot/SpringArm"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/SpringArm/PhysicsGunTrace"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -25)
-shape = SubResource("CapsuleShape3D_bidro")
+[node name="PhysicsObjectCollector" type="Area3D" parent="CameraPivot/SpringArm/PhysicsGunTrace"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollector"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -1)
+shape = SubResource("CapsuleShape3D_0vq4h")
+
+[node name="PhysicsObjectCollider" type="AnimatableBody3D" parent="CameraPivot/SpringArm/PhysicsGunTrace"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/SpringArm/PhysicsGunTrace/PhysicsObjectCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+shape = SubResource("SphereShape3D_kyxew")
 
 [node name="PhysicsGun" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38731, 0)
