@@ -12,7 +12,7 @@ height = 1.778
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bidro"]
 radius = 0.2
-height = 3.0
+height = 50.0
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
 safe_margin = 0.01
@@ -51,7 +51,7 @@ collide_with_areas = true
 [node name="PhysicsGunTrace" type="Area3D" parent="CameraPivot/SpringArm"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPivot/SpringArm/PhysicsGunTrace"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -1.5)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -25)
 shape = SubResource("CapsuleShape3D_bidro")
 
 [node name="PhysicsGun" type="Node3D" parent="."]

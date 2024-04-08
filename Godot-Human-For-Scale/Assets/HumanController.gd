@@ -471,8 +471,9 @@ func process_physics_gun(delta):
 	var physics_gun_distance = 3
 	var physics_gun_hold_location = physics_gun.global_position + (-camera_pivot.global_basis.z * physics_gun_distance)
 	
-	var physics_gun_suck_force = 1000.0
+	var physics_gun_suck_force = 50000.0
 	var physics_gun_suck_min_force = 100.0
+	var distance_full_speed_cap = 1.0
 	
 	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * physics_gun_suck_force
 	physics_gun_suck = physics_gun_suck * physics_gun_object.mass
@@ -483,7 +484,13 @@ func process_physics_gun(delta):
 	physics_gun_suck = clamp(physics_gun_suck * physics_gun_hold_location.distance_to(physics_gun_object.global_position), physics_gun_suck_min, physics_gun_suck)
 	physics_gun_suck = physics_gun_suck * delta
 	
+	physics_gun_object.linear_velocity = Vector3.ZERO
+	physics_gun_object.angular_velocity = Vector3.ZERO
 	physics_gun_object.apply_central_force(physics_gun_suck)
+	var lerp_force = clamp(physics_gun_hold_location.distance_to(physics_gun_object.global_position)/distance_full_speed_cap, 0, 1)
+	physics_gun_object.linear_velocity = Vector3.ZERO.lerp(physics_gun_object.linear_velocity, lerp_force)
+	physics_gun_object.angular_velocity = Vector3.ZERO.lerp(physics_gun_object.linear_velocity, lerp_force)
+	
 	print("physics_gun_has_grabbed = true")
 
 func cam_transition():
