@@ -1,15 +1,10 @@
 extends CharacterBody3D
 
 @export_category("Extra Options")
+@export var enable_physics_gun: bool = false
 @export var enable_depth_of_field: bool = false
 @export var disable_shadow_in_first_person: bool = false
 @export var enable_audio: bool = false
-
-@export_category("Physics Gun")
-@export var enable_physics_gun: bool = false
-@export var physics_gun_force: float = 12.5
-@export var physics_gun_initial_distance: float = 1.5
-
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
@@ -20,6 +15,12 @@ const TP_FOV = 60.0
 const ZOOM_MULT = 0.35
 const DOF_AREA_SOFTNESS = 1.15
 const DOF_AREA_SIZE_MULTIPLIER = 0.0
+# WARNING: in Godot Jolt physics damping seems to have inconsistent behavior between different physics tick rates
+const PHYSICS_GUN_DAMPING = 30.0
+const PHYSICS_GUN_PULL_FORCE = 800.0
+const PHYSICS_GUN_PULL_MARGIN = 2.0
+const PHYSICS_GUN_SHOOT_FORCE = 15.0
+const PHYSICS_GUN_HOLD_DISTANCE = 2.5
 # --- Stuff you might be interested in tweaking ---
 
 const FP_CAMERA_HEIGHT = 1.655
@@ -73,7 +74,10 @@ var orig_transform = Transform3D.IDENTITY
 var rigidbody_collisions = []
 var colliders_in_contact = []
 var collider_bump_cooldowns = []
+var physics_gun_has_grabbed = false
 var physics_gun_object = null
+var physis_gun_object_linear_damp = 0.0
+var physis_gun_object_angular_damp = 0.0
 
 var mouse_movement = Vector2.ZERO
 var forward_isdown = false
@@ -432,20 +436,26 @@ func process_physics_gun_fire(delta):
 	physics_gun_cooldown -= delta
 	physics_gun_cooldown = clamp(physics_gun_cooldown, 0.0, TOGGLE_COOLDOWN)
 
-var physics_gun_has_grabbed = false
-
 func grab_physics_gun():
 	var rigidbodies_detected = []
 	
 	for node in physics_gun_trace.get_overlapping_bodies():
 		if node is RigidBody3D:
 			rigidbodies_detected.append(node)
-			
+	
 	rigidbodies_detected.sort_custom(rigidbody_distance_sort)
 	
-	if rigidbodies_detected.size() != 0 and rigidbodies_detected[0] != null:
-		physics_gun_object = rigidbodies_detected[0]
-		physics_gun_has_grabbed = true
+	if rigidbodies_detected.size() == 0 or rigidbodies_detected[0] == null:
+		return
+	
+	physics_gun_object = rigidbodies_detected[0]
+	
+	physis_gun_object_linear_damp = physics_gun_object.linear_damp
+	physis_gun_object_angular_damp = physics_gun_object.angular_damp
+	physics_gun_object.linear_damp = PHYSICS_GUN_DAMPING
+	physics_gun_object.angular_damp = PHYSICS_GUN_DAMPING
+	
+	physics_gun_has_grabbed = true
 
 func rigidbody_distance_sort(rigidbody_a, rigidbody_b):
 	if global_position.distance_to(rigidbody_a.global_position) < global_position.distance_to(rigidbody_b.global_position):
@@ -455,43 +465,32 @@ func rigidbody_distance_sort(rigidbody_a, rigidbody_b):
 
 func fire_physics_gun():
 	physics_gun_has_grabbed = false
+	
+	physics_gun_object.linear_damp = physis_gun_object_linear_damp
+	physics_gun_object.angular_damp = physis_gun_object_angular_damp
+	
 	physics_gun_object.linear_velocity = Vector3.ZERO
 	physics_gun_object.angular_velocity = Vector3.ZERO
-	physics_gun_object.apply_central_impulse(-camera_pivot.basis.z * (physics_gun_force * physics_gun_object.mass))
+	physics_gun_object.constant_force = Vector3.ZERO
+	
+	physics_gun_object.apply_central_impulse(-camera_pivot.basis.z * (PHYSICS_GUN_SHOOT_FORCE * physics_gun_object.mass))
 
 func process_physics_gun(delta):
 	if !enable_physics_gun or !physics_gun_has_grabbed:
-		print("physics_gun_has_grabbed = false")
 		return
 	
 	if physics_gun_object == null:
 		physics_gun_has_grabbed = false
 		return
 	
-	var physics_gun_distance = 3
-	var physics_gun_hold_location = physics_gun.global_position + (-camera_pivot.global_basis.z * physics_gun_distance)
+	var physics_gun_hold_location = physics_gun.global_position + (-camera_pivot.global_basis.z * PHYSICS_GUN_HOLD_DISTANCE)
 	
-	var physics_gun_suck_force = 50000.0
-	var physics_gun_suck_min_force = 100.0
-	var distance_full_speed_cap = 1.0
-	
-	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * physics_gun_suck_force
+	var physics_gun_suck = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * PHYSICS_GUN_PULL_FORCE
 	physics_gun_suck = physics_gun_suck * physics_gun_object.mass
 	
-	var physics_gun_suck_min = physics_gun_object.global_position.direction_to(physics_gun_hold_location) * physics_gun_suck_min_force
-	physics_gun_suck_min = physics_gun_suck_min * physics_gun_object.mass
-	
-	physics_gun_suck = clamp(physics_gun_suck * physics_gun_hold_location.distance_to(physics_gun_object.global_position), physics_gun_suck_min, physics_gun_suck)
-	physics_gun_suck = physics_gun_suck * delta
-	
-	physics_gun_object.linear_velocity = Vector3.ZERO
-	physics_gun_object.angular_velocity = Vector3.ZERO
-	physics_gun_object.apply_central_force(physics_gun_suck)
-	var lerp_force = clamp(physics_gun_hold_location.distance_to(physics_gun_object.global_position)/distance_full_speed_cap, 0, 1)
-	physics_gun_object.linear_velocity = Vector3.ZERO.lerp(physics_gun_object.linear_velocity, lerp_force)
-	physics_gun_object.angular_velocity = Vector3.ZERO.lerp(physics_gun_object.linear_velocity, lerp_force)
-	
-	print("physics_gun_has_grabbed = true")
+	var lerp_force = clamp(physics_gun_hold_location.distance_to(physics_gun_object.global_position)/PHYSICS_GUN_PULL_MARGIN, 0.0, 1.0)
+	physics_gun_suck = lerp(Vector3.ZERO, physics_gun_suck, lerp_force)
+	physics_gun_object.constant_force = physics_gun_suck
 
 func cam_transition():
 	if is_cam_transitioning:
