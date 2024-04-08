@@ -42,7 +42,7 @@ fov = 60.0
 [node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/SpringArm/Camera"]
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/SpringArm/Camera"]
-target_position = Vector3(0, 0, -10000)
+target_position = Vector3(0, 0, -1)
 hit_back_faces = false
 
 [node name="PhysicsGun" type="Node3D" parent="CameraPivot/SpringArm"]

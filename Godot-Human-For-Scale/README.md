@@ -25,7 +25,7 @@ https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-4
   **RIGHT CLICK** to zoom/focus  
   **TAB** to switch third person camera shoulders  
 
-- **LEFT CLICK** to shoot physics gun  
+- **LEFT CLICK** to pick up/throw object with physics gun  
 
 ## Controls not working?
 
@@ -40,7 +40,7 @@ A Control node is likely capturing keyboard input, most likely a button or text 
 You can enable depth of field for the zoom functionality. No camera attributes setup necessary.  
 You can disable the character's shadow in first person view.  
 You can enable audio, which will enable the audio listener, footstep sounds, and physics interactions sounds.  
-You can enable the physics gun, which throws a physics object of your choosing in front of you.
+You can enable the physics gun, which allows you pick up and throw RigidBodies.
 
 ![options](https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/01ca7799-021c-46c1-a98a-c68c1dee7035)
 

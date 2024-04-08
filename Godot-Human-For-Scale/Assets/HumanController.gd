@@ -15,6 +15,7 @@ const TP_FOV = 60.0
 const ZOOM_MULT = 0.35
 const DOF_AREA_SOFTNESS = 1.15
 const DOF_AREA_SIZE_MULTIPLIER = 0.0
+const DOF_MAX_RANGE = 1000.0
 # WARNING: in Godot Jolt physics damping seems to have inconsistent behavior between different physics tick rates
 const PHYSICS_GUN_DAMPING = 30.0
 const PHYSICS_GUN_PULL_FORCE = 800.0
@@ -44,7 +45,7 @@ const MAX_PUSHABLE_WEIGHT = 200.0
 const PHYSICS_GUN_PULL_MARGIN = 2.0
 const PHYSICS_GUN_PULL_WIDTH = 0.8
 const TOGGLE_COOLDOWN = 0.25
-const DOF_MOVE_SPEED = 40.0
+const DOF_MOVE_SPEED = 30.0
 const DOF_INTENSITY = 0.25
 const BUMP_AUDIO_TIMEOUT = 0.15
 const BUMP_AUDIO_FORCE_THRESHOLD = 400.0
@@ -65,6 +66,8 @@ var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
 var cam_is_zoomed = false
 var cam_zoom_cooldown = 0.0
+var dof_target_distance = 0.0
+var dof_amount_to_apply = 0.0
 var shoulder_is_swapped = false
 var shoulder_cooldown = 0.0
 var mousecapture_on = true
@@ -584,35 +587,36 @@ func process_dof(delta):
 	if camera.attributes == null or !enable_depth_of_field:
 		return
 	
-	var near_distance = 0.5
-	var near_transition = 0.25
-	var far_distance = 50
-	var far_transition = 50
-	var blur_amount = 0.1
-	
+	var target_distance = DOF_MAX_RANGE
+	if focus_ray.is_colliding():
+		target_distance = camera.global_position.distance_to(focus_ray.get_collision_point())
+	var blur_amount = DOF_INTENSITY
 	if !cam_is_zoomed:
-		camera.attributes.dof_blur_near_enabled = true
-		near_distance = 0.5
-		near_transition = 0.25
-		camera.attributes.dof_blur_far_enabled = false
-		far_distance = 50
-		far_transition = 50
-		blur_amount = 0.1
-	else:
-		var hit_distance = camera.global_position.distance_to(focus_ray.get_collision_point())
-		camera.attributes.dof_blur_near_enabled = true
-		near_distance = hit_distance - (hit_distance * DOF_AREA_SIZE_MULTIPLIER)
-		near_transition = hit_distance * DOF_AREA_SOFTNESS
-		camera.attributes.dof_blur_far_enabled = true
-		far_distance =  hit_distance + (hit_distance * DOF_AREA_SIZE_MULTIPLIER)
-		far_transition = hit_distance * DOF_AREA_SOFTNESS
-		blur_amount = DOF_INTENSITY
+		blur_amount = 0.0
+	var distance_multiplier = 0.75
+	var coming_back_bonus_multiplier = 3.4
+	if target_distance < dof_target_distance:
+		distance_multiplier = distance_multiplier * coming_back_bonus_multiplier
+	var distance_additional = abs(dof_target_distance - target_distance)
+	distance_additional = distance_additional * distance_multiplier
+	var adjusted_dof_move_speed = DOF_MOVE_SPEED + distance_additional
 	
-	camera.attributes.dof_blur_near_distance = move_toward(camera.attributes.dof_blur_near_distance, near_distance, delta * DOF_MOVE_SPEED) 
-	camera.attributes.dof_blur_near_transition = move_toward(camera.attributes.dof_blur_near_transition, near_transition, delta * DOF_MOVE_SPEED) 
-	camera.attributes.dof_blur_far_distance =  move_toward(camera.attributes.dof_blur_far_distance, far_distance, delta * DOF_MOVE_SPEED)
-	camera.attributes.dof_blur_far_transition = move_toward(camera.attributes.dof_blur_far_transition, far_transition, delta * DOF_MOVE_SPEED)
-	camera.attributes.dof_blur_amount = move_toward(camera.attributes.dof_blur_amount, blur_amount, delta * (DOF_MOVE_SPEED/10.0))
+	dof_target_distance = move_toward(dof_target_distance, target_distance, adjusted_dof_move_speed * delta)
+	dof_amount_to_apply = move_toward(dof_amount_to_apply, blur_amount, 0.45 * delta)
+	
+	camera.attributes.dof_blur_near_distance = dof_target_distance - (dof_target_distance * DOF_AREA_SIZE_MULTIPLIER)
+	camera.attributes.dof_blur_near_transition = dof_target_distance * DOF_AREA_SOFTNESS
+	camera.attributes.dof_blur_far_distance =  dof_target_distance + (dof_target_distance * DOF_AREA_SIZE_MULTIPLIER)
+	camera.attributes.dof_blur_far_transition = dof_target_distance * DOF_AREA_SOFTNESS
+	
+	if dof_amount_to_apply < 0.001:
+		camera.attributes.dof_blur_far_enabled = false
+		camera.attributes.dof_blur_near_distance = 0.5
+		camera.attributes.dof_blur_near_transition = 0.25
+		camera.attributes.dof_blur_amount = 0.1
+	else:
+		camera.attributes.dof_blur_far_enabled = true
+		camera.attributes.dof_blur_amount = dof_amount_to_apply
 
 func hijack_camera_attributes():
 	var cams_or_envs = []
@@ -631,6 +635,9 @@ func hijack_camera_attributes():
 				break
 	
 	camera.attributes = assert_practical_attributes(hijacked_attributes)
+	
+	camera.attributes.dof_blur_near_enabled = true
+	focus_ray.target_position.z = -DOF_MAX_RANGE
 
 func assert_practical_attributes(attributes):
 	var practical_attributes = CameraAttributesPractical.new()
