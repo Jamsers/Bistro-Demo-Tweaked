@@ -99,12 +99,15 @@ transform = Transform3D(0.996065, 0.0203704, -0.0862458, -0.00854877, 0.990771, 
 bone_name = "spine_02"
 bone_idx = 12
 
-[node name="SpotLight3D" type="SpotLight3D" parent="root/Skeleton3D/FlashlightPin" index="0"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.72529e-09, 0.123079, 0.244468)
+[node name="FlashlightOffset" type="Node3D" parent="root/Skeleton3D/FlashlightPin" index="0"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.123, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="root/Skeleton3D/FlashlightPin/FlashlightOffset" index="0"]
 visible = false
 shadow_enabled = true
-shadow_blur = 1.5
-spot_range = 50.0
+shadow_blur = 2.0
+spot_range = 100.0
+spot_angle = 35.0
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

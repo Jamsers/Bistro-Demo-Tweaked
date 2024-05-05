@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var enable_depth_of_field: bool = false
 @export var disable_shadow_in_first_person: bool = false
 @export var enable_audio: bool = false
+@export var flashlight_intensity: float = 1.0
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
@@ -16,6 +17,7 @@ const ZOOM_MULT = 0.35
 const DOF_AREA_SOFTNESS = 1.15
 const DOF_AREA_SIZE_MULTIPLIER = 0.0
 const DOF_MAX_RANGE = 1000.0
+const FLASHLIGHT_ANGLE = 35.0
 # WARNING: in Godot Jolt physics damping seems to have inconsistent behavior between different physics tick rates
 const PHYSICS_GUN_DAMPING = 30.0
 const PHYSICS_GUN_PULL_FORCE = 800.0
@@ -28,6 +30,7 @@ const FP_CAMERA_HEIGHT = 1.655
 const TP_CAMERA_HEIGHT = 1.544
 const TP_CAMERA_OFFSET = 0.5
 const TP_CAMERA_DISTANCE = 2.1
+const FLASHLIGHT_DISTANCE_FROM_MODEL = 0.35
 const TRANSITION_SPEED = 0.25
 const LOOK_LIMIT_UPPER = 1.25
 const LOOK_LIMIT_LOWER = -1.25
@@ -117,7 +120,8 @@ var physics_gun_fire_isdown = false
 @onready var physics_object_collector = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector"
 @onready var physics_object_collector_collider = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector/CollisionShape3D"
 @onready var physics_gun_raycast = $"CameraPivot/SpringArm/PhysicsGun/RayCast3D"
-@onready var flashlight = $"ModelRoot/HumanModel/root/Skeleton3D/FlashlightPin/SpotLight3D"
+@onready var flashlight_pin = $"ModelRoot/HumanModel/root/Skeleton3D/FlashlightPin/FlashlightOffset"
+@onready var flashlight = $"ModelRoot/HumanModel/root/Skeleton3D/FlashlightPin/FlashlightOffset/SpotLight3D"
 
 @onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
 
@@ -148,6 +152,9 @@ func _ready():
 	model_root.global_rotation = y_rotation
 	camera_rotation = Quaternion.from_euler(camera_pivot.global_rotation)
 	camera_rotation_no_y = Quaternion.from_euler(camera_pivot.global_rotation)
+	
+	flashlight.light_energy = flashlight_intensity
+	flashlight.spot_angle = FLASHLIGHT_ANGLE
 	
 	camera.make_current()
 	
@@ -208,6 +215,12 @@ func _process(delta):
 	if !has_stairstepped:
 		collate_rigidbody_interactions()
 	
+	flashlight.global_position = flashlight_pin.global_position
+	var backwards = Basis(camera_rotation_no_y).z
+	var up = flashlight_pin.global_basis.y
+	var right = up.cross(backwards)
+	flashlight.global_basis = Basis(right, up, right.cross(up)).orthonormalized()
+	flashlight.position = flashlight.position + (-flashlight.basis.z * FLASHLIGHT_DISTANCE_FROM_MODEL)
 	flashlight.global_rotation = camera_pivot.global_rotation
 
 func _physics_process(delta):
