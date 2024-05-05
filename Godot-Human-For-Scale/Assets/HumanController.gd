@@ -62,6 +62,8 @@ var has_landed_from_fall = false
 var boot_sound_timeout = true
 var noclip_on = false
 var noclip_toggle_cooldown = 0.0
+var flashlight_on = false
+var flashlight_toggle_cooldown = 0.0
 var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
 var cam_is_zoomed = false
@@ -92,6 +94,7 @@ var left_isdown = false
 var right_isdown = false
 var cam_toggle_isdown = false
 var noclip_isdown = false
+var flashlight_isdown = false
 var sprint_isdown = false
 var jump_isdown = false
 var mousecapture_isdown = false
@@ -114,6 +117,7 @@ var physics_gun_fire_isdown = false
 @onready var physics_object_collector = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector"
 @onready var physics_object_collector_collider = $"CameraPivot/SpringArm/PhysicsGun/PhysicsObjectCollector/CollisionShape3D"
 @onready var physics_gun_raycast = $"CameraPivot/SpringArm/PhysicsGun/RayCast3D"
+@onready var flashlight = $"ModelRoot/HumanModel/root/Skeleton3D/FlashlightPin/SpotLight3D"
 
 @onready var bump_audio = load("res://Godot-Human-For-Scale/Assets/BumpAudio.tscn")
 
@@ -163,6 +167,7 @@ func _process(delta):
 	process_animation(delta)
 	process_mousecapture(delta)
 	process_noclip(delta)
+	process_flashlight(delta)
 	process_cam_toggle(delta)
 	process_cam_zoom(delta)
 	process_shoulder_swap(delta)
@@ -202,6 +207,8 @@ func _process(delta):
 	# Rigidbody interactions don't play nice with stairstepping ☹️
 	if !has_stairstepped:
 		collate_rigidbody_interactions()
+	
+	flashlight.global_rotation = camera_pivot.global_rotation
 
 func _physics_process(delta):
 	process_physics_gun(delta)
@@ -406,6 +413,15 @@ func process_noclip(delta):
 	
 	noclip_toggle_cooldown -= delta
 	noclip_toggle_cooldown = clamp(noclip_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
+
+func process_flashlight(delta):
+	if flashlight_isdown and flashlight_toggle_cooldown == 0.0:
+		flashlight_on = !flashlight_on
+		flashlight.visible = flashlight_on
+		flashlight_toggle_cooldown = TOGGLE_COOLDOWN
+	
+	flashlight_toggle_cooldown -= delta
+	flashlight_toggle_cooldown = clamp(flashlight_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func process_cam_toggle(delta):
 	if cam_toggle_isdown and cam_toggle_cooldown == 0.0 and !is_cam_transitioning:
@@ -678,6 +694,8 @@ func _unhandled_input(event):
 				right_isdown = event.pressed
 			KEY_V:
 				cam_toggle_isdown = event.pressed
+			KEY_F:
+				flashlight_isdown = event.pressed
 			KEY_QUOTELEFT:
 				noclip_isdown = event.pressed
 			KEY_SHIFT:
