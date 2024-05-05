@@ -26,6 +26,7 @@ https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-4
   **TAB** to switch third person camera shoulders  
 
 - **LEFT CLICK** to pick up/throw object with physics gun  
+  **F** to turn flashlight on/off  
 
 ## Controls not working?
 
