@@ -239,7 +239,7 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		var weight = collider.mass
 		var direction = -collision.get_normal()
-		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(weight/MAX_PUSHABLE_WEIGHT))
+		var mult_actual = lerp(0.0, central_multiplier, ease_out_circ(clamp(weight/MAX_PUSHABLE_WEIGHT, 0.0, 1.0)))
 		
 		collider.apply_central_impulse(direction * mult_actual)
 		collider_indexes_still_in_contact.append(colliders_in_contact.find(collider))
