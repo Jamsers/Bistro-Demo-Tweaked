@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6oph7gm4ukc5"
 path.s3tc="res://.godot/imported/MASTER_Roofing_Metal_01_Normal.png-4fcafb55e6ccc859c4ca391493014dbe.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Roofing_Metal_01_Normal.png-4fcafb55e6ccc859c4ca391493014dbe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Roofing/MASTER_Roofing_Metal_01_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Roofing_Metal_01_Normal.png-4fcafb55e6ccc859c4ca391493014dbe.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Roofing_Metal_01_Normal.png-4fcafb55e6ccc859c4ca391493014dbe.s3tc.ctex", "res://.godot/imported/MASTER_Roofing_Metal_01_Normal.png-4fcafb55e6ccc859c4ca391493014dbe.etc2.ctex"]
 
 [params]
 

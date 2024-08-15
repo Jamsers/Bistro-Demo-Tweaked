@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8ook6wosfa74"
 path.s3tc="res://.godot/imported/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png-8533635335cd98d0a516d858bfc908cc.s3tc.ctex"
+path.etc2="res://.godot/imported/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png-8533635335cd98d0a516d858bfc908cc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Ground/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png"
-dest_files=["res://.godot/imported/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png-8533635335cd98d0a516d858bfc908cc.s3tc.ctex"]
+dest_files=["res://.godot/imported/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png-8533635335cd98d0a516d858bfc908cc.s3tc.ctex", "res://.godot/imported/Pavement_Cobblestone_Big_BLENDSHADER_Normal.png-8533635335cd98d0a516d858bfc908cc.etc2.ctex"]
 
 [params]
 

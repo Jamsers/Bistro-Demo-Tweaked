@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckx8hred2o2ve"
 path.bptc="res://.godot/imported/san_giuseppe_bridge_4k.hdr-a935b5e80f0216b31300472747858589.bptc.ctex"
+path.astc="res://.godot/imported/san_giuseppe_bridge_4k.hdr-a935b5e80f0216b31300472747858589.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Skies/san_giuseppe_bridge_4k.hdr"
-dest_files=["res://.godot/imported/san_giuseppe_bridge_4k.hdr-a935b5e80f0216b31300472747858589.bptc.ctex"]
+dest_files=["res://.godot/imported/san_giuseppe_bridge_4k.hdr-a935b5e80f0216b31300472747858589.bptc.ctex", "res://.godot/imported/san_giuseppe_bridge_4k.hdr-a935b5e80f0216b31300472747858589.astc.ctex"]
 
 [params]
 

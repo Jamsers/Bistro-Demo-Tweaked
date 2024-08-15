@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy5kbasq0hrim"
 path.s3tc="res://.godot/imported/Plantpots_Normal.png-732f361e7a7b9183e0d9c4980c120d32.s3tc.ctex"
+path.etc2="res://.godot/imported/Plantpots_Normal.png-732f361e7a7b9183e0d9c4980c120d32.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/Plantpots_Normal.png"
-dest_files=["res://.godot/imported/Plantpots_Normal.png-732f361e7a7b9183e0d9c4980c120d32.s3tc.ctex"]
+dest_files=["res://.godot/imported/Plantpots_Normal.png-732f361e7a7b9183e0d9c4980c120d32.s3tc.ctex", "res://.godot/imported/Plantpots_Normal.png-732f361e7a7b9183e0d9c4980c120d32.etc2.ctex"]
 
 [params]
 

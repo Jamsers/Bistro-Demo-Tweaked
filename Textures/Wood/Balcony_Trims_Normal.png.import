@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba0byan7x7jvr"
 path.s3tc="res://.godot/imported/Balcony_Trims_Normal.png-1e9f12615afea3a1b54a4e9f1d23b553.s3tc.ctex"
+path.etc2="res://.godot/imported/Balcony_Trims_Normal.png-1e9f12615afea3a1b54a4e9f1d23b553.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Wood/Balcony_Trims_Normal.png"
-dest_files=["res://.godot/imported/Balcony_Trims_Normal.png-1e9f12615afea3a1b54a4e9f1d23b553.s3tc.ctex"]
+dest_files=["res://.godot/imported/Balcony_Trims_Normal.png-1e9f12615afea3a1b54a4e9f1d23b553.s3tc.ctex", "res://.godot/imported/Balcony_Trims_Normal.png-1e9f12615afea3a1b54a4e9f1d23b553.etc2.ctex"]
 
 [params]
 

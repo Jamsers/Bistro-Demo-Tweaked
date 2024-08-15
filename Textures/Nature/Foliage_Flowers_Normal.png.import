@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://t0j0m804woay"
 path.s3tc="res://.godot/imported/Foliage_Flowers_Normal.png-34f460d4e6daec4866a628478a8a12eb.s3tc.ctex"
+path.etc2="res://.godot/imported/Foliage_Flowers_Normal.png-34f460d4e6daec4866a628478a8a12eb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Nature/Foliage_Flowers_Normal.png"
-dest_files=["res://.godot/imported/Foliage_Flowers_Normal.png-34f460d4e6daec4866a628478a8a12eb.s3tc.ctex"]
+dest_files=["res://.godot/imported/Foliage_Flowers_Normal.png-34f460d4e6daec4866a628478a8a12eb.s3tc.ctex", "res://.godot/imported/Foliage_Flowers_Normal.png-34f460d4e6daec4866a628478a8a12eb.etc2.ctex"]
 
 [params]
 

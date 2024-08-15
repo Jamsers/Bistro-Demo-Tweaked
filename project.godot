@@ -37,6 +37,7 @@ theme/default_font_multichannel_signed_distance_field=true
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 lights_and_shadows/use_physical_light_units=true
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3

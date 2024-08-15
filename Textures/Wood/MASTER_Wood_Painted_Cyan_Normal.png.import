@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://77l5x1w0oepu"
 path.s3tc="res://.godot/imported/MASTER_Wood_Painted_Cyan_Normal.png-82782994279b2ecdd48c361832dc25aa.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Wood_Painted_Cyan_Normal.png-82782994279b2ecdd48c361832dc25aa.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Wood/MASTER_Wood_Painted_Cyan_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Wood_Painted_Cyan_Normal.png-82782994279b2ecdd48c361832dc25aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Wood_Painted_Cyan_Normal.png-82782994279b2ecdd48c361832dc25aa.s3tc.ctex", "res://.godot/imported/MASTER_Wood_Painted_Cyan_Normal.png-82782994279b2ecdd48c361832dc25aa.etc2.ctex"]
 
 [params]
 

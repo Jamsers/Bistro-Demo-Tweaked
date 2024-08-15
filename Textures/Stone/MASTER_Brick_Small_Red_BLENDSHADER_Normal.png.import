@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ylgmwx2lq0e1"
 path.s3tc="res://.godot/imported/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png-8f0c6c0a09f0fa06194d6d0cf5ac2e60.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png-8f0c6c0a09f0fa06194d6d0cf5ac2e60.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png-8f0c6c0a09f0fa06194d6d0cf5ac2e60.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png-8f0c6c0a09f0fa06194d6d0cf5ac2e60.s3tc.ctex", "res://.godot/imported/MASTER_Brick_Small_Red_BLENDSHADER_Normal.png-8f0c6c0a09f0fa06194d6d0cf5ac2e60.etc2.ctex"]
 
 [params]
 

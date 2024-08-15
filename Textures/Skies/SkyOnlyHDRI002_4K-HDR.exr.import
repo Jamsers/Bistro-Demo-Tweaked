@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://va16lir3iq5j"
 path.bptc="res://.godot/imported/SkyOnlyHDRI002_4K-HDR.exr-38a74cb302cb416915ca843593d51b7c.bptc.ctex"
+path.astc="res://.godot/imported/SkyOnlyHDRI002_4K-HDR.exr-38a74cb302cb416915ca843593d51b7c.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Skies/SkyOnlyHDRI002_4K-HDR.exr"
-dest_files=["res://.godot/imported/SkyOnlyHDRI002_4K-HDR.exr-38a74cb302cb416915ca843593d51b7c.bptc.ctex"]
+dest_files=["res://.godot/imported/SkyOnlyHDRI002_4K-HDR.exr-38a74cb302cb416915ca843593d51b7c.bptc.ctex", "res://.godot/imported/SkyOnlyHDRI002_4K-HDR.exr-38a74cb302cb416915ca843593d51b7c.astc.ctex"]
 
 [params]
 

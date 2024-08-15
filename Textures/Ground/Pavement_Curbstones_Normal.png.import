@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://r0x3c8mymops"
 path.s3tc="res://.godot/imported/Pavement_Curbstones_Normal.png-f8221736a61cf2d695ccaad2bca1cbc7.s3tc.ctex"
+path.etc2="res://.godot/imported/Pavement_Curbstones_Normal.png-f8221736a61cf2d695ccaad2bca1cbc7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Ground/Pavement_Curbstones_Normal.png"
-dest_files=["res://.godot/imported/Pavement_Curbstones_Normal.png-f8221736a61cf2d695ccaad2bca1cbc7.s3tc.ctex"]
+dest_files=["res://.godot/imported/Pavement_Curbstones_Normal.png-f8221736a61cf2d695ccaad2bca1cbc7.s3tc.ctex", "res://.godot/imported/Pavement_Curbstones_Normal.png-f8221736a61cf2d695ccaad2bca1cbc7.etc2.ctex"]
 
 [params]
 

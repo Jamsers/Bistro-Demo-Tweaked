@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xvqofc5uv335"
 path.s3tc="res://.godot/imported/Stringlights_Normal.png-c234366e6721d6ac0ab4bc8feb1c3429.s3tc.ctex"
+path.etc2="res://.godot/imported/Stringlights_Normal.png-c234366e6721d6ac0ab4bc8feb1c3429.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Lights/Stringlights_Normal.png"
-dest_files=["res://.godot/imported/Stringlights_Normal.png-c234366e6721d6ac0ab4bc8feb1c3429.s3tc.ctex"]
+dest_files=["res://.godot/imported/Stringlights_Normal.png-c234366e6721d6ac0ab4bc8feb1c3429.s3tc.ctex", "res://.godot/imported/Stringlights_Normal.png-c234366e6721d6ac0ab4bc8feb1c3429.etc2.ctex"]
 
 [params]
 

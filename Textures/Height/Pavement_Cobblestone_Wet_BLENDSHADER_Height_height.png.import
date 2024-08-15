@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u0vau68ulia3"
 path.s3tc="res://.godot/imported/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png-ec16beb0ba52cc23664d1fa4c1b7941c.s3tc.ctex"
+path.etc2="res://.godot/imported/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png-ec16beb0ba52cc23664d1fa4c1b7941c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Height/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png"
-dest_files=["res://.godot/imported/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png-ec16beb0ba52cc23664d1fa4c1b7941c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png-ec16beb0ba52cc23664d1fa4c1b7941c.s3tc.ctex", "res://.godot/imported/Pavement_Cobblestone_Wet_BLENDSHADER_Height_height.png-ec16beb0ba52cc23664d1fa4c1b7941c.etc2.ctex"]
 
 [params]
 

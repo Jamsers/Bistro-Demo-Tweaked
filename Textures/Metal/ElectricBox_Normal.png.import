@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://csyncy27iij3c"
 path.s3tc="res://.godot/imported/ElectricBox_Normal.png-a6db59f06832b38c6fb3f67619bdbaec.s3tc.ctex"
+path.etc2="res://.godot/imported/ElectricBox_Normal.png-a6db59f06832b38c6fb3f67619bdbaec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Metal/ElectricBox_Normal.png"
-dest_files=["res://.godot/imported/ElectricBox_Normal.png-a6db59f06832b38c6fb3f67619bdbaec.s3tc.ctex"]
+dest_files=["res://.godot/imported/ElectricBox_Normal.png-a6db59f06832b38c6fb3f67619bdbaec.s3tc.ctex", "res://.godot/imported/ElectricBox_Normal.png-a6db59f06832b38c6fb3f67619bdbaec.etc2.ctex"]
 
 [params]
 

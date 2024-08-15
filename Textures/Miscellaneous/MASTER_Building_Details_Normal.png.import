@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byscmffffxe2c"
 path.s3tc="res://.godot/imported/MASTER_Building_Details_Normal.png-0481f59350c9e712220bfd4d2b656252.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Building_Details_Normal.png-0481f59350c9e712220bfd4d2b656252.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Miscellaneous/MASTER_Building_Details_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Building_Details_Normal.png-0481f59350c9e712220bfd4d2b656252.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Building_Details_Normal.png-0481f59350c9e712220bfd4d2b656252.s3tc.ctex", "res://.godot/imported/MASTER_Building_Details_Normal.png-0481f59350c9e712220bfd4d2b656252.etc2.ctex"]
 
 [params]
 

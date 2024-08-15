@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fdv1acc26coj"
 path.s3tc="res://.godot/imported/Paris_TrafficSign_A_Normal.png-8739176d0192a47c00e48375e87e440f.s3tc.ctex"
+path.etc2="res://.godot/imported/Paris_TrafficSign_A_Normal.png-8739176d0192a47c00e48375e87e440f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Metal/Paris_TrafficSign_A_Normal.png"
-dest_files=["res://.godot/imported/Paris_TrafficSign_A_Normal.png-8739176d0192a47c00e48375e87e440f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Paris_TrafficSign_A_Normal.png-8739176d0192a47c00e48375e87e440f.s3tc.ctex", "res://.godot/imported/Paris_TrafficSign_A_Normal.png-8739176d0192a47c00e48375e87e440f.etc2.ctex"]
 
 [params]
 

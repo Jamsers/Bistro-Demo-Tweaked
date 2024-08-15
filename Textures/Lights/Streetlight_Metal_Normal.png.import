@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnfmik6klna08"
 path.s3tc="res://.godot/imported/Streetlight_Metal_Normal.png-16aeae9c8948fc7ba51ec5e80eb6245b.s3tc.ctex"
+path.etc2="res://.godot/imported/Streetlight_Metal_Normal.png-16aeae9c8948fc7ba51ec5e80eb6245b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Lights/Streetlight_Metal_Normal.png"
-dest_files=["res://.godot/imported/Streetlight_Metal_Normal.png-16aeae9c8948fc7ba51ec5e80eb6245b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Streetlight_Metal_Normal.png-16aeae9c8948fc7ba51ec5e80eb6245b.s3tc.ctex", "res://.godot/imported/Streetlight_Metal_Normal.png-16aeae9c8948fc7ba51ec5e80eb6245b.etc2.ctex"]
 
 [params]
 

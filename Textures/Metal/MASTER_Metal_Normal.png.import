@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciscvh44ummnu"
 path.s3tc="res://.godot/imported/MASTER_Metal_Normal.png-03100e704b5171b4e16ae3385817cd90.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Metal_Normal.png-03100e704b5171b4e16ae3385817cd90.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Metal/MASTER_Metal_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Metal_Normal.png-03100e704b5171b4e16ae3385817cd90.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Metal_Normal.png-03100e704b5171b4e16ae3385817cd90.s3tc.ctex", "res://.godot/imported/MASTER_Metal_Normal.png-03100e704b5171b4e16ae3385817cd90.etc2.ctex"]
 
 [params]
 

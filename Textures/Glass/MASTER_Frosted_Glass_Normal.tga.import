@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://25tl6hs1atmw"
 path.s3tc="res://.godot/imported/MASTER_Frosted_Glass_Normal.tga-763ce6992eac130b9513ef89dbfabbc6.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Frosted_Glass_Normal.tga-763ce6992eac130b9513ef89dbfabbc6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Glass/MASTER_Frosted_Glass_Normal.tga"
-dest_files=["res://.godot/imported/MASTER_Frosted_Glass_Normal.tga-763ce6992eac130b9513ef89dbfabbc6.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Frosted_Glass_Normal.tga-763ce6992eac130b9513ef89dbfabbc6.s3tc.ctex", "res://.godot/imported/MASTER_Frosted_Glass_Normal.tga-763ce6992eac130b9513ef89dbfabbc6.etc2.ctex"]
 
 [params]
 

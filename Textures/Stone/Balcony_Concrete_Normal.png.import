@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci0qd6pbs0w0o"
 path.s3tc="res://.godot/imported/Balcony_Concrete_Normal.png-5b953f7473d7fd8ccbb9d47ae1b260a7.s3tc.ctex"
+path.etc2="res://.godot/imported/Balcony_Concrete_Normal.png-5b953f7473d7fd8ccbb9d47ae1b260a7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/Balcony_Concrete_Normal.png"
-dest_files=["res://.godot/imported/Balcony_Concrete_Normal.png-5b953f7473d7fd8ccbb9d47ae1b260a7.s3tc.ctex"]
+dest_files=["res://.godot/imported/Balcony_Concrete_Normal.png-5b953f7473d7fd8ccbb9d47ae1b260a7.s3tc.ctex", "res://.godot/imported/Balcony_Concrete_Normal.png-5b953f7473d7fd8ccbb9d47ae1b260a7.etc2.ctex"]
 
 [params]
 

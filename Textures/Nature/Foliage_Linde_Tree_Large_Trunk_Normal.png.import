@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3rbru6ob8ebk"
 path.s3tc="res://.godot/imported/Foliage_Linde_Tree_Large_Trunk_Normal.png-6f5eb317587503f2648f3e2921400abd.s3tc.ctex"
+path.etc2="res://.godot/imported/Foliage_Linde_Tree_Large_Trunk_Normal.png-6f5eb317587503f2648f3e2921400abd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Nature/Foliage_Linde_Tree_Large_Trunk_Normal.png"
-dest_files=["res://.godot/imported/Foliage_Linde_Tree_Large_Trunk_Normal.png-6f5eb317587503f2648f3e2921400abd.s3tc.ctex"]
+dest_files=["res://.godot/imported/Foliage_Linde_Tree_Large_Trunk_Normal.png-6f5eb317587503f2648f3e2921400abd.s3tc.ctex", "res://.godot/imported/Foliage_Linde_Tree_Large_Trunk_Normal.png-6f5eb317587503f2648f3e2921400abd.etc2.ctex"]
 
 [params]
 

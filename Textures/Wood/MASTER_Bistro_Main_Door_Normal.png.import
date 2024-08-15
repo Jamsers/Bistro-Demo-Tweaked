@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl2lvm8o8sne0"
 path.s3tc="res://.godot/imported/MASTER_Bistro_Main_Door_Normal.png-ad7dcb29e7373c81c0e586be47973a47.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Bistro_Main_Door_Normal.png-ad7dcb29e7373c81c0e586be47973a47.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Wood/MASTER_Bistro_Main_Door_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Bistro_Main_Door_Normal.png-ad7dcb29e7373c81c0e586be47973a47.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Bistro_Main_Door_Normal.png-ad7dcb29e7373c81c0e586be47973a47.s3tc.ctex", "res://.godot/imported/MASTER_Bistro_Main_Door_Normal.png-ad7dcb29e7373c81c0e586be47973a47.etc2.ctex"]
 
 [params]
 

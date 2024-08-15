@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj1ky7lwa6vp0"
 path.s3tc="res://.godot/imported/MASTER_Glass_Exterior_Normal.tga-70572d36006df0fbaa8f5e7031c17693.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Glass_Exterior_Normal.tga-70572d36006df0fbaa8f5e7031c17693.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Glass/MASTER_Glass_Exterior_Normal.tga"
-dest_files=["res://.godot/imported/MASTER_Glass_Exterior_Normal.tga-70572d36006df0fbaa8f5e7031c17693.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Glass_Exterior_Normal.tga-70572d36006df0fbaa8f5e7031c17693.s3tc.ctex", "res://.godot/imported/MASTER_Glass_Exterior_Normal.tga-70572d36006df0fbaa8f5e7031c17693.etc2.ctex"]
 
 [params]
 

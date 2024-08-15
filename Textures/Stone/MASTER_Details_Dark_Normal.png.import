@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd13atohul7e7"
 path.s3tc="res://.godot/imported/MASTER_Details_Dark_Normal.png-cffd08b4890bf393f6e991d73a7bd6cf.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Details_Dark_Normal.png-cffd08b4890bf393f6e991d73a7bd6cf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/MASTER_Details_Dark_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Details_Dark_Normal.png-cffd08b4890bf393f6e991d73a7bd6cf.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Details_Dark_Normal.png-cffd08b4890bf393f6e991d73a7bd6cf.s3tc.ctex", "res://.godot/imported/MASTER_Details_Dark_Normal.png-cffd08b4890bf393f6e991d73a7bd6cf.etc2.ctex"]
 
 [params]
 

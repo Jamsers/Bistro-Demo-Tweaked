@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://de6gq31jpfu4t"
 path.s3tc="res://.godot/imported/MASTER_Bronze_BLENDSHADER_Normal.png-0a5e57b0d952a4ef87c0e5b75153d5ac.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Bronze_BLENDSHADER_Normal.png-0a5e57b0d952a4ef87c0e5b75153d5ac.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Metal/MASTER_Bronze_BLENDSHADER_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Bronze_BLENDSHADER_Normal.png-0a5e57b0d952a4ef87c0e5b75153d5ac.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Bronze_BLENDSHADER_Normal.png-0a5e57b0d952a4ef87c0e5b75153d5ac.s3tc.ctex", "res://.godot/imported/MASTER_Bronze_BLENDSHADER_Normal.png-0a5e57b0d952a4ef87c0e5b75153d5ac.etc2.ctex"]
 
 [params]
 

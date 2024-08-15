@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj7f5eq74c6vc"
 path.s3tc="res://.godot/imported/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png-cd905f0fcfdc5c1d6ee22d3633f8d3f0.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png-cd905f0fcfdc5c1d6ee22d3633f8d3f0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Wood/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png-cd905f0fcfdc5c1d6ee22d3633f8d3f0.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png-cd905f0fcfdc5c1d6ee22d3633f8d3f0.s3tc.ctex", "res://.godot/imported/MASTER_Wood_Painted_Green_BLENDSHADER_Normal.png-cd905f0fcfdc5c1d6ee22d3633f8d3f0.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbfjt4uj7tgci"
 path.s3tc="res://.godot/imported/MASTER_Roofing_Shingle_Green_Normal.png-c5a4b0cfe29f073842538796fbe4a1c3.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Roofing_Shingle_Green_Normal.png-c5a4b0cfe29f073842538796fbe4a1c3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Roofing/MASTER_Roofing_Shingle_Green_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Roofing_Shingle_Green_Normal.png-c5a4b0cfe29f073842538796fbe4a1c3.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Roofing_Shingle_Green_Normal.png-c5a4b0cfe29f073842538796fbe4a1c3.s3tc.ctex", "res://.godot/imported/MASTER_Roofing_Shingle_Green_Normal.png-c5a4b0cfe29f073842538796fbe4a1c3.etc2.ctex"]
 
 [params]
 

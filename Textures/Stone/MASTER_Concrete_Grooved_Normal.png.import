@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw6kfh64tyq3g"
 path.s3tc="res://.godot/imported/MASTER_Concrete_Grooved_Normal.png-f1ea1e74d49d5f46d2511f5a6079bbd8.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Concrete_Grooved_Normal.png-f1ea1e74d49d5f46d2511f5a6079bbd8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/MASTER_Concrete_Grooved_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Concrete_Grooved_Normal.png-f1ea1e74d49d5f46d2511f5a6079bbd8.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Concrete_Grooved_Normal.png-f1ea1e74d49d5f46d2511f5a6079bbd8.s3tc.ctex", "res://.godot/imported/MASTER_Concrete_Grooved_Normal.png-f1ea1e74d49d5f46d2511f5a6079bbd8.etc2.ctex"]
 
 [params]
 

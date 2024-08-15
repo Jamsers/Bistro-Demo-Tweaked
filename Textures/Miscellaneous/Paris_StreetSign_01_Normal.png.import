@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://hj47rn13h8xx"
 path.s3tc="res://.godot/imported/Paris_StreetSign_01_Normal.png-a5296cad651788e402e4f2b361800a35.s3tc.ctex"
+path.etc2="res://.godot/imported/Paris_StreetSign_01_Normal.png-a5296cad651788e402e4f2b361800a35.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Miscellaneous/Paris_StreetSign_01_Normal.png"
-dest_files=["res://.godot/imported/Paris_StreetSign_01_Normal.png-a5296cad651788e402e4f2b361800a35.s3tc.ctex"]
+dest_files=["res://.godot/imported/Paris_StreetSign_01_Normal.png-a5296cad651788e402e4f2b361800a35.s3tc.ctex", "res://.godot/imported/Paris_StreetSign_01_Normal.png-a5296cad651788e402e4f2b361800a35.etc2.ctex"]
 
 [params]
 

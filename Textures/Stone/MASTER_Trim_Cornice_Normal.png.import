@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://hjjkbvntnd70"
 path.s3tc="res://.godot/imported/MASTER_Trim_Cornice_Normal.png-24302c0c8e6b732a45146f498e7337c6.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Trim_Cornice_Normal.png-24302c0c8e6b732a45146f498e7337c6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Stone/MASTER_Trim_Cornice_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Trim_Cornice_Normal.png-24302c0c8e6b732a45146f498e7337c6.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Trim_Cornice_Normal.png-24302c0c8e6b732a45146f498e7337c6.s3tc.ctex", "res://.godot/imported/MASTER_Trim_Cornice_Normal.png-24302c0c8e6b732a45146f498e7337c6.etc2.ctex"]
 
 [params]
 

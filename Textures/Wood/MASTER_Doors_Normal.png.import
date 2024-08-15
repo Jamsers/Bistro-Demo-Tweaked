@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kd1eybs6d6eh"
 path.s3tc="res://.godot/imported/MASTER_Doors_Normal.png-b75deed818280532c80fee3711f3d6d2.s3tc.ctex"
+path.etc2="res://.godot/imported/MASTER_Doors_Normal.png-b75deed818280532c80fee3711f3d6d2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Wood/MASTER_Doors_Normal.png"
-dest_files=["res://.godot/imported/MASTER_Doors_Normal.png-b75deed818280532c80fee3711f3d6d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/MASTER_Doors_Normal.png-b75deed818280532c80fee3711f3d6d2.s3tc.ctex", "res://.godot/imported/MASTER_Doors_Normal.png-b75deed818280532c80fee3711f3d6d2.etc2.ctex"]
 
 [params]
 

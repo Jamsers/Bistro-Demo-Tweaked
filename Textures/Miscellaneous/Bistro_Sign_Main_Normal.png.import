@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bogs1sshi8qp1"
 path.s3tc="res://.godot/imported/Bistro_Sign_Main_Normal.png-6ffe86044c81a71295fe0c1329988097.s3tc.ctex"
+path.etc2="res://.godot/imported/Bistro_Sign_Main_Normal.png-6ffe86044c81a71295fe0c1329988097.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Miscellaneous/Bistro_Sign_Main_Normal.png"
-dest_files=["res://.godot/imported/Bistro_Sign_Main_Normal.png-6ffe86044c81a71295fe0c1329988097.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bistro_Sign_Main_Normal.png-6ffe86044c81a71295fe0c1329988097.s3tc.ctex", "res://.godot/imported/Bistro_Sign_Main_Normal.png-6ffe86044c81a71295fe0c1329988097.etc2.ctex"]
 
 [params]
 
