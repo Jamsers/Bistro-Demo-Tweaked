@@ -44,4 +44,5 @@ You can turn music on or off in editor.
 ## Credits
 Ported from [Amazon Lumberyard Bistro](https://developer.nvidia.com/orca/amazon-lumberyard-bistro).  
 Original porting work done by [Logan Preshaw](https://github.com/WickedInsignia), original port can be found [here](https://github.com/godotengine/godot/issues/74965).  
+Uses sphynx-owner's [motion blur addon](https://github.com/sphynx-owner/JFA_driven_motion_blur_addon).  
 Uses Creative Commons sounds, attributions are [here](https://github.com/Jamsers/Bistro-Demo-Tweaked/blob/main/Audio/ATTRIBUTION).
