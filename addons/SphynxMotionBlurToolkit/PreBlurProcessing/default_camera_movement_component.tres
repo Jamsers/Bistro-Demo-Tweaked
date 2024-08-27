@@ -6,4 +6,4 @@
 script = ExtResource("1_856ea")
 multiplier = 1.0
 lower_threshold = 0.0
-upper_threshold = 0.1
+upper_threshold = 0.075

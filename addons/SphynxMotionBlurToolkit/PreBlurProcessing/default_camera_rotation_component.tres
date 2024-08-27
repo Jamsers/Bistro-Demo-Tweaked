@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_j2iku")
-multiplier = 0.0
+multiplier = 1.0
 lower_threshold = 0.0
-upper_threshold = 0.0
+upper_threshold = 0.8
