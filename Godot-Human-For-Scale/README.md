@@ -13,20 +13,21 @@ https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/ea40c6ec-47b0-4
 **Make sure your scene has colliders for the floor at least, or the player will just fall through the map!**
 
 ## Controls
-- **ESCAPE** to capture/uncapture mouse  
-  ***Mouse is uncaptured on start!***  
-
-- **W-A-S-D** to move  
-  **SHIFT** to sprint  
-  **SPACE** to jump  
-  **TILDE(~)** to noclip
-
-- **V** to switch third person/first person  
-  **RIGHT CLICK** to zoom/focus  
-  **TAB** to switch third person camera shoulders  
-
-- **LEFT CLICK** to pick up/throw object with physics gun  
-  **F** to turn flashlight on/off  
+| Action | Mouse/Keyboard |  Controller (Xbox) |
+| - | :-: | :-: |
+| **Capture/uncapture mouse** <br /> *Mouse is uncaptured on start!* | ESCAPE | START |
+|  |  |  |
+| **Move** | W-A-S-D | Left Stick |
+| **Sprint** (Toggle) | SHIFT | Left Stick Button |
+| **Jump** | SPACE | A |
+| **Noclip** | TILDE (~) | D-pad Up |
+|  |  |  |
+| **Switch third person/first person** | V | BACK |
+| **Zoom/focus** (Toggle) | Right Click | Left Trigger |
+| **Switch third person camera shoulders** | TAB | Left Shoulder |
+|  |  |  |
+| **Pick up/throw object with physics gun** | Left Click | Right Trigger |
+| **Turn flashlight on/off** | F | D-pad Down |
 
 ## Controls not working?
 
@@ -41,7 +42,7 @@ A Control node is likely capturing keyboard input, most likely a button or text 
 You can enable depth of field for the zoom functionality. No camera attributes setup necessary.  
 You can disable the character's shadow in first person view.  
 You can enable audio, which will enable the audio listener, footstep sounds, and physics interactions sounds.  
-You can enable the physics gun, which allows you pick up and throw RigidBodies.
+You can enable the physics gun, which allows you to pick up and throw RigidBodies.
 
 ![options](https://github.com/Jamsers/Godot-Human-For-Scale/assets/39361911/01ca7799-021c-46c1-a98a-c68c1dee7035)
 
