@@ -9,7 +9,8 @@ extends CharacterBody3D
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
-const JOYSTICK_LOOK_MULTIPLIER = 12.0
+const ZOOM_SENSITIVITY_MULTIPLIER = 0.5
+const JOYSTICK_LOOK_MULTIPLIER = 1200.0
 const MOVE_MULT = 1.4
 const RUN_MULT = 1.25
 const FP_FOV = 75.0
@@ -172,7 +173,7 @@ func _ready():
 	boot_sound_timeout = false
 
 func _process(delta):
-	process_camera()
+	process_camera(delta)
 	process_off_on_floor_time(delta)
 	process_movement()
 	process_animation(delta)
@@ -365,9 +366,12 @@ func process_off_on_floor_time(delta):
 	is_on_floor_duration = clamp(is_on_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 
-func process_camera():
-	look_movement -= joystick_look.normalized() * JOYSTICK_LOOK_MULTIPLIER
+func process_camera(delta):
+	look_movement -= (map_square_to_circle(joystick_look) * delta) * JOYSTICK_LOOK_MULTIPLIER
 	look_movement -= mouse_look
+	
+	if cam_is_zoomed:
+		look_movement = look_movement * ZOOM_SENSITIVITY_MULTIPLIER
 	
 	var camera_rotation_euler = camera_rotation.get_euler()
 	
@@ -394,8 +398,8 @@ func process_movement():
 	if right_isdown:
 		input_direction.x += 1.0
 	
-	input_direction.z += joystick_move.y
-	input_direction.x += joystick_move.x
+	input_direction.z += map_square_to_circle(joystick_move).y
+	input_direction.x += map_square_to_circle(joystick_move).x
 	
 	move_direction = camera_rotation * input_direction
 	move_direction_no_y = camera_rotation_no_y * input_direction
@@ -741,10 +745,45 @@ func _unhandled_input(event):
 				joystick_look.x = event.axis_value
 			JOY_AXIS_RIGHT_Y:
 				joystick_look.y = event.axis_value
+			JOY_AXIS_TRIGGER_LEFT:
+				zoom_isdown = false
+				if event.axis_value > 0.15:
+					zoom_isdown = true
+				else:
+					zoom_isdown = false
+			JOY_AXIS_TRIGGER_RIGHT:
+				if event.axis_value > 0.15:
+					physics_gun_fire_isdown = true
+				else:
+					physics_gun_fire_isdown = false
+	
+	if event is InputEventJoypadButton:
+		match event.button_index:
+			JOY_BUTTON_BACK:
+				cam_toggle_isdown = event.pressed
+			JOY_BUTTON_DPAD_DOWN:
+				flashlight_isdown = event.pressed
+			JOY_BUTTON_DPAD_UP:
+				noclip_isdown = event.pressed
+			JOY_BUTTON_LEFT_STICK:
+				sprint_isdown = event.pressed
+			JOY_BUTTON_A:
+				jump_isdown = event.pressed
+			JOY_BUTTON_START:
+				mousecapture_isdown = event.pressed
+			JOY_BUTTON_LEFT_SHOULDER:
+				shoulder_isdown = event.pressed
 
 func switch_anim(anim, speed = 1.0):
 	if anim_player.current_animation != anim:
 		anim_player.play(anim, -1, speed)
+
+# oh god oh math oh fuck: https://raw.org/article/how-to-map-a-square-to-a-circle/
+func map_square_to_circle(square: Vector2) -> Vector2:
+	var circle = square
+	circle.x = circle.x * sqrt(1.0 - (square.y * square.y / 2.0));
+	circle.y = circle.y * sqrt(1.0 - (square.x * square.x / 2.0));
+	return circle
 
 func quat_rotate_toward(from: Quaternion, to: Quaternion, delta: float) -> Quaternion:
 	return from.slerp(to, clamp(delta / from.angle_to(to), 0.0, 1.0)).normalized()
