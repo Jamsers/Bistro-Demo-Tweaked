@@ -10,7 +10,7 @@ extends CharacterBody3D
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
 const ZOOM_SENSITIVITY_MULTIPLIER = 0.5
-const JOYSTICK_LOOK_MULTIPLIER = 1200.0
+const JOYSTICK_LOOK_MULTIPLIER = 1300.0
 const MOVE_MULT = 1.4
 const RUN_MULT = 1.25
 const FP_FOV = 75.0

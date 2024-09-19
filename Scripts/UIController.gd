@@ -295,6 +295,12 @@ func _unhandled_input(event):
 				if !ui_cooldown:
 					is_ui_hidden = !is_ui_hidden
 					switch_visibility()
+	if event is InputEventJoypadButton:
+		match event.button_index:
+			JOY_BUTTON_DPAD_LEFT:
+				if !ui_cooldown:
+					is_ui_hidden = !is_ui_hidden
+					switch_visibility()
 
 func easeInOutSine(lerp: float) -> float:
 	return clamp(-(cos(PI * lerp) - 1.0) / 2.0, 0.0, 1.0)
