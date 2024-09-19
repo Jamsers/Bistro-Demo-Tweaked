@@ -69,6 +69,8 @@ var noclip_on = false
 var noclip_toggle_cooldown = 0.0
 var flashlight_on = false
 var flashlight_toggle_cooldown = 0.0
+var sprint_on = false
+var sprint_toggle_cooldown = 0.0
 var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
 var cam_is_zoomed = false
@@ -180,6 +182,7 @@ func _process(delta):
 	process_mousecapture(delta)
 	process_noclip(delta)
 	process_flashlight(delta)
+	process_sprint(delta)
 	process_cam_toggle(delta)
 	process_cam_zoom(delta)
 	process_shoulder_swap(delta)
@@ -187,7 +190,7 @@ func _process(delta):
 	process_dof(delta)
 	
 	var move_speed = ANIM_MOVE_SPEED * MOVE_MULT
-	if sprint_isdown:
+	if sprint_on:
 		move_speed = ANIM_RUN_SPEED * RUN_MULT
 	
 	if noclip_on:
@@ -410,7 +413,7 @@ func process_animation(delta):
 	if is_off_floor_duration >= JUMP_LAND_TIMEOUT:
 		switch_anim("Fall")
 	elif move_direction != Vector3.ZERO:
-		if sprint_isdown:
+		if sprint_on:
 			switch_anim("Run", RUN_MULT)
 		else:
 			switch_anim("Jog", MOVE_MULT)
@@ -450,6 +453,19 @@ func process_flashlight(delta):
 	
 	flashlight_toggle_cooldown -= delta
 	flashlight_toggle_cooldown = clamp(flashlight_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
+
+func process_sprint(delta):
+	if move_direction == Vector3.ZERO:
+		sprint_on = false
+		
+	if sprint_isdown and sprint_toggle_cooldown == 0.0:
+		if move_direction != Vector3.ZERO:
+			sprint_on = !sprint_on
+		
+		sprint_toggle_cooldown = TOGGLE_COOLDOWN
+	
+	sprint_toggle_cooldown -= delta
+	sprint_toggle_cooldown = clamp(sprint_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
 
 func process_cam_toggle(delta):
 	if cam_toggle_isdown and cam_toggle_cooldown == 0.0 and !is_cam_transitioning:
