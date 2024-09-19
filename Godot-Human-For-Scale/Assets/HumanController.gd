@@ -9,6 +9,7 @@ extends CharacterBody3D
 
 # --- Stuff you might be interested in tweaking ---
 const LOOK_SENSITIVITY = 0.0025
+const JOYSTICK_LOOK_MULTIPLIER = 12.0
 const MOVE_MULT = 1.4
 const RUN_MULT = 1.25
 const FP_FOV = 75.0
@@ -90,7 +91,10 @@ var physics_gun_object_linear_damp = 0.0
 var physics_gun_object_angular_damp = 0.0
 var physics_gun_hit_point = Vector3.ZERO
 
-var mouse_movement = Vector2.ZERO
+var look_movement = Vector2.ZERO
+var mouse_look = Vector2.ZERO
+var joystick_look = Vector2.ZERO
+var joystick_move = Vector2.ZERO
 var forward_isdown = false
 var backward_isdown = false
 var left_isdown = false
@@ -362,17 +366,21 @@ func process_off_on_floor_time(delta):
 	is_off_floor_duration = clamp(is_off_floor_duration, 0.0, JUMP_LAND_TIMEOUT)
 
 func process_camera():
+	look_movement -= joystick_look.normalized() * JOYSTICK_LOOK_MULTIPLIER
+	look_movement -= mouse_look
+	
 	var camera_rotation_euler = camera_rotation.get_euler()
 	
 	if mousecapture_on:
-		camera_rotation_euler += Vector3(mouse_movement.y, mouse_movement.x, 0.0) * LOOK_SENSITIVITY
+		camera_rotation_euler += Vector3(look_movement.y, look_movement.x, 0.0) * LOOK_SENSITIVITY
 		camera_rotation_euler.x = clamp(camera_rotation_euler.x, LOOK_LIMIT_LOWER, LOOK_LIMIT_UPPER)
 	
 	camera_rotation = Quaternion.from_euler(camera_rotation_euler)
 	camera_pivot.global_basis = Basis(camera_rotation)
 	camera_rotation_no_y = Basis(camera_pivot.global_basis.x, Vector3.UP, camera_pivot.global_basis.z).get_rotation_quaternion()
 	
-	mouse_movement = Vector2.ZERO
+	mouse_look = Vector2.ZERO
+	look_movement = Vector2.ZERO
 
 func process_movement():
 	var input_direction = Vector3.ZERO
@@ -385,6 +393,9 @@ func process_movement():
 		input_direction.x -= 1.0
 	if right_isdown:
 		input_direction.x += 1.0
+	
+	input_direction.z += joystick_move.y
+	input_direction.x += joystick_move.x
 	
 	move_direction = camera_rotation * input_direction
 	move_direction_no_y = camera_rotation_no_y * input_direction
@@ -686,7 +697,7 @@ func assert_practical_attributes(attributes):
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		mouse_movement -= event.relative
+		mouse_look = event.relative
 	
 	if event is InputEventMouseButton:
 		match event.button_index:
@@ -719,6 +730,17 @@ func _unhandled_input(event):
 				mousecapture_isdown = event.pressed
 			KEY_TAB:
 				shoulder_isdown = event.pressed
+	
+	if event is InputEventJoypadMotion:
+		match event.axis:
+			JOY_AXIS_LEFT_X:
+				joystick_move.x = event.axis_value
+			JOY_AXIS_LEFT_Y:
+				joystick_move.y = event.axis_value
+			JOY_AXIS_RIGHT_X:
+				joystick_look.x = event.axis_value
+			JOY_AXIS_RIGHT_Y:
+				joystick_look.y = event.axis_value
 
 func switch_anim(anim, speed = 1.0):
 	if anim_player.current_animation != anim:
