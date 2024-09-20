@@ -71,6 +71,7 @@ var flashlight_on = false
 var flashlight_toggle_cooldown = 0.0
 var sprint_on = false
 var sprint_toggle_cooldown = 0.0
+var previous_sprint_isdown = false
 var cam_is_fp = false
 var cam_toggle_cooldown = 0.0
 var cam_is_zoomed = false
@@ -457,13 +458,14 @@ func process_flashlight(delta):
 func process_sprint(delta):
 	if move_direction == Vector3.ZERO:
 		sprint_on = false
-		
-	if sprint_isdown and sprint_toggle_cooldown == 0.0:
+	
+	if sprint_isdown and sprint_toggle_cooldown == 0.0 and !previous_sprint_isdown:
 		if move_direction != Vector3.ZERO:
 			sprint_on = !sprint_on
 		
 		sprint_toggle_cooldown = TOGGLE_COOLDOWN
 	
+	previous_sprint_isdown = sprint_isdown
 	sprint_toggle_cooldown -= delta
 	sprint_toggle_cooldown = clamp(sprint_toggle_cooldown, 0.0, TOGGLE_COOLDOWN)
 
