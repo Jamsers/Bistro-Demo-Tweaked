@@ -8,6 +8,7 @@ To bake lighting:
 Why is this process a bit convoluted?  
 Having a LightmapGI node in the inspector, even when `visible` is disabled, prevents SDFGI from working. Both in game and in editor.  
 So to keep SDFGI on, the LightmapGI node needs to be deleted.  
+Make sure to Unload Baked Lighting before launching the game from the editor - the in game lightmap loader/unloader cannot unload the lightmap loaded *in* editor, so SDFGI just won't work in game if you forget to Unload Baked Lighting.  
   
 ## Luminosity Notes
 We use "filmic" color temps and sun angles (except for noon), since the level is surrounded by tall buildings and realistic sun angles would leave all of the level in shadow. Luminosity values are still reference though.  
