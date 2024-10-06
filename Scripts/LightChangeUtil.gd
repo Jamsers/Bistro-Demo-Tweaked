@@ -8,11 +8,16 @@ extends Node
 @export var set_afternoon: bool = false : set = apply_afternoon
 @export var set_night: bool = false : set = apply_night
 
+@export_category("Load/Unload Baked Lighting")
+@export var load_baked_lighting: bool = false : set = apply_load_baked_lighting
+@export var unload_baked_lighting: bool = false : set = apply_unload_baked_lighting
+
 @export_category("")
 @export var UI: UIController
 
 @onready var sun_orig_res = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/size")
 @onready var sun_shadow_bits = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/16_bits")
+var loaded_lightmap
 
 func apply_dusk(dummy: bool) -> void:
 	apply_lighting(UI.lighting_scenarios.dusk)
@@ -25,6 +30,25 @@ func apply_afternoon(dummy: bool) -> void:
 
 func apply_night(dummy: bool) -> void:
 	apply_lighting(UI.lighting_scenarios.night)
+
+func apply_load_baked_lighting(dummy: bool) -> void:
+	apply_baked_lighting(true)
+
+func apply_unload_baked_lighting(dummy: bool) -> void:
+	apply_baked_lighting(false)
+
+func apply_baked_lighting(enabled):
+	UI.reflection_probes.visible = enabled
+	if enabled:
+		if loaded_lightmap == null:
+			loaded_lightmap = UI.lightmap.instantiate()
+			UI.main_scene.add_child(loaded_lightmap)
+			loaded_lightmap.set_owner(UI.main_scene)
+			UI.environment.environment.sdfgi_enabled = false
+	else:
+		if loaded_lightmap != null:
+			loaded_lightmap.queue_free()
+			UI.environment.environment.sdfgi_enabled = true
 
 func apply_lighting(lighting):
 	UI.sun_light.light_intensity_lux = lighting.lux
