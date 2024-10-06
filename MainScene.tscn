@@ -28,6 +28,7 @@
 [ext_resource type="Material" uid="uid://00b6xip7tpd8" path="res://Materials/Miscellaneous/Bistro_Sign_Letters.tres" id="13_blrrn"]
 [ext_resource type="PackedScene" uid="uid://biak8e4cv0isu" path="res://Scenes/Section02/S2Lamps.tscn" id="13_v0ve4"]
 [ext_resource type="PackedScene" uid="uid://u5uvyrtg8ns" path="res://Scenes/Section02/S2Walls.tscn" id="14_v6tgn"]
+[ext_resource type="PackedScene" uid="uid://c4iroug0guusd" path="res://Scenes/Lightmap.tscn" id="15_tdb5p"]
 [ext_resource type="PackedScene" uid="uid://bij2ka0wuj53c" path="res://Scenes/Section02/S2Details.tscn" id="15_uu4ux"]
 [ext_resource type="PackedScene" uid="uid://c7x2605gbo88t" path="res://Scenes/Section02/Bistro_Lanterns.tscn" id="16_1sf6e"]
 [ext_resource type="PackedScene" uid="uid://b62ieebpxbuin" path="res://Scenes/Section03/S3B1.tscn" id="16_m1vvn"]
@@ -63,7 +64,6 @@
 [ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="29_faasy"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
-[ext_resource type="LightmapGIData" uid="uid://m2wdd1ork76s" path="res://Resources/MainScene.lmbake" id="31_vlh20"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
 [ext_resource type="PackedScene" uid="uid://djmap33l1n2u6" path="res://Scenes/Section02/S2Lamps_Props.tscn" id="33_k0qq7"]
@@ -782,16 +782,17 @@ points = PackedVector3Array(0.510391, -1.06574, 0.344101, -0.637138, 0.368819, 0
 script = ExtResource("12_p7w1a")
 UI = NodePath("../UI")
 
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "lightmap", "reflection_probes", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("main_scene", "sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "reflection_probes", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 enable_music = true
+main_scene = NodePath("..")
 sun_light = NodePath("../Sun")
 environment = NodePath("../WorldEnvironment")
 night_lights = [NodePath("../Night Lights"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_21/Lantern_Wind_21_2/HangingLight01"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_22/Lantern_Wind_22_2/HangingLight02"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_23/Lantern_Wind_23_2/HangingLight03"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_24/Lantern_Wind_24_2/HangingLight03"), NodePath("../Props/Section02/Bistro_Lanterns/Lantern_Wind_25/Lantern_Wind_25_2/HangingLight04")]
 lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Level Geometry/Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Level Geometry/Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004"), NodePath("../Patches/Fill Out/Lamp/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp2/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp3/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36"), ExtResource("12_qowfr"), ExtResource("13_blrrn")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
-lightmap = NodePath("../LightmapGI")
+lightmap = ExtResource("15_tdb5p")
 reflection_probes = NodePath("../Reflection Probes")
 day_ambient_audio = NodePath("../Audio/DayAmbient")
 night_ambient_audio = NodePath("../Audio/NightAmbient")
@@ -813,13 +814,6 @@ light_intensity_lux = 75000.0
 light_temperature = 4250.0
 shadow_enabled = true
 directional_shadow_pancake_size = 40.0
-
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
-visible = false
-directional = true
-camera_attributes = ExtResource("30_pvdv2")
-light_data = ExtResource("31_vlh20")
 
 [node name="Reflection Probes" type="Node3D" parent="."]
 visible = false

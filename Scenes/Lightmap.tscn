@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4iroug0guusd"]
+
+[ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="1_ky37g"]
+[ext_resource type="LightmapGIData" uid="uid://m2wdd1ork76s" path="res://Resources/MainScene.lmbake" id="2_7dfpc"]
+
+[node name="LightmapGI" type="LightmapGI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
+directional = true
+camera_attributes = ExtResource("1_ky37g")
+light_data = ExtResource("2_7dfpc")

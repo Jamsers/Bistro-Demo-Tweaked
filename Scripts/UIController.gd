@@ -11,6 +11,7 @@ class_name UIController
 @export var lighting_scenarios: LightingScenarios
 
 @export_category("")
+@export var main_scene: Node
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
 @export var custom_res: Array[Control]
@@ -23,7 +24,7 @@ class_name UIController
 @export var lamp_meshes: Array[MeshInstance3D]
 @export var emissives: Array[StandardMaterial3D]
 @export var scalable_night_lights: Node3D
-@export var lightmap: Node3D
+@export var lightmap: PackedScene
 @export var reflection_probes: Node3D
 @export var day_ambient_audio: AudioStreamPlayer
 @export var night_ambient_audio: AudioStreamPlayer
@@ -39,6 +40,7 @@ var renderTargetVertical = 1080.0
 var is_time_changing = false
 var is_ui_hidden = false
 var ui_cooldown = false
+var loaded_lightmap
 
 var fps
 var frametime
@@ -158,7 +160,6 @@ func apply_settings(settings):
 	environment.environment.ssao_enabled = settings.ssao
 	environment.environment.ssil_enabled = settings.ssil
 	environment.environment.sdfgi_enabled = settings.sdfgi
-	lightmap.visible = settings.baked_lighting
 	reflection_probes.visible = settings.baked_lighting
 	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
@@ -166,6 +167,13 @@ func apply_settings(settings):
 	for light in scalable_night_lights.get_children():
 		if light is Light3D:
 			light.shadow_enabled = settings.night_shadows
+	if settings.baked_lighting:
+		if loaded_lightmap == null:
+			loaded_lightmap = lightmap.instantiate()
+			main_scene.add_child(loaded_lightmap)
+	else:
+		if loaded_lightmap != null:
+			loaded_lightmap.queue_free()
 
 func apply_time(lighting):
 	is_time_changing = false
