@@ -135,6 +135,8 @@ uncapped_independence = true
 target_constant_framerate = 30.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
+lightmap_size_hint = Vector2i(644, 462)
+add_uv2 = true
 size = Vector3(42.825, 3, 85.35)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sixh"]
@@ -147,63 +149,97 @@ data = PackedVector3Array(-21.4125, 1.5, 42.675, 21.4125, 1.5, 42.675, -21.4125,
 data = PackedVector3Array(-21.4125, 1.5, 42.675, 21.4125, 1.5, 42.675, -21.4125, -1.5, 42.675, 21.4125, 1.5, 42.675, 21.4125, -1.5, 42.675, -21.4125, -1.5, 42.675, 21.4125, 1.5, -42.675, -21.4125, 1.5, -42.675, 21.4125, -1.5, -42.675, -21.4125, 1.5, -42.675, -21.4125, -1.5, -42.675, 21.4125, -1.5, -42.675, 21.4125, 1.5, 42.675, 21.4125, 1.5, -42.675, 21.4125, -1.5, 42.675, 21.4125, 1.5, -42.675, 21.4125, -1.5, -42.675, 21.4125, -1.5, 42.675, -21.4125, 1.5, -42.675, -21.4125, 1.5, 42.675, -21.4125, -1.5, -42.675, -21.4125, 1.5, 42.675, -21.4125, -1.5, 42.675, -21.4125, -1.5, -42.675, 21.4125, 1.5, 42.675, -21.4125, 1.5, 42.675, 21.4125, 1.5, -42.675, -21.4125, 1.5, 42.675, -21.4125, 1.5, -42.675, 21.4125, 1.5, -42.675, -21.4125, -1.5, 42.675, 21.4125, -1.5, 42.675, -21.4125, -1.5, -42.675, 21.4125, -1.5, 42.675, 21.4125, -1.5, -42.675, -21.4125, -1.5, -42.675)
 
 [sub_resource type="BoxMesh" id="BoxMesh_78hf1"]
+lightmap_size_hint = Vector2i(618, 381)
+add_uv2 = true
 size = Vector3(53.73, 3, 69.155)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xtpi4"]
 data = PackedVector3Array(-26.865, 1.5, 34.5775, 26.865, 1.5, 34.5775, -26.865, -1.5, 34.5775, 26.865, 1.5, 34.5775, 26.865, -1.5, 34.5775, -26.865, -1.5, 34.5775, 26.865, 1.5, -34.5775, -26.865, 1.5, -34.5775, 26.865, -1.5, -34.5775, -26.865, 1.5, -34.5775, -26.865, -1.5, -34.5775, 26.865, -1.5, -34.5775, 26.865, 1.5, 34.5775, 26.865, 1.5, -34.5775, 26.865, -1.5, 34.5775, 26.865, 1.5, -34.5775, 26.865, -1.5, -34.5775, 26.865, -1.5, 34.5775, -26.865, 1.5, -34.5775, -26.865, 1.5, 34.5775, -26.865, -1.5, -34.5775, -26.865, 1.5, 34.5775, -26.865, -1.5, 34.5775, -26.865, -1.5, -34.5775, 26.865, 1.5, 34.5775, -26.865, 1.5, 34.5775, 26.865, 1.5, -34.5775, -26.865, 1.5, 34.5775, -26.865, 1.5, -34.5775, 26.865, 1.5, -34.5775, -26.865, -1.5, 34.5775, 26.865, -1.5, 34.5775, -26.865, -1.5, -34.5775, 26.865, -1.5, 34.5775, 26.865, -1.5, -34.5775, -26.865, -1.5, -34.5775)
 
 [sub_resource type="BoxMesh" id="BoxMesh_k30le"]
+lightmap_size_hint = Vector2i(124, 296)
+add_uv2 = true
 size = Vector3(3, 18.5, 21)
 
 [sub_resource type="BoxMesh" id="BoxMesh_v6q4x"]
+lightmap_size_hint = Vector2i(26, 141)
+add_uv2 = true
 size = Vector3(3, 12, 1.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ob6v6"]
+lightmap_size_hint = Vector2i(51, 158)
+add_uv2 = true
 size = Vector3(6.46, 12, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4g2qu"]
+lightmap_size_hint = Vector2i(100, 297)
+add_uv2 = true
 size = Vector3(3, 21, 16.295)
 
 [sub_resource type="BoxMesh" id="BoxMesh_huwvf"]
+lightmap_size_hint = Vector2i(36, 233)
+add_uv2 = true
 size = Vector3(3.505, 21, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_riqcp"]
+lightmap_size_hint = Vector2i(71, 108)
+add_uv2 = true
 size = Vector3(3, 5, 10.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jlhyi"]
+lightmap_size_hint = Vector2i(34, 206)
+add_uv2 = true
 size = Vector3(3, 18.5, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_a5vt8"]
+lightmap_size_hint = Vector2i(34, 206)
+add_uv2 = true
 size = Vector3(3, 18.5, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rrpqd"]
+lightmap_size_hint = Vector2i(34, 206)
+add_uv2 = true
 size = Vector3(3, 18.5, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wfs5p"]
+lightmap_size_hint = Vector2i(34, 206)
+add_uv2 = true
 size = Vector3(3, 18.5, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gy2lw"]
+lightmap_size_hint = Vector2i(77, 219)
+add_uv2 = true
 size = Vector3(3, 15.5, 11.725)
 
 [sub_resource type="BoxMesh" id="BoxMesh_25hkn"]
+lightmap_size_hint = Vector2i(92, 284)
+add_uv2 = true
 size = Vector3(3, 20.5, 14.7)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1ciot"]
 data = PackedVector3Array(-1.5, 10.25, 7.35, 1.5, 10.25, 7.35, -1.5, -10.25, 7.35, 1.5, 10.25, 7.35, 1.5, -10.25, 7.35, -1.5, -10.25, 7.35, 1.5, 10.25, -7.35, -1.5, 10.25, -7.35, 1.5, -10.25, -7.35, -1.5, 10.25, -7.35, -1.5, -10.25, -7.35, 1.5, -10.25, -7.35, 1.5, 10.25, 7.35, 1.5, 10.25, -7.35, 1.5, -10.25, 7.35, 1.5, 10.25, -7.35, 1.5, -10.25, -7.35, 1.5, -10.25, 7.35, -1.5, 10.25, -7.35, -1.5, 10.25, 7.35, -1.5, -10.25, -7.35, -1.5, 10.25, 7.35, -1.5, -10.25, 7.35, -1.5, -10.25, -7.35, 1.5, 10.25, 7.35, -1.5, 10.25, 7.35, 1.5, 10.25, -7.35, -1.5, 10.25, 7.35, -1.5, 10.25, -7.35, 1.5, 10.25, -7.35, -1.5, -10.25, 7.35, 1.5, -10.25, 7.35, -1.5, -10.25, -7.35, 1.5, -10.25, 7.35, 1.5, -10.25, -7.35, -1.5, -10.25, -7.35)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bw15w"]
+lightmap_size_hint = Vector2i(12, 53)
+add_uv2 = true
 size = Vector3(0.75, 4.25, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d4wt5"]
 data = PackedVector3Array(-0.375, 2.125, 0.5, 0.375, 2.125, 0.5, -0.375, -2.125, 0.5, 0.375, 2.125, 0.5, 0.375, -2.125, 0.5, -0.375, -2.125, 0.5, 0.375, 2.125, -0.5, -0.375, 2.125, -0.5, 0.375, -2.125, -0.5, -0.375, 2.125, -0.5, -0.375, -2.125, -0.5, 0.375, -2.125, -0.5, 0.375, 2.125, 0.5, 0.375, 2.125, -0.5, 0.375, -2.125, 0.5, 0.375, 2.125, -0.5, 0.375, -2.125, -0.5, 0.375, -2.125, 0.5, -0.375, 2.125, -0.5, -0.375, 2.125, 0.5, -0.375, -2.125, -0.5, -0.375, 2.125, 0.5, -0.375, -2.125, 0.5, -0.375, -2.125, -0.5, 0.375, 2.125, 0.5, -0.375, 2.125, 0.5, 0.375, 2.125, -0.5, -0.375, 2.125, 0.5, -0.375, 2.125, -0.5, 0.375, 2.125, -0.5, -0.375, -2.125, 0.5, 0.375, -2.125, 0.5, -0.375, -2.125, -0.5, 0.375, -2.125, 0.5, 0.375, -2.125, -0.5, -0.375, -2.125, -0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qa7ce"]
+lightmap_size_hint = Vector2i(12, 53)
+add_uv2 = true
 size = Vector3(0.75, 4.25, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e24dl"]
+lightmap_size_hint = Vector2i(12, 53)
+add_uv2 = true
 size = Vector3(0.75, 4.25, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1y0m7"]
+lightmap_size_hint = Vector2i(19, 59)
+add_uv2 = true
 size = Vector3(0.75, 4.25, 2.27)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_05ah1"]
