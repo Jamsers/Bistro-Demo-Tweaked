@@ -34,6 +34,9 @@ To get past the "Apple cannot check it for malicious software" warning on Mac, f
 ## *.res Files Reimported
 When opening the project for the first time, you may notice hundreds of *.res files get modified in your source control. This is a quirk of the Godot importer and these changes can be safely discarded once project has already been opened once.
 
+## Lightmaps When Project is Cloned
+This repo doesn't have lightmaps uploaded because of Github file size limitations. See [LightingScenariosNote](https://github.com/Jamsers/Bistro-Demo-Tweaked/blob/main/Resources/LightingScenariosNote.md) for more details, if you want to use baked lighting in a cloned project.
+
 ## Extra Options
 Use the Light Change Utility node to change lighting scenarios in editor.  
 Includes a profiler to see performance details. [RAM counter not available in release builds](https://docs.godotengine.org/en/stable/classes/class_performance.html#enumerations).  
