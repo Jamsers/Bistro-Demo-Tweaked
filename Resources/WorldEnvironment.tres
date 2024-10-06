@@ -9,7 +9,6 @@ sky_material = ExtResource("1_nc131")
 background_mode = 2
 background_intensity = 22500.0
 sky = SubResource("Sky_u3ie7")
-reflected_light_source = 1
 tonemap_mode = 3
 tonemap_white = 6.0
 ssr_enabled = true
