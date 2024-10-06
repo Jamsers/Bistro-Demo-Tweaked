@@ -1,0 +1,26 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://c2o3q775wr5gd"
+path="res://.godot/imported/MainScene.exr-bcd20a8b8bb7df965508db0dc078a565.ctexarray"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Resources/MainScene.exr"
+dest_files=["res://.godot/imported/MainScene.exr-bcd20a8b8bb7df965508db0dc078a565.ctexarray"]
+
+[params]
+
+compress/mode=3
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=20

@@ -1,4 +1,4 @@
-[gd_scene load_steps=294 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=295 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -63,6 +63,7 @@
 [ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="29_faasy"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
+[ext_resource type="LightmapGIData" uid="uid://m2wdd1ork76s" path="res://Resources/MainScene.lmbake" id="31_vlh20"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
 [ext_resource type="PackedScene" uid="uid://djmap33l1n2u6" path="res://Scenes/Section02/S2Lamps_Props.tscn" id="33_k0qq7"]
@@ -810,6 +811,91 @@ light_intensity_lux = 75000.0
 light_temperature = 4250.0
 shadow_enabled = true
 directional_shadow_pancake_size = 40.0
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
+directional = true
+camera_attributes = ExtResource("30_pvdv2")
+light_data = ExtResource("31_vlh20")
+
+[node name="Reflection Probes" type="Node3D" parent="."]
+
+[node name="Base Reflection Probe" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9229, 14.0114, -19.5914)
+max_distance = 1000.0
+size = Vector3(99.0745, 30.1362, 135.853)
+origin_offset = Vector3(18.275, -0.72, 20.595)
+enable_shadows = true
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.26106, 0, -0.965322, 0, 1, 0, 0.965322, 0, -0.26106, -15.8633, 10.109, 25.9676)
+max_distance = 1000.0
+size = Vector3(18.2377, 24.6563, 24.7782)
+origin_offset = Vector3(-1.665, -8.495, -0.395)
+enable_shadows = true
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(0.950293, 0, -0.311357, 0, 1, 0, 0.311357, 0, 0.950293, -6.01111, 8.92118, 16.0915)
+max_distance = 1000.0
+size = Vector3(16.0066, 20.0859, 18.1851)
+origin_offset = Vector3(0.595, -7.24, 0.17)
+enable_shadows = true
+
+[node name="ReflectionProbe3" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(0.714485, 0, 0.699651, 0, 1, 0, -0.699651, 0, 0.714485, -2.8068, 8.47172, 1.0479)
+max_distance = 1000.0
+size = Vector3(29.8224, 20.0747, 21.6785)
+origin_offset = Vector3(1.215, -6.77, 0.83)
+enable_shadows = true
+
+[node name="ReflectionProbe4" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.154434, 0, -0.988003, 0, 1, 0, 0.988003, 0, -0.154434, -25.5313, 10.3174, 0.892725)
+max_distance = 1000.0
+size = Vector3(17.4164, 23.9321, 41.0083)
+origin_offset = Vector3(-0.11, -8.625, 0)
+enable_shadows = true
+
+[node name="ReflectionProbe5" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(0.955428, 0, -0.295225, 0, 1, 0, 0.295225, 0, 0.955428, -50.1201, 10.2906, 0.336892)
+max_distance = 1000.0
+size = Vector3(17.0823, 23.4084, 20.4515)
+origin_offset = Vector3(1.04, -8.6, -0.665)
+enable_shadows = true
+
+[node name="ReflectionProbe6" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.99496, 0, -0.100275, 0, 1, 0, 0.100275, 0, -0.99496, 1.6625, 9.42667, -12.4203)
+max_distance = 1000.0
+size = Vector3(16.6154, 22.0683, 18.9468)
+origin_offset = Vector3(-0.15, -7.73, 0.16)
+enable_shadows = true
+
+[node name="ReflectionProbe7" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.99402, 0, -0.109196, 0, 1, 0, 0.109196, 0, -0.99402, -0.11928, 9.22115, -25.2888)
+max_distance = 1000.0
+size = Vector3(16.783, 21.5698, 17.4686)
+origin_offset = Vector3(-0.68, -7.555, 0)
+enable_shadows = true
+
+[node name="ReflectionProbe8" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.996496, 0, -0.083643, 0, 1, 0, 0.083643, 0, -0.996496, -0.863134, 9.12856, -38.9155)
+max_distance = 1000.0
+size = Vector3(20.1738, 21.6714, 19.0111)
+origin_offset = Vector3(0.395, -7.485, 1.17)
+enable_shadows = true
+
+[node name="ReflectionProbe9" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.999137, 0, 0.0415269, 0, 1, 0, -0.0415269, 0, -0.999137, -12.1254, 8.46098, -60.641)
+max_distance = 1000.0
+size = Vector3(22.5818, 19.9185, 33.0297)
+origin_offset = Vector3(0.335, -6.69, 1.04)
+enable_shadows = true
+
+[node name="ReflectionProbe10" type="ReflectionProbe" parent="Reflection Probes"]
+transform = Transform3D(-0.998757, 0, 0.0498434, 0, 1, 0, -0.0498434, 0, -0.998757, 6.34652, 8.3849, -61.2773)
+max_distance = 1000.0
+size = Vector3(22.0746, 19.8228, 35.4728)
+origin_offset = Vector3(-0.71, -6.68, 0.1)
+enable_shadows = true
 
 [node name="Audio" type="Node" parent="."]
 
@@ -3418,61 +3504,6 @@ distance_fade_enabled = true
 distance_fade_begin = 45.0
 spot_range = 4.0
 spot_angle = 80.0
-
-[node name="Static Lighting" type="Node3D" parent="."]
-
-[node name="LightmapGI" type="LightmapGI" parent="Static Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
-directional = true
-camera_attributes = ExtResource("30_pvdv2")
-
-[node name="Base Reflection Probe" type="ReflectionProbe" parent="Static Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9229, 14.0114, -19.5914)
-size = Vector3(99.0745, 30.1362, 135.853)
-origin_offset = Vector3(18.275, -12.365, 20.595)
-enable_shadows = true
-
-[node name="Reflection Probes" type="Node3D" parent="Static Lighting"]
-
-[node name="ReflectionProbe" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.286608, 0, -0.958048, 0, 1, 0, 0.958048, 0, -0.286608, -15.6183, 0, 25.3769)
-enable_shadows = true
-
-[node name="ReflectionProbe2" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(0.952076, 0, -0.305862, 0, 1, 0, 0.305862, 0, 0.952076, -5.41759, 0, 15.9929)
-enable_shadows = true
-
-[node name="ReflectionProbe3" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(0.583697, 0, 0.811971, 0, 1, 0, -0.811971, 0, 0.583697, -0.293588, 0, -0.0568581)
-enable_shadows = true
-
-[node name="ReflectionProbe4" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.167629, 0, -0.98585, 0, 1, 0, 0.98585, 0, -0.167629, -28.7691, 0, 0.00440979)
-enable_shadows = true
-
-[node name="ReflectionProbe5" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(0.978469, 0, -0.206392, 0, 1, 0, 0.206392, 0, 0.978469, -50.4117, 3.8147e-06, 2.05662)
-enable_shadows = true
-
-[node name="ReflectionProbe6" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.999855, 0, 0.0169987, 0, 1, 0, -0.0169987, 0, -0.999855, 1.58059, 3.8147e-06, -11.6001)
-enable_shadows = true
-
-[node name="ReflectionProbe7" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.999855, 0, 0.0169987, 0, 1, 0, -0.0169987, 0, -0.999855, 0.960729, 3.8147e-06, -26.443)
-enable_shadows = true
-
-[node name="ReflectionProbe8" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.999855, 0, 0.0169987, 0, 1, 0, -0.0169987, 0, -0.999855, -1.10835, 3.8147e-06, -39.9776)
-enable_shadows = true
-
-[node name="ReflectionProbe9" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.999855, 0, 0.0169987, 0, 1, 0, -0.0169987, 0, -0.999855, -12.7697, 3.8147e-06, -61.6394)
-enable_shadows = true
-
-[node name="ReflectionProbe10" type="ReflectionProbe" parent="Static Lighting/Reflection Probes"]
-transform = Transform3D(-0.999855, 0, 0.0169987, 0, 1, 0, -0.0169987, 0, -0.999855, 7.49796, 3.8147e-06, -62.6194)
-enable_shadows = true
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
