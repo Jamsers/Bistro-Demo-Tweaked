@@ -1,4 +1,4 @@
-[gd_scene load_steps=295 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=294 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -63,7 +63,6 @@
 [ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="29_faasy"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
-[ext_resource type="LightmapGIData" uid="uid://m2wdd1ork76s" path="res://Resources/MainScene.lmbake" id="31_vlh20"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
 [ext_resource type="PackedScene" uid="uid://djmap33l1n2u6" path="res://Scenes/Section02/S2Lamps_Props.tscn" id="33_k0qq7"]
@@ -812,16 +811,12 @@ light_temperature = 4250.0
 shadow_enabled = true
 directional_shadow_pancake_size = 40.0
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
-directional = true
-camera_attributes = ExtResource("30_pvdv2")
-light_data = ExtResource("31_vlh20")
-
 [node name="Reflection Probes" type="Node3D" parent="."]
+visible = false
 
 [node name="Base Reflection Probe" type="ReflectionProbe" parent="Reflection Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9229, 14.0114, -19.5914)
+visible = false
 max_distance = 1000.0
 size = Vector3(99.0745, 30.1362, 135.853)
 origin_offset = Vector3(18.275, -0.72, 20.595)

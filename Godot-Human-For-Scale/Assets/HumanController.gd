@@ -756,21 +756,26 @@ func _unhandled_input(event):
 	if event is InputEventJoypadMotion:
 		match event.axis:
 			JOY_AXIS_LEFT_X:
-				joystick_move.x = event.axis_value
+				if event.axis_value > 0.55 or event.axis_value < -0.55:
+					joystick_move.x = event.axis_value
+				else:
+					joystick_move.x = 0.0
 			JOY_AXIS_LEFT_Y:
-				joystick_move.y = event.axis_value
+				if event.axis_value > 0.55  or event.axis_value < -0.55:
+					joystick_move.y = event.axis_value
+				else:
+					joystick_move.y = 0.0
 			JOY_AXIS_RIGHT_X:
 				joystick_look.x = event.axis_value
 			JOY_AXIS_RIGHT_Y:
 				joystick_look.y = event.axis_value
 			JOY_AXIS_TRIGGER_LEFT:
-				zoom_isdown = false
-				if event.axis_value > 0.15:
+				if event.axis_value > 0.55:
 					zoom_isdown = true
 				else:
 					zoom_isdown = false
 			JOY_AXIS_TRIGGER_RIGHT:
-				if event.axis_value > 0.15:
+				if event.axis_value > 0.55:
 					physics_gun_fire_isdown = true
 				else:
 					physics_gun_fire_isdown = false
