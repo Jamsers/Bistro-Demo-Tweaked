@@ -782,7 +782,7 @@ points = PackedVector3Array(0.510391, -1.06574, 0.344101, -0.637138, 0.368819, 0
 script = ExtResource("12_p7w1a")
 UI = NodePath("../UI")
 
-[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
+[node name="UI" parent="." node_paths=PackedStringArray("sun_light", "environment", "night_lights", "lamp_meshes", "scalable_night_lights", "lightmap", "reflection_probes", "day_ambient_audio", "night_ambient_audio", "day_music", "night_music") instance=ExtResource("32_q35xk")]
 enable_profiler = true
 enable_music = true
 sun_light = NodePath("../Sun")
@@ -791,6 +791,8 @@ night_lights = [NodePath("../Night Lights"), NodePath("../Props/Section02/Bistro
 lamp_meshes = [NodePath("../Level Geometry/Section05/S5B1/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265/Bistro_Research_Exterior_Paris_StreetLight_01a___2__6265_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261/Bistro_Research_Exterior_Paris_StreetLight_01a___10__6261_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263/Bistro_Research_Exterior_Paris_StreetLight_01a___11__6263_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275/Bistro_Research_Exterior_Paris_StreetLight_01a___7__6275_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277/Bistro_Research_Exterior_Paris_StreetLight_01a___8__6277_004"), NodePath("../Level Geometry/Section01/S1Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279/Bistro_Research_Exterior_Paris_StreetLight_01a___9__6279_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a_6257/Bistro_Research_Exterior_Paris_StreetLight_01a_6257_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269/Bistro_Research_Exterior_Paris_StreetLight_01a___4__6269_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271/Bistro_Research_Exterior_Paris_StreetLight_01a___5__6271_004"), NodePath("../Level Geometry/Section02/S2Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273/Bistro_Research_Exterior_Paris_StreetLight_01a___6__6273_004"), NodePath("../Level Geometry/Section03/S3Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Level Geometry/Section05/S5Lamps/Bistro_Research_Exterior_Paris_StreetLight_01a__6259/Bistro_Research_Exterior_Paris_StreetLight_01a__6259_004"), NodePath("../Patches/Fill Out/Lamp/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp2/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004"), NodePath("../Patches/Fill Out/Lamp3/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267/Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004")]
 emissives = Array[StandardMaterial3D]([ExtResource("2_je3vt"), ExtResource("3_414o6"), ExtResource("4_m6wwl"), ExtResource("5_piy6g"), ExtResource("7_8yd0a"), ExtResource("8_vfdcb"), ExtResource("9_ksbxv"), ExtResource("10_5yr8b"), ExtResource("11_awwij"), ExtResource("12_xvt36"), ExtResource("12_qowfr"), ExtResource("13_blrrn")])
 scalable_night_lights = NodePath("../Night Lights/StreetLamps")
+lightmap = NodePath("../LightmapGI")
+reflection_probes = NodePath("../Reflection Probes")
 day_ambient_audio = NodePath("../Audio/DayAmbient")
 night_ambient_audio = NodePath("../Audio/NightAmbient")
 day_music = NodePath("../Audio/DayMusic")
@@ -814,11 +816,13 @@ directional_shadow_pancake_size = 40.0
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92319, 0)
+visible = false
 directional = true
 camera_attributes = ExtResource("30_pvdv2")
 light_data = ExtResource("31_vlh20")
 
 [node name="Reflection Probes" type="Node3D" parent="."]
+visible = false
 
 [node name="Base Reflection Probe" type="ReflectionProbe" parent="Reflection Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9229, 14.0114, -19.5914)

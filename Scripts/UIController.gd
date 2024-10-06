@@ -23,6 +23,8 @@ class_name UIController
 @export var lamp_meshes: Array[MeshInstance3D]
 @export var emissives: Array[StandardMaterial3D]
 @export var scalable_night_lights: Node3D
+@export var lightmap: Node3D
+@export var reflection_probes: Node3D
 @export var day_ambient_audio: AudioStreamPlayer
 @export var night_ambient_audio: AudioStreamPlayer
 @export var day_music: AudioStreamPlayer
@@ -156,6 +158,8 @@ func apply_settings(settings):
 	environment.environment.ssao_enabled = settings.ssao
 	environment.environment.ssil_enabled = settings.ssil
 	environment.environment.sdfgi_enabled = settings.sdfgi
+	lightmap.visible = settings.baked_lighting
+	reflection_probes.visible = settings.baked_lighting
 	RenderingServer.viewport_set_msaa_3d(get_viewport().get_viewport_rid(), settings.msaa)
 	RenderingServer.viewport_set_screen_space_aa(get_viewport().get_viewport_rid(), settings.fxaa)
 	RenderingServer.viewport_set_scaling_3d_mode(get_viewport().get_viewport_rid(), settings.scaling)
