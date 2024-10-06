@@ -14,6 +14,7 @@ class_name UIController
 @export var main_scene: Node
 @export var custom_res_text_box : LineEdit
 @export var fps_text : Label
+@export var time_of_day_select: Button
 @export var custom_res: Array[Control]
 @export var profiler: Array[Control]
 @export var sun_light: DirectionalLight3D
@@ -132,9 +133,13 @@ func _on_custom_res_input(input_string):
 	_on_viewport_resize()
 
 func _on_quality_selected(index):
+	time_of_day_select.disabled = false
 	match index:
 		0:
 			apply_settings(settings.low)
+			time_of_day_select.selected = 2
+			_on_time_selected(2)
+			time_of_day_select.disabled = true
 		1:
 			apply_settings(settings.normal)
 		2:

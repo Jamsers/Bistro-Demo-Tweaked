@@ -9,7 +9,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_ig5si"]
 font_size = 13
 
-[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box", "fps_text", "custom_res", "profiler")]
+[node name="UI" type="Control" node_paths=PackedStringArray("custom_res_text_box", "fps_text", "time_of_day_select", "custom_res", "profiler")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +22,7 @@ settings = ExtResource("2_5o1hx")
 lighting_scenarios = ExtResource("3_jfefo")
 custom_res_text_box = NodePath("HBoxContainer/VBoxContainer/custom_resolution/custom_resolution_input")
 fps_text = NodePath("HBoxContainer/VBoxContainer2/profiler")
+time_of_day_select = NodePath("HBoxContainer/VBoxContainer/time_of_day_select")
 custom_res = [NodePath("HBoxContainer/VBoxContainer/custom_resolution"), NodePath("HBoxContainer/VBoxContainer/custom_resolution_apply_label")]
 profiler = [NodePath("HBoxContainer/VBoxContainer2/profiler"), NodePath("HBoxContainer/VBoxContainer2/HSeparator")]
 
@@ -47,10 +48,9 @@ text = "Time Of Day"
 [node name="time_of_day_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-item_count = 4
 selected = 2
+item_count = 4
 popup/item_0/text = "Dawn"
-popup/item_0/id = 0
 popup/item_1/text = "Noon"
 popup/item_1/id = 1
 popup/item_2/text = "Afternoon"
@@ -69,10 +69,9 @@ text = "Render Resolution"
 [node name="resolution_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-item_count = 7
 selected = 2
+item_count = 7
 popup/item_0/text = "Native"
-popup/item_0/id = 0
 popup/item_1/text = "480p"
 popup/item_1/id = 1
 popup/item_2/text = "720p"
@@ -114,10 +113,9 @@ text = "Quality Scaling"
 [node name="quality_select" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-item_count = 3
 selected = 1
+item_count = 3
 popup/item_0/text = "Low"
-popup/item_0/id = 0
 popup/item_1/text = "Normal"
 popup/item_1/id = 1
 popup/item_2/text = "High"
