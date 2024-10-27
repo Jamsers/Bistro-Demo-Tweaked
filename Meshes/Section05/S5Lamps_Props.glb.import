@@ -18,6 +18,7 @@ nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -69,6 +70,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_001.res"
@@ -79,6 +81,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_005.res"
@@ -89,6 +92,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_006.res"
@@ -99,6 +103,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_007.res"
@@ -109,6 +114,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_008.res"
@@ -119,6 +125,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_175_1.res"
@@ -129,6 +136,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section05/S5Lamps_Props/S5Lamps_Props_Mesh_415.res"
