@@ -3,10 +3,14 @@
 extends Node
 
 @export_category("Set Lighting Scenario")
-@export var set_dusk: bool = false : set = apply_dusk
-@export var set_noon: bool = false : set = apply_noon
-@export var set_afternoon: bool = false : set = apply_afternoon
-@export var set_night: bool = false : set = apply_night
+@export_tool_button("Set Dusk")
+var set_dusk = apply_dusk
+@export_tool_button("Set Noon")
+var set_noon = apply_noon
+@export_tool_button("Set Afternoon")
+var set_afternoon = apply_afternoon
+@export_tool_button("Set Night")
+var set_night = apply_night
 
 @export_category("")
 @export var UI: UIController
@@ -14,16 +18,16 @@ extends Node
 @onready var sun_orig_res = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/size")
 @onready var sun_shadow_bits = ProjectSettings.get_setting("rendering/lights_and_shadows/directional_shadow/16_bits")
 
-func apply_dusk(dummy: bool) -> void:
+func apply_dusk():
 	apply_lighting(UI.lighting_scenarios.dusk)
 
-func apply_noon(dummy: bool) -> void:
+func apply_noon():
 	apply_lighting(UI.lighting_scenarios.noon)
 
-func apply_afternoon(dummy: bool) -> void:
+func apply_afternoon():
 	apply_lighting(UI.lighting_scenarios.afternoon)
 
-func apply_night(dummy: bool) -> void:
+func apply_night():
 	apply_lighting(UI.lighting_scenarios.night)
 
 func apply_lighting(lighting):
