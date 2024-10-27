@@ -18,6 +18,7 @@ nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -153,6 +154,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_001.res"
@@ -163,6 +165,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_002.res"
@@ -173,6 +176,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_003.res"
@@ -183,6 +187,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_004.res"
@@ -193,6 +198,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_036.res"
@@ -203,6 +209,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_037.res"
@@ -213,6 +220,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_038.res"
@@ -223,6 +231,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_039.res"
@@ -233,6 +242,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_168_001.res"
@@ -243,6 +253,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_168_002.res"
@@ -253,6 +264,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_168_003.res"
@@ -263,6 +275,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_168_004.res"
@@ -273,6 +286,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_168_005.res"
@@ -283,6 +297,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_169_001.res"
@@ -293,6 +308,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_169_002.res"
@@ -303,6 +319,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_169_003.res"
@@ -313,6 +330,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_169_004.res"
@@ -323,6 +341,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_169_005.res"
@@ -333,6 +352,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_001.res"
@@ -343,6 +363,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_002.res"
@@ -353,6 +374,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_003.res"
@@ -363,6 +385,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_004.res"
@@ -373,6 +396,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_170_005.res"
@@ -383,6 +407,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_001.res"
@@ -393,6 +418,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_002.res"
@@ -403,6 +429,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_003.res"
@@ -413,6 +440,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_004.res"
@@ -423,6 +451,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
+"lods/raycast_normals": false,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/Section02/S2Lamps_Props/S2Lamps_Props_Mesh_176_005.res"
