@@ -812,8 +812,10 @@ light_temperature = 4250.0
 shadow_enabled = true
 directional_shadow_pancake_size = 40.0
 
+[node name="LightmapGI" type="LightmapGI" parent="."]
+camera_attributes = ExtResource("30_pvdv2")
+
 [node name="Reflection Probes" type="Node3D" parent="."]
-visible = false
 
 [node name="Base Reflection Probe" type="ReflectionProbe" parent="Reflection Probes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9229, 14.0114, -19.5914)
@@ -3505,5 +3507,6 @@ spot_angle = 80.0
 
 [node name="Human-For-Scale" parent="." instance=ExtResource("31_gaxn2")]
 transform = Transform3D(0.941434, 0, 0.337193, 0, 1, 0, -0.337193, 0, 0.941434, -3.03466, 0, 5.09017)
+enable_physics_gun = true
 enable_depth_of_field = true
 enable_audio = true
