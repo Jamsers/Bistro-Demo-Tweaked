@@ -1,4 +1,4 @@
-[gd_scene load_steps=294 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=295 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -62,6 +62,7 @@
 [ext_resource type="Resource" uid="uid://bqehecsdgt70s" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_variance_stage.tres" id="28_lox3l"]
 [ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="29_faasy"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="30_pvdv2"]
+[ext_resource type="LightmapGIData" uid="uid://m2wdd1ork76s" path="res://Resources/MainScene.lmbake" id="31_4aoa7"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
 [ext_resource type="ArrayMesh" uid="uid://pw3fun5eaf0n" path="res://Meshes/rounded_cube.obj" id="33_6648h"]
@@ -814,6 +815,7 @@ directional_shadow_pancake_size = 40.0
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 camera_attributes = ExtResource("30_pvdv2")
+light_data = ExtResource("31_4aoa7")
 
 [node name="Reflection Probes" type="Node3D" parent="."]
 
