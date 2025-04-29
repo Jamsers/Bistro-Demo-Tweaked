@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://73ou0sg30v8f"]
 
 [ext_resource type="PackedScene" uid="uid://cuhiiv3vccg28" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/mannequiny-0.3.0.gltf" id="1_3duc2"]
-[ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/AnimationEventReciever.gd" id="2_18j06"]
+[ext_resource type="Script" uid="uid://dhkmi0rj4yune" path="res://Godot-Human-For-Scale/Assets/AnimationEventReciever.gd" id="2_18j06"]
 [ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="2_be2ba"]
 [ext_resource type="Animation" uid="uid://cacaxk4m7r6l2" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Fall.res" id="4_e7ttl"]
 [ext_resource type="Animation" uid="uid://dqxlpgixueq2i" path="res://Godot-Human-For-Scale/Assets/godot-3d-mannequin/Animations/Idle.res" id="5_ajc8x"]
@@ -10,10 +10,10 @@
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_brjo7"]
 _data = {
-"Fall": ExtResource("4_e7ttl"),
-"Idle": ExtResource("5_ajc8x"),
-"Jog": ExtResource("6_mcv6c"),
-"Run": ExtResource("7_lqrri")
+&"Fall": ExtResource("4_e7ttl"),
+&"Idle": ExtResource("5_ajc8x"),
+&"Jog": ExtResource("6_mcv6c"),
+&"Run": ExtResource("7_lqrri")
 }
 
 [node name="HumanModel" instance=ExtResource("1_3duc2")]

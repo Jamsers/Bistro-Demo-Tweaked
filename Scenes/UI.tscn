@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckt8i0dx43ex0"]
 
-[ext_resource type="Script" path="res://Scripts/UIController.gd" id="1_24736"]
+[ext_resource type="Script" uid="uid://dafu5s07q3jcp" path="res://Scripts/UIController.gd" id="1_24736"]
 [ext_resource type="Resource" uid="uid://cn0mwoakbtfhb" path="res://Resources/ScalabilitySettings.tres" id="2_5o1hx"]
 [ext_resource type="StyleBox" uid="uid://dwtrhw44g5vck" path="res://Materials/separator_horizontal.tres" id="2_j6um5"]
 [ext_resource type="StyleBox" uid="uid://pi0oobce83ay" path="res://Materials/separator_vertical.tres" id="3_8dy65"]

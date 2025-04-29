@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LightingScenarios" load_steps=7 format=3 uid="uid://bhft8dubbqr2h"]
 
-[ext_resource type="Script" path="res://Scripts/Lighting.gd" id="1_j2wa8"]
-[ext_resource type="Script" path="res://Scripts/LightingScenarios.gd" id="1_whetd"]
+[ext_resource type="Script" uid="uid://j5k5yrqipv1o" path="res://Scripts/Lighting.gd" id="1_j2wa8"]
+[ext_resource type="Script" uid="uid://bdbykwc31di4d" path="res://Scripts/LightingScenarios.gd" id="1_whetd"]
 
 [sub_resource type="Resource" id="Resource_wmn5y"]
 script = ExtResource("1_j2wa8")

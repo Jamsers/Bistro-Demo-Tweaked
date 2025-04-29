@@ -22,7 +22,7 @@
 [ext_resource type="Material" uid="uid://bi8tfpoad535y" path="res://Materials/Lights/StringLight_Red.tres" id="11_awwij"]
 [ext_resource type="PackedScene" uid="uid://dpgfbsr7n2bm8" path="res://Scenes/Section02/BistroProps.tscn" id="11_e4jub"]
 [ext_resource type="PackedScene" uid="uid://d4b75rgbhmhow" path="res://Scenes/Section02/S2Ivy.tscn" id="12_lc6cf"]
-[ext_resource type="Script" path="res://Scripts/LightChangeUtil.gd" id="12_p7w1a"]
+[ext_resource type="Script" uid="uid://cfqh74pi4i67t" path="res://Scripts/LightChangeUtil.gd" id="12_p7w1a"]
 [ext_resource type="Material" uid="uid://uyoltu5ukmtw" path="res://Materials/Lights/HangingLight_Emissive.tres" id="12_qowfr"]
 [ext_resource type="Material" uid="uid://ivcxxvgm585r" path="res://Materials/Lights/StringLight_White.tres" id="12_xvt36"]
 [ext_resource type="Material" uid="uid://00b6xip7tpd8" path="res://Materials/Miscellaneous/Bistro_Sign_Letters.tres" id="13_blrrn"]
@@ -73,7 +73,7 @@
 [ext_resource type="Material" uid="uid://d0cd8fe6hpv6t" path="res://Materials/windowlight.tres" id="63_8uykn"]
 [ext_resource type="ArrayMesh" uid="uid://npyvb0up4qr6" path="res://Meshes/Bent_Quad.obj" id="63_l4mn6"]
 [ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="70_yq80p"]
-[ext_resource type="Script" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
+[ext_resource type="Script" uid="uid://d3nrpxdh8sptx" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
 [ext_resource type="PackedScene" uid="uid://dph2jwqw0jaw" path="res://Scenes/FoliageSound.tscn" id="76_oe8ap"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
