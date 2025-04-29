@@ -13,6 +13,7 @@ height = 1.778
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6jlvi"]
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
+physics_interpolation_mode = 2
 safe_margin = 0.01
 script = ExtResource("1_jh7dy")
 
