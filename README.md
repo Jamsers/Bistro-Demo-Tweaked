@@ -7,7 +7,7 @@ Includes [Godot-Human-For-Scale](https://github.com/Jamsers/Godot-Human-For-Scal
 
 ## Usage
 1. Clone or download the Github repository.
-2. Download [Godot 4.x](https://godotengine.org/download/) and open the repository folder with Godot.
+2. Download [Godot 4.4](https://godotengine.org/releases/4.4/) and open the repository folder with Godot.
 3. Run the project. (Play button on the upper right corner of Godot's interface)
 
 ## Releases

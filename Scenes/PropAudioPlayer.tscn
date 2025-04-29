@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cb5wljw5j3qlt"]
 
-[ext_resource type="Script" path="res://Scripts/PropAudioPlayer.gd" id="1_hl2k7"]
-[ext_resource type="Script" path="res://Scripts/PropAudioPlayerHelper.gd" id="2_q782f"]
+[ext_resource type="Script" uid="uid://do1mfod8xryul" path="res://Scripts/PropAudioPlayer.gd" id="1_hl2k7"]
+[ext_resource type="Script" uid="uid://b0kmcqpvkqd71" path="res://Scripts/PropAudioPlayerHelper.gd" id="2_q782f"]
 [ext_resource type="AudioStream" uid="uid://brle6bd58h4h2" path="res://Audio/Prop Sounds/Placeholder/Bump1.wav" id="2_s6y1h"]
 [ext_resource type="AudioStream" uid="uid://bstv5aj6pm5xu" path="res://Audio/Prop Sounds/Placeholder/Bump2.wav" id="3_oopeh"]
 [ext_resource type="AudioStream" uid="uid://bn5hg5d1ypbxh" path="res://Audio/Prop Sounds/Placeholder/Bump3.wav" id="4_3hkru"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ScalabilitySettings" load_steps=6 format=3 uid="uid://cn0mwoakbtfhb"]
 
-[ext_resource type="Script" path="res://Scripts/Settings.gd" id="1_6ypcq"]
-[ext_resource type="Script" path="res://Scripts/ScalabilitySettings.gd" id="1_fleix"]
+[ext_resource type="Script" uid="uid://8lwule8cxo34" path="res://Scripts/Settings.gd" id="1_6ypcq"]
+[ext_resource type="Script" uid="uid://csna43ixaktt3" path="res://Scripts/ScalabilitySettings.gd" id="1_fleix"]
 
 [sub_resource type="Resource" id="Resource_1wfjf"]
 script = ExtResource("1_6ypcq")

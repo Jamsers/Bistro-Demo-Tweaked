@@ -67,10 +67,11 @@ points = PackedVector3Array(-0.557978, -0.258469, 0.105669, -0.34215, -0.0858214
 [node name="S4B3_Props" type="Node3D"]
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6530" type="RigidBody3D" parent="."]
+physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.6374, 0.727263, -4.58878)
 mass = 7.0
-max_contacts_reported = 5
 contact_monitor = true
+max_contacts_reported = 5
 
 [node name="Bistro_Research_Exterior_TrashCanOpen_01A1_6529" type="MeshInstance3D" parent="Bistro_Research_Exterior_TrashCanOpen_01A1_6530"]
 gi_mode = 2

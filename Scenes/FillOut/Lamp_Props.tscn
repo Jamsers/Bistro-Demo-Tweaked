@@ -6,3 +6,9 @@
 
 [node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" parent="." index="0"]
 transform = Transform3D(0.654583, 0, -0.755991, 0, 1, 0, 0.755991, 0, 0.654583, 0, 2.433, 0)
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_004" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="2"]
+physics_interpolation_mode = 1
+
+[node name="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267_005" parent="Bistro_Research_Exterior_Paris_StreetLight_01a___3__6267" index="4"]
+physics_interpolation_mode = 1

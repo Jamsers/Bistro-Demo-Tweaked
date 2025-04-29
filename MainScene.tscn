@@ -1,4 +1,4 @@
-[gd_scene load_steps=294 format=3 uid="uid://dcgtpj2gjbxgl"]
+[gd_scene load_steps=278 format=3 uid="uid://dcgtpj2gjbxgl"]
 
 [ext_resource type="PackedScene" uid="uid://x65cq1udsqsf" path="res://Scenes/Section01/S1B1.tscn" id="1_17a2u"]
 [ext_resource type="PackedScene" uid="uid://eo1atg6pdllw" path="res://Scenes/Section01/S1B2.tscn" id="2_8mtnr"]
@@ -22,7 +22,7 @@
 [ext_resource type="Material" uid="uid://bi8tfpoad535y" path="res://Materials/Lights/StringLight_Red.tres" id="11_awwij"]
 [ext_resource type="PackedScene" uid="uid://dpgfbsr7n2bm8" path="res://Scenes/Section02/BistroProps.tscn" id="11_e4jub"]
 [ext_resource type="PackedScene" uid="uid://d4b75rgbhmhow" path="res://Scenes/Section02/S2Ivy.tscn" id="12_lc6cf"]
-[ext_resource type="Script" path="res://Scripts/LightChangeUtil.gd" id="12_p7w1a"]
+[ext_resource type="Script" uid="uid://cfqh74pi4i67t" path="res://Scripts/LightChangeUtil.gd" id="12_p7w1a"]
 [ext_resource type="Material" uid="uid://uyoltu5ukmtw" path="res://Materials/Lights/HangingLight_Emissive.tres" id="12_qowfr"]
 [ext_resource type="Material" uid="uid://ivcxxvgm585r" path="res://Materials/Lights/StringLight_White.tres" id="12_xvt36"]
 [ext_resource type="Material" uid="uid://00b6xip7tpd8" path="res://Materials/Miscellaneous/Bistro_Sign_Letters.tres" id="13_blrrn"]
@@ -33,34 +33,21 @@
 [ext_resource type="PackedScene" uid="uid://b62ieebpxbuin" path="res://Scenes/Section03/S3B1.tscn" id="16_m1vvn"]
 [ext_resource type="PackedScene" uid="uid://q5n4wbhxihjp" path="res://Scenes/Section03/S3B2.tscn" id="17_4e0xd"]
 [ext_resource type="PackedScene" uid="uid://ncj04jk76gn0" path="res://Scenes/Section02/Bistro_StringLights.tscn" id="17_j1o0m"]
-[ext_resource type="Resource" uid="uid://cslvcweyejh3c" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_movement_component.tres" id="17_oyjvl"]
 [ext_resource type="PackedScene" uid="uid://chlhxyb30n5bj" path="res://Scenes/Section03/S3B3.tscn" id="18_4ij38"]
-[ext_resource type="Resource" uid="uid://iru8ynu04i00" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_rotation_component.tres" id="18_kobmx"]
 [ext_resource type="AudioStream" uid="uid://b6rc81y5wriln" path="res://Audio/day_bg.ogg" id="18_kwmnc"]
 [ext_resource type="PackedScene" uid="uid://cou4bgmlcrc2" path="res://Scenes/Section03/S3B4.tscn" id="19_acyb5"]
 [ext_resource type="AudioStream" uid="uid://cngxal8rdb5mj" path="res://Audio/night_bg.ogg" id="19_ida67"]
-[ext_resource type="Resource" uid="uid://rp3mpjmisoyh" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_object_movement_component.tres" id="19_qnes5"]
-[ext_resource type="Resource" uid="uid://c8ulad7utgrg7" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processing_stage.tres" id="20_6om2k"]
 [ext_resource type="AudioStream" uid="uid://ck4j2cl1itpcg" path="res://Audio/daymusic.ogg" id="20_mwu7t"]
 [ext_resource type="PackedScene" uid="uid://8lyr6devevqc" path="res://Scenes/Section03/S3Lamps.tscn" id="20_w5tey"]
 [ext_resource type="PackedScene" uid="uid://0rjacw3hrc2a" path="res://Scenes/Section04/S4B1.tscn" id="21_7egcs"]
-[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="21_nfman"]
 [ext_resource type="AudioStream" uid="uid://uie3maxhbtg1" path="res://Audio/nightmusic.ogg" id="21_nqn7s"]
 [ext_resource type="PackedScene" uid="uid://d0oo6ukycpqtf" path="res://Scenes/Section01/S1Lamps_Props.tscn" id="21_yopo6"]
-[ext_resource type="Resource" uid="uid://ca45noqewsyvp" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_experimental_blur_stage.tres" id="22_0g56o"]
 [ext_resource type="PackedScene" uid="uid://dg2ssh4rfvemk" path="res://Scenes/Section04/S4B2.tscn" id="22_k7idl"]
 [ext_resource type="PackedScene" uid="uid://dhbajvc40q32m" path="res://Scenes/Section04/S4B3.tscn" id="23_256hy"]
 [ext_resource type="PackedScene" uid="uid://7pvp17b3ediw" path="res://Scenes/Section02/BistroProps_Props.tscn" id="23_lunsi"]
-[ext_resource type="Resource" uid="uid://cvb65hfs2lrxo" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_neighbor_max_stage.tres" id="23_qbyug"]
 [ext_resource type="PackedScene" uid="uid://c12tht4kio8pw" path="res://Scenes/Section05/S5B1.tscn" id="24_0u2lm"]
-[ext_resource type="Resource" uid="uid://bidsfymvdyhek" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_overlay_stage.tres" id="24_c0h83"]
-[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/Guertin/new_guertin_motion_blur.gd" id="25_hmq7u"]
 [ext_resource type="PackedScene" uid="uid://del44lwpj48x1" path="res://Scenes/Section05/S5B2.tscn" id="25_tcv6v"]
-[ext_resource type="Resource" uid="uid://dipvwksvqb3dm" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_x_stage.tres" id="26_3krrd"]
 [ext_resource type="PackedScene" uid="uid://ckb5gvf1swqgf" path="res://Scenes/Section05/S5Lamps.tscn" id="26_xvk4t"]
-[ext_resource type="Resource" uid="uid://bxfg45ubc2pv7" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_y_stage.tres" id="27_o0ydy"]
-[ext_resource type="Resource" uid="uid://bqehecsdgt70s" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_variance_stage.tres" id="28_lox3l"]
-[ext_resource type="Script" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="29_faasy"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c5r7ambhbw168" path="res://Resources/BistroCameraAttributesPractical.tres" id="30_pvdv2"]
 [ext_resource type="PackedScene" uid="uid://b5i411e430syd" path="res://Godot-Human-For-Scale/Human-For-Scale.tscn" id="31_gaxn2"]
 [ext_resource type="PackedScene" uid="uid://ckt8i0dx43ex0" path="res://Scenes/UI.tscn" id="32_q35xk"]
@@ -86,53 +73,8 @@
 [ext_resource type="Material" uid="uid://d0cd8fe6hpv6t" path="res://Materials/windowlight.tres" id="63_8uykn"]
 [ext_resource type="ArrayMesh" uid="uid://npyvb0up4qr6" path="res://Meshes/Bent_Quad.obj" id="63_l4mn6"]
 [ext_resource type="PackedScene" uid="uid://cb5wljw5j3qlt" path="res://Scenes/PropAudioPlayer.tscn" id="70_yq80p"]
-[ext_resource type="Script" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
+[ext_resource type="Script" uid="uid://d3nrpxdh8sptx" path="res://Scripts/FoliageArea.gd" id="75_mt554"]
 [ext_resource type="PackedScene" uid="uid://dph2jwqw0jaw" path="res://Scenes/FoliageSound.tscn" id="76_oe8ap"]
-
-[sub_resource type="CompositorEffect" id="CompositorEffect_jwkxf"]
-resource_local_to_scene = false
-resource_name = ""
-enabled = true
-effect_callback_type = 4
-needs_motion_vectors = false
-needs_normal_roughness = false
-script = ExtResource("21_nfman")
-pre_blur_processor_stage = ExtResource("20_6om2k")
-camera_rotation_component = ExtResource("18_kobmx")
-camera_movement_component = ExtResource("17_oyjvl")
-object_movement_component = ExtResource("19_qnes5")
-debug = false
-
-[sub_resource type="CompositorEffect" id="CompositorEffect_jregd"]
-resource_local_to_scene = false
-resource_name = ""
-enabled = true
-effect_callback_type = 4
-needs_motion_vectors = false
-needs_normal_roughness = false
-script = ExtResource("25_hmq7u")
-blur_stage = ExtResource("22_0g56o")
-overlay_stage = ExtResource("24_c0h83")
-tile_max_x_stage = ExtResource("26_3krrd")
-tile_max_y_stage = ExtResource("27_o0ydy")
-neighbor_max_stage = ExtResource("23_qbyug")
-tile_variance_stage = ExtResource("28_lox3l")
-tile_size = 40
-linear_falloff_slope = 1.0
-importance_bias = 40.0
-maximum_jitter_value = 0.95
-minimum_user_threshold = 1.5
-debug = false
-
-[sub_resource type="Compositor" id="Compositor_0jy8e"]
-compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_jwkxf"), SubResource("CompositorEffect_jregd")])
-script = ExtResource("29_faasy")
-samples = 16
-intensity = 1.0
-center_fade = 0.0
-framerate_independent = true
-uncapped_independence = true
-target_constant_framerate = 30.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_u4h6w"]
 lightmap_size_hint = Vector2i(644, 462)
@@ -776,6 +718,7 @@ points = PackedVector3Array(0.920485, 0.34365, 0.158231, -0.875471, -0.425443, 0
 points = PackedVector3Array(0.510391, -1.06574, 0.344101, -0.637138, 0.368819, 0.822288, 0.637969, 0.496405, 0.790528, 0.765547, -0.682983, -0.73971, -0.477708, 0.400803, -0.962824, -0.796569, -0.778585, 0.663092, 0.701842, -0.77876, 0.790528, 0.797399, 0.464596, -0.484437, -0.764716, 0.400803, -0.580115, -0.318277, -0.810569, -0.962824, -0.445855, 0.719594, 0.567215, 0.319108, -0.810569, 0.949924, 0.637969, 0.33701, -0.867147, -0.732864, -0.651173, -0.612074, 0.351129, -1.03376, -0.707751, 0.414834, 0.273217, 1.01384, 0.861104, 0.177614, 0.184705, -0.860274, 0.241407, 0.312142, -0.382151, 0.623992, -0.771469, 0.319108, 0.719769, 0.599174, -0.573433, -0.938156, -0.452678, -0.668991, -0.459794, 0.854247, 0.510391, 0.592008, -0.707751, 0.822974, -0.690956, -0.615596, -0.414003, 0.177614, -1.02674, 0.0959725, -0.746776, -0.930865, -0.732864, 0.496405, 0.663092, -0.573433, -0.651173, -0.898906, -0.190868, 0.68761, -0.420719, 0.0322677, 0.68761, 0.72681, 0.861104, -0.523587, -0.420719, -0.828421, 0.464421, 0.152746)
 
 [node name="MainScene" type="Node"]
+physics_interpolation_mode = 2
 
 [node name="Light Change Utility" type="Node" parent="." node_paths=PackedStringArray("UI")]
 script = ExtResource("12_p7w1a")
@@ -798,7 +741,6 @@ night_music = NodePath("../Audio/NightMusic")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("33_vhloy")
 camera_attributes = ExtResource("30_pvdv2")
-compositor = SubResource("Compositor_0jy8e")
 
 [node name="FogVolume" type="FogVolume" parent="."]
 shape = 4
@@ -2164,6 +2106,7 @@ transform = Transform3D(0.847743, 0, 0.530408, 0, 1, 0, -0.530408, 0, 0.847743, 
 [node name="Lamp_Props" parent="Patches/Fill Out/Lamp3" instance=ExtResource("58_yuy0n")]
 
 [node name="MaterialCubeSpecular" type="RigidBody3D" parent="Patches"]
+physics_interpolation_mode = 1
 transform = Transform3D(0.246816, -0.109831, 0.962819, 0.453754, 0.891006, -0.0146799, -0.856265, 0.440505, 0.269751, -16.9557, 0.664963, 19.0884)
 mass = 20.0
 contact_monitor = true
@@ -2180,6 +2123,7 @@ shape = SubResource("BoxShape3D_gxu67")
 [node name="PropAudioPlayer" parent="Patches/MaterialCubeSpecular" instance=ExtResource("70_yq80p")]
 
 [node name="MaterialCubeAlbedo" type="RigidBody3D" parent="Patches"]
+physics_interpolation_mode = 1
 transform = Transform3D(0.267238, -0.422428, 0.866105, 0, 0.898794, 0.438371, -0.96363, -0.117149, 0.240192, -44.7202, 0.666692, 2.55184)
 mass = 20.0
 contact_monitor = true

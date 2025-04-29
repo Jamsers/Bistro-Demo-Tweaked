@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b5i411e430syd"]
 
-[ext_resource type="Script" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
+[ext_resource type="Script" uid="uid://b4l8l06vfvh8j" path="res://Godot-Human-For-Scale/Assets/HumanController.gd" id="1_jh7dy"]
 [ext_resource type="PackedScene" uid="uid://73ou0sg30v8f" path="res://Godot-Human-For-Scale/Assets/HumanModel.tscn" id="2_ajgv1"]
 [ext_resource type="AudioStream" uid="uid://dsfef5dgmtub1" path="res://Godot-Human-For-Scale/Assets/Audio/Footstep1.wav" id="3_4ysf2"]
 
@@ -13,6 +13,7 @@ height = 1.778
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6jlvi"]
 
 [node name="Human-For-Scale" type="CharacterBody3D"]
+physics_interpolation_mode = 2
 safe_margin = 0.01
 script = ExtResource("1_jh7dy")
 
