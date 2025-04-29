@@ -38,10 +38,11 @@ node_a = NodePath("../Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_2")
 node_b = NodePath("../Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_3")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_3" type="RigidBody3D" parent="."]
+physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.06, 3.87047, 3.94269)
 mass = 10.0
-max_contacts_reported = 5
 contact_monitor = true
+max_contacts_reported = 5
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000732422, 0.233151, 0.00202608)
@@ -68,10 +69,11 @@ node_a = NodePath("../Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_2")
 node_b = NodePath("../Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003")
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003" type="RigidBody3D" parent="."]
+physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8533, 3.85265, 1.53754)
 mass = 10.0
-max_contacts_reported = 5
 contact_monitor = true
+max_contacts_reported = 5
 
 [node name="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_004" type="MeshInstance3D" parent="Bistro_Research_Exterior_Paris_ShopSign_01B2_6159_003"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000652313, 0.23315, 0.00205636)
